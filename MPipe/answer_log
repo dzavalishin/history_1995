@@ -1,0 +1,337 @@
+ 1- Initializing buffer sucker
+ 1- receiver state machine tid = 3
+ 1- sender state machine tid = 4
+ 1- port reader/packet disassembler tid = 5
+ 1- port writer/packet assembler tid = 6
+ 4- MP_Session::s_process_wakeup
+ 4- MP_Session::s_process_wakeup
+ 4- MP_Session::s_process_init
+ 4- MP_Session::s_process_options
+ 4- MP_Session::s_process_wakeup
+ 1- MP_Send_Window::write: put at offset 0
+ 1- swin:: marking as non-received [0,17[
+ 4- MP_Session::s_send_some_data
+ 4- swin:: marking as sent [0,17[
+ 4- MP_Session::s_send_some_data
+ 4- swin:: marking as sent [0,17[
+ 3- receiver in data state got 'D'
+ 3- swin:: marking as received [0,15[
+ 3- got data [0, 15[, sent ack [0, 15[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 15[, sent ack [0, 15[
+ 4- MP_Session::s_send_some_data
+ 3- receiver in data state got 'D'
+ 4- swin:: marking as sent [0,17[
+ 3- got data [0, 15[, sent ack [0, 15[
+ 4- MP_Session::s_send_some_data
+ 3- receiver in data state got 'D'
+ 4- swin:: marking as sent [0,17[
+ 3- got data [0, 15[, sent ack [0, 15[
+ 4- MP_Session::s_send_some_data
+ 3- receiver in data state got 'D'
+ 4- swin:: marking as sent [0,17[
+ 3- got data [0, 15[, sent ack [0, 15[
+ 4- MP_Session::s_process_ack(0, 17)
+ 4- swin:: marking as received [0,17[
+ 4- MP_Session::s_process_ack(0, 17)
+ 4- swin:: marking as received [0,17[
+ 4- MP_Session::s_process_ack(0, 17)
+ 4- swin:: marking as received [0,17[
+ 1- MP_Send_Window::write: put at offset 17
+ 1- swin:: marking as non-received [17,23[
+ 4- MP_Session::s_send_some_data
+ 4- swin:: marking as sent [17,23[
+ 4- MP_Session::s_process_ack(0, 17)
+ 4- swin:: marking as received [0,17[
+ 4- MP_Session::s_send_some_data
+ 4- swin:: marking as sent [17,23[
+ 4- MP_Session::s_process_ack(0, 17)
+ 3- receiver in data state got 'D'
+ 4- swin:: marking as received [0,17[
+ 3- got data [0, 15[, sent ack [0, 15[
+ 4- MP_Session::s_send_some_data
+ 3- receiver in data state got 'D'
+ 4- swin:: marking as sent [17,23[
+ 3- got data [0, 15[, sent ack [0, 15[
+ 4- MP_Session::s_send_some_data
+ 4- swin:: marking as sent [17,23[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 15[, sent ack [0, 15[
+ 4- MP_Session::s_process_ack(0, 23)
+ 4- swin:: marking as received [0,23[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 15[, sent ack [0, 15[
+ 4- MP_Session::s_process_ack(0, 23)
+ 4- swin:: marking as received [0,23[
+ 4- MP_Session::s_process_ack(0, 23)
+ 4- swin:: marking as received [0,23[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 15[, sent ack [0, 15[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 15[, sent ack [0, 15[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 15[, sent ack [0, 15[
+ 3- receiver in data state got 'D'
+ 4- MP_Session::s_process_ack(0, 23)
+ 3- got data [0, 15[, sent ack [0, 15[
+ 4- swin:: marking as received [0,23[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 15[, sent ack [0, 15[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 15[, sent ack [0, 15[
+ 3- receiver in data state got 'D'
+ 3- swin:: marking as received [15,26[
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- got data [15, 26[, sent ack [0, 26[
+ 3- receiver in data state got 'D'
+ 3- swin:: marking as received [26,47[
+ 3- got data [26, 47[, sent ack [0, 47[
+ 3- receiver in data state got 'D'
+ 3- got data [26, 47[, sent ack [0, 47[
+ 3- receiver in data state got 'D'
+ 3- got data [26, 47[, sent ack [0, 47[
+ 3- receiver in data state got 'D'
+ 3- got data [26, 47[, sent ack [0, 47[
+ 3- receiver in data state got 'D'
+ 3- got data [26, 47[, sent ack [0, 47[
+ 3- receiver in data state got 'D'
+ 3- got data [26, 47[, sent ack [0, 47[
+ 1- EOF, exiting
+ 3- r_thread finished
+ 4- s_thread finished
+ 6- port writer thread finished
+ 5- Exc in MP_Buffer::wait_for_data: channel disconnect (), port reader thread
+ 5- port reader thread finished

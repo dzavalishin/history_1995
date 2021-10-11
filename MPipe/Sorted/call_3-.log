@@ -1,0 +1,21 @@
+ 3- receiver in data state got 'D'
+ 3- swin:: marking as received [0,17[
+ 3- got data [0, 17[, sent ack [0, 17[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 17[, sent ack [0, 17[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 17[, sent ack [0, 17[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 17[, sent ack [0, 17[
+ 3- receiver in data state got 'D'
+ 3- got data [0, 17[, sent ack [0, 17[
+ 3- receiver in data state got 'D'
+ 3- swin:: marking as received [17,23[
+ 3- got data [17, 23[, sent ack [0, 23[
+ 3- receiver in data state got 'D'
+ 3- got data [17, 23[, sent ack [0, 23[
+ 3- receiver in data state got 'D'
+ 3- got data [17, 23[, sent ack [0, 23[
+ 3- receiver in data state got 'D'
+ 3- got data [17, 23[, sent ack [0, 23[
+ 3- r_thread finished

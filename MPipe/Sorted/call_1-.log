@@ -1,0 +1,12 @@
+ 1- Initializing buffer sucker
+ 1- receiver state machine tid = 3
+ 1- sender state machine tid = 4
+ 1- port reader/packet disassembler tid = 5
+ 1- port writer/packet assembler tid = 6
+ 1- MP_Send_Window::write: put at offset 0
+ 1- swin:: marking as non-received [0,15[
+ 1- MP_Send_Window::write: put at offset 15
+ 1- swin:: marking as non-received [15,26[
+ 1- MP_Send_Window::write: put at offset 26
+ 1- swin:: marking as non-received [26,47[
+ 1- EOF, exiting

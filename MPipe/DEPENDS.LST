@@ -1,0 +1,30 @@
+mp.obj:	mp.h 
+
+mpbuff.obj:	mpbuff.h 
+
+mpchan.obj:	mpchan.h 
+
+mpchantype.obj:	mpchantype.h 
+
+mpframe.obj:	mputil.h mpframe.h 
+
+mppacket.obj:	mppacket.h 
+
+mppkutil.obj:	mppacket.h 
+
+mpport.obj:	mpport.h 
+
+mppqueue.obj:	mppqueue.h 
+
+mprecv.obj:	mpsess.h mppacket.h 
+
+mpsend.obj:	mpsess.h mppacket.h 
+
+mpsess.obj:	mpsess.h mppacket.h mputil.h 
+
+mputil.obj:	mputil.h 
+
+mpwin.obj:	mputil.h mpwin.h 
+
+strng.obj:	strng.h mputil.h mpexcept.h 
+

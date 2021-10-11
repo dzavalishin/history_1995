@@ -1,0 +1,1 @@
+{ print $0 > "sorted/"out"_"$1".log" }

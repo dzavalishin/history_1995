@@ -1,0 +1,50 @@
+
+Class hierarchy
+ MP_Channel
+  ÃÄMP_RChannel
+  ³ ÃÄMP_RC_Chat
+  ³ ÃÄMP_RC_Control
+  ³ ÃÄMP_RC_File
+  ³ ÀÄMP_RC_Main
+  ÀÄMP_SChannel
+    ÃÄMP_SC_Chat
+    ÃÄMP_SC_Control
+    ÃÄMP_SC_File
+    ÀÄMP_SC_Main
+ MP_Frame
+  ÀÄMP_WFrame
+ Mp_Ex
+  ÃÄMp_Ex_Abort
+  ÃÄMp_Ex_Disconnect
+  ÃÄMp_Ex_EOF
+  ÃÄMp_Ex_Errno
+  ÃÄMp_Ex_Fail
+  ÀÄMp_Ex_NoMemory
+ ios
+  ÃÄfstreambase
+  ³ ÃÄfstream(iostream)
+  ³ ÃÄifstream(istream)
+  ³ ÀÄofstream(ostream)
+  ÃÄistream
+  ³ ÃÄifstream(fstreambase)
+  ³ ÃÄiostream(ostream)
+  ³ ³ ÃÄfstream(fstreambase)
+  ³ ³ ÀÄiostream_withassign
+  ³ ÀÄistream_withassign
+  ÀÄostream
+    ÃÄiostream(istream)
+    ³ ÃÄfstream(fstreambase)
+    ³ ÀÄiostream_withassign
+    ÃÄofstream(fstreambase)
+    ÀÄostream_withassign
+ streambuf
+  ÀÄfilebuf
+ MP_Window
+  ÃÄMP_Receive_Window
+  ÀÄMP_Send_Window
+ MP_Port
+  ÃÄMP_ComPort
+  ÃÄMP_LoopPort
+  ÃÄMP_NPPort
+  ÃÄMP_Session
+  ÀÄMP_TcpPort
