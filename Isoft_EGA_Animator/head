@@ -1,0 +1,19 @@
+/************************ Animate ***************************\
+ *
+ *	Copyright (C) 1990 by Infinity Soft
+ *
+ *	Module 	:
+ *
+ *      $Log:$
+ *
+ *
+\*/
+
+#ifndef	STYLE_H
+#	include	<style.h>
+#endif
+
+#include	<stdlib.h>
+
+#include	"animate.h"
+

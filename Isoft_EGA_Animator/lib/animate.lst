@@ -1,0 +1,35 @@
+Publics by module
+
+AREA    	size = 364
+	area::operator +(area far&)       area::operator &&(area far&)
+	area::operator +=(area far&)    
+
+DRAW_ISG	size = 170
+	image::draw(int,int,int,int,int,int)
+
+EGA     	size = 563
+	ega::active_page(unsigned int)    ega::get_visual_page()
+	ega::reset()                      ega::setm2()
+	ega::start_graphics()             ega::stop_graphics()
+	ega::visual_page(unsigned int)    ega::wline(unsigned char huge *,unsigned int,unsigned int,unsigned int)
+	ega::page_shift                 
+
+HERO_CD 	size = 179
+	hero::hero(unsigned int)          hero::~hero()
+	hero::draw()                    
+
+LIST    	size = 813
+	list::~list()                     list::del(hero far*)
+	list::del()                       list::ins(hero far*)
+
+LOAD_ISG	size = 1396
+	image::load(unsigned char far*)   image::remove()
+
+PACK    	size = 1224
+	Pack::Pack(void(far*)(unsigned char))  Pack::~Pack()
+	Pack::Do(unsigned char)           Pack::release_bytes()
+	Unpack::Unpack(int(far*)())       Unpack::~Unpack()
+	Unpack::Do(unsigned char huge *,unsigned long)  Unpack::Do()
+
+SCENE   	size = 840
+	scene::draw()                     scene::rest_back()

@@ -1,0 +1,40 @@
+D:	Debug
+	td286 -ds -vg animate
+
+M:	Make
+	make -fanimate.mak
+
+B:	Delete BAK
+	del *.bak
+	del temp
+	del temp.c
+
+G:	Games
+	cd \games
+
+Copy sources to OLD
+	copy *.* old
+
+
+
+-----------------------
+
+1:	Save to A:
+	pkzip -a a:src *.*
+
+2:	Save to B:
+	pkzip -a b:src *.*
+
+-----------------------
+
+S:	Make Doc
+	mkdoc -p -ogw.doc *.c *.h
+
+F5:	Copy  to D:\EXE
+	tdstrip obj\.exe D:\EXE\.exe
+
+-----------------------
+
+F1:	Main menu
+	c:
+	cd \

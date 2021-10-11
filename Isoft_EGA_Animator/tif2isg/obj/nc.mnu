@@ -1,0 +1,3 @@
+F5:	Copy to E:\EXE
+	tdstrip tiff2is.exe
+	copy tiff2is.exe e:\exe\tiff2is.exe
