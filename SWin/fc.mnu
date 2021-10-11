@@ -1,0 +1,14 @@
+D: Debug
+   icsdebug test.exe
+
+Z: Zip
+   make zip
+
+I: Check in
+   ci -u *.?
+
+F: Run fullscreen
+   start /c /fs test
+
+C: Compare (diff) with last RCS version
+   rcsdiff *.?

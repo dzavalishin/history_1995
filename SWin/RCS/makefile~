@@ -1,0 +1,284 @@
+head	1.7;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.7
+date	96.11.22.13.02.38;	author dz;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	96.11.18.15.47.54;	author dz;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	96.11.15.16.29.28;	author dz;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	96.09.20.14.40.18;	author dz;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	96.09.12.01.12.51;	author dz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	96.09.09.14.53.22;	author dz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	96.09.09.01.47.48;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.7
+log
+@Nonrectangular (partially transparent) windows
+@
+text
+@
+all: mkmf test.exe
+
+mkmf:
+  mkmf -s
+
+tree: tree.txt
+
+tree.txt: *.c *.h
+  ctb -otree.txt *.c
+
+LD_PROFILE=/B"/DE /NOE" cppopa3.obj
+OP_PROFILE=-Gh
+
+#OP_BROWSE=-Fb*
+#LD_BROWSE=/B"/BROWSE"
+
+OP_DEBUG=-Ti
+#OP_OPTIMIZE=-O -Oi100
+#vmt placement 
+#OP_VMT=-Wvft+
+
+OP_MTHREAD=-Gm
+
+CFLAGS= -Tdp -Q $(OP_PROFILE) $(OP_OPTIMIZE) $(OP_DEBUG) $(OP_BROWSE) $(OP_VMT) $(OP_MTHREAD)
+
+OBJS= controls.obj ctl_entry.obj ctl_list.obj device.obj device_os2.obj device_tty.obj event.obj focus.obj map.obj strng.obj sw_sema.obj sw_sysdep.obj tail.obj test.obj types.obj win.obj
+
+
+test.exe: $(OBJS)
+   icc /B"/nologo" -Fetest.exe $(OP_DEBUG) $(OBJS) $(LD_PROFILE) $(LD_BROWSE)
+
+clean:
+	-rm $(OBJS)
+        -mv *.?~ bak
+        -rm *.pdb
+
+zip:
+    zip -r SWin * -x *.obj -x *.exe
+
+
+
+###
+controls.obj: sw_controls.h sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_ctl_list.h sw_list_elem.h sw_device.h
+ctl_entry.obj: sw_ctl_entry.h sw_controls.h sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+ctl_list.obj: sw_ctl_list.h sw_controls.h sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_list_elem.h
+device.obj: sw_device.h sw_types.h sw_except.h strng.h sw_win.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+device_os2.obj: sw_device.h sw_types.h sw_except.h strng.h sw_win.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+device_tty.obj: sw_device.h sw_types.h sw_except.h strng.h sw_win.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+event.obj: sw_event_handler.h sw_focus.h sw_event.h sw_types.h sw_except.h strng.h
+focus.obj: sw_focus.h sw_event.h sw_types.h sw_except.h strng.h sw_win.h sw_map.h sw_event_handler.h
+map.obj: sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+strng.obj: strng.h sw_except.h strng.h
+sw_sema.obj: sw_sema.h sw_except.h strng.h
+sw_sysdep.obj: sw_sysdep.h
+tail.obj: sw_tail.h sw_ctl_list.h sw_controls.h sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_list_elem.h sw_sema.h sw_device.h
+test.obj: sw_device.h sw_types.h sw_except.h strng.h sw_win.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_controls.h sw_ctl_list.h sw_list_elem.h sw_ctl_entry.h sw_tail.h sw_sema.h
+types.obj: sw_types.h sw_except.h strng.h
+win.obj: sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_device.h
+@
+
+
+1.6
+log
+@Before changing event class
+@
+text
+@d50 2
+a51 2
+event.obj: sw_event_handler.h sw_focus.h sw_event.h
+focus.obj: sw_focus.h sw_event.h sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h
+@
+
+
+1.5
+log
+@mouse event generator written
+@
+text
+@@
+
+
+1.4
+log
+@update
+@
+text
+@d2 3
+a4 1
+all: test.exe
+d7 7
+d15 2
+a16 2
+#LD_PROFILE=/B"/DE /NOE" cppopa3.obj
+#OP_PROFILE=-Gh
+d19 7
+a25 3
+#OP_OPTIMIZE=-O
+CFLAGS= -Tdp -Q $(OP_PROFILE) $(OP_OPTIMIZE) $(OP_DEBUG)
+#vmt placement -Wvft+
+d27 1
+a27 1
+OBJS= controls.obj device.obj focus.obj map.obj strng.obj test.obj types.obj win.obj
+d31 1
+a31 1
+   icc -Fetest.exe $(OP_DEBUG) $(OBJS) $(LD_PROFILE)
+d36 1
+a36 1
+        -mv *.brs bak
+d38 2
+d44 9
+a52 4
+controls.obj: sw_controls.h sw_win.h vector.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+device.obj: sw_device.h sw_types.h sw_except.h strng.h sw_win.h vector.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+focus.obj: sw_focus.h sw_event.h
+map.obj: sw_win.h vector.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+d54 4
+a57 1
+test.obj: sw_device.h sw_types.h sw_except.h strng.h sw_win.h vector.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_controls.h
+d59 1
+a59 1
+win.obj: sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+@
+
+
+1.3
+log
+@works a little
+@
+text
+@d3 1
+a3 5
+
+clean:
+	-rm $(EXE_DEPENDENCIES) $(EXE)
+        -mv *.?~ bak
+        -mv *.brs bak
+d6 2
+d9 4
+d14 1
+a14 2
+CFLAGS=-Tdp -Q -Ti
+#vmt placement -Wvft+
+a15 1
+OBJS= device.obj win.obj strng.obj test.obj map.obj types.obj
+d18 1
+a18 1
+   icc -Fetest.exe -Ti $(OBJS)
+d20 4
+d28 9
+a36 29
+
+sw_device.h:   sw_types.h sw_win.h
+
+sw_except.h:   strng.h
+
+sw_types.h:    sw_except.h
+
+sw_win.h:      sw_types.h sw_map.h
+
+sw_map.h:      sw_types.h
+
+sw_pen.h:      sw_win.h
+
+sw_controls.h: sw_win.h
+
+
+device.obj:    device.c sw_device.h
+
+win.obj:       win.c sw_win.h
+
+map.obj:       map.c sw_win.h sw_map.h
+
+strng.obj:     strng.c strng.h sw_except.h
+
+test.obj:      test.c sw_device.h sw_controls.h
+
+types.obj:     types.c sw_types.h 
+
+controls.obj:  controls.c sw_controls.h
+@
+
+
+1.2
+log
+@update
+@
+text
+@d2 9
+d13 1
+d15 1
+a15 1
+OBJS= device.obj win.obj strng.obj test.obj
+a20 1
+sw_device.h: sw_types.h sw_win.h
+a21 1
+sw_except.h: strng.h
+a22 1
+sw_types.h:  sw_except.h
+a23 1
+sw_win.h:    sw_types.h
+d25 16
+a40 1
+device.obj: device.c sw_device.h
+d42 1
+a42 1
+win.obj:    win.c sw_win.h
+d44 1
+a44 1
+strng.obj:  strng.c strng.h sw_except.h
+d46 1
+a46 1
+test.obj:   test.c sw_device.h
+d48 1
+d50 1
+d52 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+a3 1
+CFLAGS=-Tdp
+d5 1
+a5 1
+device.obj: device.c
+d7 19
+@

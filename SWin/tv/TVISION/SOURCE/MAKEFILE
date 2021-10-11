@@ -1,0 +1,316 @@
+#
+#   Borland C++ - (C) Copyright 1991, 1992 by Borland International
+#   Makefile for building Turbo Vision library
+#
+
+!ifdef __OS2__
+_CFLAGS = -D__NOROW__		# see tscreen.cpp for the use of __NOROW__
+!else
+_CFLAGS = -Vs -B -DNDEBUG -D__NOROW__
+!endif
+
+_AFLAGS = /o
+
+!include $(IDA)allmake.mak
+
+!if $d(__MSDOS__) && !$d(__WATCOMC__)
+ASMOBJ=	$(F)EDITS$(O)    $(F)FRAMELIN$(O) $(F)SWAPST$(O)   $(F)TGRMV$(O)    \
+	$(F)TTPRVLNS$(O) $(F)TVCURSOR$(O) $(F)TVEXPOSD$(O)		    \
+	$(F)TVWRITE$(O)	 $(F)sysint$(O)
+!else
+ASMOBJ=	$(F)EDITS2$(O)   $(F)FRMLINE2$(O) $(F)SWAPST2$(O)  $(F)TGRMV2$(O)   \
+	$(F)TTPRVLN2$(O) $(F)TVCURSR2$(O) $(F)TVEXPSD2$(O) $(F)TVWRITE2$(O) \
+	$(F)OS2HANDL$(O)
+!endif
+
+OBJSR =	$(ASMOBJ)	 $(F)drivers$(O)  $(F)drivers2$(O) $(F)editstat$(O) \
+	$(F)grp$(O)	 $(F)mapcolor$(O) $(F)misc$(O)	   $(F)msgbox$(O)   \
+	$(F)new$(O)	 $(F)newstr$(O)	  $(F)nmbkgrnd$(O) $(F)nmbutton$(O) \
+	$(F)nmchdrdl$(O) $(F)nmchkbox$(O) $(F)nmclrsel$(O) $(F)nmclustr$(O) \
+	$(F)nmcollct$(O) $(F)nmdialog$(O) $(F)nmdirbox$(O) $(F)nmdircol$(O) \
+	$(F)nmdsktop$(O) $(F)nmeditor$(O) $(F)nmfilcol$(O) $(F)nmfildlg$(O) \
+	$(F)nmfillst$(O) $(F)nmframe$(O)  $(F)nmgroup$(O)  $(F)nmhist$(O)   \
+	$(F)nminptln$(O) $(F)nmlabel$(O)  $(F)nmlstbox$(O) $(F)nmlstvwr$(O) \
+	$(F)nmmnubar$(O) $(F)nmmnubox$(O) $(F)nmmnuvw$(O)  $(F)nmprmtxt$(O) \
+	$(F)nmrbtns$(O)	 $(F)nmrescol$(O) $(F)nmscoll$(O)  $(F)nmscrbar$(O) \
+	$(F)nmscroll$(O) $(F)nmstctxt$(O) $(F)nmstddlg$(O) $(F)nmstline$(O) \
+	$(F)nmstrcol$(O) $(F)nmstrlst$(O) $(F)nmview$(O)   $(F)nmwindow$(O) \
+	$(F)sbkgrnd$(O)	 $(F)sbutton$(O)  $(F)schdrdlg$(O) $(F)scheckbo$(O) \
+	$(F)sclrsel$(O)	 $(F)scluster$(O) $(F)sdesktop$(O) $(F)sdialog$(O)  \
+	$(F)sdircoll$(O) $(F)sdirlist$(O) $(F)seditors$(O) $(F)sfilcoll$(O) \
+	$(F)sfildlg$(O)	 $(F)sfilelst$(O) $(F)sfinfpne$(O) $(F)sfinputl$(O) \
+	$(F)sframe$(O)	 $(F)sgroup$(O)	  $(F)shistory$(O) $(F)sinputli$(O) \
+	$(F)slabel$(O)	 $(F)slistbox$(O) $(F)slstview$(O) $(F)smenubar$(O) \
+	$(F)smenubox$(O) $(F)smnuview$(O) $(F)sparamte$(O) $(F)sradiobu$(O) \
+	$(F)srescoll$(O) $(F)sscrlbar$(O) $(F)sscrolle$(O) $(F)sstatict$(O) \
+	$(F)sstatusl$(O) $(F)sstrcoll$(O) $(F)sstrlst$(O)  $(F)strmstat$(O) \
+	$(F)sview$(O)	 $(F)swindow$(O)  $(F)syserr$(O)   $(F)tcheckbo$(O) \
+	$(F)tcmdset$(O)	 $(F)tevent$(O)	  $(F)tgroup$(O)   $(F)tindictr$(O) \
+	$(F)tmouse$(O)	 $(F)tobject$(O)  $(F)tparamte$(O) $(F)tpoint$(O)   \
+	$(F)tview$(O)	 $(F)tvtext1$(O)  $(F)tvtext2$(O)  $(F)tscreen$(O)
+
+OBJSO =	$(F)colorsel$(O) $(F)help$(O)	  $(F)helpbase$(O) $(F)histlist$(O) \
+	$(F)menu$(O)	 $(F)tlabel$(O)	  $(F)tlistbox$(O) $(F)tlstview$(O) \
+	$(F)tmemo$(O)	 $(F)tmenubar$(O) $(F)tmenubox$(O) $(F)tmnuview$(O) \
+	$(F)tradiobu$(O) $(F)trescoll$(O) $(F)tresfile$(O) $(F)tscrlbar$(O) \
+	$(F)tscrolle$(O) $(F)tsortcol$(O) $(F)tstatict$(O) $(F)tstatusl$(O) \
+	$(F)tstrcoll$(O) $(F)tstrlist$(O) $(F)tbkgrnd$(O)  $(F)tbutton$(O)  \
+	$(F)tchdrdlg$(O) $(F)tcluster$(O) $(F)tcollect$(O) $(F)tdesktop$(O) \
+	$(F)tdialog$(O)	 $(F)tdircoll$(O) $(F)tdirlist$(O) $(F)teditor1$(O) \
+	$(F)teditor2$(O) $(F)teditwnd$(O) $(F)tfildlg$(O)  $(F)tfilecol$(O) \
+	$(F)tfiledtr$(O) $(F)tfillist$(O) $(F)tframe$(O)   $(F)twindow$(O)  \
+	$(F)thistory$(O) $(F)thistwin$(O) $(F)thstview$(O) $(F)stddlg$(O)   \
+	$(F)textview$(O) $(F)tinputli$(O) $(F)tapplica$(O) $(F)tobjstrm$(O) \
+	$(F)tprogram$(O) $(F)palette$(O)
+
+OBJS = $(OBJSR) $(OBJSO)
+LIBFLAGS=tv$(T) tvasm$(T)
+
+all: $(LIBFLAGS)
+
+!ifdef __DLL__
+hello:	makefile
+!else	# __DLL__
+hello:	.\hello.exe
+.\hello.exe: $(LIBFLAGS) $(F)hello$(O)
+!ifdef __WATCOMC__
+!ifdef __DOS32__
+	wcl386 -l=dos4g /"option stack=8192" $(_CFLAGS) $(_LDFLAGS) /d1 /fm=hello.map $(OUTSW)$@ $(F)hello$(O) $(TL)tv$(A) $(TL)tvasm$(A)
+# version for debugger:
+#	ld -c -l=dos4g $(_CFLAGS) $(_LDFLAGS) $(OUTSW)$@ @&&!
+#option  caseexact, verbose
+#option	stack=8192
+#debug	lines
+#file	$(F)hello$(O) $(OBJS)
+#!
+!else
+	wcl386 $(_CFLAGS) $(_LDFLAGS) /d1 /fm=hello.map $(OUTSW)$@ $(F)hello$(O) $(TL)tv$(A) $(TL)tvasm$(A)
+# version for debugger:
+#	ld -c $(_CFLAGS) $(_LDFLAGS) $(OUTSW)$@ @&&!
+#option  caseexact, verbose
+#option	stack=8192
+#debug	lines
+#file	$(F)hello$(O) $(OBJS)
+#!
+!endif
+!else
+	$(CC) $(CFLAGS) $(_LDFLAGS) $(OUTSW)$@ $(F)hello$(O) @&&!
+$(OVROFF) $(OBJSR)
+$(OVRON) $(OBJSO)
+!
+!endif
+!endif # __DLL__
+
+$(F)hello$(O):	hello.cpp
+$(F)t$(O):	t.cpp
+
+tv$(T):	$(OBJSO)
+	$(AR) $(TL)tv$(A) @&&!
+$(OBJSO)
+!
+
+tvasm$(T):  $(OBJSR)
+	$(AR) $(TL)tvasm$(A) @&&!
+$(OBJSR)
+!
+
+#---------------------------------------------------
+!ifndef __WATCOMC__
+!ifdef __OS2__
+*.asm : tvwrit32.inc
+
+tvwrit32.inc: geninc$(B)
+     geninc$(B) > tvwrit32.inc
+
+geninc$(B): $(F)geninc$(O)
+     $(CCL) $(OUTSW)$@ $?
+
+!else
+*.asm : tvwrite.inc
+
+tvwrite.inc: geninc$(B)
+     geninc$(B) > tvwrite.inc
+
+geninc$(B): $(F)geninc$(O)
+     $(CCL) $(OUTSW)$@ $?
+!endif
+!endif
+
+#-----------------------------------------------------------------------
+$(F)tvtext1$(O): tvtext1.cpp	
+!if $d(__MSDOS__) && !$d(__WATCOMC__)
+	$(CC) -c $(CFLAGS) -B- tvtext1.cpp
+!endif
+
+
+$(F)EDITS2$(O):		EDITS2.cpp
+$(F)FRMLINE2$(O):	FRMLINE2.cpp
+$(F)SWAPST2$(O):	SWAPST2.cpp
+$(F)TGRMV2$(O):		TGRMV2.cpp
+$(F)TTPRVLN2$(O):	TTPRVLN2.cpp
+$(F)TVCURSR2$(O):	TVCURSR2.cpp
+$(F)TVEXPSD2$(O):	TVEXPSD2.cpp
+$(F)TVWRITE2$(O):	TVWRITE2.cpp
+$(F)OS2HANDL$(O):	OS2HANDL.cpp
+
+$(F)EDITS$(O):		EDITS.asm
+$(F)FRAMELIN$(O):	FRAMELIN.asm
+$(F)SWAPST$(O):		SWAPST.asm
+$(F)TGRMV$(O):		TGRMV.asm
+$(F)TTPRVLNS$(O):	TTPRVLNS.asm
+$(F)TTPRVLNW$(O):	TTPRVLNW.asm
+$(F)TVCURSOR$(O):	TVCURSOR.asm
+$(F)TVEXPOSD$(O):	TVEXPOSD.asm
+$(F)TVWRITE$(O):	TVWRITE.asm
+$(F)sysint$(O):		sysint.asm
+
+$(F)drivers$(O):	drivers.cpp	
+$(F)drivers2$(O):	drivers2.cpp
+$(F)editstat$(O):	editstat.cpp
+$(F)grp$(O):		grp.cpp	
+$(F)mapcolor$(O):	mapcolor.cpp
+$(F)misc$(O):		misc.cpp	
+$(F)msgbox$(O):		msgbox.cpp	
+$(F)new$(O):		new.cpp	
+$(F)newstr$(O):		newstr.cpp	
+$(F)nmbkgrnd$(O):	nmbkgrnd.cpp
+$(F)nmbutton$(O):	nmbutton.cpp
+$(F)nmchdrdl$(O):	nmchdrdl.cpp
+$(F)nmchkbox$(O):	nmchkbox.cpp
+$(F)nmclrsel$(O):	nmclrsel.cpp
+$(F)nmclustr$(O):	nmclustr.cpp
+$(F)nmcollct$(O):	nmcollct.cpp
+$(F)nmdialog$(O):	nmdialog.cpp
+$(F)nmdirbox$(O):	nmdirbox.cpp
+$(F)nmdircol$(O):	nmdircol.cpp
+$(F)nmdsktop$(O):	nmdsktop.cpp
+$(F)nmeditor$(O):	nmeditor.cpp
+$(F)nmfilcol$(O):	nmfilcol.cpp
+$(F)nmfildlg$(O):	nmfildlg.cpp
+$(F)nmfillst$(O):	nmfillst.cpp
+$(F)nmframe$(O):	nmframe.cpp	
+$(F)nmgroup$(O):	nmgroup.cpp	
+$(F)nmhist$(O):		nmhist.cpp	
+$(F)nminptln$(O):	nminptln.cpp
+$(F)nmlabel$(O):	nmlabel.cpp	
+$(F)nmlstbox$(O):	nmlstbox.cpp
+$(F)nmlstvwr$(O):	nmlstvwr.cpp
+$(F)nmmnubar$(O):	nmmnubar.cpp
+$(F)nmmnubox$(O):	nmmnubox.cpp
+$(F)nmmnuvw$(O):	nmmnuvw.cpp	
+$(F)nmprmtxt$(O):	nmprmtxt.cpp
+$(F)nmrbtns$(O):	nmrbtns.cpp	
+$(F)nmrescol$(O):	nmrescol.cpp
+$(F)nmscoll$(O):	nmscoll.cpp	
+$(F)nmscrbar$(O):	nmscrbar.cpp
+$(F)nmscroll$(O):	nmscroll.cpp
+$(F)nmstctxt$(O):	nmstctxt.cpp
+$(F)nmstddlg$(O):	nmstddlg.cpp
+$(F)nmstline$(O):	nmstline.cpp
+$(F)nmstrcol$(O):	nmstrcol.cpp
+$(F)nmstrlst$(O):	nmstrlst.cpp
+$(F)nmview$(O):		nmview.cpp	
+$(F)nmwindow$(O):	nmwindow.cpp
+$(F)sbkgrnd$(O):	sbkgrnd.cpp	
+$(F)sbutton$(O):	sbutton.cpp	
+$(F)schdrdlg$(O):	schdrdlg.cpp
+$(F)scheckbo$(O):	scheckbo.cpp
+$(F)sclrsel$(O):	sclrsel.cpp	
+$(F)scluster$(O):	scluster.cpp
+$(F)sdesktop$(O):	sdesktop.cpp
+$(F)sdialog$(O):	sdialog.cpp	
+$(F)sdircoll$(O):	sdircoll.cpp
+$(F)sdirlist$(O):	sdirlist.cpp
+$(F)seditors$(O):	seditors.cpp
+$(F)sfilcoll$(O):	sfilcoll.cpp
+$(F)sfildlg$(O):	sfildlg.cpp	
+$(F)sfilelst$(O):	sfilelst.cpp
+$(F)sfinfpne$(O):	sfinfpne.cpp
+$(F)sfinputl$(O):	sfinputl.cpp
+$(F)sframe$(O):		sframe.cpp	
+$(F)sgroup$(O):		sgroup.cpp	
+$(F)shistory$(O):	shistory.cpp
+$(F)sinputli$(O):	sinputli.cpp
+$(F)slabel$(O):		slabel.cpp	
+$(F)slistbox$(O):	slistbox.cpp
+$(F)slstview$(O):	slstview.cpp
+$(F)smenubar$(O):	smenubar.cpp
+$(F)smenubox$(O):	smenubox.cpp
+$(F)smnuview$(O):	smnuview.cpp
+$(F)sparamte$(O):	sparamte.cpp
+$(F)sradiobu$(O):	sradiobu.cpp
+$(F)srescoll$(O):	srescoll.cpp
+$(F)sscrlbar$(O):	sscrlbar.cpp
+$(F)sscrolle$(O):	sscrolle.cpp
+$(F)sstatict$(O):	sstatict.cpp
+$(F)sstatusl$(O):	sstatusl.cpp
+$(F)sstrcoll$(O):	sstrcoll.cpp
+$(F)sstrlst$(O):	sstrlst.cpp	
+$(F)strmstat$(O):	strmstat.cpp
+$(F)sview$(O):		sview.cpp	
+$(F)swindow$(O):	swindow.cpp	
+$(F)syserr$(O):		syserr.cpp	
+$(F)tcheckbo$(O):	tcheckbo.cpp
+$(F)tcmdset$(O):	tcmdset.cpp	
+$(F)tevent$(O):		tevent.cpp	
+$(F)tgroup$(O):		tgroup.cpp	
+$(F)tindictr$(O):	tindictr.cpp
+$(F)tmouse$(O):		tmouse.cpp	
+$(F)tobject$(O):	tobject.cpp	
+$(F)tparamte$(O):	tparamte.cpp
+$(F)tpoint$(O):		tpoint.cpp	
+$(F)tview$(O):		tview.cpp	
+$(F)tvtext2$(O):	tvtext2.cpp	
+$(F)tscreen$(O):	tscreen.cpp	
+
+$(F)colorsel$(O):	colorsel.cpp
+$(F)help$(O):		help.cpp	
+$(F)helpbase$(O):	helpbase.cpp
+$(F)histlist$(O):	histlist.cpp
+$(F)menu$(O):		menu.cpp	
+$(F)tlabel$(O):		tlabel.cpp	
+$(F)tlistbox$(O):	tlistbox.cpp
+$(F)tlstview$(O):	tlstview.cpp
+$(F)tmemo$(O):		tmemo.cpp	
+$(F)tmenubar$(O):	tmenubar.cpp
+$(F)tmenubox$(O):	tmenubox.cpp
+$(F)tmnuview$(O):	tmnuview.cpp
+$(F)tradiobu$(O):	tradiobu.cpp
+$(F)trescoll$(O):	trescoll.cpp
+$(F)tresfile$(O):	tresfile.cpp
+$(F)tscrlbar$(O):	tscrlbar.cpp
+$(F)tscrolle$(O):	tscrolle.cpp
+$(F)tsortcol$(O):	tsortcol.cpp
+$(F)tstatict$(O):	tstatict.cpp
+$(F)tstatusl$(O):	tstatusl.cpp
+$(F)tstrcoll$(O):	tstrcoll.cpp
+$(F)tstrlist$(O):	tstrlist.cpp
+$(F)tbkgrnd$(O):	tbkgrnd.cpp	
+$(F)tbutton$(O):	tbutton.cpp	
+$(F)tchdrdlg$(O):	tchdrdlg.cpp
+$(F)tcluster$(O):	tcluster.cpp
+$(F)tcollect$(O):	tcollect.cpp
+$(F)tdesktop$(O):	tdesktop.cpp
+$(F)tdialog$(O):	tdialog.cpp	
+$(F)tdircoll$(O):	tdircoll.cpp
+$(F)tdirlist$(O):	tdirlist.cpp
+$(F)teditor1$(O):	teditor1.cpp
+$(F)teditor2$(O):	teditor2.cpp
+$(F)teditwnd$(O):	teditwnd.cpp
+$(F)tfildlg$(O):	tfildlg.cpp	
+$(F)tfilecol$(O):	tfilecol.cpp
+$(F)tfiledtr$(O):	tfiledtr.cpp
+$(F)tfillist$(O):	tfillist.cpp
+$(F)tframe$(O):		tframe.cpp	
+$(F)twindow$(O):	twindow.cpp	
+$(F)thistory$(O):	thistory.cpp
+$(F)thistwin$(O):	thistwin.cpp
+$(F)thstview$(O):	thstview.cpp
+$(F)stddlg$(O):		stddlg.cpp	
+$(F)textview$(O):	textview.cpp
+$(F)tinputli$(O):	tinputli.cpp
+$(F)tapplica$(O):	tapplica.cpp
+$(F)tobjstrm$(O):	tobjstrm.cpp
+$(F)tprogram$(O):	tprogram.cpp
+$(F)palette$(O):	palette.cpp
+$(F)geninc$(O):		geninc.cpp

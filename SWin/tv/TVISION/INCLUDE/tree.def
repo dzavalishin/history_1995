@@ -1,0 +1,139 @@
+
+Class hierarchy
+ THWMouse
+  ÀÄTMouse
+ TSystemInit
+  ÀÄTProgram(TProgInit)
+    ÀÄTApplication
+ TStreamable
+  ÀÄTView(TObject)
+    ÃÄTButton
+    ÃÄTCluster
+    ³ ÃÄTCheckBoxes
+    ³ ÀÄTRadioButtons
+    ÃÄTColorDisplay
+    ÃÄTColorSelector
+    ÃÄTEditor
+    ³ ÃÄTFileEditor
+    ³ ÀÄTMemo
+    ÃÄTFileInfoPane
+    ÃÄTFrame
+    ÃÄTGroup
+    ³ ÀÄTWindow(TWindowInit)
+    ³   ÃÄTEditWindow
+    ³   ÃÄTHelpWindow
+    ³   ÀÄTHistoryWindow(THistInit)
+    ÃÄTHistory
+    ÃÄTIndicator
+    ÃÄTInputLine
+    ³ ÀÄTFileInputLine
+    ÃÄTListViewer
+    ÃÄTMenuView
+    ³ ÃÄTMenuBar
+    ³ ÀÄTMenuBox
+    ÃÄTScrollBar
+    ÃÄTScroller
+    ³ ÀÄTHelpViewer
+    ÃÄTStaticText
+    ³ ÃÄTLabel
+    ³ ÀÄTParamText
+    ÀÄTStatusLine
+ TProgInit
+  ÀÄTProgram(TSystemInit)
+    ÀÄTApplication
+ TDeskInit
+  ÀÄTDeskTop
+ TMenuItem
+  ÀÄTSubMenu
+ TListBox
+  ÃÄTDirListBox
+  ÀÄTSortedListBox
+    ÀÄTFileList
+ TDialog
+  ÃÄTChDirDialog
+  ÀÄTFileDialog
+ ios
+  ÃÄfstreambase
+  ³ ÃÄfstream(iostream)
+  ³ ÃÄifstream(istream)
+  ³ ÀÄofstream(ostream)
+  ÃÄistream
+  ³ ÃÄifstream(fstreambase)
+  ³ ÃÄiostream(ostream)
+  ³ ³ ÃÄfstream(fstreambase)
+  ³ ³ ÀÄiostream_withassign
+  ³ ÀÄistream_withassign
+  ÀÄostream
+    ÃÄiostream(istream)
+    ³ ÃÄfstream(fstreambase)
+    ³ ÀÄiostream_withassign
+    ÃÄofstream(fstreambase)
+    ÃÄostream_withassign
+    ÀÄotstream
+ TObject
+  ÃÄTNSCollection
+  ³ ÀÄTNSSortedCollection
+  ÀÄTView(TStreamable)
+    ÃÄTButton
+    ÃÄTCluster
+    ³ ÃÄTCheckBoxes
+    ³ ÀÄTRadioButtons
+    ÃÄTColorDisplay
+    ÃÄTColorSelector
+    ÃÄTEditor
+    ³ ÃÄTFileEditor
+    ³ ÀÄTMemo
+    ÃÄTFileInfoPane
+    ÃÄTFrame
+    ÃÄTGroup
+    ³ ÀÄTWindow(TWindowInit)
+    ³   ÃÄTEditWindow
+    ³   ÃÄTHelpWindow
+    ³   ÀÄTHistoryWindow(THistInit)
+    ÃÄTHistory
+    ÃÄTIndicator
+    ÃÄTInputLine
+    ³ ÀÄTFileInputLine
+    ÃÄTListViewer
+    ÃÄTMenuView
+    ³ ÃÄTMenuBar
+    ³ ÀÄTMenuBox
+    ÃÄTScrollBar
+    ÃÄTScroller
+    ³ ÀÄTHelpViewer
+    ÃÄTStaticText
+    ³ ÃÄTLabel
+    ³ ÀÄTParamText
+    ÀÄTStatusLine
+ streambuf
+  ÃÄTTextDevice
+  ³ ÀÄTTerminal
+  ÀÄfilebuf
+ TCollection
+  ÃÄTDirCollection
+  ÀÄTSortedCollection
+    ÃÄTFileCollection
+    ÀÄTStringCollection
+      ÀÄTResourceCollection
+ pstream
+  ÃÄfpbase
+  ³ ÃÄfpstream(iopstream)
+  ³ ÃÄifpstream(ipstream)
+  ³ ÀÄofpstream(opstream)
+  ÃÄipstream
+  ³ ÃÄifpstream(fpbase)
+  ³ ÀÄiopstream(opstream)
+  ³   ÀÄfpstream(fpbase)
+  ÀÄopstream
+    ÃÄiopstream(ipstream)
+    ³ ÀÄfpstream(fpbase)
+    ÀÄofpstream(fpbase)
+ TDisplay
+  ÀÄTScreen
+ THistInit
+  ÀÄTHistoryWindow(TWindow)
+ TWindowInit
+  ÀÄTWindow(TGroup)
+    ÃÄTEditWindow
+    ÃÄTHelpWindow
+    ÀÄTHistoryWindow(THistInit)

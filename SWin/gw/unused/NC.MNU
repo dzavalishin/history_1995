@@ -1,0 +1,58 @@
+M:	Make library
+	make lib
+
+E:	Copy libs & headers to E:
+	ctc
+
+B:	Delete BAK
+	del *.bak
+	del temp
+	del temp.c
+	del obj\*.obj
+
+T:	Run test
+	make test
+	test
+
+
+G:	Games
+	cd \games
+
+P:	Put *.C *.H to VCS
+	put *.c *.h
+
+
+-----------------------
+
+1:	Save ZIP to A:
+	del obj\*.obj
+	mv *.obj obj
+	pkzip -a a:gwsrc *.*
+	mv obj\*.obj .
+
+2:	Save VCS to A:
+	pkzip -a a:gwvcs vcs\*.*
+
+3:	Create Distributive on A:
+	cp gw.lib gw.doc gw.h font.h menu.h mouse.h sfile.h a:
+
+4:	Create Distributive on B:
+	cp gw.lib gw.doc gw.h font.h menu.h mouse.h sfile.h b:
+
+-----------------------
+
+D:	Make Doc
+	mkdoc -p -ogw.doc *.c *.h
+
+
+-----------------------
+
+F1:	Main menu
+	c:
+	cd \
+
+F2:	Jconvert
+	cd \j\jconvert
+
+F5:	Copy to tc\lib
+	copy gw.lib d:\comp\tc\lib

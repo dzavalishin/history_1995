@@ -1,0 +1,53 @@
+head	1.3;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.3
+date	96.11.18.15.47.54;	author dz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	96.11.15.16.29.28;	author dz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	96.11.15.13.12.49;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@Before changing event class
+@
+text
+@Если дохнет окно, его нужно вычищать из стека фокусов! :)
+
+mouse autorepeat
+@
+
+
+1.2
+log
+@mouse event generator written
+@
+text
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 1
+@

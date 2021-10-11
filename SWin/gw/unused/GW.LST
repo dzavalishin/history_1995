@@ -1,0 +1,188 @@
+Publics by module
+
+8X14T   	size = 3606
+	__8x14t_font                      __8x14t_font_layout
+
+8X16T   	size = 4118
+	__8x16t_font                      __8x16t_font_layout
+
+8X8     	size = 2070
+	__8x8_font                        __8x8_font_layout
+
+ASKFNAME	size = 525
+	_infname                          _newfname
+	_outfname                       
+
+BAR     	size = 514
+	_BAR_BACK                         _BAR_BORD
+	_BAR_TEXT                         _msgbar_style
+	_pop_bar                          _push_bar
+
+BDFONT  	size = 151
+	_sf_load_font_bd                  _sf_save_font_bd
+
+BETAFONT	size = 391
+	_load_beta_font                 
+
+CHGEN   	size = 1194
+	_linegen                          _putbitline
+	_putsymbol                      
+
+CREATFNT	size = 335
+	_creat_font                     
+
+DIR     	size = 3259
+	_DIR_BACK                         _DIR_BARB
+	_DIR_BARS                         _DIR_BART
+	_DIR_BORD                         _DIR_BOX
+	_DIR_SHAD                         _DIR_TEXT
+	_dir_bar                          _dir_style
+	_dirmenu                          _disp_dir
+	_sfdirmenu                      
+
+EDITS   	size = 1852
+	_EDS_BACK                         _EDS_BORD
+	_EDS_CURS                         _EDS_HEAD
+	_EDS_TEXT                         _gwedits
+	_strins                         
+
+EGA     	size = 1039
+	_EGA_RESET_WRITE_MODE             _EGA_WRITE_COLOR
+	_EGA_WRITE_OP                     __EGA_alloc
+	__EGA_free                        __EGA_get
+	__EGA_put                         __EGA_xchg
+
+EGASYS  	size = 244
+	_Ega_Sys_attached                 _es_attach
+	_es_get_port                      _es_put_port
+
+EGAVGAF 	size = 5363
+	_EGAVGA_driver_far              
+
+ERRMSG  	size = 1349
+	_confirm                          _confirm_style
+	_errmsg                           _errmsg_style
+	_ioerr_msg                        _outofmem_msg
+	_press_any_key                    _warnmsg
+
+FONT    	size = 248
+	_load_font                        _save_font
+
+FONTRD  	size = 593
+	_g_load_font                    
+
+FONTWR  	size = 330
+	_g_save_font                    
+
+GWPRINT 	size = 1319
+	_gp_def_style                     _gp_hskip
+	_gp_printf                        _gp_puts
+	_gp_sprintf                       _gp_sputs
+
+HELP    	size = 1000
+	_help                           
+
+INIT    	size = 1044
+	_Gdriver                          _Gmode
+	_Gresult                          _Xbase
+	_Xend                             _Ybase
+	_Yend                             ___GW_ext_keyboard
+	_full_screen_window               _gw_inited
+	_gwfatal                          _gwinit
+	_gwreset                          _gwresult
+	_planebuf                       
+
+MCURS   	size = 414
+	_init_mouse_cursor                _mouse_off
+	_mouse_on                         _reset_mouse_cursor
+	_set_mouse_cursor               
+
+MENU    	size = 3965
+	_exit_menu                        _menu_F10_exit
+	_sel_menu                         _std_menu_help
+
+MOUSE   	size = 1028
+	_Mouse_attached                   _Nbuttons
+	_mcheckin                         _mdelta
+	_mdisplay                         _mgetpos
+	_mpress                           _mrelease
+	_mreset                           _msetfunc
+	_msetpos                          _mtextcursor
+	_mxregion                         _myregion
+	_reset_latches                  
+
+MOUSEIMG	size = 2486
+	__mouseimg_font                   __mouseimg_font_layout
+
+SAVEPAL 	size = 235
+	_rest_palette                     _save_palette
+
+SELCOLOR	size = 1225
+	_sel_color                      
+
+SFFONT  	size = 220
+	_sf_load_font                     _sf_save_font
+
+SFILE   	size = 10932
+	_Bnam                             _Dscr
+	_Fblk                             _Sb_r
+	_Sblk                             _Sf_sign
+	_Sfd                              _Sfopen
+	_allocbsf                         _del_name_dir
+	_freebsf                          _mksf
+	_rd_sblk                          _read_name_dir
+	_reallocbsf                       _sfalloc
+	_sfclose                          _sfdel_name_dir
+	_sfflush                          _sffree
+	_sfload                           _sfmkdir
+	_sfopen                           _sfread
+	_sfread_name_dir                  _sfrealloc
+	_sfreallocdir                     _sfret_sizeblk
+	_sfsetspace                       _sfwrite
+	_sfwrite_name_dir                 _wr_sblk
+	_write_name_dir                 
+
+SPLIT   	size = 18
+	_gwsplit                        
+
+SRCHFILE	size = 693
+	_ex_name                          _search_file
+	_search_fopen                     _search_open
+
+STACK   	size = 1144
+	_gwattach                         _gwdetach
+	_gwdigin                          _gwdigout
+	_gwpermdetach                   
+
+TOOLS   	size = 1833
+	_def_style                        _gwborder
+	_gwborder3d                       _gwclear
+	_gwprintf                         _gwscenter
+	_gwsgotoxy                        _gwshadow
+	_gwsheight                        _gwsnl
+	_gwsprintf                        _gwsputs
+	_gwswidth                         _gwtextattr
+	_gwtextback                       _gwtextcolor
+	_gwtextfill                     
+
+VPAGE   	size = 138
+	__GW_apage                        __GW_apb
+	__GW_vpage                        __GW_vpb
+	_gwapage                          _gwvpage
+
+WMANAGE 	size = 579
+	_gw_set_win_pars                  _gw_swap_images
+	_gwcreate                         _gwdestroy
+	_gwnobuf                          _gwregister
+
+WONOFF  	size = 180
+	_gwoff                            _gwon
+	_gwpermoff                      
+
+XORLINE 	size = 339
+	_xorline                        
+
+ZONE    	size = 2030
+	_mouse_action                     _select_zone
+	_x_max                            _x_min
+	_y_max                            _y_min

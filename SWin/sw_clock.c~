@@ -1,0 +1,118 @@
+/************************ SWin ***************************\
+ *
+ *	Copyright (C) 1996 by Dmitry Zavalishin
+ *
+ *	Module 	: clock class impl.
+ *
+ *      $Log: sw_clock.c $
+ *      Revision 1.2  1996/11/22 18:18:01  dz
+ *      ticks
+ *
+ *      Revision 1.1  1996/11/22 17:37:34  dz
+ *      Initial revision
+ *
+ *
+ *
+ *
+\*/
+
+
+
+#include "sw_clock.h"
+#include "sw_device.h"
+
+
+static char image[] =
+    "    ± ± ± ± ± ± ± ± ±     "
+    "  ±     ù   ù   ù     ±   "
+    "±   ù               ù   ± "
+    "±         J u v         ± "
+    "± ù     4 2 : 7 3     ù ± "
+    "±       7 2 , 0 6       ± "
+    "±   ù               ù   ± "
+    "  ±     ù   ù   ù     ±   "
+    "    ± ± ± ± ± ± ± ± ±     "
+    ;
+
+
+static const sw_point tick[12] =
+    {
+    sw_point(6,1),  sw_point(8,1),
+    sw_point(10,2), sw_point(11,4), sw_point(10,6),
+    sw_point(8,7),  sw_point(6,7),  sw_point(4,7),
+    sw_point(2,6),  sw_point(1,4),  sw_point(2,2),
+    sw_point(4,1)
+    };
+
+void sw_clock::put_tick(int second_number)
+    {
+    int new_tick = second_number / 5;
+    int odd_second = second_number % 2;
+
+    sw_color tick_col = odd_second ? ticks_on_col : ticks_off_col;
+
+    if( new_tick != old_tick )
+        put( tick[old_tick], /* ticks_off_col */ border_col, 'ù' );
+    put( tick[new_tick], tick_col, 'ù' );
+    old_tick = new_tick;
+    }
+
+
+void sw_clock::refresh(const sw_rect &_sq)
+    {
+    sw_rect sq;
+    if( !sq.intersection( _sq, sw_rect(0,0,xs(),ys()) )) return;
+    sw_round_win::refresh(sq);
+    fill( display_col, ' ', sq );
+
+    put( sw_rect(0,0,xs(),ys()), image );
+
+    //static sec = 0;
+    //put_tick( sec++ );
+    //if( sec >= 60 ) sec = 0;
+    }
+
+void sw_clock::run()
+    {
+    static sec = 0;
+    while(1)
+        {
+        put_tick( sec++ );
+        if( sec >= 60 ) sec = 0;
+        device.flush();
+        sleep(500);
+        }
+    }
+
+
+sw_clock::sw_clock(
+                   sw_abstract_win &parent, sw_point pos,
+                   sw_color _border_col,
+                   sw_color _display_col,
+                   sw_color _ticks_off_col,
+                   sw_color _ticks_on_col
+                  )
+    : sw_round_win( parent, sw_rect(pos,sw_size(13,9)) ),
+    border_col(_border_col), display_col(_display_col), ticks_off_col(_ticks_off_col), ticks_on_col(_ticks_on_col)
+    {
+    old_tick = 0;
+    
+    for( int i = 0; ++i < sizeof(image); )
+        {
+        image[i] = border_col.value();
+        i++;
+        }
+
+    for( int sec = 0; sec < 60; sec += 5 )
+        put_tick( sec );
+
+    refresh(sw_rect(sw_point(0,0),*this));
+
+    sw_thread::begin();
+    }
+
+sw_clock::~sw_clock()
+    {
+    }
+
+

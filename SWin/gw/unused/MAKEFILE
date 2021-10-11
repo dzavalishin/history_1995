@@ -1,0 +1,195 @@
+#
+#			Graphics Windows makefile
+#
+#	   Copyright (C) 1989, 1990 by Infinity Software Systems
+#
+#			$Revision:   1.0  $
+#
+#	$Log:   C:/c/gw/vcs/makefile.__v  $
+#       
+#          Rev 1.0   29 Apr 1990 16:18:40   dz
+#       Initial revision.
+#
+#
+#
+
+
+#
+#	NB!
+#
+#	This must be compiled with turned OFF 'check stack overflow'
+#	( tcc -N- ) because of mouse interface requirements !!
+#
+
+
+
+
+#
+#	Change to '1' if you need far version
+#	( Don't forget to change link.mac )
+#
+
+FAR_BGI_DRIVER	= 1
+
+
+!if $(FAR_BGI_DRIVER)
+BGI_DRIVER_OBJ	=	egavgaf.obj
+!else
+BGI_DRIVER_OBJ	=	egavga.obj
+!endif
+
+
+
+
+goal	:	lib
+
+
+.c.obj		:
+	tcc -c -N- $<
+
+egavga.obj	:	egavga.bgi
+	bgiobj    egavga
+
+egavgaf.obj	:	egavga.bgi
+	bgiobj /f egavga
+
+help.obj	:	help.c sfile.h mouse.h gw.h 
+
+sfile.obj	:	sfile.c sfile.h
+
+mouse.obj	:	mouse.c mouse.h
+
+
+8x16t.obj	:	8x16t.c font.h
+
+8x14t.obj	:	8x14t.c	font.h
+
+8x8.obj		:	8x8.c font.h
+
+gwprint.obj	:	gwprint.c font.h
+
+mouseimg.obj	:	mouseimg.c font.h
+
+#
+#	NB!
+#
+#	Mcurs.c must be compiled with no stack overflow check !!!
+#
+
+mcurs.obj	:	mcurs.c mouse.h
+	tcc -c -N- mcurs.c
+
+###	Fonts & character generation support	###
+
+font.obj	:	font.c font.h ega.h
+
+sffont.obj	:	sffont.c font.h sfile.h
+
+bdfont.obj	:	bdfont.c font.h sfile.h
+
+betafont.obj	:	betafont.c font.h
+
+creatfnt.obj	:	creatfnt.c font.h
+
+chgen.obj	:	chgen.c font.h ega.h
+
+fontrd.obj	:	fontrd.c font.h
+
+fontwr.obj	:	fontwr.c font.h
+
+
+
+ega.obj		:	ega.c ega.h
+
+!if $(FAR_BGI_DRIVER)
+init.obj	:	init.c gw.h local.h
+	tcc -c -DFAR_BGI init.c
+!else
+init.obj	:	init.c gw.h local.h
+	tcc -c -DNEAR_BGI init.c
+!endif
+
+
+wmanage.obj	:	wmanage.c gw.h local.h
+
+
+wonoff.obj	:	wonoff.c gw.h local.h
+
+
+stack.obj	:	stack.c gw.h local.h
+
+###	Text print, borders
+tools.obj	:	tools.c gw.h
+
+
+###	GUI	###
+
+errmsg.obj	:	errmsg.c gw.h
+
+
+edits.obj	:	edits.c gw.h
+
+
+bar.obj		:	bar.c gw.h
+
+
+menu.obj	:	menu.c menu.h gw.h mouse.h
+
+
+dir.obj		:	dir.c gw.h mouse.h sfile.h
+
+zone.obj	:	zone.c gw.h mouse.h
+
+selcolor.obj	:	selcolor.c gw.h mouse.h
+
+askfname.obj	:	askfname.c gw.h
+
+xorline.obj	:	xorline.c gw.h
+
+vpage.obj	:	vpage.c local.h gw.h mouse.h
+split.obj	:	split.c local.h gw.h
+
+egasys.obj	:	egasys.c ega.h
+savepal.obj	:	savepal.c ega.h
+
+srchfile.obj	:	srchfile.c futil.h
+
+
+lib		:	gw.lib
+
+gw.lib		:	$(BGI_DRIVER_OBJ) mouse.obj 8x16t.obj	\
+			8x8.obj 8x14t.obj mouseimg.obj mcurs.obj\
+			chgen.obj ega.obj			\
+			init.obj wmanage.obj wonoff.obj		\
+			stack.obj tools.obj errmsg.obj		\
+			edits.obj bar.obj menu.obj dir.obj	\
+			sfile.obj help.obj			\
+			font.obj sffont.obj bdfont.obj		\
+			fontrd.obj fontwr.obj			\
+			betafont.obj creatfnt.obj		\
+			selcolor.obj zone.obj askfname.obj	\
+			xorline.obj gwprint.obj			\
+			vpage.obj split.obj			\
+			egasys.obj savepal.obj			\
+			srchfile.obj
+	tlib @link.mac
+
+
+
+doc		:	gw.doc
+
+
+gw.doc		:	*.c *.h
+	mkdoc -p -ogw.doc *.c *.h
+
+
+
+test		:	test.exe
+
+test.exe	:	test.c gw.lib
+	tcc -etest.exe test.c gw.lib graphics.lib
+
+
+
+
+

@@ -1,0 +1,59 @@
+
+all: mkmf test.exe
+
+mkmf:
+  mkmf -s
+
+tree: tree.txt
+
+tree.txt: *.c *.h
+  ctb -otree.txt *.c
+
+LD_PROFILE=/B"/DE /NOE" cppopa3.obj
+OP_PROFILE=-Gh
+
+#OP_BROWSE=-Fb*
+#LD_BROWSE=/B"/BROWSE"
+
+OP_DEBUG=-Ti
+#OP_OPTIMIZE=-O -Oi100
+#vmt placement 
+#OP_VMT=-Wvft+
+
+OP_MTHREAD=-Gm
+
+CFLAGS= -Tdp -Q $(OP_PROFILE) $(OP_OPTIMIZE) $(OP_DEBUG) $(OP_BROWSE) $(OP_VMT) $(OP_MTHREAD)
+
+OBJS= controls.obj ctl_entry.obj ctl_list.obj device.obj device_os2.obj device_tty.obj event.obj focus.obj map.obj strng.obj sw_sema.obj sw_sysdep.obj tail.obj test.obj types.obj win.obj
+
+
+test.exe: $(OBJS)
+   icc /B"/nologo" -Fetest.exe $(OP_DEBUG) $(OBJS) $(LD_PROFILE) $(LD_BROWSE)
+
+clean:
+	-rm $(OBJS)
+        -mv *.?~ bak
+        -rm *.pdb
+
+zip:
+    zip -r SWin * -x *.obj -x *.exe
+
+
+
+###
+controls.obj: sw_controls.h sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_ctl_list.h sw_list_elem.h sw_device.h
+ctl_entry.obj: sw_ctl_entry.h sw_controls.h sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+ctl_list.obj: sw_ctl_list.h sw_controls.h sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_list_elem.h
+device.obj: sw_device.h sw_types.h sw_except.h strng.h sw_win.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+device_os2.obj: sw_device.h sw_types.h sw_except.h strng.h sw_win.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+device_tty.obj: sw_device.h sw_types.h sw_except.h strng.h sw_win.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+event.obj: sw_event_handler.h sw_focus.h sw_event.h sw_types.h sw_except.h strng.h
+focus.obj: sw_focus.h sw_event.h sw_types.h sw_except.h strng.h sw_win.h sw_map.h sw_event_handler.h
+map.obj: sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h
+strng.obj: strng.h sw_except.h strng.h
+sw_sema.obj: sw_sema.h sw_except.h strng.h
+sw_sysdep.obj: sw_sysdep.h
+tail.obj: sw_tail.h sw_ctl_list.h sw_controls.h sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_list_elem.h sw_sema.h sw_device.h
+test.obj: sw_device.h sw_types.h sw_except.h strng.h sw_win.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_controls.h sw_ctl_list.h sw_list_elem.h sw_ctl_entry.h sw_tail.h sw_sema.h
+types.obj: sw_types.h sw_except.h strng.h
+win.obj: sw_win.h sw_types.h sw_except.h strng.h sw_map.h sw_event_handler.h sw_focus.h sw_event.h sw_device.h

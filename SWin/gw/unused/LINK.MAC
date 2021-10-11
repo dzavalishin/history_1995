@@ -1,0 +1,16 @@
+gw.lib /c/e						&
++-egavgaf.obj +-8x16t.obj +-8x8.obj +-8x14t.obj		&
++-mouse.obj +-mouseimg.obj +-mcurs.obj			&
++-font.obj +-sffont.obj	+-bdfont.obj			&
++-fontrd.obj +-fontwr.obj +-gwprint.obj			&
++-betafont.obj +-creatfnt.obj				&
++-chgen.obj +-ega.obj +-init.obj +-wmanage.obj		&
++-wonoff.obj +-stack.obj +-tools.obj +-errmsg.obj	&
++-edits.obj +-bar.obj +-menu.obj +-dir.obj		&
++-sfile.obj +-help.obj +-selcolor.obj +-zone.obj	&
++-askfname.obj +-xorline.obj				&
++-vpage.obj +-split.obj					&
++-egasys.obj +-savepal.obj				&
++-srchfile.obj						&
+, gw.lst
+

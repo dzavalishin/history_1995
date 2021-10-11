@@ -1,0 +1,169 @@
+
+Class hierarchy
+ sw_focus_changer
+  ÃÄsw_button_focus_changer
+  ³ ÀÄsw_abs_button(sw_control)
+  ³   ÃÄsw_onechar_button
+  ³   ÀÄsw_text_button
+  ÃÄsw_desktop_focus_changer
+  ³ ÀÄsw_test_desktop(sw_bordered_win)
+  ÃÄsw_dialog_focus_changer
+  ³ ÀÄdialog(sw_bordered_win)
+  ÀÄsw_event_handler()
+    ÀÄsw_abstract_win(sw_size,sw_win_ops)
+      ÃÄsw_device
+      ³ ÀÄsw_2b_video_memory_device
+      ³   ÃÄsw_tty_base_device
+      ³   ³ ÃÄsw_ansi_device
+      ³   ³ ÀÄsw_termcap_device
+      ³   ÀÄsw_vio_base
+      ³     ÃÄsw_avio_device
+      ³     ÀÄsw_vio_device
+      ÀÄsw_win(sw_point)
+        ÃÄsw_border
+        ÃÄsw_bordered_win
+        ³ ÃÄdialog(sw_dialog_focus_changer)
+        ³ ÀÄsw_test_desktop(sw_desktop_focus_changer)
+        ÃÄsw_control
+        ³ ÃÄsw_3d_shadow
+        ³ ÃÄsw_abs_button(sw_button_focus_changer)
+        ³ ³ ÃÄsw_onechar_button
+        ³ ³ ÀÄsw_text_button
+        ³ ÃÄsw_entry_base
+        ³ ³ ÀÄsw_entry
+        ³ ³   ÀÄsw_3d_entry
+        ³ ÃÄsw_label
+        ³ ³ ÃÄsw_lamp
+        ³ ³ ÀÄsw_title
+        ³ ÀÄsw_list_base
+        ³   ÃÄsw_menu_base
+        ³   ³ ÃÄsw_hmenu
+        ³   ³ ÀÄsw_vmenu
+        ³   ³   ÀÄsw_vsubmenu(sw_menu_elem_base)
+        ³   ÃÄsw_simple_list
+        ³   ÀÄsw_tail
+        ÀÄsw_round_win
+          ÀÄsw_clock(sw_thread)
+ sw_win_ops
+  ÀÄsw_abstract_win(sw_event_handler,sw_size)
+    ÃÄsw_device
+    ³ ÀÄsw_2b_video_memory_device
+    ³   ÃÄsw_tty_base_device
+    ³   ³ ÃÄsw_ansi_device
+    ³   ³ ÀÄsw_termcap_device
+    ³   ÀÄsw_vio_base
+    ³     ÃÄsw_avio_device
+    ³     ÀÄsw_vio_device
+    ÀÄsw_win(sw_point)
+      ÃÄsw_border
+      ÃÄsw_bordered_win
+      ³ ÃÄdialog(sw_dialog_focus_changer)
+      ³ ÀÄsw_test_desktop(sw_desktop_focus_changer)
+      ÃÄsw_control
+      ³ ÃÄsw_3d_shadow
+      ³ ÃÄsw_abs_button(sw_button_focus_changer)
+      ³ ³ ÃÄsw_onechar_button
+      ³ ³ ÀÄsw_text_button
+      ³ ÃÄsw_entry_base
+      ³ ³ ÀÄsw_entry
+      ³ ³   ÀÄsw_3d_entry
+      ³ ÃÄsw_label
+      ³ ³ ÃÄsw_lamp
+      ³ ³ ÀÄsw_title
+      ³ ÀÄsw_list_base
+      ³   ÃÄsw_menu_base
+      ³   ³ ÃÄsw_hmenu
+      ³   ³ ÀÄsw_vmenu
+      ³   ³   ÀÄsw_vsubmenu(sw_menu_elem_base)
+      ³   ÃÄsw_simple_list
+      ³   ÀÄsw_tail
+      ÀÄsw_round_win
+        ÀÄsw_clock(sw_thread)
+ sw_size
+  ÃÄsw_abstract_win(sw_event_handlersw_win_ops)
+  ³ ÃÄsw_device
+  ³ ³ ÀÄsw_2b_video_memory_device
+  ³ ³   ÃÄsw_tty_base_device
+  ³ ³   ³ ÃÄsw_ansi_device
+  ³ ³   ³ ÀÄsw_termcap_device
+  ³ ³   ÀÄsw_vio_base
+  ³ ³     ÃÄsw_avio_device
+  ³ ³     ÀÄsw_vio_device
+  ³ ÀÄsw_win(sw_point)
+  ³   ÃÄsw_border
+  ³   ÃÄsw_bordered_win
+  ³   ³ ÃÄdialog(sw_dialog_focus_changer)
+  ³   ³ ÀÄsw_test_desktop(sw_desktop_focus_changer)
+  ³   ÃÄsw_control
+  ³   ³ ÃÄsw_3d_shadow
+  ³   ³ ÃÄsw_abs_button(sw_button_focus_changer)
+  ³   ³ ³ ÃÄsw_onechar_button
+  ³   ³ ³ ÀÄsw_text_button
+  ³   ³ ÃÄsw_entry_base
+  ³   ³ ³ ÀÄsw_entry
+  ³   ³ ³   ÀÄsw_3d_entry
+  ³   ³ ÃÄsw_label
+  ³   ³ ³ ÃÄsw_lamp
+  ³   ³ ³ ÀÄsw_title
+  ³   ³ ÀÄsw_list_base
+  ³   ³   ÃÄsw_menu_base
+  ³   ³   ³ ÃÄsw_hmenu
+  ³   ³   ³ ÀÄsw_vmenu
+  ³   ³   ³   ÀÄsw_vsubmenu(sw_menu_elem_base)
+  ³   ³   ÃÄsw_simple_list
+  ³   ³   ÀÄsw_tail
+  ³   ÀÄsw_round_win
+  ³     ÀÄsw_clock(sw_thread)
+  ÃÄsw_map
+  ÀÄsw_rect(sw_point)
+ sw_point
+  ÃÄsw_rect(sw_size)
+  ÀÄsw_win(sw_abstract_win)
+    ÃÄsw_border
+    ÃÄsw_bordered_win
+    ³ ÃÄdialog(sw_dialog_focus_changer)
+    ³ ÀÄsw_test_desktop(sw_desktop_focus_changer)
+    ÃÄsw_control
+    ³ ÃÄsw_3d_shadow
+    ³ ÃÄsw_abs_button(sw_button_focus_changer)
+    ³ ³ ÃÄsw_onechar_button
+    ³ ³ ÀÄsw_text_button
+    ³ ÃÄsw_entry_base
+    ³ ³ ÀÄsw_entry
+    ³ ³   ÀÄsw_3d_entry
+    ³ ÃÄsw_label
+    ³ ³ ÃÄsw_lamp
+    ³ ³ ÀÄsw_title
+    ³ ÀÄsw_list_base
+    ³   ÃÄsw_menu_base
+    ³   ³ ÃÄsw_hmenu
+    ³   ³ ÀÄsw_vmenu
+    ³   ³   ÀÄsw_vsubmenu(sw_menu_elem_base)
+    ³   ÃÄsw_simple_list
+    ³   ÀÄsw_tail
+    ÀÄsw_round_win
+      ÀÄsw_clock(sw_thread)
+ ios
+  ÃÄistream
+  ³ ÃÄiostream(ostream)
+  ³ ³ ÀÄiostream_withassign
+  ³ ÀÄistream_withassign
+  ÀÄostream
+    ÃÄiostream(istream)
+    ³ ÀÄiostream_withassign
+    ÀÄostream_withassign
+ sw_thread
+  ÃÄsw_clock(sw_round_win)
+  ÀÄsw_os2_mouse_handler
+ sw_hook_base
+  ÃÄsw_lamp_focus_hook
+  ÀÄsw_single_hook()
+    ÀÄsw_repost_hook()
+ sw_list_elem_base
+  ÃÄsw_menu_elem_base
+  ³ ÃÄsw_menu_func
+  ³ ÃÄsw_menu_push_focus
+  ³ ÃÄsw_menu_submenu
+  ³ ÃÄsw_vmenu_delimiter
+  ³ ÀÄsw_vsubmenu(sw_vmenu)
+  ÀÄsw_static_list_elem

@@ -1,0 +1,12 @@
+NB!!	gwswidth worked incorrectly - 8 mar 90 corrected. ( is it OK ? )
+
+Italics	- Divide skew factor by 2 - must be better 
+
+Rewrite with assembler:
+	ù chgen.c
+	ù mcurs.c
+	
+
+
+
+

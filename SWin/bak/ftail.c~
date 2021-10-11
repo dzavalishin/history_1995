@@ -1,0 +1,422 @@
+/************************ SWin ***************************\
+ *
+ *	Copyright (C) 1996 by Dmitry Zavalishin
+ *
+ *	Module 	: colored log display
+ *
+ *      $Log: sw_ctl_list.h $
+ *
+ *      
+ * TODO: ...
+ *
+\*/
+
+#include "sw_ctl_list.h"
+#include <vector.h>
+
+#include <io.h>
+#include <stdio.h>
+#include <string.h>
+#include <process.h>
+#include <ctype.h>
+
+#define INCL_DOSDATETIME     /* Timer support    */
+#define INCL_DOSSEMAPHORES   /* Semaphore values */
+#define INCL_DOSERRORS       /* error codes      */
+#define INCL_DOSPROCESS
+#include <os2.h>
+
+static char *Id = "$Id: ftail.c 1.2 1996/05/12 01:45:59 dz Rel $";
+
+
+
+const max_time = 170;
+
+void wait_sema();
+void close_sema();
+void create_sema();
+
+
+void set_color( int time );
+void gotoxy( int, int y );
+
+static cid cid_from_time( int time )
+    {
+      // можно выразить в общем виде
+    if( time <  10 ) return 0;
+    if( time <  20 ) return 1;
+    if( time <  40 ) return 2;
+    if( time <  80 ) return 3;
+    if( time < 160 ) return 4;
+    return 5;
+    }
+        
+
+static const sw_color cname_from_cid[] =
+    {
+    sw_color::White, sw_color::yellow, sw_color::lightred,
+    sw_color::lightmagenta, sw_color::brown, sw_color::darkgray
+    };
+
+
+
+
+
+
+
+
+class sw_tail : public sw_list_base
+    {
+    
+    
+    class line
+        {
+        protected:
+            string      text;
+            int         time; // since line was placed here
+            int         changed;
+            sw_color    current_color;
+            sw_color    recommended_color;
+        public:
+            line() 
+                {
+                time = 0;
+                changed = 1;
+                current_color = 0;
+                recommended_color = 0;
+                }
+            
+            void touch() { changed = 1; }
+            
+            void draw( int y )
+                { 
+                put( sw_point(0,y), current_color, text );
+                changed = 0;
+                }
+            
+            void cond_draw( int y )
+                { 
+                if( !changed ) return;
+                draw( y );
+                }
+            
+            void tick() 
+                { 
+                if( time <= max_time ) 
+                    {
+                    time++; 
+                    recommended_color = color::cid_from_time(time);
+                    } 
+                }
+            
+            /* arg - color of line above. */
+            /* returns 1 if color changed */
+            int repaint( color prev_line )
+                {
+                color our_recommended_color = recommended_color;
+                // предотвратить слипание цветов
+                if( our_recommended_color >= prev_line )
+                    {
+                    if( our_recommended_color <= 0 )
+                        return 0;
+                    our_recommended_color = our_recommended_color.prev();
+                    }
+                if( our_recommended_color <= current_color )
+                    return 0;
+                
+                current_color = our_recommended_color;
+                touch();
+                return 1;
+                }
+
+            color get_current_color() { return current_color; }
+            int get_time() { return time; }
+
+            void set( const char *_text )
+                {
+                text = _text;
+                time = 0;
+                current_color = color::cid_from_time(time);
+                touch(); 
+                }
+
+            const char *get() { return text; }
+
+            void scroll( line &l )
+                {
+                text = l.text;
+                time = l.time;
+                current_color = l.current_color;
+                recommended_color = l.recommended_color;
+                touch();
+                }
+        };
+
+    
+    vector <line>      lines;
+    sw_color           lcolor_v, scolor_v;
+    
+    
+public:
+    tail(
+         sw_abstract_win &parent, const sw_rect &r,
+         sw_color lc, sw_color sc
+        )
+        :
+    sw_list_base( parent, rect ), lcolor_v(lc), scolor_v(sc),
+        {}
+    ~tail()
+        {}
+
+    virtual int          visible_elems() const { return ys(); }
+    virtual int          size() const { return lines.size(); }
+    virtual void         display_elem( int line )
+        {
+        lines[line].draw(line-shift_v);
+        }
+    
+    virtual void         cond_display_all()
+        {
+        int ie = visible_elems();
+        for( int i = 0; i < ie; i++ )
+            lines[i+shift_v].cond_draw( i );
+        }
+
+    void add( const string & str )
+        {
+        // Очень молодая строка доскроллилась доверху - подождем чуток!
+        //if( lines[0].get_time() < 20 ) DosSleep( 500 );
+        
+        for( int i = 0; i < window-1; i++ )
+            lines[i].scroll( lines[i+1] );
+        lines[window-1].set( str.substr(0,xs());
+        cond_display_all();
+        }
+    
+    tick()
+        {
+        for( int i = 0; i < window; i++ )
+            lines[i].tick();
+        
+        color new_color = 8;
+        for( i = 0; i < window; i++ )
+            {
+            if( lines[i].repaint( new_color ) )
+                new_color = lines[i].get_current_color();
+            }
+        
+        }
+    
+};
+
+
+sw_tail::line::line()
+    {
+    time = 0;
+    changed = 1;
+    current_color = 0;
+    recommended_color = 0;
+    }
+
+void sw_tail::line::touch()
+    {
+    changed = 1;
+    }
+
+void sw_tail::line::draw( int y )
+    {
+    put( sw_point(0,y), current_color, text );
+    changed = 0;
+    }
+
+void sw_tail::line::cond_draw( int y )
+    {
+    if( !changed ) return;
+    draw( y );
+    }
+
+void sw_tail::line::tick() 
+    {
+    if( time <= max_time )
+        {
+        time++;
+        recommended_color = color::cid_from_time(time);
+        }
+    }
+
+  /* arg - color of line above. */
+  /* returns 1 if color changed */
+int sw_tail::line::repaint( color prev_line )
+    {
+    color our_recommended_color = recommended_color;
+      // предотвратить слипание цветов
+    if( our_recommended_color >= prev_line )
+        {
+        if( our_recommended_color <= 0 )
+            return 0;
+        our_recommended_color = our_recommended_color.prev();
+        }
+    if( our_recommended_color <= current_color )
+        return 0;
+
+    current_color = our_recommended_color;
+    touch();
+    return 1;
+    }
+
+sw_color sw_tail::line::get_current_color()
+    {
+    return current_color;
+    }
+
+int sw_tail::line::get_time()
+    {
+    return time;
+    }
+
+void sw_tail::line::set( const char *_text )
+    {
+    text = _text;
+    time = 0;
+    current_color = color::cid_from_time(time);
+    touch();
+    }
+
+const string & sw_tail::line::get()
+    {
+    return text;
+    }
+
+void scroll( line &l )
+{
+text = l.text;
+time = l.time;
+current_color = l.current_color;
+recommended_color = l.recommended_color;
+touch();
+}
+
+                            
+
+tail   t(20);
+HEV     disp_sema;
+
+    
+extern "OPTLINK" void ticker(void *val)
+    {
+    while(1)
+        {
+        //gotoxy( 0, 23 );
+        //fprintf( stdout, "O" );
+        t.tick();
+        DosPostEventSem( disp_sema );
+
+        //gotoxy( 0, 23 );
+        //fprintf( stdout, "o" );
+        //fflush( stdout );
+
+        DosSleep( 1000 );
+        }
+    }
+
+
+extern "OPTLINK" void shower(void *val)
+    {
+    char marker = 'a'-1;
+    while(1)
+        {
+        marker++;
+        if( marker > 'z' ) marker = 'a';
+        
+        gotoxy( 0, 23 );
+        fprintf( stdout, "%c", toupper( marker ) );
+        t.cond_display_all();
+        gotoxy( 0, 23 );
+        fprintf( stdout, "%c", tolower( marker ) );
+        fflush( stdout );
+
+        wait_sema();
+        }
+    }
+
+
+
+int main( int ac, char **av )
+    {
+    
+    create_sema();
+    
+    _beginthread( ticker, 0, 16*1024, 0 );
+    _beginthread( shower, 0, 16*1024, 0 );
+    
+    while(1)
+        {
+        char str[100];
+        if( fgets( str, 79, stdin ) == NULL )
+            break;
+        char *c = strpbrk( str, "\r\n" );
+        if( c ) *c = 0;
+        t.add( str );
+        DosPostEventSem( disp_sema );
+        
+        }
+    
+    close_sema();
+    
+    
+    return 0;
+    }
+
+
+
+
+
+
+
+
+
+void create_sema()
+    {
+    APIRET  rc            = NO_ERROR;            /* Return code               */
+ 
+    rc = DosCreateEventSem( NULL,
+                           &disp_sema,
+                           0 /* DC_SEM_SHARED */,
+                           FALSE);         /* Semaphore is in RESET state  */
+    if (rc != NO_ERROR)
+        {
+        printf("DosCreateEventSem error: return code = %u\n", rc);
+        exit( 1 );
+        }
+ 
+    }
+
+void close_sema()
+    {
+    APIRET rc = DosCloseEventSem(disp_sema);      /* Get rid of semaphore       */
+    if (rc != NO_ERROR) 
+        printf("DosCloseEventSem error: return code = %u", rc);
+    }
+ 
+
+void wait_sema( void )
+    {
+
+    APIRET  rc;         /* Return code                    */
+ 
+    rc = DosWaitEventSem( disp_sema, SEM_INDEFINITE_WAIT );
+ 
+    if (rc != 0) 
+        {
+        printf("DosWaitEventSem error: return code = %ld", rc);
+        return;
+        }
+    
+    ULONG res;
+    DosResetEventSem( disp_sema, &res );
+    }
+
+
+
+
+
