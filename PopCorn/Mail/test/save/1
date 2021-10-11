@@ -1,0 +1,10 @@
+From uucp Tue Sep 12 06:32:46 1995 remote from phantom
+Received:  from kiae by router.phantom.ru (UUPC/extended 1.12o) with UUCP
+           for postmaster; Tue, 12 Sep 1995 06:32:46 +0400
+From: uucp (UUCP Batch Mail Service)
+To: postmaster
+Subject: batch receiption failed
+
+ERROR: Can't read data - got 1621 instead of 1643.
+Batch saved in D:\TMP\74300000.CTN
+

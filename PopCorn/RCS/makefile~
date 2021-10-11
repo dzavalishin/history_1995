@@ -1,0 +1,72 @@
+head	1.2;
+access;
+symbols
+	Ver_075:1.2;
+locks;
+comment	@# @;
+
+
+1.2
+date	96.09.17.23.20.43;	author dz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	96.09.13.07.24.48;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@First completely working POP3/ESMTP version
+@
+text
+@
+EXE=PopCorn.exe
+
+all: $(EXE)
+
+
+#LD_PROFILE=/B"/DE /NOE" cppopa3.obj
+#OP_PROFILE=-Gh
+
+OP_DEBUG=-Ti
+#OP_OPTIMIZE=-O
+CFLAGS= -Tdp -Q $(OP_PROFILE) $(OP_OPTIMIZE) $(OP_DEBUG)
+#vmt placement -Wvft+
+
+OBJS= pop3proto.obj strng.obj
+
+$(EXE): $(OBJS)
+   icc -Fe$(EXE) $(OP_DEBUG) $(OBJS) $(LD_PROFILE)
+
+clean:
+	-rm $(OBJS)
+        -mv *.?~ bak
+        -mv *.brs bak
+
+
+
+
+
+
+
+pop3proto.obj: pop3proto.c PopCorn.h
+
+
+###
+strng.obj: strng.h d:/ibmcpp/include/sys/types.h d:/ibmcpp/include/stdlib.h d:/ibmcpp/include/stdarg.h d:/usr/include/stl/cset/style.h d:/ibmcpp/include/string.h except.h d:/ibmcpp/include/ctype.h
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@

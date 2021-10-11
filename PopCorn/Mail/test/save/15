@@ -1,0 +1,121 @@
+From Eugene_Leskovets%p0.f43.n450.z2.fidonet.org Fri Nov  3 07:29:49 1995 remote from phantom
+Received:  from gate.phantom.ru by router.phantom.ru (UUPC/extended 1.12o) with UUCP
+           for rocknet.murmansk.su; Fri, 03 Nov 1995 07:29:48 +0300
+Received:  by gate.phantom.ru (FIDO2UU 1.99f [OS2/C Set]) with FTN; Fri,  3 Nov 1995 07:29:48 +0300
+To: rocknet.murmansk.su
+From: Eugene Leskovets <Eugene_Leskovets@p0.f43.n450.z2.fidonet.org>
+Message-Id: <309A0B3C@gate.phantom.ru>
+Subject: Re: [NEWS] ы╘╧ ╨╔H┼╘ NLM-╨╥╧╟╥┴══┘ - Ёяэячщ⌠х...
+Date: Fri,  3 Nov 1995 07:29:48 +0300
+
+
+following up a message from Eugene Leskovets to Uucp:
+
+Hi Sergey!
+
+EL> Hе нашел я у себя дома - на работе он. Так что попозжее.
+
+Вот.
+
+
+Area: SU.NET.PROG
+
+Date : Oct 26 '95, 17:52                                           Dir Loc Scn 
+>From : Eugene Leskovets                                       2:450/17.0
+To   : All                                 
+Subj : sample makefile for NLM                                               
+────────────────────────────────────────────────────────────────────────────────
+
+
+@MSGID: 2:450/17.0 9003101
+Hello All!
+
+Многие интересовались, как собирать NLM. Вот MAKEFILE, который я использую для
+сборки NLM-а из одного исходного файла. В мэйкфайле нет явных зависимостей,
+поэтому можно пользоваться для любых исходников.
+
+Я использовал MAKE от борланда, от TC++ 1.01 (кажется, MAKE версия 3). В
+принципе, не вижу принципиальной нужды использовать при сборке WMAKE, да и
+привык я к борландовскому :)
+
+Запускается сборка командой
+
+MAKE <filename>.nlm
+
+или
+
+MAKE /DDEBUG <filename>.nlm
+
+Во втором случае NLM получается с отладочной информацией, которая и для WVIDEO,
+и для встроенного отладчика (они разные, эти информации, и могут, AFAIK,
+существовать отдельно друг от друга).
+
+Естественно, что должен существовать файл <filename>.C ;-)
+
+===================================== рэзать тут будем
+
+
+WLIB=d:\wc\lib386
+
+CC=d:\wc\bin\wcc386
+LINK=d:\wc\binb\wlink
+MODEL=f
+!if $d(DEBUG)
+CFLAGS=/zl /bt=netware /d2 /od /of+ /dDEBUG
+!else
+CFLAGS=/zl /bt=netware /oxs
+!endif
+LFLAGS=
+LIBS=
+INCS=
+
+hello.nlm : hello.obj
+
+hello.obj : hello.c
+
+.OBJ.NLM:
+!if $d(DEBUG)
+    $(LINK) @&&%
+form novell nlm '$* test program'
+option screenname '$* Screen'
+option threadname '$*'
+module clib
+debug all
+file $*.obj,$(WLIB)\prelude
+name $*.nlm
+import @$(WLIB)\clib.imp,__CHK
+option map
+%
+!else
+    $(LINK) @&&%
+form novell nlm '$* test program'
+option screenname '$* Screen'
+option threadname '$*'
+module clib
+file $*.obj,$(WLIB)\prelude
+name $*.nlm
+import @$(WLIB)\clib.imp,__CHK
+option map
+%
+!endif
+
+.C.OBJ:
+        $(CC) $(CFLAGS) $(INCS) $*.c
+
+
+===================================== рэзать тут будем
+
+Bye!
+Eugene
+
+P.S. Да, что еще - я использую для писания NLM-ов Watcom версии 9. :)
+
+-+- timEd-g1+
+ + Origin: Pig Pong (2:450/17)
+
+Bye!
+Eugene
+
+--- timEd-g1+
+
+

@@ -1,0 +1,17 @@
+F3: Start server
+    start /c PopCorn
+
+P: telnet to POP3 Server
+    telnet -p 110 localhost
+
+S: telnet to SMTP Server
+    telnet -p 25 localhost
+
+F5: Debug server
+    icsdebug PopCorn
+
+N:  Netstat
+    netstat -s
+
+Z:  Zip all
+    zip -r PopCorn * -x *.obj -x *.exe -x *~

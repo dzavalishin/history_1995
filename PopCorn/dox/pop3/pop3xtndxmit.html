@@ -1,0 +1,67 @@
+<title>Non-standard POP3 commands</title>                                       
+<h1>Non-standard POP3 commands</h1>                                             
+                                                                                
+<h2>Introduction</h2>                                                           
+Some POP3 servers and clients support non-standard POP3 protocol                
+commands.  One such command is the XTND XMIT Berkeley extension                 
+to send mail.  The following description for the XTND XMIT command              
+is written in the style of the RFC defining the POP3 protocol.                  
+<hr>                                                                            
+<h2>XTND XMIT (Berkeley extension)</h2><pre>                                    
+Arguments: none                                                                 
+                                                                                
+Restrictions:                                                                   
+    may only be given in the TRANSACTION state                                  
+                                                                                
+Discussion:                                                                     
+    Usually mail to be sent is transmitted from the client to the SMTP          
+    server.  If the POP3 client and server support the XTND XMIT                
+    feature, the client can upload mail for delivery to the POP3 server         
+    instead of the SMTP server.  As the client has already been                 
+    authenticated by the POP3 server, some level of security is assured.        
+    Further validation may take place during XTND XMIT processing.              
+    After the mail has been validated, the POP3 server delivers the             
+    mail to a message transfer agent for delivery.                              
+                                                                                
+    The XTND XMIT feature allows one message to be delivered at a time.         
+    The message transmission follows the basic operation of a multi-line        
+    response as documented in the POP3 protocol, including the method of        
+    termination and byte-stuffing where required.  The XTND XMIT command        
+    can be used repetitively to send multiple messages.                         
+                                                                                
+Possible Responses:                                                             
+    +OK                                                                         
+    -ERR                                                                        
+                                                                                
+Examples:                                                                       
+    C: XTND XMIT                                                                
+    S: +OK POP3 server supports XTND XMIT                                       
+    C: <the POP3 client sends the entire message here>                          
+    C: .                                                                        
+    S: +OK mail sent                                                            
+                                                                                
+    C: XTND XMIT                                                                
+    S: +OK POP3 server supports XTND XMIT                                       
+    C: <the POP3 client sends the entire message here>                          
+    C: .                                                                        
+    S: -ERR the return address must include your POP account                    
+                                                                                
+    C: XTND XMIT                                                                
+    S: -ERR invalid command                                                     
+                                                                                
+Implementation:                                                                 
+    Clients: 1-commercial version of Eudora                                     
+               Defining the SMTP server address sends mail via SMTP.            
+               Leaving the SMTP server address blank sends mail via             
+               POP3 XTND XMIT.                                                  
+             2-PC/TCP from FTP Software                                         
+                                                                                
+    Servers: 1-MUSIC/SP POP3 server                                             
+             2-Unix popper-1.7 server                                           
+</pre>                                                                          
+<hr>                                                                            
+<a href="home.html"> <img src="home.gif">                                       
+Return to McGill Systems Inc. Home Page</a>                                     
+<hr>                                                                            
+<center><i>This page last updated by Earl Lindberg 96/09/05                     
+</i></center>                                                                   

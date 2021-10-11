@@ -1,0 +1,173 @@
+<title>Introduction to ASN.1 and the Packed Encoding Rules</title>
+<h1>Introduction to ASN.1 and the Packed Encoding Rules</h1>
+
+<address><a href="http://sunsite.unc.edu/ses">Simon E Spero (ses@tipper.oit.unc.edu)</a></address>
+
+<h4>Quick overview of ASN.1, BER, and PER adapted by Dave Raggett from an email
+message by Simon. Simon promises to replace it with a <em>proper</em> tutorial.</h4>
+
+<p>ASN.1 is a notation for describing data structures; it's very much
+like a type declaration in C or C++. Let's start with a C++ structure and 
+create the appropriate ASN.1 Data structure. I'll use a simplified form of
+the the GET request from FHTTP to start with.
+
+<pre>
+struct GetRequest {
+int headerOnly; // flag: do we only want headers?
+int lock; // flag: should we checkout the object?
+string url; // the url to fetch
+AcceptTypes* acceptTypes; // Optional list of accept types that only apply
+// to this request
+};
+
+struct AcceptTypes {
+List&lt;bitset&gt;* standardTypes; // list of bitmaps indicating which
+// preference order for standard types
+List&lt;string&gt;* otherTypes; // nonstandard types in preference order
+};
+
+GetRequest ::= [APPLICATION 0] IMPLICIT SEQUENCE {
+headerOnly BOOLEAN,
+lock BOOLEAN,
+acceptTypes AcceptTypes OPTIONAL
+url OCTET STRING,
+
+}
+
+AcceptTypes ::= [APPLICATION 1] IMPLICIT SEQUENCE {
+standardTypes [0] IMPLICIT SEQUENCE OF BIT STRING 
+{html(0),plain-text(1),gif(2), jpeg(3)} OPTIONAL,
+
+otherTypes [1] IMPLICIT SEQUENCE OF OCTET STRING OPTIONAL
+}
+</pre>
+
+<P>For the encoding examples, we'll use the following example. (the notation for
+the test case is a little lispy. If that makes you uncomfortable, just thing
+of it as a wais source :-)
+
+<pre>
+(GetRequest 
+:headerOnly TRUE 
+:lock FALSE 
+:acceptTypes (AcceptTypes 
+:standardTypes ((html) 
+(plain-text)))
+:url "/ses/magic/moxen.html")
+</pre>
+
+<p>The Basic Encoding Rules (BER) were the orignal rules for taking an
+ASN.1 data type, and turning it into a sequence of bits and bytes. BER uses
+a form of encoding commonly known as Tag-Length-Value. Each item is encoded as 
+a tag, indicating what type it is, a length indicating the size of the object,
+and a value, which contains the actual contents of the object. 
+
+<p>Tags are reasonably simple - in there simplest form they consist of a single 
+byte; the highest two bits indicate the tag class (whether the tag is an 
+official ISO tag, an application wide tag, a private tag, or a tag that only
+has meaning for this particular structure. The next bit is a flag to indicate
+whether the tagged object is a simple type, such as a number or a string, 
+or a compound type made up from a bunch of other types. The remaining 5 bits
+are used to represent the tag number. If the tag is too big to fit in 5 bits,
+then these bits are set to all ones, and the tag number is encoded in the
+following bytes as a sequence of seven bit bytes. The high bit of these
+bytes is used as a flag to indicate whether there's more tag available.
+
+<p>Lengths are also quite simple. There are two ways of encoding lengths - 
+the definite form, and the indefinite form. 
+
+<p>For the definite form, if the length is less than 128, you just use a single
+byte, with the high bit set to zero. Otherwise the high bit is set to one,
+and the low seven bits set to the length of length. The length is then
+encoded in that many bytes.
+
+<p>The indefinite form is encoded by sending a length field with a length of 
+length of 0 - i.e. [1000|0000]. The object is ended by sending two 
+zero bytes.
+
+<h3>Here's our test case encoded using the BER</h3>
+
+<pre>
+0x60 -- [0110|0000], [APPLICATION 0, Compound] - GetRequest
+0x80 -- [1000|0000], Indefinite length
+
+0x01 -- [0000|0001], [BOOLEAN] GetRequest.headerOnly
+0x01 -- [0000|0001], length 1
+0x01 -- [0000|0001], value TRUE
+
+0x01 -- [0000|0001], [BOOLEAN] GetRequest.lock
+0x01 -- [0000|0001], length 1
+0x00 -- [0000|0000] value FALSE
+
+0x61 -- [0110|0001], [APPLICATION 1, Compound] - GetRequest.types
+0x80 -- indefinite length
+
+0xa0 -- [1010|0000], [CONTEXT 0, Compound] types.standardTypes
+0x80 -- indefinite length
+
+0x03 -- [0000|0011] [BIT STRING]
+0x02 -- length 2
+0x04 -- Four bits unused
+0x80 -- [1000|0000] {html}
+
+0x03 -- [0000|0011] [BIT STRING]
+0x02 -- length 2
+0x04 -- Four bits unused
+0x40 -- [0100|0000] {plain-text}
+
+0x00
+0x00 -- End of list of standard Types
+0x00
+0x00 -- End of Accept Types
+
+0x04 -- [0000|0100], [OCTET STRING] GetRequest.url
+0x16 -- [0001|0110], length 22
+[/ses/magic/moxen.html] -- value
+
+0x00 
+0x00 -- End of get request
+
+[50 bytes total], 22 url
+</pre>
+
+<p>The packed encoding rules use a different style of encoding. Instead of 
+using a generic style of encoding that encodes all types in a uniform way,
+the PER specialise the encoding based on the data type to generate much more
+compact representations. 
+
+<p>PER only generates tags when they are needed to prevent ambiguity this 
+only occurs when ASN.1's version of union is used (CHOICE). PER also only
+generates lengths when the size of an object can vary. Even then, PER tries
+to represent the lengths in the most compact form possible. 
+
+<p>PER encodings are not always aligned on byte boundaries- if the 'aligned' 
+variant of the rules is used, then strings *will* be aligned - otherwise
+the encoding is treated as a string of bits, allowing things like booleans
+and small integers to be squished together in one byte. 
+
+<p>The presence of optional elements in a sequence is indicated by a list of
+single bit flags placed at the start of a sequence - if the bit is set, then
+the option is present. 
+
+<p>Here's what our test case looks like in PER. 
+
+<pre>
+[1] -- flag bit indicates acceptTypes is present
+[1] -- boolean, header only, TRUE
+[0] -- boolean, lock, FALSE
+[1] -- flag bit, indicates standardTypes is present
+[0] -- flag bit, indicates otherTypes is absent
+[000] -- pad bits to make length octet aligned
+[00000010] -- length of 2, -- 2 standardType bit strings to follow
+[1000] -- the first bit string, html is set
+[0100] -- the second bit string, plain-text is set
+[00010110] -- length 22; url is 22 octets long
+/ses/magic/moxen.html -- value of url
+
+[total size is 26, 22 url]
+</pre>
+
+
+<p>In this case, the PER are about twice as compact as the BER. If I had chosen
+a shorter URL, such as /, the difference would have been even greater -
+BER, 29; PER, 5, for a ratio of over 5-1.

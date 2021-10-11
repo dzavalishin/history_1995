@@ -1,0 +1,117 @@
+<title>Progress on HTTP-NG</title>
+
+<A HREF="../../"><IMG alt="WWW" SRC="../../Icons/WWW/WWWlogo48"></A>
+<a href="../"><img alt="W3C" src="../../Icons/WWW/w3c_48x48"></a>
+<A HREF="../Overview.html"><IMG SRC="../../Icons/WWW/HTTP48x.gif" ALT="HTTP"></A>
+
+<h1>Progress on HTTP-NG</h1>
+
+<HR>
+
+<address><a href="http://sunsite.unc.edu/ses">Simon Spero, UNC Sunsite/EIT (ses@unc.edu)</a></address>
+
+<P>Here's some quick notes on how HTTP-NG is coming along - We've now got
+a simple proof-of-concept implementation up and running, using a
+minimalist set of requests and responses, and the results have been
+quite encouraging. Even though the network connection between Bristol
+and Civillization was extremely congested, initial timings seemed to
+show that HTTP-NG was capable of using the entire path bandwidth
+available when multiple requests were used. Initial measurements
+seemed to show that for typical inlined-objects, HTTP 1.0 would only
+use around a 10th of the available bandwidth, and that parallel
+fetches degraded badly under congested conditions.
+
+<h2>Further reading:</h2>
+
+<p><a href="http-ng-arch.html">A longer description of the architecture</a>
+<p><a href="http-ng-scp.html">The Session Control Protocol</a>
+<p><a href="asn1.html">A Quick Introduction to ASN.1</a>
+<p><a href="http://sunsite.unc.edu/mdma-release/http-prob.html">
+Analysis of HTTP/1.0 performance problems</a>
+<P><a href="http://sunsite.unc.edu/ses/ng-notes.txt">Original March 1995 Draft</a>
+
+<hr>
+<h2>Architecture</h2>
+
+<P>HTTP-NG is designed to be a replacement for HTTP 1.0 offering much
+higher performance and adding some extra features needed for use in
+commercial applications. The protocol is designed to make it easy to
+implement the basic functionality needed for a simple browser whilst
+making the addition of more powerful features such as security and
+authentication much simpler than it is for HTTP.
+
+<P>HTTP-NG uses a different basic model to HTTP. HTTP sets up a new
+connection for every request, which causes a lot of severe performance
+problems both in the time taken for each transaction, and the load
+placed on both networks and servers.
+
+<P>To avoid these problems, HTTP-NG allows many different requests to be
+sent over a single connection. These requests are asynchronous -
+there's no need for the client to wait for a response before sending
+out a different request. The server can also respond to requests in
+any order it sees fit - it can even interweave the data from multiple
+objects, allowing several images to be transferred in "parallel".
+
+<P>To make these multiple data streams easy to work with, HTTP-NG sends
+all it's messages and data using a "session layer". This divides the
+connection up into lots of different channels. HTTP-NG sends all
+control messages (GET requests, meta-information etc) over a control
+channel. Each object is returned over in its own channel.
+
+<P>This separation of data and control information also makes redirection
+much more powerful - for example, if the object is a video the server
+can return the meta-information over the same connection, together
+with a URL pointing to a dedicated video transfer protocol that will
+fetch the data for the relevant object.  This becomes much more
+important when working with multimedia aware networking technologies,
+such as ATM or RSVP.
+
+<HR>
+
+<h2>Implementation Experience</h2>
+
+<P>There are several obvious ways of implementing HTTP-NG. The first
+approach is to use a simple synchronous RPC model. The client
+establishes a connection to the server, then sends out a request. The
+client then waits until it has received all the data corresponding to
+the request, then returns. This approach is very simple to implement,
+and corresponds quite closely to current practice in older HTTP
+clients. As a simple optimization, the implementation could send a
+number of requests before waiting for all their responses.
+
+<P>The second approach is to use an event based model. A simple
+dispatcher can be wrapped around the connection. Each request then
+adds a callback that should be called whenever the response to the
+request comes in. This model works well with event based browsers such
+as Arena and Netscape; it is also quite simple to implement.
+
+<P>The final approach is to use a multi-threaded implementation; each
+request and channel gets allocated its own thread, allowing multiple
+requests to be processed in parallel.  This model works supremely well
+for servers, especially those serving as proxies.  The proxy server
+can keep a cache of open connections to other proxies or to popular
+sites. Since each connection resides within a single process, requests
+that can't be satisfied from the local cache can easily be switched to
+the appropriate connection. This approach also allows efficient
+gatewaying of HTTP 1.0 requests (see next section).
+
+
+</h2>Transition</h2>
+
+<P>The best transition strategy for moving from HTTP 1.0 to HTTP-NG is
+through the use of intermediate proxy servers. This allows the
+existing base of servers and clients to continues operating as they
+are now, whilst still taking advantage of much of the performance
+enhancements in the new protocol.
+
+<P>The reason that this works is that most of the performance problems in
+HTTP 1.0 are caused by delays in the network. If proxy servers are
+placed close to older clients and servers, then these delays become
+significant. For example, if two servers are placed at either end of a
+transatlantic link, communicating with each other using HTTP-NG, but
+accepting and sending requests to and from other systems using HTTP
+1.0, all the HTTP 1.0 delays would all occur within a continent,
+rather than spanning the intercontinental links. Further, a cacheing
+server can interpret HTML documents and pre-fetch any inlined objects
+before an HTTP client requests them.
+

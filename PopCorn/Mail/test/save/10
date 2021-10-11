@@ -1,0 +1,10 @@
+From uucp Fri Oct 20 00:46:02 1995 remote from phantom
+Received:  from kiae by router.phantom.ru (UUPC/extended 1.12o) with UUCP
+           for postmaster; Fri, 20 Oct 1995 00:46:02 +0400
+From: uucp (UUCP Batch Mail Service)
+To: postmaster
+Subject: batch receiption failed
+
+ERROR: Can't read data - got 30557 instead of 31126.
+Batch saved in D:\TMP\0e500000.CTN
+

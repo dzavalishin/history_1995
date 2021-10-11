@@ -1,0 +1,175 @@
+head	1.1;
+access;
+symbols
+	Ver_075:1.1;
+locks;
+comment	@ * @;
+
+
+1.1
+date	96.09.17.23.20.43;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@/************************ PopCorn server ***************************\
+ *
+ *      Copyright (C) 1991-1993 by Infinity Soft
+ *
+ *      Module  :	File Folder
+ *
+ *      $Log: Ffolder.C $
+ *
+ *
+ *
+ *
+\*/
+
+#include "ffolder.h"
+#include <except.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <ctype.h>
+
+#define ATTRS2FIND	0x27
+
+static bool msg_file( const char *fn_a )
+    {
+    char    ext[_MAX_EXT], dummy[_MAX_PATH], fn[_MAX_PATH];
+    _splitpath( (char *)fn_a, dummy, dummy, fn, ext);
+
+    //printf("got %s ('%s'.'%s')\n", fn_a, fn, ext );
+
+    for( char *cp = fn; *cp; cp++ )
+        if( !isdigit(*cp) )
+            return No;
+
+    //printf("digits: %s\n", fn_a );
+
+    if( (ext[0] != 0) && (stricmp( ext, "." ) != 0) )
+        return No;
+
+    //printf("good: %s\n", fn_a );
+    return Yes;
+    }
+
+
+ffolder::ffolder( const string &dir ) : dir_v( dir )
+    {
+    restart_flag = Yes;
+    opened_flag = No;
+    }
+
+ffolder::~ffolder()
+    {
+    close();
+    }
+
+void ffolder::restart()
+    {
+    close();
+    }
+
+void ffolder::do_restart( string &name )
+    {
+    ULONG           count = 1;
+    APIRET          rc;
+    FILEFINDBUF3	ff = { 0 };
+
+    char	mask[400];
+    sprintf( mask, "%s/*", dir_v.c_str() );
+
+    //printf("mask is %s\n", mask );
+    
+    h = HDIR_CREATE;
+
+    rc = DosFindFirst( mask, &h, ATTRS2FIND, 
+                      &ff, sizeof(ff), &count, FIL_STANDARD );
+
+    if( rc == NO_ERROR )
+        {
+        name = ff.achName;
+        restart_flag = No;
+        opened_flag = Yes;
+        return;
+        }
+
+    if( rc == ERROR_NO_MORE_FILES )
+        {
+        //log( "#", "Nothing to do - no messages found" );
+        close();
+        throw XEOF( "ffolder::do_restart", "no more files", dir_v );
+        }
+
+    //error( EI_Full, "FindFirst rc = %d", rc );
+    throw Invalid_Condition
+        ( "ffolder::do_restart", "FindFirst error", "" );
+    }
+
+
+void ffolder::do_continue( string &name )
+    {
+    ULONG           count = 1;
+    APIRET          rc;
+    FILEFINDBUF3	ff = { 0 };
+
+    rc = DosFindNext( h, &ff, sizeof(ff), &count );
+
+    if( rc == NO_ERROR )
+        {
+        name = ff.achName;
+        return;
+        }
+
+    // Sometimes handle goes nuts :(
+    if( rc == ERROR_INVALID_HANDLE )
+        {
+        //log( "#", "findnext gave ERROR_INVALID_HANDLE, restarting..." );
+        close();
+        do_restart( name );
+        return;
+        }
+
+    if( rc == ERROR_NO_MORE_FILES )
+        throw XEOF( "ffolder::do_continue", "no more files", dir_v );
+
+    //error( EI_Full, "FindNext rc = %d", rc );
+    throw Invalid_Condition( __FILE__, "FindNext error", "" );
+    }
+
+
+string ffolder::next()
+    {
+    string	s;
+
+    do	
+        {
+        restart_flag ? do_restart( s ) : do_continue( s );
+        } while( !msg_file( s.c_str() ) );
+
+    return dir_v + "/" + s;
+    }
+
+void ffolder::close()
+    {
+    APIRET          rc;
+
+    if( !opened_flag ) return;
+
+    restart_flag = Yes;
+
+    //if( (rc = DosFindClose( h )) != NO_ERROR ) error( EI_Full, "FindClose rc = %d", rc );
+    }
+
+
+
+@

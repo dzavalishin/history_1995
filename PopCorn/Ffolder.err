@@ -1,0 +1,30 @@
+.\strng.h(38): Error! E238: (col 5) 'string' is not a function 
+.\strng.h(38): Note! N393: (col 5) included from ffolder.h(23) 
+.\strng.h(38): Note! N393: (col 5) included from Ffolder.C(17) 
+.\strng.h(190): Error! E006: (col 13) syntax error; probable cause: missing ';' 
+.\strng.h(191): Error! E042: (col 13) symbol '_Export' already defined 
+.\strng.h(191): Note! N392: (col 13) 'int _Export' defined in: .\strng.h(190) (col 5) 
+.\strng.h(191): Error! E006: (col 13) syntax error; probable cause: missing ';' 
+.\strng.h(193): Error! E336: (col 16) declaration specifiers are required to declare 'string' 
+.\strng.h(193): Error! E498: (col 8) syntax error before '_Export'; probable cause: incorrectly spelled type name 
+.\strng.h(194): Error! E336: (col 16) declaration specifiers are required to declare 'string' 
+.\strng.h(194): Error! E498: (col 8) syntax error before '_Export'; probable cause: incorrectly spelled type name 
+.\strng.h(200): Error! E238: (col 5) 'istring' is not a function 
+.\strng.h(219): Error! E042: (col 13) symbol '_Export' already defined 
+.\strng.h(219): Note! N392: (col 13) 'int _Export' defined in: .\strng.h(190) (col 5) 
+.\strng.h(219): Error! E006: (col 13) syntax error; probable cause: missing ';' 
+.\strng.h(220): Error! E042: (col 13) symbol '_Export' already defined 
+.\strng.h(220): Note! N392: (col 13) 'int _Export' defined in: .\strng.h(190) (col 5) 
+.\strng.h(220): Error! E006: (col 13) syntax error; probable cause: missing ';' 
+.\strng.h(222): Error! E042: (col 13) symbol '_Export' already defined 
+.\strng.h(222): Note! N392: (col 13) 'int _Export' defined in: .\strng.h(190) (col 5) 
+.\strng.h(222): Error! E006: (col 13) syntax error; probable cause: missing ';' 
+.\strng.h(223): Error! E042: (col 13) symbol '_Export' already defined 
+.\strng.h(223): Note! N392: (col 13) 'int _Export' defined in: .\strng.h(190) (col 5) 
+.\strng.h(223): Error! E006: (col 13) syntax error; probable cause: missing ';' 
+.\strng.h(224): Error! E042: (col 13) symbol '_Export' already defined 
+.\strng.h(224): Note! N392: (col 13) 'int _Export' defined in: .\strng.h(190) (col 5) 
+.\strng.h(224): Error! E006: (col 13) syntax error; probable cause: missing ';' 
+.\strng.h(225): Error! E042: (col 13) symbol '_Export' already defined 
+.\strng.h(225): Note! N392: (col 13) 'int _Export' defined in: .\strng.h(190) (col 5) 
+.\strng.h(225): Error! E133: (col 13) too many errors: compilation aborted 

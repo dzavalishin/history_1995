@@ -1,0 +1,78 @@
+<title>Session Control Protocol (SCP)</title>
+<h1>Session Control Protocol (SCP)</h1>
+
+<address><a href="http://sunsite.unc.edu/ses">Simon Spero, UNC Sunsite/EIT (ses@unc.edu)</a></address>
+
+<P>Several heavily used Internet applications such as
+ FTP, GOPHER, and HTTP use a protocol model in which every transaction
+requires a separate TCP connection. Since clients normally issue multiple
+requests to the  same server, this model is quite inefficient, as it incurs
+all the connection start up costs for every single request.
+
+<P>SCP is a simple protocol which lets a server and client have multiple 
+conversations over a single TCP connection. The protocol is designed to be
+simple to implement, and is modelled after TCP.
+
+<h2>Services</h2>
+
+<P>SCP's main service is dialogue control. This service allows either end of
+the connection to establish a virtual session over a single transport
+connection. SCP also allows a sender to indicate message boundaries, and
+allows a reciever to reject an incoming session.
+
+<h2>Design goals</h2>
+
+<dl>
+         <dt> Unconfirmed service without negotiation. 
+
+         <dd> SCP allows data to be sent with the session establishment; the 
+          recepient does not confirm successful connection establishment, but 
+          may reject unsuccessful attempts. This simplifies the design of the
+          protocol, and removes the latency required for a confirmed operation.
+
+        <dt> Low overhead
+
+        <dd> SCP has a fixed overhead of 8 bytes per segment. This overhead is
+         half the size of an IPNG address, and is only incurred once per 
+         segment, instead of once per packet.
+
+        <dt> Simple design
+
+        <dd>The session protocol should be simple enough to implement for a 
+         single application. 
+</dl>
+
+<h2>Protocol Description</h2>
+
+<P><B>Header Format:</B>
+
+<P><img src="scp.gif">
+                                         
+<h2>Protocol Operation</h2>
+
+
+<h3>Session ID allocation</h3>
+
+<p>Each session is allocated a session identifier. Session Identifiers below
+1024 are reserved. Session IDs allocated by clients are  even; those allocated
+by servers, odd. 
+
+<h3>Session establishment</h3>
+
+<P>A session is established by setting the SYN bit in the first message sent
+on that channel. 
+
+<h3>Graceful release</h3>
+
+<P>A session is ended by sending a message with the FIN bit set. Each end of a
+ connection may be closed independently.
+
+<h3>Disgraceful release</h3>
+
+<p>A session may be terminated by sending a message with the RST bit set. All
+pending data for that session should be discarded
+
+<h3>Message boundaries</h3>
+
+<p>A message boundary is marked by sending a message with the PUSH bit set.
+The boundary is set at the final octet in this message, including that octet.

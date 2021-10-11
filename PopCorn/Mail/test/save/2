@@ -1,0 +1,34 @@
+From abramov!abramov.msk.su!MAILER-DAEMON Tue Sep 12 11:14:49 1995 remote from phantom
+Received:  from kiae by router.phantom.ru (UUPC/extended 1.12o) with UUCP
+           for phantom.ru!phantom!user; Tue, 12 Sep 1995 11:14:48 +0400
+Received: by sequent.KIAE.su (UUMAIL/2.0); Tue, 12 Sep 95 10:26:52 +0400
+Subject: Troubles delivering the message
+
+Could not deliver a message to the following address:
+
+		phantom!phantom.ru!phantom!user
+
+Mailer SENDMAIL.EXE, mail from abramov!MAILER-DAEMON
+
+
+	--------- The unsent message follows -----------
+From: UUPC/@ Daemon <MAILER-DAEMON@abramov.msk.su>
+To: phantom!phantom.ru!phantom!user
+Subject: Delivering Errors
+Date: Tue, 12 Sep 1995 09:58:03 +0400
+
+I can't deliver your message to:
+
+root
+
+  ----- Message header follows -----
+Received: by abramov.msk.su (UUPC/@ v5.06gamma, 07Feb93);
+          Tue, 12 Sep 1995 09:57:58 +0400
+Received: by sovcom.KIAE.su (UUMAIL/2.0); Mon, 11 Sep 95 23:43:02 +0300
+Received: by phantom.ru (IBM OS/2 sendmail v.1.3.2/1.6dz) id AA0946; Tue, 12 Sep 95 00:24:21 +0400
+Received:  by gate.phantom.ru (FIDO2UU 1.99f [OS2/C Set]) with FTN; Tue, 12 Sep 1995 00:24:08 +0300
+To: root@abramov.msk.su
+From: Dmitry Zavalishin <dz@phantom.ru>
+Message-Id: <30550B68@gate.phantom.ru>
+Subject: Re: 14 дней учебы и отдыха в Irwin College (Lester, England) в июле-авг
+Date: Tue, 12 Sep 1995 00:24:08 +0300
