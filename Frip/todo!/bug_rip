@@ -1,0 +1,205 @@
+================================= dz's netmail =================================
+   From: Vladimir Donskoy                    2:5055/29       18 Dec 95  16:58:17
+     To: Dmitry Zavalishin                   2:5020/32       19 Dec 95  02:10:01
+   Subj: FRIP                                                                   
+================================================================================
+                      คเ ขแโขใฉ, Dmitry Zavalishin!
+
+      € ขฎโ ญ  ํโฎฌ pจฏฅ ขแฅ ใ ฌฅญ๏ ฃpฎๅ ซฎแ์... ฎๅฎฆฅ, ็โฎ ข ฎแจ ญ  FATฅ 
+็โฎ-โฎ แกฎจโ ฏpจ ไฎpฌจpฎข ญจจ ญฅขฅpญฎฃฎ จฌฅญจ ช โ ซฎฃ . แฅ ฎแโ ซ์ญ๋ฅ pจฏ๋ แ 
+ญฅ-ไจคฎ่ญ๋ฌจ คฎฌฅญ ฌจ ฏpฎๅฎคจซจ ญฎpฌ ซ์ญฎ (จ ช โ ซฎฃจ ฅแซจ ญฅ ขฎงฌฎฆญ๋ - ญฅ 
+ไฎpฌจpฎข ซจแ์),   โใโ - โp ฏ...
+
+แโ โจ,   ง ็ฅฌ ฏฎแ๋ซ โ์ pจฏ๋ ญ  ฏฎจญโฎข๋ฉ  คpฅแ? (5020/32.54)
+
+>อออออออออออออออ  Cut Begin  Rip75168.Rip ออออออออออออออออออออออ
+from 2:5055/15.0@fidonet.org
+to 2:5055/29.0@fidonet.org
+hops 13
+created 26/11/95 14:40:48
+creator 2:5020/530.0@fidonet.org
+ad 963:*/*.*@Viwanet.msk.ru
+path 2:5055/15.0@fidonet.org
+path 2:5055/24.0@fidonet.org
+path 2:5021/4.0@fidonet.org
+path 2:5020/441.0@fidonet.org
+path 2:5020/215.0@fidonet.org
+path 2:5020/372.0@fidonet.org
+path 2:5020/378.0@fidonet.org
+path 2:5020/278.0@fidonet.org
+path 2:5020/302.0@fidonet.org
+path 2:5020/418.0@fidonet.org
+path 2:5020/647.0@fidonet.org
+path 2:5020/251.0@FidoNet
+path 2:5020/530.0@fidonet.org
+seenby 2:5055/15.0@fidonet.org
+seenby 7:1410/15.0@fidonet.org
+seenby 2:5055/24.0@fidonet.org
+seenby 2:5055/21.0@fidonet.org
+seenby 2:5055/9.0@fidonet.org
+seenby 2:5021/4.0@fidonet.org
+seenby 2:5020/441.0@fidonet.org
+seenby 2:5020/215.0@fidonet.org
+seenby 2:5020/372.0@fidonet.org
+seenby 2:5020/378.0@fidonet.org
+seenby 2:5020/278.0@fidonet.org
+seenby 2:5020/302.0@fidonet.org
+seenby 57:5020/40.0@fidonet.org
+seenby 2:5020/418.0@fidonet.org
+seenby 2:5020/135.0@fidonet.org
+seenby 2:5020/432.0@fidonet.org
+seenby 2:5020/621.0@fidonet.org
+seenby 2:5020/647.0@fidonet.org
+seenby 2:5020/32.54@fidonet.org
+seenby 2:5020/251.0@FidoNet
+seenby 7:1130/251.0@FidoNet
+seenby 7:7/2.0@FidoNet
+seenby 7:7/777.0@FidoNet
+seenby 7:7/1000.0@FidoNet
+seenby 250:1000/4.0@DinaNet
+seenby 2:5020/530.0@fidonet.org
+seenby 942:95/530.0@fidonet.org
+seenby 963:1/530.0@fidonet.org
+>ออออออออออออออออออออ  Cut End  อออออออออออออออออออออออออ
+
+ฎโ ซฎฃ (ญฅแชฎซ์ชฎ ง ฏใแชฎข):
+
+>อออออออออออออออ  Cut Begin  Frip.Log ออออออออออออออออออออออ
+*!* Frip - FTN Networks Automatic Routing Builder: Beta_11
+
+*!* Got announce of 942:95/530.0@Planets.Net@fidonet.org from 
+2:5055/38.0@fidonet.org
+Error: Can't rename RIP63028.RIP to 
+d:\frip\MapDir/Planets.Net@fidonet.org/942_95.530
+***     Will come to 2:5055/1.0@fidonet.org
+***     Will come to 2:5055/5.0@fidonet.org
+***     Will come to 2:5055/15.0@fidonet.org
+***     Will come to 2:5055/16.0@fidonet.org
+***     Will come to 2:5055/23.0@fidonet.org
+***     Will not come to 2:5055/38.0@fidonet.org due to seenby
+> จ แกฎฉ...
+*!* Frip - FTN Networks Automatic Routing Builder: Beta_11
+
+*!* Got announce of 942:95/530.0@Planets.Net@fidonet.org from 
+2:5055/15.0@fidonet.org
+Error: Can't rename RIP52255.RIP to 
+d:\frip\MapDir/Planets.Net@fidonet.org/942_95.530
+***     Will come to 2:5055/1.0@fidonet.org
+***     Will come to 2:5055/5.0@fidonet.org
+***     Will not come to 2:5055/15.0@fidonet.org due to seenby
+***     Will come to 2:5055/16.0@fidonet.org
+***     Will come to 2:5055/23.0@fidonet.org
+***     Will come to 2:5055/38.0@fidonet.org
+***     Will come to 2:5055/40.0@fidonet.org
+***     Will come to 2:5058/13.0@fidonet.org
+*!* Got announce of 963:*/*.*@Viwanet.msk.ru from 2:5055/15.0@fidonet.org
+Error: Can't rename  to d:\frip\MapDir/Viwanet.msk.ru/963_$.$
+**!* Frip - FTN Networks Automatic Routing Builder: Beta_11
+> แกฎฉ... ‘ซฅคใ๎้จฉ ง ฏใแช ข๋ขฅซ ง ฃฎซฎขฎช ข โฎฉ ฆฅ แโpฎชฅ ^^^
+
+*!* Creating route file...
+*!* Total 0 rips ignored, 0 new, 0 better, 0 timed out, 0 filtered
+>ออออออออออออออออออออ  Cut End  อออออออออออออออออออออออออ
+
+ฎฃ ฎโ OS/2 แ ชใ็ฅฉ  กฅญคฎข ไpจฏ :
+
+>อออออออออออออออ  Cut Begin  Popuplog.Os2 ออออออออออออออออออออออ
+12-18-1995  00:11:31  SYS3175  PID 04ce
+D:\FRIP\FRIP.EXE
+c0000005
+00030a8f
+P1=00000001  P2=00000002  P3=XXXXXXXX  P4=XXXXXXXX
+EAX=00211f8c  EBX=000001ba  ECX=00211efc  EDX=00000002
+ESI=00211f8c  EDI=00044d18
+DS=0053  DSACC=d0f3  DSLIM=1bffffff
+ES=0053  ESACC=d0f3  ESLIM=1bffffff
+FS=150b  FSACC=00f3  FSLIM=00000030
+GS=0000  GSACC=****  GSLIM=********
+CS:EIP=005b:00030a8f  CSACC=d0df  CSLIM=1bffffff
+SS:ESP=0053:00044cdc  SSACC=d0f3  SSLIM=1bffffff
+EBP=00044d1c  FLG=00012202
+
+FRIP.EXE 0002:00010a8f
+
+----------------------------------------
+
+12-18-1995  02:49:15  SYS3175  PID 055a
+D:\FRIP\FRIP.EXE
+c0000005
+00030a8f
+P1=00000001  P2=00000002  P3=XXXXXXXX  P4=XXXXXXXX
+EAX=00211f8c  EBX=000001ba  ECX=00211efc  EDX=00000002
+ESI=00211f8c  EDI=00044d18
+DS=0053  DSACC=d0f3  DSLIM=1bffffff
+ES=0053  ESACC=d0f3  ESLIM=1bffffff
+FS=150b  FSACC=00f3  FSLIM=00000030
+GS=0000  GSACC=****  GSLIM=********
+CS:EIP=005b:00030a8f  CSACC=d0df  CSLIM=1bffffff
+SS:ESP=0053:00044cdc  SSACC=d0f3  SSLIM=1bffffff
+EBP=00044d1c  FLG=00012202
+
+FRIP.EXE 0002:00010a8f
+
+----------------------------------------
+
+12-18-1995  09:16:37  SYS3175  PID 05d5
+D:\FRIP\FRIP.EXE
+c0000005
+0002c821
+P1=00000001  P2=00000002  P3=XXXXXXXX  P4=XXXXXXXX
+EAX=00000000  EBX=00224be4  ECX=ffffffe2  EDX=00044bcc
+ESI=00000002  EDI=00044be8
+DS=0053  DSACC=d0f3  DSLIM=1bffffff
+ES=0053  ESACC=d0f3  ESLIM=1bffffff
+FS=150b  FSACC=00f3  FSLIM=00000030
+GS=0000  GSACC=****  GSLIM=********
+CS:EIP=005b:0002c821  CSACC=d0df  CSLIM=1bffffff
+SS:ESP=0053:00044bc8  SSACC=d0f3  SSLIM=1bffffff
+EBP=00044de2  FLG=00012206
+
+FRIP.EXE 0002:0000c821
+
+----------------------------------------
+
+12-18-1995  11:28:33  SYS3175  PID 0649
+D:\FRIP\FRIP.EXE
+c0000005
+0002c821
+P1=00000001  P2=00000002  P3=XXXXXXXX  P4=XXXXXXXX
+EAX=00000000  EBX=00216c90  ECX=ffffffe2  EDX=00044bcc
+ESI=00000002  EDI=00044be8
+DS=0053  DSACC=d0f3  DSLIM=1bffffff
+ES=0053  ESACC=d0f3  ESLIM=1bffffff
+FS=150b  FSACC=00f3  FSLIM=00000030
+GS=0000  GSACC=****  GSLIM=********
+CS:EIP=005b:0002c821  CSACC=d0df  CSLIM=1bffffff
+SS:ESP=0053:00044bc8  SSACC=d0f3  SSLIM=1bffffff
+EBP=00044de2  FLG=00012206
+
+FRIP.EXE 0002:0000c821
+
+----------------------------------------
+
+12-18-1995  16:30:36  SYS3175  PID 0840
+D:\FRIP\FRIP.EXE
+c0000005
+0002c821
+P1=00000001  P2=00000002  P3=XXXXXXXX  P4=XXXXXXXX
+EAX=00000000  EBX=00216c90  ECX=ffffffe2  EDX=00044bcc
+ESI=00000002  EDI=00044be8
+DS=0053  DSACC=d0f3  DSLIM=1bffffff
+ES=0053  ESACC=d0f3  ESLIM=1bffffff
+FS=150b  FSACC=00f3  FSLIM=00000030
+GS=0000  GSACC=****  GSLIM=********
+CS:EIP=005b:0002c821  CSACC=d0df  CSLIM=1bffffff
+SS:ESP=0053:00044bc8  SSACC=d0f3  SSLIM=1bffffff
+EBP=00044de2  FLG=00012206
+
+FRIP.EXE 0002:0000c821
+>ออออออออออออออออออออ  Cut End  อออออออออออออออออออออออออ
+
+      ‘ ใข ฆฅญจฅฌ, Vladimir Donskoy
+
+--- GoldED/2 2.50+
+ * Origin: VGTU * 7-8442-936149 * 21:00-18:00 * 33600 V.Everithing (2:5055/29)
+

@@ -1,0 +1,116 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	96.01.07.15.15.23;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@$Id: Config.Sys 1.11 1996/01/06 23:59:19 dz Exp $
+
+Hi there, those who can't read in Russian. I'm sorry, but there's
+still no dox in english. I'll try to do my best in next versions, 
+but nothing guaranteed.
+
+Here's a brief translation of russian read.me.
+
+Q: What's this?
+
+A: Automatic netmail routing table builder called FRIP.
+
+
+
+Q: How does it work in brief?
+
+A: FRIP is a decentralized system, no central authority or control
+required. Each one, who needs that, sets up FRIP for his system and
+systems running FRIP start to exchange routing information packets
+called 'rips' or 'ads' here. Each ad carries information about one
+routing destination (either one node or complete network or even
+zone or domain) and gives information about which node mail addressed
+to that destination can be routed to. Each frip node once a while
+creates ads describing himself and broadcasts them around. Directly
+connected nodes receive this ad and send it along to their other links,
+and ad goes on and on until it makes it to a node, which knows shorter
+path to the given destination, that this ad came through.
+
+
+Q: Which ad is considered to be better among two of them?
+
+A: Each ad carries its time of birth inside. Using it we can calculate time
+this ad was on its way here. Ad, which took less time to make to us, 
+considered to be better.
+
+
+Q: Does it mean that FRIP will build me a routing table contating, in
+some future, records about all the nodes in the world?? It will be a huge
+list, is not it?
+
+A: It is not going to list all nodes in the world in its database.
+There's a simple trick to prevent this: FRIP can build routing to
+the nets, zones and domains as a whole, and if it knows, how to
+send mail to, say, zone 6 in 24 hours, it will ignore information
+about worse routing to zone 6 nodes and nets.
+
+
+
+Q; Can I announce with FRIP such thing as, say, *:*/*.*@@fidonet.org?
+
+A: Yeah. Domains are fully supported.
+
+
+
+Q: And if I do that just to forge routing?
+
+A:
+   1. You'll be traced in a moment: all paths are kept in ads.
+   2. There's an ability to filter ads in FRIP, and each node
+      can define who can send it which kinds of ads, so unwanted
+      routing changes can be prevented.
+
+
+
+Q: How can I sei thing up?
+
+A: Put everything in a fresh new clean directory. Set up your
+   fido.ad file, links.cfg, frip.cfg. If you like to start FRIP
+   from other directory, that it was put to, set environment variable
+   'FRIP' with a command such as "set FRIP=x:\....\frip.cfg" in your
+   autoexec.bat for DOS or Config.Sys for OS/2.
+
+
+Q: How to run it?
+
+A: Each time your node received *.ri?, but at least once a day.
+
+
+
+
+Q: Where can I ask questions?
+
+A: There's an echo Ru.FRIP in Russia, welcome!
+
+
+Q: Is there a version for Unix?
+
+A: Not yet, but if you like to port - I'll give you sources.
+   (Do not distribute 'em, though). Frip is written in C++
+   mostly in system-independent way. Watcom C++ contatiner class
+   lib is used, but I'll be gald if you will port it to STL.
+
+
+@

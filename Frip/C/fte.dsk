@@ -1,0 +1,18 @@
+FTE Desktop 1
+F|D:\C\FRIP\C\frip.C
+F|D:\C\FRIP\C\sysdep.C
+F|D:\C\FRIP\C\mainloop.c
+F|D:\C\FRIP\C\msgid.h
+F|D:\C\FRIP\C\datetime.c
+D|D:\C\FRIP\C\
+F|D:\C\FRIP\C\app.h
+F|D:\C\FRIP\C\app.c
+F|D:\C\FRIP\C\dep_nt_i.c
+F|D:\WATCOM\H\NT\winbase.h
+F|D:\C\FRIP\C\frip.h
+F|D:\C\FRIP\C\dep_unix_i.c
+F|D:\C\FRIP\C\dep_dos_i.c
+F|D:\C\FRIP\C\dep_os2_i.c
+F|D:\C\FRIP\C\conf.h
+F|D:\C\FRIP\C\base.h
+F|D:\C\FRIP\C\Base.C

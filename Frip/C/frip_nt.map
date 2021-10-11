@@ -1,0 +1,1737 @@
+WATCOM Linker Version 10.6
+Copyright by WATCOM International Corp. 1985, 1996. All rights reserved.
+Created on:       97/05/22 23:36:57
+Executable Image: frip_nt.exe
+creating a Windows NT character-mode executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        0002e700
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE                          0001:00000000   00000007
+_TEXT                  CODE                          0001:00000010   0004611c
+TRANSFER CODE          CODE                          0001:0004612c   00000174
+_NULL                  BEGDATA        DGROUP         0002:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0002:00000004   00000000
+CONST                  DATA           DGROUP         0002:00000004   0000526c
+CONST2                 DATA           DGROUP         0002:00005270   00026044
+_DATA                  DATA           DGROUP         0002:0002b2b4   000016d8
+XIB                    DATA           DGROUP         0002:0002c98c   00000000
+XI                     DATA           DGROUP         0002:0002c98c   000000f0
+XIE                    DATA           DGROUP         0002:0002ca7c   00000000
+YIB                    DATA           DGROUP         0002:0002ca7c   00000000
+YI                     DATA           DGROUP         0002:0002ca7c   00000012
+YIE                    DATA           DGROUP         0002:0002ca8e   00000000
+TIB                    DATA           DGROUP         0002:0002ca8e   00000000
+TI                     DATA           DGROUP         0002:0002ca8e   00000000
+TIE                    DATA           DGROUP         0002:0002ca8e   00000000
+DATA                   DATA           DGROUP         0002:0002ca8e   00000000
+_BSS                   BSS            DGROUP         0002:0002d010   00000684
+c_common               BSS            DGROUP         0002:0002d694   00000064
+STACK                  STACK          DGROUP         0002:0002d700   00001000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: nt\flag.obj(D:\C\FRIP\C\flag.c)
+0001:0000d658  bool near string::same( string const near & ) const
+0001:0000d648  string::srtti near string::rtti() const
+0001:0000d5f0  near string::sdata::sdata( string::sdata const near & )
+0001:0000d59c  near string::sdata::~sdata()
+0001:0000d574  void near string::detach()
+0001:0000d514  near string::~string()
+0001:0000d4f8  near wildness::wildness( wildness const near & )
+0001:0000d494  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near <<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near >::allo
+0001:0000d484  int near <<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near >::allocator::init_page_size()
+0001:0000d428  string near * near <string near >::allocator::allocate( int )
+0001:0000d410  void near <string near >::allocator::deallocate( string near * )
+0001:0000d400  int near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::buffer_size()
+0001:0000d3a4  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node_buffer near * near <<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node_buffe
+0001:0000d250  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::get_node()
+0001:0000d23c  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near & near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::root()
+0001:0000d228  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near & near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::leftmost()
+0001:0000d214  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near & near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rightmost()
+0001:0000d200  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near & near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::left( <string near,
+0001:0000d1ec  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near & near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::right( <string near
+0001:0000d1dc  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near & near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::parent( <string nea
+0001:0000d1cc  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::color_type near & near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::color( <string near,string n
+0001:0000d1b4  near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator::iterator( <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * )
+0001:0000d118  near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::~rb_tree()
+0001:0000cfa0  near <string near,<string near >::less near >::set::set( <string near,<string near >::less near >::set const near & )
+0001:0000cf90  int near <<addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near >::allocator::init_page_size()
+0001:0000cf7c  string const near * near <string near >::vector::begin() const
+0001:0000cf68  string const near * near <string near >::vector::end() const
+0001:0000cf38  near <string near >::vector::~vector()
+0001:0000cf20  void near <stopgo near >::allocator::deallocate( stopgo near * )
+0001:0000ce84  near <stopgo near >::vector::vector( <stopgo near >::vector const near & )
+0001:0000ce54  near <stopgo near >::vector::~vector()
+0001:0000ce44  int near <<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near >::allocator::init_page_size()
+0001:00000043  near flags::~flags()
+0001:00000114  near flags::flags( string const near & )
+0001:0000039d  near flags::operator string () const
+0001:00000554  int near flags::operator ==( flags const near & ) const
+0001:00000761  flags near & near flags::operator +=( string )
+0001:00000891* flags near & near flags::operator -=( string )
+0001:0000098a  bool near flags::has( string ) const
+0001:0000ce24  bool near operator ==( <<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near,string near,string near & near,int near >::reverse_bidirectional_iterator const near &, <<string near,string near,<
+0001:0000ce04  bool near operator ==( <<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::const_iterator near,string near,string const near & near,int near >::reverse_bidirectional_iterator const near &, <<string near,s
+0001:0000cde4  near operator ==( <<addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::iterator near,<addr const near,string near >::pair near,<addr const near,str
+0001:0000cdc4  near operator ==( <<addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::const_iterator near,<addr const near,string near >::pair near,<addr const ne
+0001:0000cda4  bool near operator ==( <<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near,app_elem near,app_elem near & near,int near >::reverse_bidirectional_iterator const near &, <<app_elem ne
+0001:0000cd84  bool near operator ==( <<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::const_iterator near,app_elem near,app_elem const near & near,int near >::reverse_bidirectional_iterator const near &, <
+0001:0000cd68  bool near operator ==( <addr const near * near,addr near,addr const near & near,int near >::reverse_iterator const near &, <addr const near * near,addr near,addr const near & near,int near >::reverse_iterator const near & )
+0001:0000cd4c  bool near operator ==( <addr near * near,addr near,addr near & near,int near >::reverse_iterator const near &, <addr near * near,addr near,addr near & near,int near >::reverse_iterator const near & )
+0001:0000cd30  bool near operator ==( <string const near * near,string near,string const near & near,int near >::reverse_iterator const near &, <string const near * near,string near,string const near & near,int near >::reverse_iterator const near & )
+0001:0000cd14  bool near operator ==( <string near * near,string near,string near & near,int near >::reverse_iterator const near &, <string near * near,string near,string near & near,int near >::reverse_iterator const near & )
+0001:0000ccf8  bool near operator ==( <stopgo const near * near,stopgo near,stopgo const near & near,int near >::reverse_iterator const near &, <stopgo const near * near,stopgo near,stopgo const near & near,int near >::reverse_iterator const near & )
+0001:0000ccdc  bool near operator ==( <stopgo near * near,stopgo near,stopgo near & near,int near >::reverse_iterator const near &, <stopgo near * near,stopgo near,stopgo near & near,int near >::reverse_iterator const near & )
+0001:0000ccc0  bool near operator ==( <path_elem const near * near,path_elem near,path_elem const near & near,int near >::reverse_iterator const near &, <path_elem const near * near,path_elem near,path_elem const near & near,int near >::reverse_iterator const near & )
+0001:0000cca4  bool near operator ==( <path_elem near * near,path_elem near,path_elem near & near,int near >::reverse_iterator const near &, <path_elem near * near,path_elem near,path_elem near & near,int near >::reverse_iterator const near & )
+0001:0000cc88  bool near operator ==( <RipZip const near * near,RipZip near,RipZip const near & near,int near >::reverse_iterator const near &, <RipZip const near * near,RipZip near,RipZip const near & near,int near >::reverse_iterator const near & )
+0001:0000cc6c  bool near operator ==( <RipZip near * near,RipZip near,RipZip near & near,int near >::reverse_iterator const near &, <RipZip near * near,RipZip near,RipZip near & near,int near >::reverse_iterator const near & )
+0001:0000cc50  bool near operator ==( <base_data const near * near,base_data near,base_data const near & near,int near >::reverse_iterator const near &, <base_data const near * near,base_data near,base_data const near & near,int near >::reverse_iterator const near & )
+0001:0000cc34  bool near operator ==( <base_data near * near,base_data near,base_data near & near,int near >::reverse_iterator const near &, <base_data near * near,base_data near,base_data near & near,int near >::reverse_iterator const near & )
+0001:0000cc18  bool near operator ==( <link const near * near,link near,link const near & near,int near >::reverse_iterator const near &, <link const near * near,link near,link const near & near,int near >::reverse_iterator const near & )
+0001:0000cbfc  bool near operator ==( <link near * near,link near,link near & near,int near >::reverse_iterator const near &, <link near * near,link near,link near & near,int near >::reverse_iterator const near & )
+0001:0000cbe0  bool near operator <( <addr const near * near,addr near,addr const near & near,int near >::reverse_iterator const near &, <addr const near * near,addr near,addr const near & near,int near >::reverse_iterator const near & )
+0001:0000cbc4  bool near operator <( <addr near * near,addr near,addr near & near,int near >::reverse_iterator const near &, <addr near * near,addr near,addr near & near,int near >::reverse_iterator const near & )
+0001:0000cba8  bool near operator <( <string const near * near,string near,string const near & near,int near >::reverse_iterator const near &, <string const near * near,string near,string const near & near,int near >::reverse_iterator const near & )
+0001:0000cb8c  bool near operator <( <string near * near,string near,string near & near,int near >::reverse_iterator const near &, <string near * near,string near,string near & near,int near >::reverse_iterator const near & )
+0001:0000cb70  bool near operator <( <stopgo const near * near,stopgo near,stopgo const near & near,int near >::reverse_iterator const near &, <stopgo const near * near,stopgo near,stopgo const near & near,int near >::reverse_iterator const near & )
+0001:0000cb54  bool near operator <( <stopgo near * near,stopgo near,stopgo near & near,int near >::reverse_iterator const near &, <stopgo near * near,stopgo near,stopgo near & near,int near >::reverse_iterator const near & )
+0001:0000cb38  bool near operator <( <path_elem const near * near,path_elem near,path_elem const near & near,int near >::reverse_iterator const near &, <path_elem const near * near,path_elem near,path_elem const near & near,int near >::reverse_iterator const near & )
+0001:0000cb1c  bool near operator <( <path_elem near * near,path_elem near,path_elem near & near,int near >::reverse_iterator const near &, <path_elem near * near,path_elem near,path_elem near & near,int near >::reverse_iterator const near & )
+0001:0000cb00  bool near operator <( <RipZip const near * near,RipZip near,RipZip const near & near,int near >::reverse_iterator const near &, <RipZip const near * near,RipZip near,RipZip const near & near,int near >::reverse_iterator const near & )
+0001:0000cae4  bool near operator <( <RipZip near * near,RipZip near,RipZip near & near,int near >::reverse_iterator const near &, <RipZip near * near,RipZip near,RipZip near & near,int near >::reverse_iterator const near & )
+0001:0000cac8  bool near operator <( <base_data const near * near,base_data near,base_data const near & near,int near >::reverse_iterator const near &, <base_data const near * near,base_data near,base_data const near & near,int near >::reverse_iterator const near & )
+0001:0000caac  bool near operator <( <base_data near * near,base_data near,base_data near & near,int near >::reverse_iterator const near &, <base_data near * near,base_data near,base_data near & near,int near >::reverse_iterator const near & )
+0001:0000ca90  bool near operator <( <link const near * near,link near,link const near & near,int near >::reverse_iterator const near &, <link const near * near,link near,link const near & near,int near >::reverse_iterator const near & )
+0001:0000ca74  bool near operator <( <link near * near,link near,link near & near,int near >::reverse_iterator const near &, <link near * near,link near,link near & near,int near >::reverse_iterator const near & )
+0001:0000ca4c  int near operator -( <addr const near * near,addr near,addr const near & near,int near >::reverse_iterator const near &, <addr const near * near,addr near,addr const near & near,int near >::reverse_iterator const near & )
+0001:0000ca24  int near operator -( <addr near * near,addr near,addr near & near,int near >::reverse_iterator const near &, <addr near * near,addr near,addr near & near,int near >::reverse_iterator const near & )
+0001:0000c9f8  int near operator -( <string const near * near,string near,string const near & near,int near >::reverse_iterator const near &, <string const near * near,string near,string const near & near,int near >::reverse_iterator const near & )
+0001:0000c9cc  int near operator -( <string near * near,string near,string near & near,int near >::reverse_iterator const near &, <string near * near,string near,string near & near,int near >::reverse_iterator const near & )
+0001:0000c9a4  int near operator -( <stopgo const near * near,stopgo near,stopgo const near & near,int near >::reverse_iterator const near &, <stopgo const near * near,stopgo near,stopgo const near & near,int near >::reverse_iterator const near & )
+0001:0000c97c  int near operator -( <stopgo near * near,stopgo near,stopgo near & near,int near >::reverse_iterator const near &, <stopgo near * near,stopgo near,stopgo near & near,int near >::reverse_iterator const near & )
+0001:0000c954  int near operator -( <path_elem const near * near,path_elem near,path_elem const near & near,int near >::reverse_iterator const near &, <path_elem const near * near,path_elem near,path_elem const near & near,int near >::reverse_iterator const near & )
+0001:0000c92c  int near operator -( <path_elem near * near,path_elem near,path_elem near & near,int near >::reverse_iterator const near &, <path_elem near * near,path_elem near,path_elem near & near,int near >::reverse_iterator const near & )
+0001:0000c904  int near operator -( <RipZip const near * near,RipZip near,RipZip const near & near,int near >::reverse_iterator const near &, <RipZip const near * near,RipZip near,RipZip const near & near,int near >::reverse_iterator const near & )
+0001:0000c8dc  int near operator -( <RipZip near * near,RipZip near,RipZip near & near,int near >::reverse_iterator const near &, <RipZip near * near,RipZip near,RipZip near & near,int near >::reverse_iterator const near & )
+0001:0000c8b4  int near operator -( <base_data const near * near,base_data near,base_data const near & near,int near >::reverse_iterator const near &, <base_data const near * near,base_data near,base_data const near & near,int near >::reverse_iterator const near & )
+0001:0000c88c  int near operator -( <base_data near * near,base_data near,base_data near & near,int near >::reverse_iterator const near &, <base_data near * near,base_data near,base_data near & near,int near >::reverse_iterator const near & )
+0001:0000c864  int near operator -( <link const near * near,link near,link const near & near,int near >::reverse_iterator const near &, <link const near * near,link near,link const near & near,int near >::reverse_iterator const near & )
+0001:0000c83c  int near operator -( <link near * near,link near,link near & near,int near >::reverse_iterator const near &, <link near * near,link near,link near & near,int near >::reverse_iterator const near & )
+0001:0000c80c  <addr const near * near,addr near,addr const near & near,int near >::reverse_iterator near operator +( int, <addr const near * near,addr near,addr const near & near,int near >::reverse_iterator const near & )
+0001:0000c7dc  <addr near * near,addr near,addr near & near,int near >::reverse_iterator near operator +( int, <addr near * near,addr near,addr near & near,int near >::reverse_iterator const near & )
+0001:0000c7b4  <string const near * near,string near,string const near & near,int near >::reverse_iterator near operator +( int, <string const near * near,string near,string const near & near,int near >::reverse_iterator const near & )
+0001:0000c78c  <string near * near,string near,string near & near,int near >::reverse_iterator near operator +( int, <string near * near,string near,string near & near,int near >::reverse_iterator const near & )
+0001:0000c75c  <stopgo const near * near,stopgo near,stopgo const near & near,int near >::reverse_iterator near operator +( int, <stopgo const near * near,stopgo near,stopgo const near & near,int near >::reverse_iterator const near & )
+0001:0000c72c  <stopgo near * near,stopgo near,stopgo near & near,int near >::reverse_iterator near operator +( int, <stopgo near * near,stopgo near,stopgo near & near,int near >::reverse_iterator const near & )
+0001:0000c6fc  <path_elem const near * near,path_elem near,path_elem const near & near,int near >::reverse_iterator near operator +( int, <path_elem const near * near,path_elem near,path_elem const near & near,int near >::reverse_iterator const near & )
+0001:0000c6cc  <path_elem near * near,path_elem near,path_elem near & near,int near >::reverse_iterator near operator +( int, <path_elem near * near,path_elem near,path_elem near & near,int near >::reverse_iterator const near & )
+0001:0000c6a8  <RipZip const near * near,RipZip near,RipZip const near & near,int near >::reverse_iterator near operator +( int, <RipZip const near * near,RipZip near,RipZip const near & near,int near >::reverse_iterator const near & )
+0001:0000c684  <RipZip near * near,RipZip near,RipZip near & near,int near >::reverse_iterator near operator +( int, <RipZip near * near,RipZip near,RipZip near & near,int near >::reverse_iterator const near & )
+0001:0000c650  <base_data const near * near,base_data near,base_data const near & near,int near >::reverse_iterator near operator +( int, <base_data const near * near,base_data near,base_data const near & near,int near >::reverse_iterator const near & )
+0001:0000c61c  <base_data near * near,base_data near,base_data near & near,int near >::reverse_iterator near operator +( int, <base_data near * near,base_data near,base_data near & near,int near >::reverse_iterator const near & )
+0001:0000c5e8  <link const near * near,link near,link const near & near,int near >::reverse_iterator near operator +( int, <link const near * near,link near,link const near & near,int near >::reverse_iterator const near & )
+0001:0000c5b4  <link near * near,link near,link near & near,int near >::reverse_iterator near operator +( int, <link near * near,link near,link near & near,int near >::reverse_iterator const near & )
+0001:0000c594  int const near & near max( int const near &, int const near & )
+0001:0000c524  void near destroy( addr near *, addr near * )
+0001:0000c4f8  void near destroy( string near *, string near * )
+0001:0000c488  void near destroy( stopgo near *, stopgo near * )
+0001:0000c418  void near destroy( path_elem near *, path_elem near * )
+0001:0000c360  void near destroy( RipZip near *, RipZip near * )
+0001:0000c284  void near destroy( base_data near *, base_data near * )
+0001:0000c160  void near destroy( link near *, link near * )
+0001:0000c120  addr near * near uninitialized_copy( addr const near *, addr const near *, addr near * )
+0001:0000c0e0  addr near * near uninitialized_copy( addr near *, addr near *, addr near * )
+0001:0000c0a0  string near * near uninitialized_copy( string const near *, string const near *, string near * )
+0001:0000c060  string near * near uninitialized_copy( string near *, string near *, string near * )
+0001:0000bfd4  stopgo near * near uninitialized_copy( stopgo const near *, stopgo const near *, stopgo near * )
+0001:0000bf48  stopgo near * near uninitialized_copy( stopgo near *, stopgo near *, stopgo near * )
+0001:0000bebc  path_elem near * near uninitialized_copy( path_elem const near *, path_elem const near *, path_elem near * )
+0001:0000be30  path_elem near * near uninitialized_copy( path_elem near *, path_elem near *, path_elem near * )
+0001:0000bd1c  RipZip near * near uninitialized_copy( RipZip const near *, RipZip const near *, RipZip near * )
+0001:0000bc08  RipZip near * near uninitialized_copy( RipZip near *, RipZip near *, RipZip near * )
+0001:0000bad8  base_data near * near uninitialized_copy( base_data const near *, base_data const near *, base_data near * )
+0001:0000b9a8  base_data near * near uninitialized_copy( base_data near *, base_data near *, base_data near * )
+0001:0000b810  link near * near uninitialized_copy( link const near *, link const near *, link near * )
+0001:0000b678  link near * near uninitialized_copy( link near *, link near *, link near * )
+0001:0000b640  void near uninitialized_fill_n( addr near *, int, addr const near & )
+0001:0000b608  void near uninitialized_fill_n( string near *, int, string const near & )
+0001:0000b580  void near uninitialized_fill_n( stopgo near *, int, stopgo const near & )
+0001:0000b4f8  void near uninitialized_fill_n( path_elem near *, int, path_elem const near & )
+0001:0000b3ec  void near uninitialized_fill_n( RipZip near *, int, RipZip const near & )
+0001:0000b2c4  void near uninitialized_fill_n( base_data near *, int, base_data const near & )
+0001:0000b134  void near uninitialized_fill_n( link near *, int, link const near & )
+0001:0000b0fc  addr near * near copy( addr near *, addr near *, addr near * )
+0001:0000b0c4  string near * near copy( string near *, string near *, string near * )
+0001:0000b080  stopgo near * near copy( stopgo near *, stopgo near *, stopgo near * )
+0001:0000b040  path_elem near * near copy( path_elem near *, path_elem near *, path_elem near * )
+0001:0000afe4  RipZip near * near copy( RipZip near *, RipZip near *, RipZip near * )
+0001:0000af54  base_data near * near copy( base_data near *, base_data near *, base_data near * )
+0001:0000ae84  link near * near copy( link near *, link near *, link near * )
+0001:0000ae20  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near allocate( int, <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_nod
+0001:0000adc4  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node_buffer near * near allocate( int, <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_t
+0001:0000ad60  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near * near allocate( int, <addr near,<addr const near,string near >::pair near,<<
+0001:0000ad04  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node_buffer near * near allocate( int, <addr near,<addr const near,string near >::pair 
+0001:0000aca0  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near * near allocate( int, <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::
+0001:0000ac44  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node_buffer near * near allocate( int, <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less n
+0001:0000aaa8  <addr near >::vector near & near <addr near >::vector::operator =( <addr near >::vector const near & )
+0001:0000a918  void near <addr near >::vector::insert_aux( addr near *, addr const near & )
+0001:0000a6bc  void near <addr near >::vector::insert( addr near *, int, addr const near & )
+0001:0000a43c  void near <addr near >::vector::insert( addr near *, addr const near *, addr const near * )
+0001:0000a2c0  <string near >::vector near & near <string near >::vector::operator =( <string near >::vector const near & )
+0001:0000a148  void near <string near >::vector::insert_aux( string near *, string const near & )
+0001:00009f24  void near <string near >::vector::insert( string near *, int, string const near & )
+0001:00009cdc  void near <string near >::vector::insert( string near *, string const near *, string const near * )
+0001:00009b38  <stopgo near >::vector near & near <stopgo near >::vector::operator =( <stopgo near >::vector const near & )
+0001:00009938  void near <stopgo near >::vector::insert_aux( stopgo near *, stopgo const near & )
+0001:000096c8  void near <stopgo near >::vector::insert( stopgo near *, int, stopgo const near & )
+0001:00009434  void near <stopgo near >::vector::insert( stopgo near *, stopgo const near *, stopgo const near * )
+0001:00009298  <path_elem near >::vector near & near <path_elem near >::vector::operator =( <path_elem near >::vector const near & )
+0001:0000909c  void near <path_elem near >::vector::insert_aux( path_elem near *, path_elem const near & )
+0001:00008e40  void near <path_elem near >::vector::insert( path_elem near *, int, path_elem const near & )
+0001:00008bc0  void near <path_elem near >::vector::insert( path_elem near *, path_elem const near *, path_elem const near * )
+0001:00008a44  <RipZip near >::vector near & near <RipZip near >::vector::operator =( <RipZip near >::vector const near & )
+0001:00008738  void near <RipZip near >::vector::insert_aux( RipZip near *, RipZip const near & )
+0001:00008530  void near <RipZip near >::vector::insert( RipZip near *, int, RipZip const near & )
+0001:0000830c  void near <RipZip near >::vector::insert( RipZip near *, RipZip const near *, RipZip const near * )
+0001:00008158  <base_data near >::vector near & near <base_data near >::vector::operator =( <base_data near >::vector const near & )
+0001:00007da4  void near <base_data near >::vector::insert_aux( base_data near *, base_data const near & )
+0001:00007b08  void near <base_data near >::vector::insert( base_data near *, int, base_data const near & )
+0001:00007844  void near <base_data near >::vector::insert( base_data near *, base_data const near *, base_data const near * )
+0001:00007698  <link near >::vector near & near <link near >::vector::operator =( <link near >::vector const near & )
+0001:000071e8  void near <link near >::vector::insert_aux( link near *, link const near & )
+0001:00006f64  void near <link near >::vector::insert( link near *, int, link const near & )
+0001:00006cb8  void near <link near >::vector::insert( link near *, link const near *, link const near * )
+0001:00006c80  void near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::deallocate_buffers()
+0001:00006bb8  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree near & near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::operator =( <string near,string near,<st
+0001:000067f0  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::__insert( <string near,string near,<s
+0001:00006570  <<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near,bool near >::pair near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::insert( strin
+0001:000061fc  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::insert( <string near,string near,<str
+0001:0000611c  void near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::insert( <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator, <string near,string nea
+0001:000060e0  void near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::insert( string const near *, string const near * )
+0001:00005bd8  void near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::erase( <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator )
+0001:00005b30  int near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::erase( string const near & )
+0001:00005a10  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::__copy( <string near,strin
+0001:000059b8  void near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::__erase( <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * )
+0001:0000586c  void near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::erase( <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator, <string near,string near
+0001:0000583c  void near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::erase( string const near *, string const near * )
+0001:00005664  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::find( string const near & )
+0001:0000548c  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::const_iterator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::find( string const near & ) con
+0001:00005400  int near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::count( string const near & ) const
+0001:000052dc  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::lower_bound( string const near & )
+0001:000051b8  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::const_iterator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::lower_bound( string const near 
+0001:00005094  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::upper_bound( string const near & )
+0001:00004f70  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::const_iterator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::upper_bound( string const near 
+0001:00004f00  <<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near,<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near >::pair near <string n
+0001:00004e90  <<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::const_iterator near,<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::const_iterator near >::pair ne
+0001:00004e58  void near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::deallocate_buffers()
+0001:00004d90  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<near ::less near ::rb_tree near & near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair 
+0001:000049d4  near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::__insert( <addr near,<addr const near,string near >::pair near,<<addr const near,string ne
+0001:0000484c  <<addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::iterator near,bool near >::pair near <addr near,<addr const near,string near >::pair near,<<ad
+0001:000046ac  <addr near,<addr const near,string near >::pair near,<near ::select1st near ::rb_tree::iterator near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_
+0001:000045cc  near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::insert( <addr near,<addr const near,string near >::pair near,<<addr const near,string near
+0001:00004590  void near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::insert( <addr const near,string near >::pair const near *, <addr const near,string ne
+0001:00004018  void near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::erase( <addr near,<addr const near,string near >::pair near,<<addr const near,string 
+0001:00003f70  int near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::erase( addr const near & )
+0001:00003df8  near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::__copy( <addr near,<addr const near,string near >::pair near,<<addr const near,string near
+0001:00003d40  void near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::__erase( <addr near,<addr const near,string near >::pair near,<<addr const near,strin
+0001:00003bf4  near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::erase( <addr near,<addr const near,string near >::pair near,<<addr const near,string near,
+0001:00003bc4  void near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::erase( addr const near *, addr const near * )
+0001:00003ac4  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::iterator near <addr near,<addr const near,string near >::pair near,<<addr const near,string nea
+0001:000039c4  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::const_iterator near <addr near,<addr const near,string near >::pair near,<<addr const near,stri
+0001:00003938  int near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::count( addr const near & ) const
+0001:00003884  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::iterator near <addr near,<addr const near,string near >::pair near,<<addr const near,string nea
+0001:000037d0  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::const_iterator near <addr near,<addr const near,string near >::pair near,<<addr const near,stri
+0001:0000371c  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::iterator near <addr near,<addr const near,string near >::pair near,<<addr const near,string nea
+0001:00003668  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::const_iterator near <addr near,<addr const near,string near >::pair near,<<addr const near,stri
+0001:000035f8  <<addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::iterator near,<addr near,<addr const near,string near >::pair near,<near ::select1st near ::rb
+0001:00003588  <<addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::const_iterator near,<addr near,<addr const near,string near >::pair near >::rb_tree::const_ite
+0001:00003550  void near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::deallocate_buffers()
+0001:00003488  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree near & near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::operator =( <app_ele
+0001:000030a4  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::__insert( <app_el
+0001:00002ec0  <<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near,bool near >::pair near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb
+0001:00002c54  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::insert( <app_elem
+0001:00002b74  void near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::insert( <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator, <ap
+0001:00002b38  void near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::insert( app_elem const near *, app_elem const near * )
+0001:000025c0  void near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::erase( <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator )
+0001:00002518  int near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::erase( app_elem const near & )
+0001:000023a4  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near * near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::__copy
+0001:000022ec  void near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::__erase( <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node
+0001:000021a0  void near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::erase( <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator, <app
+0001:00002170  void near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::erase( app_elem const near *, app_elem const near * )
+0001:0000200c  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::find( app_elem co
+0001:00001ea8  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::const_iterator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::find( app_e
+0001:00001e1c  int near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::count( app_elem const near & ) const
+0001:00001d34  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::lower_bound( app_
+0001:00001c4c  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::const_iterator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::lower_bound
+0001:00001b64  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::upper_bound( app_
+0001:00001a7c  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::const_iterator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::upper_bound
+0001:00001a0c  <<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near,<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near >:
+0001:0000199c  <<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::const_iterator near,<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::const_iter
+0001:00001964  addr near * near copy( addr const near *, addr const near *, addr near * )
+0001:0000192c  addr near * near copy_backward( addr near *, addr near *, addr near * )
+0001:000018fc  void near fill( addr near *, addr near *, addr const near & )
+0001:000018c4  string near * near copy( string const near *, string const near *, string near * )
+0001:0000188c  string near * near copy_backward( string near *, string near *, string near * )
+0001:0000185c  void near fill( string near *, string near *, string const near & )
+0001:00001818  stopgo near * near copy( stopgo const near *, stopgo const near *, stopgo near * )
+0001:000017d8  stopgo near * near copy_backward( stopgo near *, stopgo near *, stopgo near * )
+0001:0000179c  void near fill( stopgo near *, stopgo near *, stopgo const near & )
+0001:0000175c  path_elem near * near copy( path_elem const near *, path_elem const near *, path_elem near * )
+0001:00001720  path_elem near * near copy_backward( path_elem near *, path_elem near *, path_elem near * )
+0001:000016e4  void near fill( path_elem near *, path_elem near *, path_elem const near & )
+0001:00001688  RipZip near * near copy( RipZip const near *, RipZip const near *, RipZip near * )
+0001:00001630  RipZip near * near copy_backward( RipZip near *, RipZip near *, RipZip near * )
+0001:000015dc  void near fill( RipZip near *, RipZip near *, RipZip const near & )
+0001:0000154c  base_data near * near copy( base_data const near *, base_data const near *, base_data near * )
+0001:000014c0  base_data near * near copy_backward( base_data near *, base_data near *, base_data near * )
+0001:00001434  void near fill( base_data near *, base_data near *, base_data const near & )
+0001:00001364  link near * near copy( link const near *, link const near *, link near * )
+0001:000012a0  link near * near copy_backward( link near *, link near *, link near * )
+0001:000011dc  void near fill( link near *, link near *, link const near & )
+0001:00001174  <stopgo const near * near,stopgo const near * near >::pair near mismatch( stopgo const near *, stopgo const near *, stopgo const near * )
+0001:000010c0  <string const near * near,string const near * near >::pair near mismatch( string const near *, string const near *, string const near * )
+0001:00001044  void near __distance( <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator, <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator, int near 
+0001:00000fcc  void near __distance( <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::const_iterator, <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::const_iterato
+0001:00000f50  void near __distance( <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::iterator, <addr near,<addr const near,string near >::pair near,<<addr con
+0001:00000ed8  void near __distance( <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::const_iterator, <addr near,<addr const near,string near >::pair near,<<ad
+0001:00000e5c  void near __distance( <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator, <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree:
+0001:00000de4  void near __distance( <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::const_iterator, <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb
+0001:00000d78  near ad_filter::~ad_filter()
+0001:00000d5c  near datetime::datetime( datetime const near & )
+0001:00000c88  near <string near,<string near >::less near >::set::~set()
+0001:00000c78+ near <string near,int near >::bidirectional_iterator::bidirectional_iterator( <string near,int near >::bidirectional_iterator const near & )
+0001:00000c68  near <string near,string near,bool near >::binary_function::binary_function( <string near,string near,bool near >::binary_function const near & )
+0001:00000be0  near addr::~addr()
+0001:00000bd0  near bidirectional_iterator_tag::bidirectional_iterator_tag( bidirectional_iterator_tag const near & )
+0001:00000a85  void near flags::extract( string near &, char )
+0001:00000b69  void near flags::clear()
+Module: nt\Approve.obj(D:\C\FRIP\C\Approve.c)
+0001:0000e4e8  near filer::filer()
+0001:0000d6a7+ void near approve::insert( app_elem const near & )
+0001:0000d704+ bool near approve::lookup( app_elem const near & )
+0001:0000d727  bool near approve::is_approved( addr const near &, addr const near & )
+0001:0000d7cf+ void near approve::load_line( string const near & )
+0001:0000d990+ void near approve::load_file( string const near & )
+0001:0000e4d8+ near <app_elem near,int near >::bidirectional_iterator::bidirectional_iterator( <app_elem near,int near >::bidirectional_iterator const near & )
+0001:0000e40c+ near app_elem::~app_elem()
+0001:0000e358  near Ex_Errno::Ex_Errno( Ex_Errno const near & )
+0001:0000e240  near Ex_Errno::~Ex_Errno()
+0001:0000e18c  near Ex_Arg::Ex_Arg( Ex_Arg const near & )
+0001:0000e074  near Ex_Arg::~Ex_Arg()
+0001:0000df5c  near Ex_EOF::~Ex_EOF()
+0001:0000deb8  near General_Ex::General_Ex( General_Ex const near & )
+0001:0000ddac  near General_Ex::~General_Ex()
+0001:0000dd9c  near Empty_Ex::Empty_Ex( Empty_Ex const near & )
+0001:0000dd8c  near Empty_Ex::~Empty_Ex()
+0001:0000dc0b+ void near approve::load()
+Module: nt\msgid.obj(D:\C\FRIP\C\msgid.c)
+0001:0001000c  near msgid::msgid( msgid const near & )
+0001:0000e59f+ void near msgid_base::header::read( fstream near & )
+0001:0000e6de+ void near msgid_base::header::write( fstream near & ) const
+0001:0000e7d6+ void near msgid_base::open()
+0001:0000eaf6  void near msgid_base::close()
+0001:0000ec1f+ int near msgid_base::page_pos( int )
+0001:0000ed1e+ void near msgid_base::read_page( int )
+0001:0000ef31+ void near msgid_base::write_page( int )
+0001:0000f04d+ void near msgid_base::flush_cur_page()
+0001:0000f07e+ void near msgid_base::set_cur_page( int )
+0001:0000f0b0+ bool near msgid_base::check_in_buf( msgid const near &, bool )
+0001:0000ff4c  near msgid::~msgid()
+0001:0000fe98  near Ex_Fail::Ex_Fail( Ex_Fail const near & )
+0001:0000fd80  near Ex_Fail::~Ex_Fail()
+0002:0002b2b4+ char const near msgid_base::signature[]
+0001:0000f4af  bool near msgid_base::is_dupe( msgid const near & )
+0001:0000f4fe  bool near msgid_base::check( msgid const near & )
+0001:0000f53e+ int near msgid::hashvalue( int ) const
+0001:0000f5bb  near msgid_base::msgid_base( string, int, int )
+0001:0000f881+ void near msgid_base::rebuild( int near &, int near & )
+0002:00007a6c* int const near msgid_base::version
+Module: nt\App.obj(D:\C\FRIP\C\App.c)
+0001:000140e4  void near * near operator new( int unsigned, void near * )
+0001:000140d4  string::srtti near istring::rtti() const
+0001:00014068  near istring::istring()
+0001:00013ff0  near istring::istring( istring const near & )
+0001:00013f34  void near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::add_new_buffer()
+0001:00013f14  void near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::put_node( <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * )
+0001:00013f00  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near & near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::root() const
+0001:00013ed8  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::minimum( <string near,stri
+0001:00013eb0  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::maximum( <string near,stri
+0001:00013d08  void near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::init()
+0001:00013ce4  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::begin()
+0001:00013cc8  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::iterator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::end()
+0001:00013b98  near flags::flags()
+0001:00013b68  near <addr near >::vector::~vector()
+0001:00013a0c  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near * near <addr near,<addr const near,string near >::pair near,<<addr const near
+0001:000139ec  void near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::put_node( <addr near,<addr const near,string near >::pair near,<<addr const near,stri
+0001:000139d8  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near * near & near <addr near,<addr const near,string near >::pair near,<<addr con
+0001:000139c4  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near * near & near <addr near,<addr const near,string near >::pair near,<<addr con
+0001:000139b0  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near * near & near <addr near,<addr const near,string near >::pair near,<<addr con
+0001:0001399c  <addr near,<addr const near,string near >::pair near,<<addr const near,::pair near ::select1st near ::rb_tree::rb_tree_node near * near & near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::sel
+0001:00013988  <addr near,<addr const near,string near >::pair near,<<addr const near >::pair near ::select1st near ::rb_tree::rb_tree_node near * near & near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::se
+0001:00013978  <addr near,<addr const near,string near >::pair near,<<addr const near ::pair near ::select1st near ::rb_tree::rb_tree_node near * near & near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::sel
+0001:00013968  <addr near,<addr const near,string near >::pair near,<pair near ::select1st near ::rb_tree::color_type near & near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::le
+0001:00013950  near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::iterator::iterator( <addr near,<addr const near,string near >::pair near,<<addr const near
+0001:000137a0  void near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::init()
+0001:00013704  near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::~rb_tree()
+0001:000136e0  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::iterator near <addr near,<addr const near,string near >::pair near,<<addr const near,string nea
+0001:000136c4  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::iterator near <addr near,<addr const near,string near >::pair near,<<addr const near,string nea
+0001:000131bc  near rip::rip()
+0001:0001318c  near <path_elem near >::vector::~vector()
+0001:00012fa8  near rif::rif()
+0001:00012f44+ near ilock::ilock()
+0001:00012ea8+ near ilock::~ilock()
+0001:00012e18  near path::path( path const near & )
+0001:00012e00  void near deallocate( string near * )
+0001:00012de8  void near deallocate( addr near * )
+0001:00012dd0  void near deallocate( path_elem near * )
+0001:00012d10  near path::~path()
+0001:00012b18  near rif::~rif()
+0001:000127b4  near rip::~rip()
+0001:000126e0  near <addr near,string near,<addr near >::less near >::map::~map()
+0001:000126d0  near <addr near >::less::less( <addr near >::less const near & )
+0001:000126c0  near <addr near,addr near,bool near >::binary_function::binary_function( <addr near,addr near,bool near >::binary_function const near & )
+0001:00012530  near flags::flags( flags const near & )
+0001:00012520  near <string near >::less::less( <string near >::less const near & )
+0001:00012460  near istring::~istring()
+0001:000100b7  void near FripApp::fara_send( string, addr, bool, rif_type, flags, string )
+0001:000104de+ void near FripApp::frip_do_off( addr, string )
+0001:00010894+ void near FripApp::do_help()
+0001:00010c85  void near FripApp::frip( int, char near * near * )
+Module: nt\addr.obj(D:\C\FRIP\C\addr.c)
+0001:00016538+ string::srtti near domain_s::rtti() const
+0001:00014194  bool near addr::matches( addr const near & ) const
+0001:00014502  near addr::addr( string const near & )
+0001:0001498f  near addr::addr( addr const near & )
+0001:00014a0f+ void near addr::fill_defaults()
+0001:00014aca  near addr::operator string () const
+0001:00014c5a  string near addr::short_string() const
+0001:00014ec3  addr near & near addr::operator =( addr const near & )
+0001:00014f0b  near addr::addr()
+0001:00014fbe  string near addr::ntos( int )
+0001:0001500d  near domain_s::domain_s()
+0001:00015078  near domain_s::domain_s( string const near & )
+0001:000150ed  near domain_s::domain_s( domain_s const near & )
+0001:00015118+ near domain_s::domain_s( char const near * )
+0001:00015168  int near domain_eq( string const near &, string const near & )
+0001:000156c1  int near domain_lt( string const near &, string const near & )
+0001:00015bf3  bool near domain_s::is_wild() const
+0001:00015c23  int near addr::operator !=( addr const near & ) const
+0001:00015c4c  int near addr::operator ==( addr const near & ) const
+0001:00015d0f  int near addr::operator <( addr const near & ) const
+0001:00015e6f* bool near addr::is_wild() const
+0001:00016478  near domain_s::~domain_s()
+0001:00015ea7  near wildness::wildness( string )
+0001:00016350  bool near wildness::match( addr const near & ) const
+0002:0000a924* int const near addr::Wild
+0002:0002d060  addr near addr::default_addr
+Module: nt\sglist.obj(D:\C\FRIP\C\sglist.c)
+0001:00016938  near stopgo::stopgo( stopgo const near & )
+0001:000168b0  near stopgo::~stopgo()
+0001:0001657b  near stopgo::stopgo( string )
+0001:00016670  bool near sglist::match( addr const near &, bool ) const
+0001:000166eb  void near sglist::add_all( string )
+Module: nt\Announce.obj(D:\C\FRIP\C\Announce.c)
+0001:00016b0e  bool near need_announce()
+0001:00016fba+ void near announce_one( string const near & )
+0001:0001768e+ void near announce_aka( addr const near &, addr const near & )
+0001:00017cd0  void near announce()
+Module: nt\Bink.obj(D:\C\FRIP\C\Bink.c)
+0001:00017f9f+ near bsy_flag::bsy_flag( string const )
+0001:000182f7+ near bsy_flag::~bsy_flag()
+0001:00018404  void near BinkAttach( string const near &, addr const near &, bool )
+0001:00018899  void near HPFSAttach( string const near &, addr const near &, bool )
+Module: nt\TMail.obj(D:\C\FRIP\C\TMail.c)
+0001:00018c3f  void near TMailAttachFAT( string const near &, addr const near &, bool )
+0001:00018f1e  void near TMailAttachHPFS( string const near &, addr const near &, bool )
+Module: nt\Zip.obj(D:\C\FRIP\C\Zip.c)
+0001:0001a374  near <string near >::vector::vector( <string near >::vector const near & )
+0001:0001a2e0+ near RipZip::RipZip()
+0001:0001a284  string near * near allocate( int, string near * )
+0001:0001a17c+ near RipZip::RipZip( RipZip const near & )
+0001:0001a090+ near RipZip::~RipZip()
+0001:000191e3+ void near RipZip::do_zip()
+0001:0001960e+ void near RipZip::zip()
+0001:000197da+ near RipZip::RipZip( addr const near & )
+0001:000198c0  void near zip_list::add( string const near &, addr const near & )
+0001:00019a68  void near zip_list::send()
+0001:00019bde  void near FripApp::unzip_in( string const near & )
+Module: nt\base.obj(D:\C\FRIP\C\base.c)
+0001:0001a43b  bool near base::check( rip const near & )
+0001:0001ab75+ bool near base::better( base_data const near &, rip const near &, datetime const ) const
+0001:0001aeda  void near base::update( rip const near & )
+0001:0001b0e6+ bool near base::match( bool near &, bool near &, base_data const near &, addr const near & ) const
+0001:0001b963  addr near base::find_route( addr const near &, bool )
+0001:0001c7f4  near base_data::~base_data()
+0001:0001c740  near Ex_EOF::Ex_EOF( Ex_EOF const near & )
+0001:0001bec0  base::db_off near base::process_off( rip const near &, bool )
+0001:0001c350  void near base::get_timed_out_routes( <base_data near >::vector near & ) const
+Module: nt\config.obj(D:\C\FRIP\C\config.c)
+0001:000208a8  string::srtti near max_rtti( string::srtti, string::srtti )
+0001:00020890+ void near <addr near >::allocator::deallocate( addr near * )
+0001:000205a4+ near config::config()
+0001:0001cc3b+ void near config::open_log( string const near & )
+0001:0001cd43+ void near config::open_stat_log( string const near & )
+0001:0001ced7  addr const near & near config::match_aka( addr const near & )
+0001:0002058c  void near deallocate( stopgo near * )
+0001:000200ec+ near config::~config()
+0001:0001db1b+ void near config::do_cfg_line( string )
+0001:0001fe24  void near parse_config()
+0002:0002d0e8  config near conf
+Module: nt\mainloop.obj(D:\C\FRIP\C\mainloop.c)
+0001:0002441c+ near <string near >::vector::vector()
+0001:000243b8  stopgo near * near <stopgo near >::allocator::allocate( int )
+0001:000243a4  stopgo const near * near <stopgo near >::vector::begin() const
+0001:00024390  stopgo const near * near <stopgo near >::vector::end() const
+0001:0002436c+ near <base_data near >::vector::vector()
+0001:000242cc+ near <base_data near >::vector::vector( <base_data near >::vector const near & )
+0001:0002429c  near <base_data near >::vector::~vector()
+0001:0002094c  void near FripApp::eat_rips_in( string const near & )
+0001:0002116b+ void near FripApp::do_ad( string const near &, rip near & )
+0001:000218b5  void near FripApp::do_off( rip near & )
+0001:000221b0+ void near FripApp::do_one_rip( string )
+0001:00022706+ void near FripApp::delete_timed_out_routes()
+0001:000227e1  void near FripApp::main_loop( bool, bool )
+0001:00022ac5+ void near FripApp::receive_one_rif( string const near &, rif near & )
+0001:0002354f+ void near FripApp::do_one_rif( string )
+0001:00024238  stopgo near * near allocate( int, stopgo near * )
+0001:0002408c  near link::link( link const near & )
+0001:00023eec  near link::~link()
+0001:00023c77+ void near FripApp::eat_rifs_in( string const near & )
+Module: nt\routes.obj(D:\C\FRIP\C\routes.c)
+0001:00024473  void near FripApp::create_routes()
+Module: nt\rip.obj(D:\C\FRIP\C\rip.c)
+0001:000244b3+ void near rip::put_path( ofstream near & )
+0001:0002474e+ void near rip::put_seenby( ofstream near & )
+0001:00024848+ void near rip::put_unknown( ofstream near & )
+0001:000248b1+ void near rip::put_comment( ofstream near & )
+0001:00024928  void near rip::load( string const near & )
+0001:00026423  bool near rip::seenby_matches( addr const near & ) const
+0001:00026526  void near rip::save_to_file( ofstream near & )
+0001:00026a2b  void near rip::save_to_dir( string const near & )
+0001:00026b95+ near rip_type::rip_type( string )
+0001:00026c4a+ near rip_type::operator string () const
+0001:00026d28+ near <addr const near,string near >::pair::~pair()
+0001:00026cfc  void near rip::increment_time( datetime )
+Module: nt\Links.obj(D:\C\FRIP\C\Links.c)
+0001:0002b45c  near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree( <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree const near &, bool )
+0001:0002b3a0+ void near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::add_new_buffer()
+0001:0002b38c+ <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near * near & near <addr near,<addr const near,string near >::pair near,<<addr con
+0001:0002b364+ <addr near,<addr const near,string near >::pair near,<<addr const near >::pair near ::select1st near ::rb_tree::rb_tree_node near * near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st
+0001:0002b33c+ <addr near,<addr const near,string near >::pair near,<<addr const near >::pair near ::select1st near ::rb_tree::rb_tree_node near * near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st
+0001:00026e27  near link::link()
+0001:00026f65+ void near link::clear()
+0001:00026f9d+ void near ad_filter::set_time_inc( string )
+0001:0002754f+ bool near ad_filter::pass( rip const near & ) const
+0001:000275d6+ void near links::add_user( string )
+0001:00027e7d+ void near links::add_base( string )
+0001:00028659  void near links::save_base()
+0001:00028a4c  bool near links::check_in( rip const near &, link near & ) const
+0001:00028c56  bool near links::is_from_link( rip const near & ) const
+0001:00028d68  void near links::load()
+0001:00028d95+ void near links::load_user()
+0001:00028fed+ void near links::load_base()
+0001:000292d6  void near links::process_ping( rip const near & )
+0001:0002952f  void near deliver( addr const near &, string const near & )
+0001:00029833+ void near FripApp::send_rip_to_link( rip, link const near &, bool )
+0001:00029bde  void near FripApp::send_rip_to_all_links( rip const near &, bool )
+0001:0002b2dc+ addr near * near allocate( int, addr near * )
+0001:0002b1e4+ near ad_filter::ad_filter( ad_filter const near & )
+0001:0002aa60  near rip::rip( rip const near & )
+0001:0002a2e2  void near FripApp::ping()
+0001:0002a6f0* void near FripApp::send_rescan_req()
+Module: nt\path.obj(D:\C\FRIP\C\path.c)
+0001:0002b5c7  void near path::fix()
+0001:0002b63d+ void near path::to_backslashes()
+0001:0002b674* void near path::to_slashes()
+0001:0002b6ab+ void near path::make_relative_to_dir( path )
+0001:0002b8e3  path near make_relative_to_start_dir( path )
+Module: nt\util.obj(D:\C\FRIP\C\util.c)
+0001:0002cad0+ near statistics::statistics()
+0001:0002cac0+ near statistics::~statistics()
+0001:0002ba65  void near filer::next()
+0001:0002bbb2  near filer::filer( string, string )
+0001:0002bc75  bool near filer::valid()
+0001:0002bc94  string near filer::current()
+0001:0002bcbb  near filer::~filer()
+0001:0002bed2+ bool near filer::fnmatch( char const near *, char const near * )
+0001:0002bff7  bool near our_aka_matches( addr const near & )
+0001:0002c11a  bool near is_our_aka( addr const near & )
+0001:0002c195* void near tempFile( fstream near &, string near &, string const near &, int )
+0001:0002c2c8  string near tempFileName( string const near & )
+0001:0002c46a  string near newdir( char const near *, string )
+0001:0002c590  void near mkpath( string const near & )
+0001:0002c62c  void near statistics::report()
+0001:0002c770  void near Log( char const near *, string const near & )
+0001:0002c806  void near StatLog( string const near & )
+0001:0002c88b  void near Error( string )
+0001:0002c8e8  void near Warning( string )
+0001:0002c93d  void near Msg( string )
+0001:0002c995  void near BoldMsg( string )
+0001:0002c9ed  void near General_Ex::print() const
+0002:0002d330  statistics near stats
+Module: nt\parse.obj(D:\C\FRIP\C\parse.c)
+0001:0002cb57  bool near string::parse( string near &, char, string near & ) const
+0001:0002cc59  bool near string::parse( string near &, string near & ) const
+Module: nt\ping.obj(D:\C\FRIP\C\ping.c)
+0001:0002cd6f  bool near need_ping()
+0001:0002cec7  void near mark_ping()
+Module: nt\base_rw.obj(D:\C\FRIP\C\base_rw.c)
+0001:0002d123+ void near base::add( string )
+0001:0002d2ee  void near base::load()
+0001:0002d792  void near base::save()
+0001:0002dd56  void near base::showbase()
+Module: nt\basedata.obj(D:\C\FRIP\C\basedata.c)
+0001:0002de93  near base_data::base_data( rip const near &, datetime const near & )
+0001:0002e26a  near base_data::base_data( string )
+0001:0002ecea  near base_data::operator string () const
+0001:0002ee12  void near base_data::showbase()
+0001:0002f1e6* int near base_data::operator ==( base_data const near & ) const
+0001:0002f281* void near base::foreach( void (near *)( ))
+0001:0002f500  bool near base_data::too_old( datetime ) const
+Module: nt\datetime.obj(D:\C\FRIP\C\datetime.c)
+0001:0002f5f0* string near datetime::gmtime_rip_string() const
+0001:0002f67c  string near datetime::gmtime_time_t_string() const
+0001:0002f6bc  string near datetime::localtime_rip_string() const
+0001:0002f765  string near datetime::localtime_ctime_locale_string() const
+0001:0002f7e8  string near datetime::localtime_via_string() const
+0001:0002f984+ void near datetime::load_tm( tm const near & )
+0001:0002fa8e  datetime near datetime::from_rip_string( string )
+0001:0002fde2  datetime near datetime::from_time_t_string( string, datetime::tztype )
+Module: nt\strng.obj(D:\C\FRIP\C\strng.c)
+0001:0002fe24* void near string::recode_upper_128( char const near * )
+0001:0002ff12  string near string::substr( int, int ) const
+0001:00030060  void near string::save( __iobuf near * ) const
+0001:00030177  void near string::load( __iobuf near * )
+0001:00030366  void near string::strip_crlf()
+0001:0003044c  void near string::strip_ws()
+0001:00030574  void near string::strip_leading_ws()
+0001:00030678  void near string::strip_leading( int )
+0001:00030792  void near string::strip( int, int )
+0001:000308ab  char const near * near string::c_str() const
+0001:000308be  near string::operator char const near * () const
+0001:000308c5* near string::operator char unsigned const near * () const
+0001:000308cc* near string::operator char signed const near * () const
+0001:000308d3  char near & near string::operator []( int )
+0001:00030a47  char near string::operator []( int ) const
+0001:00030b21  near string::string()
+0001:00030bda  near string::string( char const near * )
+0001:00030d26* near string::string( char unsigned const near * )
+0001:00030d57  near string::string( string const near & )
+0001:00030d7c  string near & near string::operator =( string const near & )
+0001:00030db2  string near & near string::operator =( char const near * )
+0001:00030e7f  string near & near string::operator +=( string const near & )
+0001:00030f6c  string near string::operator +( string const near & ) const
+0001:00031052  string near operator +( string const near &, char const near * )
+0001:00031148  string near operator +( char const near *, string const near & )
+0001:00031218  int near string_eq( string const near &, string const near & )
+0001:00031262  int near istring_eq( string const near &, string const near & )
+0001:000312ac  int near string_lt( string const near &, string const near & )
+0001:000312f6  int near istring_lt( string const near &, string const near & )
+0001:00031340  int near string::insert( string const near *, string const near * )
+0001:000314ea  int near string::print( char const near *, ... )
+0001:0003159c+ near Nomem_Ex::Nomem_Ex()
+0001:0003158c+ near Nomem_Ex::Nomem_Ex( Nomem_Ex const near & )
+0001:0003157c+ near Nomem_Ex::~Nomem_Ex()
+0001:00031550  void near string::zdie( void const near * )
+Module: nt\frip.obj(D:\C\FRIP\C\frip.c)
+0001:0003287c+ void near <RipZip near >::allocator::deallocate( RipZip near * )
+0001:0003284c+ near <RipZip near >::vector::~vector()
+0001:000327cc+ near zip_list::~zip_list()
+0001:000327b4+ void near <base_data near >::allocator::deallocate( base_data near * )
+0001:00032734+ near base::~base()
+0001:0003271c+ void near <link near >::allocator::deallocate( link near * )
+0001:000326ec+ near <link near >::vector::~vector()
+0001:00032668+ near links::~links()
+0001:000325ac+ near msgid_base::~msgid_base()
+0001:00032548+ <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near * near <<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tr
+0001:00032538+ int near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::buffer_size()
+0001:000324dc+ <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node_buffer near * near <<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree
+0001:000324bc+ void near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::put_node( <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_nod
+0001:000324a8+ <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near * near & near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree:
+0001:00032494+ <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near * near & near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree:
+0001:0003247c+ near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator::iterator( <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tre
+0001:000322d4+ void near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::init()
+0001:00032128+ near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree( <app_elem near >::less const near &, bool )
+0001:0003208c+ near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::~rb_tree()
+0001:00032068+ <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::begin()
+0001:0003204c+ <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::iterator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::end()
+0001:00031ecc+ near FripApp::FripApp()
+0001:00031ca8+ near FripApp::~FripApp()
+0001:00031642  void near add_exit_code( exit_code )
+0001:00031c90+ void near deallocate( RipZip near * )
+0001:00031c78+ void near deallocate( base_data near * )
+0001:00031c60+ void near deallocate( link near * )
+0001:00031b88+ near approve::~approve()
+0001:00031ab4+ near <app_elem near,<app_elem near >::less near >::set::~set()
+0001:00031aa4+ near <app_elem near >::less::less()
+0001:00031a94+ near <app_elem near >::less::less( <app_elem near >::less const near & )
+0002:0002d3a8+ OS_Type near os_type
+0002:0002d3ad  bool volatile near Stop_Frip
+0001:000316c0+ void near go_dir( string )
+0001:00031715  main
+0002:0002d3b4  string near started_in_dir
+Module: nt\sysdep.obj(D:\C\FRIP\C\sysdep.c)
+0001:000328c7  near OS_Type::OS_Type()
+0001:00032b55  void near ilock::wait( int )
+0001:00032b6d  void near ilock::release()
+0001:00032c0b  void near ilock::lock()
+0001:00032d9b  void near frip_rename( string, string )
+0001:00032edc  void near frip_copy( string, string )
+0001:00033361  string near get_desc( string )
+0001:000335b9  void near set_desc( string, string )
+0001:000338cd  void near frip_sleep( int )
+Module: nt\debug.obj(D:\C\FRIP\C\debug.c)
+0001:00033928* void near heap_dump( char const near * )
+0001:00033a86  void near debug( string )
+Module: nt\rif.obj(D:\C\FRIP\C\rif.c)
+0001:000358fc+ int near ios::bad() const
+0001:0003584c+ near Ex_Fail::Ex_Fail( char const near *, char const near *, char const near * )
+0001:00034145  void near rif::load( string const near & )
+0001:00034ab4+ near rif_type::rif_type( string )
+0001:00034b69+ near rif_type::operator string () const
+0001:00034c1b  void near unpack_rif( string const near & )
+0001:00034e0f  void near add_path_to_rif( string const near & )
+0001:000357c4+ near path_elem::~path_elem()
+0001:00035151+ void near rif::save_to_file( ostream near & )
+0001:000354a2+ string near get_nameext( char const near * )
+0001:0003557f  void near rif::create_in_dir( string const near &, string near &, string const near &, bool )
+Module: nt\mail.obj(D:\C\FRIP\C\mail.c)
+0001:00038a9c+ int near ios::fail() const
+0001:000389f4+ near Ex_EOF::Ex_EOF( char const near * )
+0001:00038924+ near Ex_Errno::Ex_Errno( char const near *, char const near *, long )
+0001:00035947  void near FripApp::eat_mail_in( string const near & )
+0001:00036ff3+ void near msg_mark_sent( string )
+0001:0003717b  void near msg_mark_received( string )
+0001:000373d2+ void near FripApp::mail_send_one_msg( string )
+0001:00037afe+ int near find_last_msg( string const near & )
+0001:00037c16  string near new_msg_name( string const near & )
+0001:00037d6f  void near msg_add_via_lines( string, <path_elem near >::vector const near & )
+0001:00038323  void near msg_create_new( string, addr const near &, string, string, string, string )
+Module: nt\Mail_Flags.obj(D:\C\FRIP\C\Mail_Flags.c)
+0001:00038ae7* void near mail_print_flags( string near &, long unsigned )
+0001:00038bab  long unsigned near mail_scan_flags( string const near & )
+Module: nt\ea.obj(D:\C\FRIP\C\ea.c)
+0001:00038c8f  void near set_ea_ASCII( char const near *, char const near *, string )
+0001:00038c9a  void near set_ea_MVMT_ASCII( char const near *, char const near *, <string near >::vector const near & )
+0001:00038ca5* void near set_ea_MVST_ASCII( char const near *, char const near *, <string near >::vector const near & )
+Module: D:\Watcom\lib386\nt\clib3s.lib(stkwnt)
+0001:00038cb1  __CHK
+0001:00038cbc* __GRO
+0001:00038cbf  __STKOVERFLOW
+Module: D:\Watcom\lib386\plbx3s.lib(opnewarr)
+0001:00038ccc  void near * near operator new []( int unsigned )
+Module: D:\Watcom\lib386\nt\clib3s.lib(strncpy)
+0001:00038cd9  strncpy
+Module: D:\Watcom\lib386\plbx3s.lib(dtorarst)
+0001:00038d0c  __wcpp_2_dtor_array_store_
+Module: D:\Watcom\lib386\plbx3s.lib(opdelarr)
+0001:00038d38  void near operator delete []( void near * )
+Module: D:\Watcom\lib386\plbx3s.lib(opdel)
+0001:00038d48  void near operator delete( void near * )
+Module: D:\Watcom\lib386\plbx3s.lib(setnwhdl)
+0001:00038d5c  void (near * near set_new_handler( void (near *)()))()
+Module: D:\Watcom\lib386\plbx3s.lib(opnew)
+0001:00038d6c  void near * near operator new( int unsigned )
+Module: D:\Watcom\lib386\plbx3s.lib(manendl)
+0001:00038e3c  istream near & near operator >>( istream near &, <long near >::smanip const near & )
+0001:00038e1c  istream near & near operator >>( istream near &, <int near >::smanip const near & )
+0001:00038dfc  ostream near & near operator <<( ostream near &, <long near >::smanip const near & )
+0001:00038ddc  ostream near & near operator <<( ostream near &, <int near >::smanip const near & )
+0001:00038dbc  ostream near & near endl( ostream near & )
+Module: D:\Watcom\lib386\plbx3s.lib(ioicerr)
+0002:0002d45c  ostream near cerr
+0001:00038f0b+ near cerr_initfini::cerr_initfini()
+0001:00038f21+ near cerr_initfini::~cerr_initfini()
+Module: D:\Watcom\lib386\plbx3s.lib(ostincch)
+0001:00038f34  ostream near & near ostream::operator <<( char const near * )
+Module: D:\Watcom\lib386\plbx3s.lib(ostinomn)
+0001:00038fd0  ostream near & near ostream::operator <<( ostream near & (near *)( ))
+Module: D:\Watcom\lib386\nt\clib3s.lib(exit)
+0001:00038fdc+ __null_int23_exit
+0001:00038fdd  exit
+0001:00038ff7+ _exit
+0002:0002b468+ __atexit
+0002:0002b46c+ __int23_exit
+0002:0002b470+ __FPE_handler_exit
+Module: D:\Watcom\lib386\plbx3s.lib(cppdata)
+0002:0002d498  _wint_thread_data
+0002:0002d4b8* __wcpp_2_data_catch_completed_
+0002:0002d4bc  __wcpp_2_data_dtreg_vfptrs_
+0002:0002d4d0  __compiled_under_generic
+Module: D:\Watcom\lib386\nt\clib3s.lib(strupr)
+0001:00039020* _strupr
+0001:0003902e  strupr
+Module: D:\Watcom\lib386\plbx3s.lib(stabdtor)
+0001:00039245  __wcpp_2_destruct_internal_
+0001:0003924d  __wcpp_2_destruct_all_
+0001:00039258* __wcpp_2_destruct_after_all_
+0001:00039263  __wcpp_2_destruct_
+0001:00039278* __wcpp_2_destruct_after_
+Module: D:\Watcom\lib386\plbx3s.lib(vfun_err)
+0001:0003927c  __wcpp_2_undef_vfun_
+Module: D:\Watcom\lib386\plbx3s.lib(stabfunc)
+0001:000392d5* __wcpp_2_fun_register_
+0002:0002ca46  ___wcpp_2_data_stab_init_fun_
+Module: D:\Watcom\lib386\plbx3s.lib(stabthrw)
+0001:00039300  __wcpp_2_corrupted_stack_
+0001:00039695  __wcpp_2_catch_done_
+0001:0003992f+ __wcpp_2_dispatchable_
+0001:00039990+ __wcpp_2_save_exc_
+0001:00039a1c+ __wcpp_2_dispatch_
+0001:00039b53  __wcpp_2_rethrow_
+0001:00039b5b  __wcpp_2_throw_
+0001:00039b6e* __wcpp_2_throw_zero_
+0002:0002ca4c+ ___wcpp_2_data_init_longjmp_
+Module: D:\Watcom\lib386\nt\clib3s.lib(fopen)
+0001:00039c8e+ __open_flags
+0001:00039e47+ _fsopen
+0001:00039e76  fopen
+0001:00039f02* freopen
+Module: D:\Watcom\lib386\nt\clib3s.lib(errno)
+0001:00039f6c  __get_errno_ptr
+0001:00039f76* __get_doserrno_ptr
+Module: D:\Watcom\lib386\nt\clib3s.lib(sprintf)
+0001:00039f97  sprintf
+Module: D:\Watcom\lib386\nt\clib3s.lib(stjmp386)
+0001:00039fca  _setjmp
+0001:0003a009  longjmp
+Module: D:\Watcom\lib386\nt\clib3s.lib(fclose)
+0001:0003a087  fclose
+0001:0003a0be  __shutdown_stream
+0001:0003a0f4+ __MkTmpFile
+0001:0003a16d  __doclose
+Module: D:\Watcom\lib386\plbx3s.lib(undefed)
+0001:0003a23c  __wcpp_2_undefed_cdtor_
+Module: D:\Watcom\lib386\plbx3s.lib(fstdestr)
+0001:0003a24c  near fstream::~fstream()
+Module: D:\Watcom\lib386\plbx3s.lib(istsgstp)
+0001:0003a384  istream near & near istream::seekg( long )
+Module: D:\Watcom\lib386\plbx3s.lib(istread)
+0001:0003a3d0  istream near & near istream::read( char near *, int )
+Module: D:\Watcom\lib386\plbx3s.lib(ostspstp)
+0001:0003a47c  ostream near & near ostream::seekp( long )
+Module: D:\Watcom\lib386\plbx3s.lib(ostwrite)
+0001:0003a510  ostream near & near ostream::write( char const near *, int )
+Module: D:\Watcom\lib386\plbx3s.lib(ostflush)
+0001:0003a5e0  ostream near & near ostream::flush()
+Module: D:\Watcom\lib386\plbx3s.lib(flfoprot)
+0002:0002a9dc  int const near filebuf::openprot
+Module: D:\Watcom\lib386\plbx3s.lib(fsbopen)
+0001:0003a628  void near fstreambase::open( char const near *, int, int )
+Module: D:\Watcom\lib386\nt\clib3s.lib(strncmp)
+0001:0003a67d  strncmp
+Module: D:\Watcom\lib386\plbx3s.lib(fsbclose)
+0001:0003a6b4  void near fstreambase::close()
+Module: D:\Watcom\lib386\nt\clib3s.lib(strlen)
+0001:0003a6eb  strlen
+Module: D:\Watcom\lib386\nt\clib3s.lib(memmove)
+0001:0003a704  memmove
+Module: D:\Watcom\lib386\plbx3s.lib(iosclear)
+0001:0003a758  int near ios::clear( int )
+Module: D:\Watcom\lib386\plbx3s.lib(fstconde)
+0001:0003a778  near fstream::fstream()
+Module: D:\Watcom\lib386\nt\clib3s.lib(set386)
+0001:0003a850  memset
+Module: D:\Watcom\lib386\nt\clib3s.lib(gtpidwnt)
+0001:0003a872  getpid
+Module: D:\Watcom\lib386\nt\clib3s.lib(chmodwnt)
+0001:0003a877  chmod
+Module: D:\Watcom\lib386\nt\clib3s.lib(unlnkwnt)
+0001:0003a8ae  unlink
+Module: D:\Watcom\lib386\plbx3s.lib(fstconnm)
+0001:0003a8c4  near fstream::fstream( char const near *, int, int )
+Module: D:\Watcom\lib386\nt\clib3s.lib(renamwnt)
+0001:0003a9a2  rename
+Module: D:\Watcom\lib386\nt\clib3s.lib(mkdirwnt)
+0001:0003a9c1  mkdir
+Module: D:\Watcom\lib386\nt\clib3s.lib(time)
+0001:0003a9d8  time
+Module: D:\Watcom\lib386\nt\clib3s.lib(tzset)
+0002:0002b480  __start_dst
+0002:0002b4a4  __end_dst
+0002:0002b4c8  timezone
+0002:0002b4cc  __dst_adjust
+0002:0002b4d0+ daylight
+0001:0003aa0f+ tryOSTimeZone
+0001:0003aad2  tzset
+0001:0003ad38+ __parse_tz
+0002:0002b512  tzname
+Module: D:\Watcom\lib386\nt\clib3s.lib(strlwr)
+0001:0003adda* _strlwr
+0001:0003ade8  strlwr
+Module: D:\Watcom\lib386\plbx3s.lib(stabmod)
+0001:0003ae08  __wcpp_2_module_dtor_
+0001:0003ae8f  __wcpp_2_mod_register_
+0002:0002ca52* rt_init __based("XI") __wcpp_2_data_stab_init_mod_
+Module: D:\Watcom\lib386\nt\clib3s.lib(istable)
+0002:0002aa88  _IsTable
+Module: D:\Watcom\lib386\nt\clib3s.lib(atoi)
+0001:0003aea1  atoi
+Module: D:\Watcom\lib386\nt\clib3s.lib(strcat)
+0001:0003aef8  strcat
+Module: D:\Watcom\lib386\plbx3s.lib(moddtorr)
+0002:0002ca7c  ___wcpp_2_data_module_dtor_ref_
+Module: D:\Watcom\lib386\plbx3s.lib(ifsdestr)
+0001:0003af34  near ifstream::~ifstream()
+Module: D:\Watcom\lib386\plbx3s.lib(ofsdestr)
+0001:0003b050  near ofstream::~ofstream()
+Module: D:\Watcom\lib386\nt\clib3s.lib(statwnt)
+0001:0003b1bb* _stat
+0001:0003b1ce  stat
+Module: D:\Watcom\lib386\plbx3s.lib(ifsconnm)
+0001:0003b388  near ifstream::ifstream( char const near *, int, int )
+Module: D:\Watcom\lib386\plbx3s.lib(istexulo)
+0001:0003b458  istream near & near istream::operator >>( long unsigned near & )
+Module: D:\Watcom\lib386\plbx3s.lib(ofsconnm)
+0001:0003b4b8  near ofstream::ofstream( char const near *, int, int )
+Module: D:\Watcom\lib386\plbx3s.lib(ostinulo)
+0001:0003b588  ostream near & near ostream::operator <<( long unsigned )
+Module: D:\Watcom\lib386\nt\clib3s.lib(sscanf)
+0001:0003b6f2+ vsscanf
+0001:0003b72e  sscanf
+Module: D:\Watcom\lib386\plbx3s.lib(ifsconde)
+0001:0003b754  near ifstream::ifstream()
+Module: D:\Watcom\lib386\plbx3s.lib(ofsconde)
+0001:0003b818  near ofstream::ofstream()
+Module: D:\Watcom\lib386\nt\clib3s.lib(accsswnt)
+0001:0003b8dc* _access
+0001:0003b8f1  access
+Module: D:\Watcom\lib386\nt\clib3s.lib(openwnt)
+0001:0003b91d  open
+0001:0003b93f  sopen
+Module: D:\Watcom\lib386\nt\clib3s.lib(close)
+0001:0003bade  close
+Module: D:\Watcom\lib386\plbx3s.lib(ctorarst)
+0001:0003bbef* __wcpp_2_ctor_array_storage_1_
+0001:0003bc0a* __wcpp_2_ctor_array_storage_2_
+0001:0003bc0e  __wcpp_2_ctor_array_storage_g_
+Module: D:\Watcom\lib386\nt\clib3s.lib(spvp)
+0001:0003bc17  spawnvp
+Module: D:\Watcom\lib386\nt\clib3s.lib(system)
+0001:0003bc3a  system
+Module: D:\Watcom\lib386\nt\clib3s.lib(getenv)
+0001:0003bcab  getenv
+Module: D:\Watcom\lib386\plbx3s.lib(istgline)
+0001:0003bd08  istream near & near istream::getline( char near *, int, char )
+Module: D:\Watcom\lib386\nt\clib3s.lib(creat)
+0001:0003bd3f  creat
+Module: D:\Watcom\lib386\nt\clib3s.lib(localtim)
+0001:0003bd56  _localtime
+0001:0003bdac  localtime
+Module: D:\Watcom\lib386\nt\clib3s.lib(strftime)
+0001:0003be88  strftime
+Module: D:\Watcom\lib386\plbx3s.lib(ostinslo)
+0001:0003c138  ostream near & near ostream::operator <<( long )
+Module: D:\Watcom\lib386\nt\clib3s.lib(stricmp)
+0001:0003c23b* _stricmp
+0001:0003c23b* strcmpi
+0001:0003c250  stricmp
+Module: D:\Watcom\lib386\nt\clib3s.lib(atol)
+0001:0003c291  atol
+Module: D:\Watcom\lib386\nt\clib3s.lib(fprintf)
+0001:0003c2e8  fprintf
+Module: D:\Watcom\lib386\nt\clib3s.lib(strstr)
+0001:0003c30d  strstr
+Module: D:\Watcom\lib386\nt\clib3s.lib(fullpath)
+0001:0003c3d2  _fullpath
+Module: D:\Watcom\lib386\nt\clib3s.lib(dirwnt)
+0001:0003c486+ __opendir
+0001:0003c503+ _opendir
+0001:0003c5d0  opendir
+0001:0003c5e0  readdir
+0001:0003c660  closedir
+Module: D:\Watcom\lib386\nt\clib3s.lib(gfattwnt)
+0001:0003c6a5  _dos_getfileattr
+Module: D:\Watcom\lib386\nt\clib3s.lib(toupper)
+0001:0003c6e6* _toupper
+0001:0003c6f4  toupper
+Module: D:\Watcom\lib386\nt\clib3s.lib(splitpat)
+0001:0003c745  _splitpath
+Module: D:\Watcom\lib386\nt\clib3s.lib(cmp386)
+0001:0003c7f0  strcmp
+Module: D:\Watcom\lib386\nt\clib3s.lib(iob)
+0002:0002b528  __iob
+0002:0002b730* __tmpfnext
+0002:0002b731  _fmode
+0002:0002d4d4  __ClosedStreams
+Module: D:\Watcom\lib386\plbx3s.lib(ioicout)
+0002:0002d510  ostream near cout
+0001:0003c94b+ near cout_initfini::cout_initfini()
+0001:0003c957+ near cout_initfini::~cout_initfini()
+Module: D:\Watcom\lib386\nt\clib3s.lib(mktime)
+0001:0003c969  mktime
+Module: D:\Watcom\lib386\nt\clib3s.lib(asctime)
+0001:0003cafb+ _asctime
+0001:0003cbeb  asctime
+0001:0003cc03* _ctime
+0001:0003cc2c* ctime
+Module: D:\Watcom\lib386\nt\clib3s.lib(fputs)
+0001:0003cc43  fputs
+Module: D:\Watcom\lib386\nt\clib3s.lib(fgets)
+0001:0003ccf3  fgets
+Module: D:\Watcom\lib386\nt\clib3s.lib(strpbrk)
+0001:0003cd82  strpbrk
+Module: D:\Watcom\lib386\nt\clib3s.lib(strcpy)
+0001:0003cdd7  strcpy
+Module: D:\Watcom\lib386\nt\clib3s.lib(vsprintf)
+0001:0003ce13  vsprintf
+Module: D:\Watcom\lib386\nt\clib3s.lib(signlwnt)
+0001:0003ce3a+ __sigabort
+0001:0003ce45+ __sigfpe_handler
+0001:0003ce90  signal
+0001:0003cf0f+ raise
+0001:0003cf8e  __SigInit
+0001:0003cfbb  __SigFini
+0001:0003cfda+ ___ExceptionFilter
+0001:0003d324  __NewExceptionHandler
+0001:0003d364  __DoneExceptionHandler
+0002:0002b748+ SignalTable
+0002:0002d54c+ __ExceptionHandled
+Module: D:\Watcom\lib386\nt\clib3s.lib(tolower)
+0001:0003d382* _tolower
+0001:0003d390  tolower
+Module: D:\Watcom\lib386\nt\clib3s.lib(sdrvewnt)
+0001:0003d3a2  _dos_setdrive
+Module: D:\Watcom\lib386\nt\clib3s.lib(chdirwnt)
+0001:0003d3d6  chdir
+Module: D:\Watcom\lib386\nt\clib3s.lib(gtcwdwnt)
+0001:0003d3eb  getcwd
+Module: D:\Watcom\lib386\nt\clib3s.lib(cstrtwnt)
+0001:0003d472  _cstart_
+Module: D:\Watcom\lib386\nt\clib3s.lib(argcv386)
+0002:0002b7b0  _argc
+0002:0002b7b4  _argv
+Module: D:\Watcom\lib386\nt\clib3s.lib(sleepwnt)
+0001:0003d4e6  sleep
+Module: D:\Watcom\lib386\nt\clib3s.lib(nheapwal)
+0001:0003d500  _heapwalk
+0001:0003d50e+ _nheapwalk
+0001:0003d535+ __NHeapWalk
+Module: D:\Watcom\lib386\plbx3s.lib(ostspsto)
+0001:0003d5d4  ostream near & near ostream::seekp( long, int )
+Module: D:\Watcom\lib386\plbx3s.lib(osttellp)
+0001:0003d668  long near ostream::tellp()
+Module: D:\Watcom\lib386\plbx3s.lib(istsgsto)
+0001:0003d698  istream near & near istream::seekg( long, int )
+Module: D:\Watcom\lib386\plbx3s.lib(isttellg)
+0001:0003d6e4  long near istream::tellg()
+Module: D:\Watcom\lib386\nt\clib3s.lib(chsizwnt)
+0001:0003d711  chsize
+Module: D:\Watcom\lib386\plbx3s.lib(istsync)
+0001:0003d76c  int near istream::sync()
+Module: D:\Watcom\lib386\plbx3s.lib(istget)
+0001:0003d784  int near istream::get()
+Module: D:\Watcom\lib386\plbx3s.lib(ostput)
+0001:0003d808  ostream near & near ostream::put( char )
+Module: D:\Watcom\lib386\nt\clib3s.lib(xmsgwnt)
+0001:0003d8b9  __exit_with_msg
+0001:0003d8f4  __fatal_runtime_error
+Module: D:\Watcom\lib386\plbx3s.lib(stabadt)
+0001:0003d91c  __wcpp_2_dtor_array_
+Module: D:\Watcom\lib386\nt\clib3s.lib(nfree)
+0001:0003d95b  free
+0001:0003d969  _nfree
+Module: D:\Watcom\lib386\nt\clib3s.lib(nmalloc)
+0001:0003d9d3  malloc
+0001:0003d9e1  _nmalloc
+0002:0002b7b8  __nheapbeg
+0002:0002b7bc  __MiniHeapRover
+0002:0002b7c0  __LargestSizeB4MiniHeapRover
+Module: D:\Watcom\lib386\plbx3s.lib(sdfdestr)
+0001:0003dad8  near stdiobuf::~stdiobuf()
+Module: D:\Watcom\lib386\plbx3s.lib(ostdestr)
+0001:0003db84  near ostream::~ostream()
+Module: D:\Watcom\lib386\plbx3s.lib(sdfconde)
+0001:0003dc50  near stdiobuf::stdiobuf()
+Module: D:\Watcom\lib386\plbx3s.lib(ostconde)
+0001:0003dcac  near ostream::ostream()
+Module: D:\Watcom\lib386\plbx3s.lib(ostcoost)
+0001:0003dd38  near ostream::ostream( ostream const near & )
+Module: D:\Watcom\lib386\nt\clib3s.lib(iobaddr)
+0001:0003dde0  __get_std_stream
+Module: D:\Watcom\lib386\plbx3s.lib(sdfconfp)
+0001:0003de00  near stdiobuf::stdiobuf( __iobuf near * )
+Module: D:\Watcom\lib386\plbx3s.lib(ostconsf)
+0001:0003de68  near ostream::ostream( streambuf near * )
+Module: D:\Watcom\lib386\plbx3s.lib(ostopfx)
+0001:0003df04  int near ostream::do_opfx()
+Module: D:\Watcom\lib386\plbx3s.lib(iouwrtit)
+0001:0003df64  int near __WATCOM_ios::writeitem( ostream near &, char const near *, int, int )
+Module: D:\Watcom\lib386\plbx3s.lib(iossetst)
+0001:0003e294+ near ios::failure::failure( ios::failure const near & )
+0001:0003e28c+ near ios::failure::~failure()
+0001:0003e284+ near __WATCOM_exception::__WATCOM_exception( __WATCOM_exception const near & )
+0001:0003e27c+ near __WATCOM_exception::~__WATCOM_exception()
+0001:0003e240  void near ios::setstate( int )
+Module: D:\Watcom\lib386\nt\clib3s.lib(winrtns)
+0002:0002b7c4  _WindowsIsWindowedHandle
+0002:0002b7c8  _WindowsRemoveWindowedHandle
+0002:0002b7cc  _WindowsNewWindow
+0002:0002b7d0  _WindowsCloseWindow
+0002:0002b7d4* _WindowsSetAbout
+0002:0002b7d8* _WindowsSetAppTitle
+0002:0002b7dc* _WindowsSetConTitle
+0002:0002b7e0* _WindowsDestroyOnClose
+0002:0002b7e4* _WindowsYieldControl
+0002:0002b7e8* _WindowsShutDown
+0002:0002b7ec  _WindowsStdin
+0002:0002b7f0  _WindowsStdout
+0002:0002b7f4* _WindowsKbhit
+0002:0002b7f8  _WindowsGetch
+0002:0002b7fc* _WindowsGetche
+0002:0002b800  _WindowsPutch
+0002:0002b804  _WindowExitRtn
+Module: D:\Watcom\lib386\nt\clib3s.lib(mainwnt)
+0002:0002b808  __TlsIndex
+0002:0002b80c  __GetThreadPtr
+0002:0002b810  _AccessFileH
+0002:0002b814  _ReleaseFileH
+0002:0002b818  _InitAccessH
+0002:0002b81c  _FiniAccessH
+0002:0002b820  _AccessIOB
+0002:0002b824  _ReleaseIOB
+0002:0002b828  _AccessNHeap
+0002:0002b82c  _AccessFHeap
+0002:0002b830  _ReleaseNHeap
+0001:0003e2a5* __threadid
+0001:0003e2d3+ __NTInit
+0001:0003e3b8  __NTMainInit
+0001:0003e3f3  __exit
+0002:0002b834  _ReleaseFHeap
+0002:0002b838  _AccessTDList
+0002:0002b83c  _ReleaseTDList
+0002:0002b840  _AccessFList
+0002:0002b844  _ReleaseFList
+0002:0002b848  _ThreadExitRtn
+0002:0002b84c  __sig_init_rtn
+0002:0002b850  __sig_fini_rtn
+0002:0002d550  __Is_DLL
+0002:0002d554  __FirstThreadData
+Module: D:\Watcom\lib386\plbx3s.lib(stabtrav)
+0001:0003e414  __wcpp_2_stab_entry_
+0001:0003e448  __wcpp_2_stab_trav_init_
+0001:0003e476  __wcpp_2_stab_trav_comp_
+0001:0003e47f  __wcpp_2_stab_trav_next_
+0001:0003e50d  __wcpp_2_stab_trav_move_
+Module: D:\Watcom\lib386\plbx3s.lib(prwdata)
+0002:0002b854  _wint_pure_error_flag
+0002:0002b856  _wint_undef_vfun_flag
+0002:0002b858  _wint_module_init
+Module: D:\Watcom\lib386\plbx3s.lib(fatalerr)
+0001:0003e5b4  __wcpp_2_fatal_runtime_error_
+Module: D:\Watcom\lib386\plbx3s.lib(stabreg)
+0001:0003e5dc  __wcpp_2_base_register_
+0001:0003e601  __wcpp_2_base_deregister_
+Module: D:\Watcom\lib386\plbx3s.lib(callterm)
+0001:0003e610  __wcpp_2_call_terminate_
+Module: D:\Watcom\lib386\plbx3s.lib(tsequiv)
+0001:0003e625  __wcpp_2_ts_equiv_
+Module: D:\Watcom\lib386\plbx3s.lib(callunex)
+0001:0003e684  __wcpp_2_call_unexpected_
+Module: D:\Watcom\lib386\plbx3s.lib(allocexc)
+0001:0003e6b0  __wcpp_2_alloc_exc_
+0001:0003e7f6  __wcpp_2_free_exc_
+0001:0003e825  __wcpp_2_pop_exc_
+0001:0003e834  __wcpp_2_push_exc_
+Module: D:\Watcom\lib386\nt\clib3s.lib(ltoa)
+0001:0003e86e  ultoa
+0001:0003e8be  ltoa
+0001:0003e8f3* _ltoa
+Module: D:\Watcom\lib386\nt\clib3s.lib(ljmphdl)
+0002:0002b85c  __longjmp_handler
+Module: D:\Watcom\lib386\nt\clib3s.lib(seterrno)
+0001:0003e90e* __set_EDOM
+0001:0003e919* __set_ERANGE
+0001:0003e91d* __set_EINVAL
+0001:0003e92d  __set_errno
+0001:0003e93b  __set_doserrno
+0001:0003e949* __FPE_exception_
+Module: D:\Watcom\lib386\nt\clib3s.lib(allocfp)
+0001:0003e954  __allocfp
+0001:0003ea09  __freefp
+0001:0003ea40  __purgefp
+Module: D:\Watcom\lib386\nt\clib3s.lib(fseek)
+0001:0003eaa5  fseek
+Module: D:\Watcom\lib386\nt\clib3s.lib(chktty)
+0001:0003ec2b  __chktty
+Module: D:\Watcom\lib386\nt\clib3s.lib(stinit)
+0002:0002d558  __OpenStreams
+Module: D:\Watcom\lib386\nt\clib3s.lib(prtf)
+0001:0003ec5e  __prtf
+Module: D:\Watcom\lib386\nt\clib3s.lib(flush)
+0001:0003f73a  __flush
+Module: D:\Watcom\lib386\nt\clib3s.lib(ftell)
+0001:0003f818  ftell
+Module: D:\Watcom\lib386\nt\clib3s.lib(lseekwnt)
+0001:0003f86a* _lseek
+0001:0003f884  lseek
+Module: D:\Watcom\lib386\nt\clib3s.lib(_clsewnt)
+0001:0003f8d2  __close
+Module: D:\Watcom\lib386\nt\clib3s.lib(remove)
+0001:0003f958  remove
+Module: D:\Watcom\lib386\plbx3s.lib(iotdestr)
+0001:0003f968  near iostream::~iostream()
+Module: D:\Watcom\lib386\plbx3s.lib(fsbdestr)
+0001:0003fa84  near fstreambase::~fstreambase()
+Module: D:\Watcom\lib386\plbx3s.lib(iosdestr)
+0001:0003fb6c  near ios::~ios()
+Module: D:\Watcom\lib386\plbx3s.lib(stfseeko)
+0001:0003fbb4  long near streambuf::seekoff( long, int, int )
+Module: D:\Watcom\lib386\plbx3s.lib(istipfx)
+0001:0003fbbc  int near istream::ipfx( int )
+Module: D:\Watcom\lib386\plbx3s.lib(stfdsgtn)
+0001:0003fc18  int near streambuf::do_sgetn( char near *, int )
+Module: D:\Watcom\lib386\plbx3s.lib(istdipfx)
+0001:0003fc94  int near istream::do_ipfx( int )
+Module: D:\Watcom\lib386\plbx3s.lib(istdread)
+0001:0003fd28  istream near & near istream::do_read( char near *, int )
+Module: D:\Watcom\lib386\plbx3s.lib(stfdspun)
+0001:0003fda8  int near streambuf::do_sputn( char const near *, int )
+Module: D:\Watcom\lib386\plbx3s.lib(flfopen)
+0001:0003fe50  filebuf near * near filebuf::open( char const near *, int, int )
+Module: D:\Watcom\lib386\plbx3s.lib(flfclose)
+0001:0003fee8  filebuf near * near filebuf::close()
+Module: D:\Watcom\lib386\plbx3s.lib(iosconde)
+0001:0003ff2c  near ios::ios()
+Module: D:\Watcom\lib386\plbx3s.lib(fsbconde)
+0001:0003ff38  near fstreambase::fstreambase()
+Module: D:\Watcom\lib386\plbx3s.lib(iotconde)
+0001:0003ffec  near iostream::iostream()
+Module: D:\Watcom\lib386\nt\clib3s.lib(__stos)
+0001:000400c0  __STOSB
+0001:000400f7* __STOSD
+Module: D:\Watcom\lib386\nt\clib3s.lib(dosret)
+0001:00040163* _dosret0
+0001:0004017d+ _dosretax
+0001:0004019a  __set_errno_dos
+0001:000401e0  __set_errno_nt
+Module: D:\Watcom\lib386\plbx3s.lib(fsbconnm)
+0001:000401f0  near fstreambase::fstreambase( char const near *, int, int )
+Module: D:\Watcom\lib386\nt\clib3s.lib(gtctmwnt)
+0001:000402d2  __getctime
+Module: D:\Watcom\lib386\plbx3s.lib(istdestr)
+0001:00040338  near istream::~istream()
+Module: D:\Watcom\lib386\nt\clib3s.lib(strchr)
+0001:00040401  strchr
+Module: D:\Watcom\lib386\nt\clib3s.lib(ntdirinf)
+0001:0004041f  __MakeDOSDT
+0001:00040449* __FromDOSDT
+0001:00040477  __GetNTDirInfo
+0001:000404bf  __NTFindNextFileWithAttr
+Module: D:\Watcom\lib386\nt\clib3s.lib(d2ttime)
+0001:00040500  _d2ttime
+Module: D:\Watcom\lib386\plbx3s.lib(istconde)
+0001:00040574  near istream::istream()
+Module: D:\Watcom\lib386\plbx3s.lib(istgetul)
+0001:0004060c  int near __getunsignedlong( streambuf near *, long unsigned near &, long unsigned, long, long )
+Module: D:\Watcom\lib386\plbx3s.lib(ioufgtba)
+0001:000407cc  int near __FlagsToBase( long )
+Module: D:\Watcom\lib386\plbx3s.lib(ostadpre)
+0001:000407f4  void near __AddPrefix( char, char near *, int near &, int, long )
+Module: D:\Watcom\lib386\nt\clib3s.lib(scnf)
+0001:00040851  __scnf
+Module: D:\Watcom\lib386\nt\clib3s.lib(nthdl)
+0002:0002d55c  __FileHandleIDs
+0001:00041499  __NTAtMaxFiles
+0001:000414da  __NTAddFileHandle
+0001:0004155f* __NTAddSpecificFileHandle
+0001:00041606  __NTRemoveFileHandle
+0001:0004162c  __NTInitFileHandles
+0001:0004166b  __NTGetFakeHandle
+Module: D:\Watcom\lib386\nt\clib3s.lib(ntfio)
+0001:0004167b* __GetNTCreateAttr
+0001:000416b9  __GetNTAccessAttr
+0001:000416f4  __GetNTShareAttr
+Module: D:\Watcom\lib386\nt\clib3s.lib(isattwnt)
+0001:0004172b  isatty
+Module: D:\Watcom\lib386\nt\clib3s.lib(iomode)
+0001:00041772  __IOMode
+0001:000417c8  __SetIOMode
+0002:0002b878  __NFiles
+0002:0002b87c+ __init_mode
+0002:0002b8cc+ _iomode
+Module: D:\Watcom\lib386\plbx3s.lib(tssize)
+0001:00041804  __wcpp_2_ts_size_
+Module: D:\Watcom\lib386\plbx3s.lib(stabactv)
+0001:00041844  __wcpp_2_ctor_varray_
+Module: D:\Watcom\lib386\plbx3s.lib(stabact)
+0001:000418a0  __wcpp_2_ctor_array_
+Module: D:\Watcom\lib386\nt\clib3s.lib(environ)
+0002:0002b8d0  environ
+0002:0002b8d4  __env_mask
+Module: D:\Watcom\lib386\nt\clib3s.lib(spvpe)
+0001:000418fc  spawnvpe
+Module: D:\Watcom\lib386\nt\clib3s.lib(spve)
+0001:00041a50  __Slash_C
+0001:00041a7d  spawnve
+Module: D:\Watcom\lib386\nt\clib3s.lib(splp)
+0001:00041de5  spawnlp
+Module: D:\Watcom\lib386\nt\clib3s.lib(strnicmp)
+0001:00041dff  strnicmp
+Module: D:\Watcom\lib386\plbx3s.lib(istgalin)
+0001:00041e64  int near __getaline( istream near &, char near *, int, char, int, int near & )
+Module: D:\Watcom\lib386\nt\clib3s.lib(gmtime)
+0001:00041f66  __brktime
+0001:000420a6+ _gmtime
+0001:000420c9* gmtime
+Module: D:\Watcom\lib386\nt\clib3s.lib(timeutil)
+0001:000420e1  __leapyear
+0001:00042247  __isindst
+0002:0002b1b8  __diyr
+0002:0002b1d2  __dilyr
+Module: D:\Watcom\lib386\nt\clib3s.lib(itoa)
+0001:0004257a+ utoa
+0001:000425cc  itoa
+0001:00042601* _itoa
+Module: D:\Watcom\lib386\nt\clib3s.lib(fprtf)
+0001:0004263b  __fprtf
+Module: D:\Watcom\lib386\nt\clib3s.lib(ioalloc)
+0001:000426ee  __ioalloc
+Module: D:\Watcom\lib386\nt\clib3s.lib(fputc)
+0001:0004276e  fputc
+Module: D:\Watcom\lib386\nt\clib3s.lib(fgetc)
+0001:0004286a  fgetc
+0001:00042915+ __filbuf
+0001:00042944+ __fill_buffer
+Module: D:\Watcom\lib386\nt\clib3s.lib(bits)
+0001:000429ff  __setbits
+0002:0002b1ec  _Bits
+Module: D:\Watcom\lib386\nt\clib3s.lib(abort)
+0001:00042a40* abort
+0001:00042a46  __terminate
+0002:0002b8d8  __abort
+Module: D:\Watcom\lib386\math387s.lib(cntrl87)
+0001:00042a59  _control87
+Module: D:\Watcom\lib386\nt\clib3s.lib(chk8087)
+0001:00042ac0+ __init_8087
+0001:00042aef  _fpreset
+0001:00042af9  __chk8087
+Module: D:\Watcom\lib386\nt\clib3s.lib(puts)
+0001:00042b39  puts
+Module: D:\Watcom\lib386\nt\clib3s.lib(main2wnt)
+0001:00042b6c  __NTMain
+Module: D:\Watcom\lib386\nt\clib3s.lib(segdefns)
+0001:00000003  ___begtext
+0002:00000000* __nullarea
+0002:0002ca8e* _start_TI
+0002:0002ca8e* _end_TI
+Module: D:\Watcom\lib386\nt\clib3s.lib(initargv)
+0001:00042bb4  __Init_Argv
+Module: D:\Watcom\lib386\plbx3s.lib(pure_err)
+0001:00042d5d  __wcpp_2_pure_error_
+Module: D:\Watcom\lib386\nt\clib3s.lib(enterdb)
+0001:00042d80  __EnterWVIDEO
+0002:0002b8dc+ __WD_Present
+Module: D:\Watcom\lib386\plbx3s.lib(stabarr)
+0001:00042dea  __wcpp_2_arr_register_
+0002:0002ca70* rt_init __based("XI") __wcpp_2_data_stab_init_arr_
+Module: D:\Watcom\lib386\nt\clib3s.lib(memalloc)
+0001:00042e24  __MemAllocator
+0001:00042ecc  __MemFree
+Module: D:\Watcom\lib386\nt\clib3s.lib(heapmod)
+0002:0002d564  __fheap_clean
+0002:0002d565  __nheap_clean
+Module: D:\Watcom\lib386\nt\clib3s.lib(grownear)
+0001:000430db  __ExpandDGROUP
+Module: D:\Watcom\lib386\nt\clib3s.lib(nmemneed)
+0001:00043130  __nmemneed
+Module: D:\Watcom\lib386\plbx3s.lib(stfpbfai)
+0001:00043134  int near streambuf::pbackfail( int )
+Module: D:\Watcom\lib386\plbx3s.lib(sdfoverf)
+0001:0004313c  int near stdiobuf::overflow( int )
+Module: D:\Watcom\lib386\plbx3s.lib(sdfundrf)
+0001:000432b4  int near stdiobuf::underflow()
+Module: D:\Watcom\lib386\plbx3s.lib(stfsbuf)
+0001:000433b0  streambuf near * near streambuf::setbuf( char near *, int )
+Module: D:\Watcom\lib386\plbx3s.lib(stfseekp)
+0001:00043408  long near streambuf::seekpos( long, int )
+Module: D:\Watcom\lib386\plbx3s.lib(sdfsync)
+0001:00043424  int near stdiobuf::sync()
+Module: D:\Watcom\lib386\plbx3s.lib(stfdoall)
+0001:00043450  int near streambuf::doallocate()
+Module: D:\Watcom\lib386\plbx3s.lib(stfdestr)
+0001:00043480  near streambuf::~streambuf()
+Module: D:\Watcom\lib386\plbx3s.lib(stfconde)
+0001:000434a4  near streambuf::streambuf()
+Module: D:\Watcom\lib386\plbx3s.lib(iosinit)
+0001:000434f4  void near ios::init( streambuf near * )
+Module: D:\Watcom\lib386\plbx3s.lib(iosfail)
+0001:0004354c  near ios::failure::failure( int )
+Module: D:\Watcom\lib386\nt\clib3s.lib(mthread)
+0001:00043559+ __CloseSemaphore
+0001:00043580+ __AccessSemaphore
+0001:000435db+ __ReleaseSemaphore
+0001:00043600+ __AccessIOB
+0001:0004360e+ __ReleaseIOB
+0001:0004361c+ __AccessFileH
+0001:00043635+ __ReleaseFileH
+0001:0004364e+ __InitAccessH
+0001:0004365c+ __FiniAccessH
+0001:00043689+ __AccessNHeap
+0001:00043693+ __ReleaseNHeap
+0001:0004369d+ __AccessFHeap
+0001:000436a7+ __ReleaseFHeap
+0001:000436b1+ __AccessTDList
+0001:000436bb+ __ReleaseTDList
+0001:000436c5+ __AccessFList
+0001:000436cf+ __ReleaseFList
+0001:000436d9+ __MultipleThread
+0001:000436ee  __InitThreadData
+0001:0004372c  __NTThreadInit
+0001:00043742  __NTAddThread
+0001:00043799  __NTRemoveThread
+0001:000437d3+ __NTThreadFini
+0001:000437ef  __InitMultipleThread
+0002:0002b8ec+ __AccessSema4
+0002:0002b8f0+ __ReleaseSema4
+0002:0002b8f4+ __CloseSema4
+0002:0002ca88* __AccessSema4Fini
+Module: D:\Watcom\lib386\nt\clib3s.lib(crwd386)
+0002:0002b908* _psp
+0002:0002b933  _osmajor
+0002:0002b934  _osminor
+0002:0002b92a* _Extender
+0002:0002b92b* _ExtenderSubtype
+0002:0002b92c* __X32VM
+0002:0002b90c* __x386_stacklow
+0002:0002b900  _LpCmdLine
+0002:0002b904  _LpPgmName
+0002:0002b8f8* _dynend
+0002:0002b8fc  _curbrk
+0002:0002b90c* _STACKLOW
+0002:0002b910* _STACKTOP
+0002:0002b914  __ASTACKSIZ
+0002:0002b918  __ASTACKPTR
+0002:0002b91c  _cbyte
+0002:0002b920* _cbyte2
+0002:0002b924* _child
+0002:0002b92d  _Envptr
+0002:0002b931* _Envseg
+0002:0002b928  __no87
+0002:0002b935  __FPE_handler
+0002:0002b935* ___FPE_handler
+Module: D:\Watcom\lib386\nt\clib3s.lib(strdup)
+0001:0004397f* _strdup
+0001:0004398d  strdup
+Module: D:\Watcom\lib386\nt\clib3s.lib(inirt386)
+0001:000439d8  __InitRtns
+0001:00043a23  __FiniRtns
+Module: D:\Watcom\lib386\plbx3s.lib(bittest)
+0001:00043a74  __wcpp_2_bit_test_
+Module: D:\Watcom\lib386\plbx3s.lib(termnate)
+0001:00043a94  void near terminate()
+Module: D:\Watcom\lib386\plbx3s.lib(unexpect)
+0001:00043ad8  void near unexpected()
+Module: D:\Watcom\lib386\plbx3s.lib(areaexc)
+0002:0002b944  __EXC_AREA
+Module: D:\Watcom\lib386\nt\clib3s.lib(tellwnt)
+0001:00043b08  tell
+Module: D:\Watcom\lib386\nt\clib3s.lib(initfile)
+0001:00043b4a  __InitFiles
+Module: D:\Watcom\lib386\nt\clib3s.lib(ioexit)
+0001:00043bbf  __full_io_exit
+0001:00043bce* fcloseall
+Module: D:\Watcom\lib386\nt\clib3s.lib(noefgfmt)
+0002:0002c944  __EFG_printf
+0002:0002c948  __EFG_scanf
+Module: D:\Watcom\lib386\nt\clib3s.lib(qwrit)
+0001:00043c44  __qwrite
+Module: D:\Watcom\lib386\plbx3s.lib(flfdestr)
+0001:00043d04  near filebuf::~filebuf()
+Module: D:\Watcom\lib386\plbx3s.lib(ioscoios)
+0001:00043dc0  near ios::ios( ios const near & )
+Module: D:\Watcom\lib386\plbx3s.lib(ioufrxal)
+0001:00043e10  void near __WATCOM_ios::free_xalloc_storage( ios near * )
+Module: D:\Watcom\lib386\plbx3s.lib(manws)
+0001:00043e30  istream near & near ws( istream near & )
+Module: D:\Watcom\lib386\nt\clib3s.lib(plusopen)
+0001:00043e6d  __plusplus_open
+Module: D:\Watcom\lib386\plbx3s.lib(flfconde)
+0001:00043f08  near filebuf::filebuf()
+Module: D:\Watcom\lib386\plbx3s.lib(istcoist)
+0001:00043f6c  near istream::istream( istream const near & )
+Module: D:\Watcom\lib386\plbx3s.lib(istgsign)
+0001:00044028  int near __getsign( streambuf near *, char near & )
+Module: D:\Watcom\lib386\plbx3s.lib(istgbase)
+0001:0004406c  int near __getbase( streambuf near *, int near &, int near & )
+Module: D:\Watcom\lib386\plbx3s.lib(istgnum)
+0001:000441e0  int near __getnumber( streambuf near *, long unsigned near &, int, int near & )
+Module: D:\Watcom\lib386\nt\clib3s.lib(fdfs386)
+0001:0004437a  __FDFS
+Module: D:\Watcom\lib386\nt\clib3s.lib(nrealloc)
+0001:000443c6  realloc
+0001:000443db+ _nrealloc
+Module: D:\Watcom\lib386\nt\clib3s.lib(setenvp)
+0001:00044475  __setenvp
+Module: D:\Watcom\lib386\nt\clib3s.lib(memcpy)
+0001:0004453d  memcpy
+Module: D:\Watcom\lib386\nt\clib3s.lib(cenvarg)
+0001:0004457f  __cenvarg
+0001:000446b0  __ccmdline
+Module: D:\Watcom\lib386\nt\clib3s.lib(stack386)
+0001:00044702  stackavail
+Module: D:\Watcom\lib386\nt\clib3s.lib(split2)
+0001:00044766  _splitpath2
+Module: D:\Watcom\lib386\nt\clib3s.lib(save8087)
+0002:0002c960  __Save8087
+0002:0002c964  __Rest8087
+Module: D:\Watcom\lib386\nt\clib3s.lib(makepath)
+0001:00044823  _makepath
+Module: D:\Watcom\lib386\nt\clib3s.lib(dospnwnt)
+0001:00044910  __dospawn
+Module: D:\Watcom\lib386\nt\clib3s.lib(spl)
+0001:00044a27  spawnl
+Module: D:\Watcom\lib386\nt\clib3s.lib(flushall)
+0001:00044a48  flushall
+0001:00044a53  __flushall
+Module: D:\Watcom\lib386\nt\clib3s.lib(gtchewnt)
+0001:00044a96  getche
+Module: D:\Watcom\lib386\nt\clib3s.lib(qread)
+0001:00044abe  __qread
+Module: D:\Watcom\lib386\nt\clib3s.lib(_8087386)
+0002:0002c968  __8087
+0002:0002c969  __real87
+Module: D:\Watcom\lib386\nt\clib3s.lib(8087cw)
+0002:0002c96c  __8087cw
+Module: D:\Watcom\lib386\nt\clib3s.lib(ini87386)
+0001:00044b4c  __init_80x87
+Module: D:\Watcom\lib386\nt\clib3s.lib(regdata)
+0001:00044b73* __RegisterThreadDataSize
+0002:0002c970  __ThreadDataSize
+Module: D:\Watcom\lib386\nt\clib3s.lib(cmain386)
+0001:00044b85  __CMain
+Module: D:\Watcom\lib386\nt\clib3s.lib(seg386)
+0000:00001234  __DOSseg__
+Module: D:\Watcom\lib386\nt\clib3s.lib(___argc)
+0002:0002d670  ___Argc
+0002:0002d674  ___Argv
+Module: D:\Watcom\lib386\nt\clib3s.lib(heapen)
+0001:00044bde* _heapenable
+0002:0002c974  __heap_enabled
+Module: D:\Watcom\lib386\nt\clib3s.lib(amblksiz)
+0002:0002c978  _amblksiz
+Module: D:\Watcom\lib386\nt\clib3s.lib(fwrite)
+0001:00044bfe  fwrite
+Module: D:\Watcom\lib386\nt\clib3s.lib(fflush)
+0001:00044e1e  fflush
+Module: D:\Watcom\lib386\plbx3s.lib(stfsetb)
+0001:00044e38  void near streambuf::setb( char near *, char near *, int )
+Module: D:\Watcom\lib386\nt\clib3s.lib(liballoc)
+0001:00044ea6  _plib_malloc
+0001:00044eb4  _plib_free
+Module: D:\Watcom\lib386\nt\clib3s.lib(trdlist)
+0001:00044ec2  __GetThreadData
+0001:00044ef7  __AddThreadData
+0001:00044f63  __RemoveThreadData
+0001:00044fb5+ __FreeThreadDataList
+Module: D:\Watcom\lib386\nt\clib3s.lib(calloc)
+0001:00044fe3  calloc
+Module: D:\Watcom\lib386\nt\clib3s.lib(trdalloc)
+0001:00045008  __FiniThreadProcessing
+Module: D:\Watcom\lib386\plbx3s.lib(flfpbfai)
+0001:00045010  int near filebuf::pbackfail( int )
+Module: D:\Watcom\lib386\plbx3s.lib(flfoverf)
+0001:000450e0  int near filebuf::overflow( int )
+Module: D:\Watcom\lib386\plbx3s.lib(flfundrf)
+0001:00045288  int near filebuf::underflow()
+Module: D:\Watcom\lib386\plbx3s.lib(flfsetbf)
+0001:00045374  streambuf near * near filebuf::setbuf( char near *, int )
+Module: D:\Watcom\lib386\plbx3s.lib(flfseeko)
+0001:000453d8  long near filebuf::seekoff( long, int, int )
+Module: D:\Watcom\lib386\plbx3s.lib(flfsync)
+0001:00045454  int near filebuf::sync()
+Module: D:\Watcom\lib386\plbx3s.lib(istpeek)
+0001:000454ec  int near istream::peek()
+Module: D:\Watcom\lib386\nt\clib3s.lib(nmsize)
+0001:00045547  _nmsize
+0001:00045547* _msize
+Module: D:\Watcom\lib386\nt\clib3s.lib(nexpand)
+0001:00045554* _expand
+0001:00045569+ __HeapManager_expand
+0001:00045714  _nexpand
+Module: D:\Watcom\lib386\nt\clib3s.lib(getchwnt)
+0001:0004586b  getch
+Module: D:\Watcom\lib386\nt\clib3s.lib(putchwnt)
+0001:000458ee  putch
+Module: D:\Watcom\lib386\nt\clib3s.lib(cinit)
+0001:00045952  __CommonInit
+Module: D:\Watcom\lib386\nt\clib3s.lib(write)
+0001:0004595d  write
+Module: D:\Watcom\lib386\nt\clib3s.lib(register)
+0001:00045c52* _beginthread
+0001:00045c74  _endthread
+0001:00045c7b  __initthread
+0001:00045c8a* __RegisterThreadData
+Module: D:\Watcom\lib386\nt\clib3s.lib(read)
+0001:00045cd5  read
+Module: D:\Watcom\lib386\nt\clib3s.lib(conutwnt)
+0001:00045e82  __NTRealKey
+0001:00045f18  __NTConsoleInput
+0001:00045f23  __NTConsoleOutput
+Module: D:\Watcom\lib386\nt\clib3s.lib(thredwnt)
+0001:00045fb0  __CBeginThread
+0001:000460e7  __CEndThread
+Module: D:\Watcom\lib386\plbx3s.lib(stfsync)
+0001:00046108  int near streambuf::sync()
+
+
+                        +----------------------+
+                        |   Communal Symbols   |
+                        +----------------------+
+
+Address        Symbol
+=======        ======
+
+0002:0002d694  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::free_list
+0002:0002d698  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::next_avail
+0002:0002d69c  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::last
+0002:0002d6a0  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node_buffer near * near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::buffer_list
+0002:0002d6a4  int near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::number_of_trees
+0002:0002d6a8  <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near * near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::NIL
+0002:0002d6ac  <<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node_buffer near >::allocator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::buffer_
+0002:0002d6b0  <<string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node near >::allocator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::rb_tree_node_a
+0002:0002d6b1  <string near >::allocator near <string near >::vector::static_allocator
+0002:0002d6b2  <stopgo near >::allocator near <stopgo near >::vector::static_allocator
+0002:0002d6b3  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node_buffer near * near <addr near,<addr const near,string near >::pair near,<<addr con
+0002:0002d6b7  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near * near <addr near,<addr const near,string near >::pair near,<<addr const near
+0002:0002d6bb  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near * near <addr near,<addr const near,string near >::pair near,<<addr const near
+0002:0002d6bf  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near * near <addr near,<addr const near,string near >::pair near,<<addr const near
+0002:0002d6c3  <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near * near <addr near,<addr const near,string near >::pair near,<<addr const near
+0002:0002d6c7  <<addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node near >::allocator near <addr near,<addr const near,string near >::pair near,<<add
+0002:0002d6c8  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node_buffer near * near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree:
+0002:0002d6cc  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near * near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::NIL
+0002:0002d6d0  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near * near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::free_l
+0002:0002d6d4  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near * near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::next_a
+0002:0002d6d8  <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near * near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::last
+0002:0002d6dc  <<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node near >::allocator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_
+0002:0002d6dd  <addr near >::allocator near <addr near >::vector::static_allocator
+0002:0002d6de  <path_elem near >::allocator near <path_elem near >::vector::static_allocator
+0002:0002d6df  <RipZip near >::allocator near <RipZip near >::vector::static_allocator
+0002:0002d6e0  <base_data near >::allocator near <base_data near >::vector::static_allocator
+0002:0002d6e1  <link near >::allocator near <link near >::vector::static_allocator
+0002:0002d6e5  <string near >::allocator near <string near,string near,<string near,string near >::ident near,<string near >::less near >::rb_tree::value_allocator
+0002:0002d6e6  int near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::number_of_trees
+0002:0002d6ea  <<addr const near,string near >::pair near >::allocator near <addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::value_allocator
+0002:0002d6eb  <<addr near,<addr const near,string near >::pair near,<<addr const near,string near >::pair near,addr near >::select1st near,<addr near >::less near >::rb_tree::rb_tree_node_buffer near >::allocator near <addr near,<addr const near,string near >::pair nea
+0002:0002d6ef  int near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::number_of_trees
+0002:0002d6f3  <app_elem near >::allocator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::value_allocator
+0002:0002d6f4  <<app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near >::rb_tree::rb_tree_node_buffer near >::allocator near <app_elem near,app_elem near,<app_elem near,app_elem near >::ident near,<app_elem near >::less near
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+_RtlUnwind                          KERNEL32.DLL
+_GetCurrentProcessId                KERNEL32.DLL
+_GetFileAttributesA                 KERNEL32.DLL
+_SetFileAttributesA                 KERNEL32.DLL
+_DeleteFileA                        KERNEL32.DLL
+_MoveFileA                          KERNEL32.DLL
+_CreateDirectoryA                   KERNEL32.DLL
+_GetTimeZoneInformation             KERNEL32.DLL
+_FindFirstFileA                     KERNEL32.DLL
+_FindClose                          KERNEL32.DLL
+_CreateFileA                        KERNEL32.DLL
+_GetFullPathNameA                   KERNEL32.DLL
+_FindNextFileA                      KERNEL32.DLL
+_GetLastError                       KERNEL32.DLL
+_LoadLibraryA                       KERNEL32.DLL
+_GetProcAddress                     KERNEL32.DLL
+_GetModuleFileNameA                 KERNEL32.DLL
+_SetCurrentDirectoryA               KERNEL32.DLL
+_GetCurrentDirectoryA               KERNEL32.DLL
+_GetVersionExA@4                    KERNEL32.dll
+_GetLastError@0                     KERNEL32.dll
+_CopyFileA@12                       KERNEL32.dll
+_Sleep                              KERNEL32.DLL
+_SetFilePointer                     KERNEL32.DLL
+_SetEndOfFile                       KERNEL32.DLL
+_WriteFile                          KERNEL32.DLL
+_ExitProcess                        KERNEL32.DLL
+_GetEnvironmentStrings              KERNEL32.DLL
+_GetCommandLineA                    KERNEL32.DLL
+_GetVersion                         KERNEL32.DLL
+_CloseHandle                        KERNEL32.DLL
+_GetLocalTime                       KERNEL32.DLL
+_FileTimeToLocalFileTime            KERNEL32.DLL
+_FileTimeToDosDateTime              KERNEL32.DLL
+_DosDateTimeToFileTime              KERNEL32.DLL
+_LocalFileTimeToFileTime            KERNEL32.DLL
+_SetStdHandle                       KERNEL32.DLL
+_GetStdHandle                       KERNEL32.DLL
+_GetFileType                        KERNEL32.DLL
+_LocalAlloc                         KERNEL32.DLL
+_GetCurrentThreadId                 KERNEL32.DLL
+_CreateMutexA                       KERNEL32.DLL
+_WaitForSingleObject                KERNEL32.DLL
+_ReleaseMutex                       KERNEL32.DLL
+_TlsGetValue                        KERNEL32.DLL
+_TlsAlloc                           KERNEL32.DLL
+_TlsSetValue                        KERNEL32.DLL
+_TlsFree                            KERNEL32.DLL
+_CreateProcessA                     KERNEL32.DLL
+_GetExitCodeProcess                 KERNEL32.DLL
+_ReadFile                           KERNEL32.DLL
+_ReadConsoleInputA                  KERNEL32.DLL
+_GetConsoleMode                     KERNEL32.DLL
+_SetConsoleMode                     KERNEL32.DLL
+_WriteConsoleA                      KERNEL32.DLL
+_SetEvent                           KERNEL32.DLL
+_GetCurrentThread                   KERNEL32.DLL
+_CreateEventA                       KERNEL32.DLL
+_CreateThread                       KERNEL32.DLL
+_GetThreadContext                   KERNEL32.DLL
+_ResumeThread                       KERNEL32.DLL
+_ExitThread                         KERNEL32.DLL
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+D:\Watcom\lib386\nt\kernel32.lib
+D:\Watcom\lib386\math387s.lib
+D:\Watcom\lib386\nt\clib3s.lib
+D:\Watcom\lib386\plbx3s.lib
+D:\Watcom\lib386\nt\nt.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  1000 (4096.)
+Memory size:  000749a0 (477600.)
+Entry point address: 0001:0003d472
+Link time: 00:20.56

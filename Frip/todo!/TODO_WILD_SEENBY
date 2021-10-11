@@ -1,0 +1,130 @@
+─ Z Our node netmail (2:5020/32) ─────────────────────────────────────────────────────── L.OUR ─
+ Msg  : 20 of 107                           Rcv                                                 
+ From : Andrew Ivanov                       2:5020/32.54    16 Nov 95  17:49:04 
+ To   : Dmitry Zavalishin                   2:5020/32       17 Nov 95  01:07:20 
+ Subj : Frip                                                                                    
+────────────────────────────────────────────────────────────────────────────────────────────────
+Hello Dmitry!
+
+Попpобовал, pаботает . Только как бы еще HOLD не ставить - а то не все мне звонят ... И насчет
+флажков тоже бы озаботиться - а то есть ненулевая веpоятность убиения бокса до того, как в него 
+ляжет *.RIP . И неплохо бы иметь возможность вместо TOBESENT.$$$ пpосто кидать туда rip'ы .
+И воще - вот  смотpи :
+
+
+===8<=== Begin Fido.Ad ===>8===
+
+2:5020/647.0
+
+2:5020/28.* -2:5020/28.0 -2:5079/*.*
+2:5020/75.* -2:5020/75.0 -2:5079/*.*
+2:5020/*.* -2:5020/*.*
+2:5079/*.* -2:5079/*.*
+
+===8<=== End Fido.Ad ===>8===
+
+И лог :
+
+===8<=== Begin Frip.Log ===>8===
+Warning: No annonce time stamp found. Running for the first time?
+*!* Announcing from fido.ad
+*** Announcing 2:5020/647.0
+
+>*** Announcing 2:5020/28.* -2:5020/28.0 -2:5079/*.*
+>*** Announcing 2:5020/75.* -2:5020/75.0 -2:5079/*.*
+>*** Announcing 2:5020/*.* -2:5020/*.*
+>*** Announcing 2:5079/*.* -2:5079/*.*
+
+Debug: Loading links
+Debug: Loading database
+*!* Looking at: rip-4670.rip
+
+>*!* Got announce of 2:5020/75.*@fidonet.org from 2:5020/647.0@fidonet.org
+>***     This announce will come to 2:5079/12.0@fidonet.org
+
+***       - delivering ./out/rip81770.rip to 2:5079/12.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02NU400C.00H/TOBESENT.$$$
+***     This announce will come to 2:5020/28.0@fidonet.org
+***       - delivering ./out/rip-8758.rip to 2:5020/28.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS400S.00H/TOBESENT.$$$
+***     This announce will come to 2:5020/32.0@fidonet.org
+***       - delivering ./out/rip81772.rip to 2:5020/32.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS4001.00H/TOBESENT.$$$
+***     This announce will not come to 2:5020/75.0@fidonet.org due to seenby
+*!* Looking at: rip-5824.rip
+
+>*!* Got announce of 2:5020/*.*@fidonet.org from 2:5020/647.0@fidonet.org
+
+***     This announce will come to 2:5079/12.0@fidonet.org
+***       - delivering ./out/rip-4669.rip to 2:5079/12.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02NU400C.00H/TOBESENT.$$$
+
+>***     This announce will come to 2:5020/28.0@fidonet.org
+
+***       - delivering ./out/rip81774.rip to 2:5020/28.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS400S.00H/TOBESENT.$$$
+
+>***     This announce will come to 2:5020/32.0@fidonet.org
+
+***       - delivering ./out/rip81776.rip to 2:5020/32.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS4001.00H/TOBESENT.$$$
+
+>***     This announce will come to 2:5020/75.0@fidonet.org
+
+***       - delivering ./out/rip-5804.rip to 2:5020/75.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS40B2.00H/TOBESENT.$$$
+*!* Looking at: rip-8759.rip
+
+>*!* Got announce of 2:5020/28.*@fidonet.org from 2:5020/647.0@fidonet.org
+>***     This announce will come to 2:5079/12.0@fidonet.org
+
+***       - delivering ./out/rip81778.rip to 2:5079/12.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02NU400C.00H/TOBESENT.$$$
+***     This announce will not come to 2:5020/28.0@fidonet.org due to seenby
+***     This announce will come to 2:5020/32.0@fidonet.org
+***       - delivering ./out/rip-8757.rip to 2:5020/32.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS4001.00H/TOBESENT.$$$
+***     This announce will come to 2:5020/75.0@fidonet.org
+***       - delivering ./out/rip81780.rip to 2:5020/75.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS40B2.00H/TOBESENT.$$$
+*!* Looking at: rip35060.rip
+
+>*!* Got announce of 2:5079/*.*@fidonet.org from 2:5020/647.0@fidonet.org
+>***     This announce will come to 2:5079/12.0@fidonet.org
+
+***       - delivering ./out/rip-4668.rip to 2:5079/12.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02NU400C.00H/TOBESENT.$$$
+***     This announce will come to 2:5020/28.0@fidonet.org
+***       - delivering ./out/rip81782.rip to 2:5020/28.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS400S.00H/TOBESENT.$$$
+***     This announce will come to 2:5020/32.0@fidonet.org
+***       - delivering ./out/rip81784.rip to 2:5020/32.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS4001.00H/TOBESENT.$$$
+***     This announce will come to 2:5020/75.0@fidonet.org
+***       - delivering ./out/rip-8756.rip to 2:5020/75.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS40B2.00H/TOBESENT.$$$
+*!* Looking at: rip81768.rip
+*!* Got announce of 2:5020/647.0@fidonet.org from 2:5020/647.0@fidonet.org
+***     This announce will come to 2:5079/12.0@fidonet.org
+***       - delivering ./out/rip81786.rip to 2:5079/12.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02NU400C.00H/TOBESENT.$$$
+***     This announce will come to 2:5020/28.0@fidonet.org
+***       - delivering ./out/rip-4667.rip to 2:5020/28.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS400S.00H/TOBESENT.$$$
+***     This announce will come to 2:5020/32.0@fidonet.org
+***       - delivering ./out/rip81788.rip to 2:5020/32.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS4001.00H/TOBESENT.$$$
+***     This announce will come to 2:5020/75.0@fidonet.org
+***       - delivering ./out/rip-4666.rip to 2:5020/75.0@fidonet.org
+Debug: tmail lo name: H:\Frip\Boxes/02SS40B2.00H/TOBESENT.$$$
+*!* Creating route file...
+
+===8<=== End Frip.Log ===>8===
+
+Оно не понимает Seen-By с wildcards ...
+
+Andrew
+
+---  UNREG
+
+

@@ -1,0 +1,1285 @@
+<HTML>
+<HEAD><TITLE>frip</TITLE>
+</HEAD>
+<BODY LINK="#000080" VLINK="#800000">
+<P ALIGN=CENTER>
+<FONT SIZE=7><B><BR></B></FONT>
+</P>
+<P ALIGN=CENTER>
+<FONT SIZE=7><B><BR></B></FONT>
+</P>
+<P ALIGN=CENTER>
+<FONT SIZE=7><B><BR></B></FONT>
+</P>
+<P ALIGN=CENTER>
+<FONT SIZE=7><B>FRIP</B></FONT>
+</P>
+<P ALIGN=CENTER>
+<FONT SIZE=7><I><BR></I></FONT>
+</P>
+<P ALIGN=CENTER>
+<FONT SIZE=5><B><BR></B></FONT>
+</P>
+<P ALIGN=CENTER>
+<FONT SIZE=6>Automatic mail/file routing system for FidoNet-Style Networks</FONT>
+</P>
+<P ALIGN=CENTER>
+<BR>
+</P>
+<P>
+<BR>
+</P>
+<P>
+<BR>
+</P>
+<P>
+<BR>
+</P>
+<P ALIGN=CENTER>
+<FONT SIZE=4><I><BR></I></FONT>
+</P>
+<P ALIGN=CENTER>
+<FONT SIZE=5><B><BR></B></FONT>
+</P>
+<P>
+<H1>
+Introduction
+</H1>
+<P>
+<BR>
+</P>
+<H2>
+FRIP: What for?
+</H2>
+<P>
+The reason behind FRIP is really simple. I don't like to do myself anything that is not fun and can be done with the help of computer or some other machine. For example, I don't like to keep routing tables for my FIDO node manually since it doesn't look fu
+nny for me, can be done automatically and, hopefully, automatic routing is more efficient. Second reason is ability of current FRIP to route files, which is virtually impossible and dangerous by standard FTN means.
+</P>
+<H2>
+Assumptions
+</H2>
+<P>
+You are not too paranoid. :-)
+</P>
+<P>
+You have a decent computer, such as 486/8M/500HD. Even 386 will do, but it better should be running some multitasker to not to keep your mailer from answering a ring when mail processing takes place. FRIP has a DOS version, but it will be withdrawn in a ha
+lf of year or so, cause there's only 5% of DOS-based FIDO nodes even here in Russia - that's in August of 1996. FRIP is distributed with sources, so everybody can port it to any OS he likes.
+</P>
+<P>
+You are able to modify sample config file to suit your system.
+</P>
+<P>
+You have mailer either with Binkley-style outbound, T-Mail style fileboxes or some program that can create a file-attach for your mailer.
+</P>
+<P>
+<BR>
+</P>
+<H2>
+Basics
+</H2>
+<P>
+There is two loosely coupled parts in FRIP today. The FRIP itself and so-called FARA - frip Aided Router of Attaches. Both of them are in one executable, and it is done on purpose. It makes me sure that if FRIP works, FARA is operational too. Well, here's 
+what each one does.
+</P>
+<H3>
+FRIP
+</H3>
+<P>
+Does the routing analysis and builds routing table for FARA. Frip is able to produce text-form routing table for other software too, but it is not a primary function. FRIP builds routing table with the help of RIP-files, or, to be short, RIPs. Such a files
+ are sent on a regular basis (one in a two weeks by default) to all FRIPs around and relayed through all the FRIP-ified nodes. Those nodes, in turn, gather information from RIPs coming through and discover the shortest ways to other nodes, networks, zones 
+and domains around. The description of FRIP operation here is VERY brief. Please, refer to page 9 to read more about it. As a user you don't have to know anything about it, though.
+</P>
+<H3>
+FARA
+</H3>
+<P>
+FRIP-Aided Routing of Attaches is a FRIP-based data (mail, files) delivery mechanism. FRIP is able to encapsulate data into a RIF files and transfer them through the FRIP-able nodes. FARA was brought to life after half of year testing of FRIP, which shown 
+that a lot of people easily sets up FRIP, but does not let it produce routing tables for main system router. With the help of FARA FRIP can be used as a separate, add-on mail delivery system.
+</P>
+<P>
+<BR>
+</P>
+<H1>
+Usage
+</H1>
+<P>
+<BR>
+</P>
+<H2>
+<A NAME="Minimal setup &amp; usage"></A>Minimal setup &amp; usage
+</H2>
+<P>
+To be able to use most of the FRIP features you need to perform an easy set up: put FRIP in a separate directory and specify minimum of parameters in a config. File. The most complex parameters is those which let FRIP send files to your direct links. Thing
+s are real easy if your mailer supports Binkley-style outbound. Most current mailers, including The Brake, Binkley, Bink/+, T-Mail, Xenia and others do support such outbound. If your mailer supports Binkley-style outbound, define BinkOutBound and BinkOutBo
+undDefault parameters. First must specify path to your outbound, excluding last subdirectory, and second - that last directory name, whithout path. If your mailer does not support Binkley outbound but supports T-Mail style fileboxes (including tobesent.$$$
+ file feature), you can use TmailFileBoxesFAT or TmailFileBoxesHPFS for FAT (DOS) or HPFS (long name) style fileboxes. If both ways are not for you, still there is a workaround exist: DeliverCommand parameter can be used to tell FRIP which command it has t
+o execute to send file to some address. Note that file must be sent only directly and in <I>kill file sent</I> mode. Apart from this, you should specify Address (one per your AKA), Dir (where you put FRIP), Inbound (your secure inbound directory), FripMail (NetMa
+il, transferred by FRIP) and Log (log file name) parameters. In a directory, specified by FripMail parameter your mail, received by FARA will be put, and all netmail written in that folder will be sent by FARA, if possible.
+</P>
+<P>
+Address 2:5030/16.555
+</P>
+<P>
+Address 666:777/888.999
+</P>
+<P>
+Dir c:\net\Frip
+</P>
+<P>
+Inbound c:\Net\Inbound\Secure
+</P>
+<P>
+FripMail c:\Net\Mail\Frip
+</P>
+<P>
+Log c:\Net\Logs\Frip.Log
+</P>
+<P>
+; The following parameters assume that your main Bink outbound is c:\Net\Outbound
+</P>
+<P>
+BinkOutBound c:\Net
+</P>
+<P>
+BinkOutBoundDefault Outbound
+</P>
+<P>
+In addition to frip.cfg file links.cfg must be defined too. It is even more easy to create this file. For the first time just list all your direct links with neighbor nodes using FRIP, one node per line, together with your main aka first:
+</P>
+<P>
+&lt;your main address&gt; &lt;first link node address&gt;
+</P>
+<P>
+&lt;your main address&gt; &lt;second link node address&gt;
+</P>
+<P>
+...
+</P>
+<P>
+That's all. Now just run frip.exe when you need to pack fripmail, unpack received RIPs, RIFs and RIZs, and at least daily.
+</P>
+<P>
+<BR>
+</P>
+<H2>
+Common errors
+</H2>
+<P>
+To be gathered. :)
+</P>
+<H2>
+Simple tweaking 
+</H2>
+<P>
+<BR>
+</P>
+<H2>
+Total Control
+</H2>
+<P>
+<BR>
+</P>
+<H2>
+Configuration File Reference
+</H2>
+<P>
+Lines, beginning with ':' and empty lines are ignored.
+</P>
+<P>
+Boolean parameters can have value of Yes/No/On/Off.
+</P>
+<P>
+<A NAME="Configuration file keywords reference"></A><FONT SIZE=2><I>Configuration file keywords reference</I></FONT>
+</P>
+<TABLE WIDTH=100% BORDER=1 FRAME=BOX RULES=ALL>
+<COLGROUP><COL WIDTH=63*><COL WIDTH=75*><COL WIDTH=118*></COLGROUP><THEAD><TR>
+<TH WIDTH=25% VALIGN=TOP>
+<P>
+Keyword
+</TH>
+<TH WIDTH=29% VALIGN=TOP>
+<P>
+Example
+</TH>
+<TH WIDTH=46% VALIGN=TOP>
+<P>
+Description
+</TH>
+</TR>
+</THEAD><TBODY><TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+Address
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+address 2:5020/32.555
+<P>
+address 7:1130/32.555
+<P>
+address 7:7/0.555
+<P>
+<BR>
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Your addresses.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+Dir
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+Dir c:/net/frip
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Frip home dir
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+Inbound
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+Inbound c:/net/in
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Mailer (secure!!) inbound
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+FripMail
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+FripMail c:\net\FripMail
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Frip will send netmail from this directory using FARA (see page 3) and receive FARA netmail to this directory.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+Log
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+Log c:\net\logs\Frip
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Log file name
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+BinkOutBound
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+BinkOutBound  c:/net
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Path to Binkley-style outbound EXCLUDING LAST DIRECTORY.
+<P>
+NB!
+<P>
+Select and define one of BinkOutBound+BinkOutBoundDefault, HPFSOutbound, TMailFileBoxes or DeliverCommand.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+BinkOutBoundDefault
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+BinkOutBoundDefault outbound
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Last Bink outbound directory name (excluded above)
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+HPFSOutBound
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+HPFSOutBound  c:/net/HPFS_outbound
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Path to HPFS outbound (test version)
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+TMailFileBoxesFAT
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+TMailFileBoxesFAT ./filebox
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Path to T-Mail fileboxes - FAT format (DOS mode)
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+TMailFileBoxesHPFS
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+TMailFileBoxesHPFS ./filebox
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Path to T-Mail fileboxes - HPFS format (OS/2 &amp; NT mode, long names)
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+DeliverCommand 
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+DeliverCommand Squish Send &quot;^%0&quot; to %1
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Command to send file %0 to node %1, DIRECT flavor and kill file sent ONLY! 
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+Hold
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+Hold 333 5030/* -5030/222
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Send RIPs with HOLD flavor to given nodes. Does not work with DeliverCommand.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+AnnouncePeriod
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+AnnouncePeriod 15
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Time in days between automatic announces. Default - 14 days.
+<P>
+NB!
+<P>
+<B>DO NOT SET IT TO LESS THAN A WEEK.</B>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+PingPeriod
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+PingPeriod 2
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Time between pings. Default - 2 days.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+ZipCmd
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+ZipCmd zip -mj1
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+zip or pkzip command. Puhleeease! Do NOT use pkzip under OS/2, Win/NT or Win/95. Use native OS/2 or Win32 zip/unzip instead. This parameter is for special cases only - don't specify it if don't have to. Frip has reasonable defaults.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+UnZipCmd
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+UnZipCmd unzip -Cjn
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+unzip or pkunzip command. See comments to zip command.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+CmdLimit
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+CmdLimit 400
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Max. length of OS command line. Default is 100 for DOS, Win/95 and NT (because of Win95!), 400 for OS/2.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+Ansi
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+Ansi Off
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Enable/disable ANSI coloring.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+Debug
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+Debug On
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Debugging information switch.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+Map
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+Map n:\temp\MapDir
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Directory to build routing map in. FRIP does not use that map at all, and is able to build it for sysop's use only.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+MapFormat
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+MapFormat (%s)_%s_%s/%4s.%-3s
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Map file name printf format. Each %s from left ot right substituted with: Domain, Zone, Net, Node,  Point,  Input rip file name (usually not needed).
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+AnnounceFromAdFiles
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+AnnounceFromAdFiles Off
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Turn on processing of .ad files. For those who really needs it. Be careful! Don't use, if not understand what you are doing.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=25% VALIGN=TOP>
+<P>
+ProcessedFlag
+</TD>
+<TD WIDTH=29% VALIGN=TOP>
+<P>
+ProcessedFlag c:/net/Frip_routing_changed.!!!
+</TD>
+<TD WIDTH=46% VALIGN=TOP>
+<P>
+Frip will create this file if routing possibly changed
+</TD>
+</TR>
+</TBODY></TABLE>
+<P>
+<BR>
+</P>
+<P>
+<BR>
+</P>
+<P>
+The following table lists keywords, used in external router mode. This mode is obsolete, not recommended and can be used only if neighbor FRIP nodes are support this mode too.
+</P>
+<P>
+<FONT SIZE=2><I>Obsolete Keywords Reference</I></FONT>
+</P>
+<TABLE WIDTH=100% BORDER=1 FRAME=BOX RULES=ALL>
+<COLGROUP><COL WIDTH=85*><COL WIDTH=85*><COL WIDTH=85*></COLGROUP><THEAD><TR>
+<TH WIDTH=33% VALIGN=TOP>
+<P>
+Keyword
+</TH>
+<TH WIDTH=33% VALIGN=TOP>
+<P>
+Example
+</TH>
+<TH WIDTH=33% VALIGN=TOP>
+<P>
+Description
+</TH>
+</TR>
+</THEAD><TBODY><TR>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+StripDomain
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+StripDomain Off
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+If turned on, FRIP will strip domain from addresses it puts in external route file.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+PointRouting
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+PointRouting On
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+If turned on, FRIP will put routes to/via points to external routing file.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+WildWord
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+WildWord *
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+Wildcard character or word for external routing file
+</TD>
+</TR>
+<TR>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteWildAfter
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteWildAfter Yes
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+Whether to put wildcarded routes after or before detailed ones
+</TD>
+</TR>
+<TR>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteFilePath
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteFilePath c:\net\squish
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+Routing file directory
+</TD>
+</TR>
+<TR>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteFileName
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteFileName route.cfg
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+Routing file NAME ONLY, with no path. Leave empty if no external routing file to be created. It is recommended to use FRIP without external routing.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteFileSuff
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteFileSuff Suffix.rou
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+Contents of this file will be added to output routing file at the end.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteFilePref
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteFilePref Prefix.rou
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+Contents of this file will be prepended to output routing file
+</TD>
+</TR>
+<TR>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteLine
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+RouteLine Route %1 to %0
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+Routing file line format
+</TD>
+</TR>
+<TR>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+ViaSelf
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+ViaSelf Yes
+</TD>
+<TD WIDTH=33% VALIGN=TOP>
+<P>
+Put routing of node via itself to route file. For example, &#187;Route 2:5020/666 to 2:5020/666&#171;
+</TD>
+</TR>
+</TBODY></TABLE>
+<P>
+<BR>
+</P>
+<P>
+<BR>
+</P>
+<H1>
+Protocol
+</H1>
+<P>
+<BR>
+</P>
+<H2>
+<A NAME="Protocol for those who curious"></A>For those who curious
+</H2>
+<P>
+<BR>
+</P>
+<H2>
+For those who real interested
+</H2>
+<P>
+<BR>
+</P>
+<H2>
+For those who's serious to implement
+</H2>
+<P>
+<BR>
+</P>
+<H2>
+Details, data formats, etc.
+</H2>
+<P>
+<BR>
+</P>
+<H3>
+RIP structure
+</H3>
+<P>
+RIP file is an ASCII text file with the name beginning with letters &#187;rip&#171;, extension beginning with &#187;.ri&#171; and ending with one letter or digit. Lines in RIP file can end with either Unix-style newline character or RSX-style CRLF. Last line must end with new
+line or CRLF too. Each line begins with keyword and possibly contains a value. There are a few types of RIPs, distinguished by value of TYPE line.
+</P>
+<P>
+<BR>
+</P>
+<P>
+<FONT SIZE=2><I>RIP types</I></FONT>
+</P>
+<TABLE WIDTH=100% BORDER=1 FRAME=BOX RULES=ALL>
+<COLGROUP><COL WIDTH=29*><COL WIDTH=28*><COL WIDTH=61*><COL WIDTH=138*></COLGROUP><THEAD><TR>
+<TH WIDTH=11% VALIGN=TOP>
+<P>
+Type
+</TH>
+<TH WIDTH=11% VALIGN=TOP>
+<P>
+Version
+</TH>
+<TH WIDTH=24% VALIGN=TOP>
+<P>
+Obligatory keywords
+</TH>
+<TH WIDTH=54% VALIGN=TOP>
+<P>
+Description
+</TH>
+</TR>
+</THEAD><TBODY><TR>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+AD
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+1
+</TD>
+<TD WIDTH=24% VALIGN=TOP>
+<P>
+Ad, from, to, created, hops, path, seenby
+</TD>
+<TD WIDTH=54% VALIGN=TOP>
+<P>
+Routing announce. Used to track routing
+</TD>
+</TR>
+<TR>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+OFF
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+20
+</TD>
+<TD WIDTH=24% VALIGN=TOP>
+<P>
+Off, from, to, created, hops, path, seenby
+</TD>
+<TD WIDTH=54% VALIGN=TOP>
+<P>
+Routing loss announce.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+PING
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+20
+</TD>
+<TD WIDTH=24% VALIGN=TOP>
+<P>
+From, to, created
+</TD>
+<TD WIDTH=54% VALIGN=TOP>
+<P>
+Used to gather average link delay information.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+HI
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+?
+</TD>
+<TD WIDTH=24% VALIGN=TOP>
+<P>
+<BR>
+</TD>
+<TD WIDTH=54% VALIGN=TOP>
+<P>
+Not implemented.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+HACK
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+?
+</TD>
+<TD WIDTH=24% VALIGN=TOP>
+<P>
+<BR>
+</TD>
+<TD WIDTH=54% VALIGN=TOP>
+<P>
+Not implemented.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+RRQ
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+?
+</TD>
+<TD WIDTH=24% VALIGN=TOP>
+<P>
+<BR>
+</TD>
+<TD WIDTH=54% VALIGN=TOP>
+<P>
+Rescan request. Should be used by a new FRIP node to get all available routing information quickly. Not implemented.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+RACK
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+?
+</TD>
+<TD WIDTH=24% VALIGN=TOP>
+<P>
+<BR>
+</TD>
+<TD WIDTH=54% VALIGN=TOP>
+<P>
+Rescan acknowledge. Not implemented. I'm not really sure it has to be implemented at all.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+SEARCH
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+24?
+</TD>
+<TD WIDTH=24% VALIGN=TOP>
+<P>
+<BR>
+</TD>
+<TD WIDTH=54% VALIGN=TOP>
+<P>
+Not implemented.
+</TD>
+</TR>
+</TBODY></TABLE>
+<P>
+<BR>
+</P>
+<P>
+Here goes description of all possible RIP fields. Note that FRIP passing all the unknown fields through, so all the new fields that will be invented are to come through unnoticed by old FRIPs.
+</P>
+<P>
+<BR>
+</P>
+<P>
+<FONT SIZE=2><I>RIP fields</I></FONT>
+</P>
+<TABLE WIDTH=100% BORDER=1 FRAME=BOX RULES=ALL>
+<COLGROUP><COL WIDTH=37*><COL WIDTH=29*><COL WIDTH=38*><COL WIDTH=152*></COLGROUP><THEAD><TR>
+<TH WIDTH=14% VALIGN=TOP>
+<P>
+Field name
+</TH>
+<TH WIDTH=11% VALIGN=TOP>
+<P>
+Version
+</TH>
+<TH WIDTH=15% VALIGN=TOP>
+<P>
+Data type
+</TH>
+<TH WIDTH=59% VALIGN=TOP>
+<P>
+Description
+</TH>
+</TR>
+</THEAD><TBODY><TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+From
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+1
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Address
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Address of system, that sent this particular RIP-file, i.e. our neighbor.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+To
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+1
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Address
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Address of system this RIP is intended for. Used to prevent processing of mistakenly routed RIPs by intermediate nodes. NB! RIPs should never be routed, as well as RIFs and RIZs.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Type
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+?
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+String
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Type of RIP, see above. Not case-sensitive.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Capas
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+20
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Flags
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Capabilities of system, which generated this RIP. Used to keep track of neighbors abilities. Was introduced together with FARA-able FRIPs.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Created
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+1
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Time/Date
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Time/date to subtract from now to get route quality estimate. It is NOT always a real time/date RIP was created, don't treat as such.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Creator
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+?
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Address
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Todo: add version/os type here.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Flags
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+?
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Flags
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Special info. Used by AD-type RIPs to distinguish between routing types and carry additional info.
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Hops
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+1
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Integer
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Hops this RIP made
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Ad
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+1
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Address
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Announced address
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Off
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+20
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Address
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Address, we lost routing for
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Search
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+?
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+(Complex)
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+<BR>
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Path
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+1
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Address
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+Primary addresses of all systems RIP passed through
+</TD>
+</TR>
+<TR>
+<TD WIDTH=14% VALIGN=TOP>
+<P>
+Seenby
+</TD>
+<TD WIDTH=11% VALIGN=TOP>
+<P>
+1
+</TD>
+<TD WIDTH=15% VALIGN=TOP>
+<P>
+Address
+</TD>
+<TD WIDTH=59% VALIGN=TOP>
+<P>
+All AKAs  of all systems RIP passed through
+</TD>
+</TR>
+</TBODY></TABLE>
+<P>
+<BR>
+</P>
+<H3>
+RIF structure
+</H3>
+<P>
+RIZ file is a binary file with the name beginning with letters &#187;rif&#171;, extension beginning with &#187;.ri&#171; and ending with one letter or digit. RIF is used to carry mail, and beginning of it is a data carried. All the envelope info including addresses, path/seen
+by info, etc. etc. is kept in a &#187;tailer&#171;.
+</P>
+<P>
+<BR>
+</P>
+<H3>
+RIZ structure
+</H3>
+<P>
+RIZ file is a regular ZIP archive (InfoZIP 2.1 level), with the name beginning with letters &#187;riz&#171;, extension beginning with &#187;.ri&#171; and ending with one letter or digit. There can be RIPs and RIFs in RIZ file.
+</P>
+<P>
+<BR>
+</P>
+<H1>
+Final words
+</H1>
+<P>
+<BR>
+</P>
+<H2>
+Thanks!
+</H2>
+<P>
+I'd like to thank Kirill Lebedev, Kirill Shirokov, Anton Tsarevsky, Alex Tutubalin, Mike Bravo, Serge Troffimovsky, Dmitry Efimov, Andrew Iwanov,  Ivan Munitsyn, Alexander Erlikh, Fyodor Ustinov, Basil Dolmatov, Yuri Safronov, Dmitry Morozovsky, Pavel Bour
+danov, Vladimir Kopiev and all the other people, who took part in protocol discussions, betatesting, etc. etc.
+</P>
+<H2>
+Plans
+</H2>
+<P>
+Time zones must be used in RIPs.
+</P>
+<P>
+Rescan requests and responses are not done.
+</P>
+<P>
+Direct RIZ processing - without pre-unzip. Tricky, but possible.
+</P>
+<P>
+Fatal routing loss. If some database record was not updated in a two months or so, remove it at all and generate routing loss event (OFF-type RIPs to all).
+</P>
+<P>
+Make FRIP know does it rule the main netmail router or not. If not, add a special flag to a routes coming through to make sure these routes will not be used in generation of external routing tables as well.
+</P>
+<P>
+<BR>
+</P>
+<H2>
+Bugs
+</H2>
+<P>
+Not that FRIP has real serious bugs which are known but not fixed. Here is just things that can be done better:
+</P>
+<P>
+FRIP should discover that routing base is empty and request links for rescan.
+</P>
+<P>
+Inability to send mail because of route absence should force routing loss (OFF) request, but NOT TOO FREQUENT! I have to be careful here and not to bring OFF-storms to life.
+</P>
+<P>
+In addition to Deliver command FRIP must understand arcmail-attach style mailers by itself.
+</P>
+<H2>
+Contacts
+</H2>
+<P>
+<BR>
+</P>
+<P>
+Yours truly Dmitry Zavalishin aka dz can be reached via:
+</P>
+<P>
+E-mail (preferred): dz@phantom.ru, dz@kiae.su, dz@virgin.relcom.eu.net, Dmitry_Zavalishin@f32.n5020.z2.fidonet.org, fidonet#2:5020/32.
+</P>
+<P>
+Phone: +7 (095) 110-6728. If somebody non-English speaking answers your call and you can't speak Russian just keep saying my name. :) Try German, if you can - my mother used to it. :)
+</P>
+<P>
+Snail-Mail: Arteckovskaya 7-4-260, Moscow, Russia.
+</P>
+<P>
+<BR>
+</P>
+</BODY></HTML>

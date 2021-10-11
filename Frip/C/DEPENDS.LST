@@ -1,0 +1,74 @@
+addr.obj:	frip.h 
+
+announce.obj:	frip.h filer.h 
+
+app.obj:	frip.h flag.h lock.h path.h stat.h 
+
+approve.obj:	frip.h approve.h filer.h 
+
+base.obj:	frip.h stat.h 
+
+basedata.obj:	frip.h 
+
+base_rw.obj:	frip.h 
+
+bink.obj:	frip.h 
+
+config.obj:	frip.h 
+
+datetime.obj:	datetime.h except.h 
+
+debug.obj:	frip.h ansi.h 
+
+dep_dos_i.obj:	
+
+dep_nt_i.obj:	frip.h 
+
+dep_os2_i.obj:	
+
+dep_unix_i.obj:	
+
+ea.obj:	frip.h binbuf.h except.h ea.h 
+
+flag.obj:	frip.h flag.h 
+
+frip.obj:	version.h frip.h app.h lock.h rif.h 
+
+links.obj:	frip.h links.h sglist.h 
+
+mail.obj:	frip.h filer.h mail.h rif.h base.h datetime.h 
+
+mail_flags.obj:	mail.h 
+
+mainloop.obj:	frip.h rip.h rif.h base.h mail.h approve.h filer.h stat.h 
+
+msgid.obj:	conf.h msgid.h 
+
+msgid15.obj:	conf.h msgid.h 
+
+parse.obj:	frip.h 
+
+path.obj:	path.h app.h 
+
+ping.obj:	frip.h filer.h 
+
+regress.obj:	frip.h strng.h datetime.h 
+
+rif.obj:	frip.h rif.h osname.h 
+
+rip.obj:	frip.h osname.h version.h 
+
+routes.obj:	frip.h 
+
+sglist.obj:	frip.h sglist.h 
+
+strng.obj:	strng.h addr.h except.h 
+
+sysdep.obj:	lock.h lock.h dep_os2_i.c dep_nt_i.c dep_dos_i.c dep_unix_i.c 
+
+tmail.obj:	frip.h 
+
+util.obj:	frip.h filer.h stat.h ansi.h 
+
+zip.obj:	zip.h frip.h filer.h 
+

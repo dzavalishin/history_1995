@@ -1,0 +1,1 @@
+start icsdebug frip.exe

@@ -1,0 +1,131 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	96.01.07.15.15.23;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@04 Jan 1996: Found & fixed huge memory hog in string class.
+             Added code to move rips and unzip rizs from inbound
+             without a special command file. Frip now changes directory
+             to its home as well. Config file name can be set in
+             'FRIP' environment variable. Inbound directory has
+             to be specified in conf. file.
+             Catching ^C & ^Break (at least in OS/2) & shutting down
+             correctly.
+
+09 Dec 1995: OS/2 and NT versions are using spawn() instead of system(),
+             so that no limit is imposed on a length of a command line
+             at all, even in Win95. Zip does its job in a single pass now.
+
+09 Dec 1995: Writing date/time of frip start to log.
+
+06 Dec 1995: Now added creation of map of routing - just storing processed
+             rips in a tree of subdirs.
+
+05 Dec 1995: CmdLimit parameter in conf. file. Default value for NT version
+             is 100 bytes now due to Win95 limits (oh holy shit...).
+             Optimized! Now up to 10 times faster when processing RIPs! :)
+             Now flushing database to disk every 20 rips for safety reasons.
+             Now debug output can be turned on/off from setup file.
+             Fixed little bug in timing code: part of frip thought there are
+             24 days in month and 24 months in a year :).
+
+             Sometimes frip considered 'fidonet.org' to be not equal to
+             'fidonet' because operator != was missed for class addr and
+             compiler used string::operatot != with addr::operator string
+             instead.
+
+01 Dec 1995: Fix: Added -C flag to unzip.
+
+28 Nov 1995: Fix: In DOS versions zip was used instead of pkzip.
+             Now converting '/' to '\' in DOS mode before executing
+             zip.
+             Fix: Now stripping leaing and trailing spaces when parsing
+             config. file.
+             New setup parameter - Ansi [On|Off]
+             NB: Now compiling with optimizer on.
+
+26 Nov 1995: Fix: Log file now opened in append, not overwrite mode.
+             Now zip command can be given as ZipCmd in config. file.
+
+24 Nov 1995: New setup parameter - AnnouncePeriod.
+
+22 Nov 1995: Fixed bug: now reannouncing if any .ad file changed.
+
+20 Nov 1995: Added HOLD keyword.
+
+16 Nov 1995: Bug fix in DeliverCommand code, TMail FAT/HPFS fileboxes
+             support, obsolette route replacement. If DeliverCommand
+             was commented out FRIP refused to update bink outbound
+             and fileboxes. Now fixed.
+
+15 Nov 1995: Alot of new frip.cfg parameters, Bink outbound support,
+             HPFS outbound preliminary support, log file added,
+             configurable deliver command line, route file line format,
+             various fixes.
+
+13 Nov 1995: Added new parameters to config. Fixed bug in temp. file
+             name generator (sometimes it used to leave '?'-s in name),
+             now before calling deliver converting filename to
+             fullpath with '\' instead of '/' as directories delimiter.
+
+11 Nov 1995: Error in deliv_at.cmd fixed.
+
+10 Nov 1995: Error in address parser fixed.
+
+10 Nov 1995: Compiled 16-bit DOS version. Don't use it, if possible!
+
+10 Nov 1995: Announcer rewritten in C too and made automatic.
+
+10 Nov 1995: Bug in address parser found: point number was ignored
+             if no trailing domain was given.
+
+ 9 Nov 1995: Rewritten in C, except for announcer module.
+
+29 Oct 1995: Now we automatically add all of our AKAs to outgoig
+             rip seenbys, so that we'll never get it back to our
+             other AKA, as it happened before.
+
+29 Oct 1995: Bugfix: own rips (from announce) was processed
+             incorrectly, generating crazy routes.
+
+
+29 Oct 1995: More colours :)
+
+
+29 Oct 1995: Speedup a bit: included text of fcanon into the frip.cmd
+
+28 Oct 1995: Main config file (frip.cfg) added - now it holds
+             addresses only. Used to prevent wildcard announces
+             from destroying detailed routing inside of wildcard's
+             area. Now you can safely let announe of, say, 2:5020/*
+             come to any node in 2:5020 and not destroy it's roting.
+
+28 Oct 1995: Colouring :)
+
+28 Oct 1995: deliv_sq.cmd now keeps silence while works
+
+28 Oct 1995: Now we put announces from ourselves into the base.
+             This helps against receiving our announces back from
+             other systems :).
+
+ 4 Oct 1995: When generating routing file, treat .0 as .*
+
+$Id: Config.Sys 1.11 1996/01/06 23:59:19 dz Exp $
+@

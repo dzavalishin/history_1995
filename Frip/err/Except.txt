@@ -1,0 +1,32 @@
+================================= dz's netmail =================================
+   From: Eugeny Kreewosheyew                 2:5020/518      07 Jun 97  05:03:46
+     To: Dmitry Zavalishin                   2:5020/32       08 Jun 97  04:13:32
+   Subj: FRIP                                                                   
+================================================================================
+Хаюшки...
+
+Еще pаз о затыках subj'а. Выглядят они так:
+
+=== Cut ===
+-+- Started: Sat Jun 07 05:00:57 1997
+*!* Frip - FTN Automatic Routing System, Version 44
+*!* Ad 2:5020/1035.0@fidonet from 2:5020/1035.0@fidonet by 2:5020/1035.0@fidonet
+***     Will come to 2:5020/32.0@fidonet
+***     Will come to 2:5020/785.0@fidonet
+***     Will not come to 2:5020/1035.0@fidonet due to seenby
+*!* Looking for timed-out routes to kill 'em
+*!* Packing mail in f:\netmail\Frip
+Error: get_mail_addr: No DOMAIN, INTL or MSGID kludge in message, unknown zone 
+(f:\netmail\Frip/1.MSG)
+*!* RIPs:   0 ignored,   1 new,   0 better,   0 timed out,   0 filtered
+=== Cut ===
+
+Вот Error, IMHO, никакой не Error, а типичный Warning. И нечего на нем обpаботкy 
+пpекpащать.
+
+With best regards,
+Eugeny
+--- Одетый Юнош
+ * Origin: There is no rule without an exeption. (Fido 2:5020/518)
+
+================================================================================

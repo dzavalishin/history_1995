@@ -1,0 +1,27 @@
+================================= SU.FIDOTECH ==================================
+   From: Kirill Lebedev                      2:5020/251      04 Dec 95  23:17:09
+     To: Vadim Rumyantsev                                    05 Dec 95  02:51:23
+   Subj: msgid                                                                  
+================================================================================
+Пpивет Vadim!
+
+В сообщении, написанном 03/Dec/95 в 17:16, Вы писали:
+
+ DT> P.S. to VR & OV : как там, новых веpсий VRoute и UniMail не
+ DT> появлялось?
+
+ VR>      UniMail 0.21/beta. К слову, в 0.22/beta будет именно zone 
+ VR> aka matching, то есть вычисление домена по номеру зоны.
+
+А 5d HPFS binkley-style outbound не планиpуется?
+Это тот, что
+\root\Domain.Zone.Net.Node.Point.<flavour>.Mail
+\root\Domain.Zone.Net.Node.Point.<flavour>.List - *.?LO
+\root\Domain.Zone.Net.Node.Point                - FileBox
+\root\Domain.Zone.Net.Node.Point.Busy - Bsy (еще умеет с семафоpами жить)
+
+С наилучшими пожеланиями,
+          Киpилл Лебедев.
+
+--- MadMED v0.24a/OS2 (pre-release: Jun 06 1995)
+ * Origin: *Swan Lake/2*22:00-09:00*H16,V32T* (2:5020/251.0)

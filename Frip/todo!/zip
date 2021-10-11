@@ -1,0 +1,29 @@
+*** Answering a msg posted in area ITRACK.TO.ME (Mail to me).
+
+Hello Dmitry!
+
+22 Feb 96 01:17, Dmitry Zavalishin wrote to Koctya Boyko:
+
+ DZ> Формат в конфиге перемени, чтобы было не 382/0.RIP86336.RIP, а
+ DZ> 382/0/RIP86336.RIP - там вместо %s.%s надо поставить %s/%S...
+
+Ааа... А я поступил проще -- подпатчил frip.dos.exe... :)
+
+Еще проблем:
+ 1) (навеяно squish) можно ли сделать так, чтобы после обработки заданного в
+конфиге числа rip, frip выходил с заданным errorlevel (для паковки) или сам 
+начинал паковать outbound?
+ 2) можно ли как-то задействовать возможность pkzip паковать сразу списком?
+Пока что я это буду делать:
+ grep -l+ "to 2:5020/37" out\*.rip > 139c0025.rsp
+ pkzip -m out\139c0025.riz @139c0025.rsp
+
+Да, насчет того, что я называл ANSI, я разобрался. Это из .rip:
+
+path 2:5020/378.0@fidonet , ї[path 2:5020/372.0@fidonet , ї[seenby
+>>                          ^^^                            ^^^
+
+Koctya
+
+--- GoldED 2.42.G0614
+

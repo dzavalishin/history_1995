@@ -1,0 +1,468 @@
+Making version called 'Version_44'
+
+[D:\C\FRIP\C]set VD="VERDEF = Version_44" 
+[D:\C\FRIP\C]
+
+[D:\C\FRIP\C]make clean 
+
+Operating System/2 Program Maintenance Utility
+Version 3.00.006 Mar 15 1995
+Copyright (C) IBM Corporation 1988-1995
+Copyright (C) Microsoft Corp. 1988-1991
+All rights reserved.
+
+	rm os2cs\ea.obj        os2cs\Approve.obj   os2cs\App.obj       os2cs\msgid.obj     os2cs\flag.obj      os2cs\basedata.obj  os2cs\base.obj      os2cs\config.obj    os2cs\mainloop.obj  os2cs\routes.obj    os2cs\rip.obj       os2cs\rif.obj       os2cs\Links.obj     os2cs\parse.obj     os2cs\path.obj      os2cs\ping.obj      os2cs\strng.obj     os2cs\sglist.obj    os2cs\Zip.obj       os2cs\Bink.obj      os2cs\TMail.obj     os2cs\base_rw.obj   os2cs\Announce.obj  os2cs\sysdep.obj    os2cs\addr.obj      os2cs\util.obj      os2cs\datetime.obj  os2cs\mail.obj      os2cs\Mail_Flags.obj  os2cs\debug.obj frip.exe *.map
+	mv *~ bak
+
+[D:\C\FRIP\C]make "NODEBUG = yes" "VERDEF = Version_44" 
+
+Operating System/2 Program Maintenance Utility
+Version 3.00.006 Mar 15 1995
+Copyright (C) IBM Corporation 1988-1995
+Copyright (C) Microsoft Corp. 1988-1991
+All rights reserved.
+
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\ea.obj /c ea.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\Approve.obj /c Approve.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\App.obj /c App.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\msgid.obj /c msgid.c
+msgid.c(285:24) : informational EDC3130: A constant is being used as a conditional expression.
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\flag.obj /c flag.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\basedata.obj /c basedata.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\base.obj /c base.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\config.obj /c config.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\mainloop.obj /c mainloop.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\routes.obj /c routes.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\rip.obj /c rip.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\rif.obj /c rif.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\Links.obj /c Links.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\parse.obj /c parse.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\path.obj /c path.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\ping.obj /c ping.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\strng.obj /c strng.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\sglist.obj /c sglist.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\Zip.obj /c Zip.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\Bink.obj /c Bink.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\TMail.obj /c TMail.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\base_rw.obj /c base_rw.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\Announce.obj /c Announce.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\sysdep.obj /c sysdep.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\addr.obj /c addr.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\util.obj /c util.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\datetime.obj /c datetime.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\mail.obj /c mail.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\Mail_Flags.obj /c Mail_Flags.c
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /foos2cs\debug.obj /c debug.c
+	makedep
+MAKEDEP v.3, (c) 1994 by Hartmut Obendorf
+*.CPP
+*.C
+addr.obj:	frip.h 
+announce.obj:	frip.h filer.h 
+app.obj:	frip.h flag.h lock.h path.h stat.h 
+approve.obj:	frip.h approve.h filer.h 
+base.obj:	frip.h stat.h 
+basedata.obj:	frip.h 
+base_rw.obj:	frip.h 
+bink.obj:	frip.h 
+config.obj:	frip.h 
+datetime.obj:	datetime.h except.h 
+debug.obj:	frip.h ansi.h 
+dep_dos_i.obj:	
+dep_nt_i.obj:	frip.h 
+dep_os2_i.obj:	
+dep_unix_i.obj:	
+ea.obj:	frip.h binbuf.h except.h ea.h 
+flag.obj:	frip.h flag.h 
+frip.obj:	version.h frip.h app.h lock.h rif.h 
+links.obj:	frip.h links.h sglist.h 
+mail.obj:	frip.h filer.h mail.h rif.h base.h datetime.h 
+mail_flags.obj:	mail.h 
+mainloop.obj:	frip.h rip.h rif.h base.h mail.h approve.h filer.h stat.h 
+msgid.obj:	conf.h msgid.h 
+msgid15.obj:	conf.h msgid.h 
+parse.obj:	frip.h 
+path.obj:	path.h app.h 
+ping.obj:	frip.h filer.h 
+regress.obj:	frip.h strng.h datetime.h 
+rif.obj:	frip.h rif.h osname.h 
+rip.obj:	frip.h osname.h version.h 
+routes.obj:	frip.h 
+sglist.obj:	frip.h sglist.h 
+strng.obj:	strng.h addr.h except.h 
+sysdep.obj:	lock.h lock.h dep_os2_i.c dep_nt_i.c dep_dos_i.c dep_unix_i.c 
+tmail.obj:	frip.h 
+util.obj:	frip.h filer.h stat.h ansi.h 
+zip.obj:	zip.h frip.h filer.h 
+	icc /Q  /G5 /O+ /Oi30 -istl_cs;. /Tdp /B"/NOE" /B"/M:Full" /Q /Fefrip.exe /Fmfrip.map  os2cs\ea.obj        os2cs\Approve.obj   os2cs\App.obj       os2cs\msgid.obj     os2cs\flag.obj      os2cs\basedata.obj  os2cs\base.obj      os2cs\config.obj    os2cs\mainloop.obj  os2cs\routes.obj    os2cs\rip.obj       os2cs\rif.obj       os2cs\Links.obj     os2cs\parse.obj     os2cs\path.obj      os2cs\ping.obj      os2cs\strng.obj     os2cs\sglist.obj    os2cs\Zip.obj       os2cs\Bink.obj      os2cs\TMail.obj     os2cs\base_rw.obj   os2cs\Announce.obj  os2cs\sysdep.obj    os2cs\addr.obj      os2cs\util.obj      os2cs\datetime.obj  os2cs\mail.obj      os2cs\Mail_Flags.obj  os2cs\debug.obj os2cs\frip.obj
+	copy frip.exe d:\tmp\frip
+        1 file(s) copied.
+[D:\C\FRIP\C]
+
+[D:\C\FRIP\C]make /f Make_DOS.Mak clean 
+
+Operating System/2 Program Maintenance Utility
+Version 3.00.006 Mar 15 1995
+Copyright (C) IBM Corporation 1988-1995
+Copyright (C) Microsoft Corp. 1988-1991
+All rights reserved.
+
+	rm dos\Approve.obj   dos\App.obj       dos\msgid.obj     dos\ea.obj        dos\flag.obj      dos\basedata.obj  dos\base.obj      dos\config.obj    dos\datetime.obj  dos\mainloop.obj  dos\mail.obj      dos\Mail_Flags.obj  dos\routes.obj    dos\rip.obj       dos\rif.obj       dos\Links.obj     dos\util.obj      dos\parse.obj     dos\path.obj      dos\ping.obj      dos\strng.obj     dos\sglist.obj    dos\Zip.obj       dos\Bink.obj      dos\TMail.obj     dos\base_rw.obj   dos\Announce.obj  dos\frip.obj      dos\sysdep.obj    dos\addr.obj      dos\debug.obj frip_dos.exe *.map
+	mv *~ bak
+
+[D:\C\FRIP\C]make /f Make_DOS.Mak "NODEBUG = yes" "VERDEF = Version_44" 
+
+Operating System/2 Program Maintenance Utility
+Version 3.00.006 Mar 15 1995
+Copyright (C) IBM Corporation 1988-1995
+Copyright (C) Microsoft Corp. 1988-1991
+All rights reserved.
+
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\Approve.obj Approve.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+Approve.c: 105 lines, included 9354, no warnings, no errors
+Code size: 199102
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\App.obj App.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+App.c: 330 lines, included 9488, no warnings, no errors
+Code size: 254363
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\msgid.obj msgid.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+msgid.c: 399 lines, included 6642, no warnings, no errors
+Code size: 31857
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\ea.obj ea.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+ea.c: 154 lines, included 9306, no warnings, no errors
+Code size: 187302
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\flag.obj flag.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+flag.c: 110 lines, included 9292, no warnings, no errors
+Code size: 197223
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\basedata.obj basedata.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+basedata.c: 305 lines, included 9292, no warnings, no errors
+Code size: 210786
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\base.obj base.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+base.c: 532 lines, included 9365, no warnings, no errors
+Code size: 236125
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\config.obj config.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+config.c: 323 lines, included 9292, no warnings, no errors
+Code size: 255028
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\datetime.obj datetime.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+datetime.c: 147 lines, included 3115, no warnings, no errors
+Code size: 6495
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\mainloop.obj mainloop.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+mainloop.c: 752 lines, included 10014, no warnings, no errors
+Code size: 312390
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\mail.obj mail.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+mail.c(502): Warning! W628: (col 10) expression is not meaningful 
+mail.c: 538 lines, included 9862, 1 warning, no errors
+Code size: 247473
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\Mail_Flags.obj Mail_Flags.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+Mail_Flags.c: 116 lines, included 8012, no warnings, no errors
+Code size: 73109
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\routes.obj routes.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+routes.c: 269 lines, included 9292, no warnings, no errors
+Code size: 187268
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\rip.obj rip.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+rip.c: 419 lines, included 9354, no warnings, no errors
+Code size: 227209
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\rif.obj rif.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+rif.c: 382 lines, included 9351, no warnings, no errors
+Code size: 213142
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\Links.obj Links.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+Links.c: 564 lines, included 9415, no warnings, no errors
+Code size: 283980
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\util.obj util.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+util.c: 485 lines, included 10020, no warnings, no errors
+Code size: 199902
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\parse.obj parse.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+parse.c: 61 lines, included 9292, no warnings, no errors
+Code size: 188490
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\path.obj path.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+path.c: 82 lines, included 8764, no warnings, no errors
+Code size: 191777
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\ping.obj ping.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+ping.c: 92 lines, included 9292, no warnings, no errors
+Code size: 191414
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\strng.obj strng.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+strng.c: 598 lines, included 2959, no warnings, no errors
+Code size: 15648
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\sglist.obj sglist.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+sglist.c: 81 lines, included 9292, no warnings, no errors
+Code size: 190536
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\Zip.obj Zip.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+Zip.c: 355 lines, included 9469, no warnings, no errors
+Code size: 207827
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\Bink.obj Bink.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+Bink.c: 217 lines, included 9481, no warnings, no errors
+Code size: 197703
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\TMail.obj TMail.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+TMail.c: 137 lines, included 9292, no warnings, no errors
+Code size: 191086
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\base_rw.obj base_rw.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+base_rw.c: 254 lines, included 9292, no warnings, no errors
+Code size: 205557
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\Announce.obj Announce.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+Announce.c: 291 lines, included 9354, no warnings, no errors
+Code size: 229605
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\frip.obj frip.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+frip.c: 205 lines, included 9904, no warnings, no errors
+Code size: 201522
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\sysdep.obj sysdep.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+sysdep.c: 254 lines, included 10068, no warnings, no errors
+Code size: 204465
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\addr.obj addr.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+addr.c: 391 lines, included 9415, no warnings, no errors
+Code size: 226028
+	wpp386 -bt=DOS  /Ox  -i=stl -xst -5s -od -4s -fo=dos\debug.obj debug.c
+WATCOM C++32 Optimizing Compiler  Version 10.6 
+Copyright by WATCOM International Corp. 1989, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+debug.c: 92 lines, included 9329, no warnings, no errors
+Code size: 188805
+	makedep
+MAKEDEP v.3, (c) 1994 by Hartmut Obendorf
+*.CPP
+*.C
+addr.obj:	frip.h 
+announce.obj:	frip.h filer.h 
+app.obj:	frip.h flag.h lock.h path.h stat.h 
+approve.obj:	frip.h approve.h filer.h 
+base.obj:	frip.h stat.h 
+basedata.obj:	frip.h 
+base_rw.obj:	frip.h 
+bink.obj:	frip.h 
+config.obj:	frip.h 
+datetime.obj:	datetime.h except.h 
+debug.obj:	frip.h ansi.h 
+dep_dos_i.obj:	
+dep_nt_i.obj:	frip.h 
+dep_os2_i.obj:	
+dep_unix_i.obj:	
+ea.obj:	frip.h binbuf.h except.h ea.h 
+flag.obj:	frip.h flag.h 
+frip.obj:	version.h frip.h app.h lock.h rif.h 
+links.obj:	frip.h links.h sglist.h 
+mail.obj:	frip.h filer.h mail.h rif.h base.h datetime.h 
+mail_flags.obj:	mail.h 
+mainloop.obj:	frip.h rip.h rif.h base.h mail.h approve.h filer.h stat.h 
+msgid.obj:	conf.h msgid.h 
+msgid15.obj:	conf.h msgid.h 
+parse.obj:	frip.h 
+path.obj:	path.h app.h 
+ping.obj:	frip.h filer.h 
+regress.obj:	frip.h strng.h datetime.h 
+rif.obj:	frip.h rif.h osname.h 
+rip.obj:	frip.h osname.h version.h 
+routes.obj:	frip.h 
+sglist.obj:	frip.h sglist.h 
+strng.obj:	strng.h addr.h except.h 
+sysdep.obj:	lock.h lock.h dep_os2_i.c dep_nt_i.c dep_dos_i.c dep_unix_i.c 
+tmail.obj:	frip.h 
+util.obj:	frip.h filer.h stat.h ansi.h 
+zip.obj:	zip.h frip.h filer.h 
+	wlink system dos4g op stack=128k op map=frip_dos.map name frip_dos.exe  file  dos\flag.obj,     dos\Approve.obj,   dos\msgid.obj,    dos\App.obj,       dos\addr.obj,     dos\sglist.obj,    dos\Announce.obj, dos\Bink.obj,      dos\TMail.obj,    dos\Zip.obj,       dos\base.obj,     dos\config.obj,    dos\mainloop.obj, dos\routes.obj,    dos\rip.obj,      dos\Links.obj,    dos\path.obj,      dos\util.obj,     dos\parse.obj,    dos\ping.obj,      dos\base_rw.obj,  dos\basedata.obj, dos\datetime.obj,  dos\strng.obj,    dos\frip.obj,      dos\sysdep.obj,   dos\debug.obj,     dos\rif.obj,      dos\mail.obj,     dos\Mail_Flags.obj,  dos\ea.obj disable 1027
+ WATCOM Linker Version 10.6
+Copyright by WATCOM International Corp. 1985, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+loading object files
+searching libraries
+creating map file
+creating a DOS/4G executable
+	copy frip_dos.exe d:\tmp\frip
+        1 file(s) copied.
+[D:\C\FRIP\C]
+
+[D:\C\FRIP\C]REM make /f Make_DOS16.Mak clean 
+
+[D:\C\FRIP\C]rem make /f Make_DOS16.Mak "NODEBUG = yes" "VERDEF = Version_44" 
+[D:\C\FRIP\C]
+
+[D:\C\FRIP\C]make /f Make_NT.Mak clean 
+
+Operating System/2 Program Maintenance Utility
+Version 3.00.006 Mar 15 1995
+Copyright (C) IBM Corporation 1988-1995
+Copyright (C) Microsoft Corp. 1988-1991
+All rights reserved.
+
+	rm nt\Approve.obj   nt\App.obj       nt\msgid.obj     nt\ea.obj        nt\flag.obj      nt\basedata.obj  nt\base.obj      nt\config.obj    nt\datetime.obj  nt\mainloop.obj  nt\mail.obj      nt\Mail_Flags.obj  nt\routes.obj    nt\rip.obj       nt\rif.obj       nt\Links.obj     nt\util.obj      nt\parse.obj     nt\path.obj      nt\ping.obj      nt\strng.obj     nt\sglist.obj    nt\Zip.obj       nt\Bink.obj      nt\TMail.obj     nt\base_rw.obj   nt\Announce.obj  nt\frip.obj      nt\sysdep.obj    nt\addr.obj      nt\debug.obj frip_nt.exe *.map
+	mv *~ bak
+
+[D:\C\FRIP\C]make /f Make_NT.Mak "NODEBUG = yes" "VERDEF = Version_44" 
+
+Operating System/2 Program Maintenance Utility
+Version 3.00.006 Mar 15 1995
+Copyright (C) IBM Corporation 1988-1995
+Copyright (C) Microsoft Corp. 1988-1991
+All rights reserved.
+
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\Approve.obj Approve.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\App.obj App.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\msgid.obj msgid.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\ea.obj ea.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\flag.obj flag.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\basedata.obj basedata.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\base.obj base.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\config.obj config.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\datetime.obj datetime.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\mainloop.obj mainloop.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\mail.obj mail.c
+mail.c(502): Warning! W628: (col 10) expression is not meaningful 
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\Mail_Flags.obj Mail_Flags.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\routes.obj routes.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\rip.obj rip.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\rif.obj rif.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\Links.obj Links.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\util.obj util.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\parse.obj parse.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\path.obj path.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\ping.obj ping.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\strng.obj strng.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\sglist.obj sglist.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\Zip.obj Zip.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\Bink.obj Bink.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\TMail.obj TMail.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\base_rw.obj base_rw.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\Announce.obj Announce.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\frip.obj frip.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\sysdep.obj sysdep.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\addr.obj addr.c
+	wpp386 -bt=NT    -zq -i=stl -xs -4s -fo=nt\debug.obj debug.c
+	makedep
+MAKEDEP v.3, (c) 1994 by Hartmut Obendorf
+*.CPP
+*.C
+addr.obj:	frip.h 
+announce.obj:	frip.h filer.h 
+app.obj:	frip.h flag.h lock.h path.h stat.h 
+approve.obj:	frip.h approve.h filer.h 
+base.obj:	frip.h stat.h 
+basedata.obj:	frip.h 
+base_rw.obj:	frip.h 
+bink.obj:	frip.h 
+config.obj:	frip.h 
+datetime.obj:	datetime.h except.h 
+debug.obj:	frip.h ansi.h 
+dep_dos_i.obj:	
+dep_nt_i.obj:	frip.h 
+dep_os2_i.obj:	
+dep_unix_i.obj:	
+ea.obj:	frip.h binbuf.h except.h ea.h 
+flag.obj:	frip.h flag.h 
+frip.obj:	version.h frip.h app.h lock.h rif.h 
+links.obj:	frip.h links.h sglist.h 
+mail.obj:	frip.h filer.h mail.h rif.h base.h datetime.h 
+mail_flags.obj:	mail.h 
+mainloop.obj:	frip.h rip.h rif.h base.h mail.h approve.h filer.h stat.h 
+msgid.obj:	conf.h msgid.h 
+msgid15.obj:	conf.h msgid.h 
+parse.obj:	frip.h 
+path.obj:	path.h app.h 
+ping.obj:	frip.h filer.h 
+regress.obj:	frip.h strng.h datetime.h 
+rif.obj:	frip.h rif.h osname.h 
+rip.obj:	frip.h osname.h version.h 
+routes.obj:	frip.h 
+sglist.obj:	frip.h sglist.h 
+strng.obj:	strng.h addr.h except.h 
+sysdep.obj:	lock.h lock.h dep_os2_i.c dep_nt_i.c dep_dos_i.c dep_unix_i.c 
+tmail.obj:	frip.h 
+util.obj:	frip.h filer.h stat.h ansi.h 
+zip.obj:	zip.h frip.h filer.h 
+	wlink system nt name frip_nt.exe  file  nt\flag.obj,     nt\Approve.obj,   nt\msgid.obj,    nt\App.obj,       nt\addr.obj,     nt\sglist.obj,    nt\Announce.obj, nt\Bink.obj,      nt\TMail.obj,    nt\Zip.obj,       nt\base.obj,     nt\config.obj,    nt\mainloop.obj, nt\routes.obj,    nt\rip.obj,      nt\Links.obj,    nt\path.obj,      nt\util.obj,     nt\parse.obj,    nt\ping.obj,      nt\base_rw.obj,  nt\basedata.obj, nt\datetime.obj,  nt\strng.obj,    nt\frip.obj,      nt\sysdep.obj,   nt\debug.obj,     nt\rif.obj,      nt\mail.obj,     nt\Mail_Flags.obj,  nt\ea.obj disable 1027 op map=frip_nt.map Library kernel32.lib
+ WATCOM Linker Version 10.6
+Copyright by WATCOM International Corp. 1985, 1996. All rights reserved.
+WATCOM is a trademark of WATCOM International Corp.
+loading object files
+searching libraries
+creating map file
+creating a Windows NT character-mode executable
+	copy frip_nt.exe d:\tmp\frip
+        1 file(s) copied.
+[D:\C\FRIP\C]

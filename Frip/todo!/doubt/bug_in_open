@@ -1,0 +1,29 @@
+=================================== Ru.FRIP ====================================
+   From: Sergei Plaksienko                   2:5000/53       15 Dec 95  17:39:05
+     To: All                                                 16 Dec 95  10:07:25
+   Subj: ?                                                                      
+================================================================================
+Hi All!
+
+    Отмеченное так и должно быть, или как?
+
+> ┌────────────────────────┤ Begin FRIP.LOG ├────────────────────────┐
+*!* Frip - FTN Networks Automatic Routing Builder: Beta_11
+
+Warning: No annonce time stamp found. Running for the first time?
+*!* Announcing from fido.ad
+*** Announcing 2:5000/53
+*!* Got announce of 2:5000/53.0@fidonet.org from 2:5000/53.0@fidonet.org
+Error: Can't rename  to d:/binkley/frip/MapDir/(fidonet.org)_2_5000/  53
+[ skip ]
+>Error: Can't open 
+>Error: Can't load RIP 
+*!* Creating route file...
+*!* Total 0 rips ignored, 1 new, 0 better, 0 timed out, 0 filtered
+> └────────────────────────┤  End FRIP.LOG  ├────────────────────────┘
+
+WBR & 73,
+  Sergei.
+
+--- GoldED/2 2.50.A0715+
+ * Origin: ВИHТОВКА - ЭТО ПРАЗДHИК !!! (2:5000/53)

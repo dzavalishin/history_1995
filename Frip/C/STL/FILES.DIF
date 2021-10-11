@@ -1,0 +1,737 @@
+==== diff old/algo.h new/algo.h
+
+62c62
+< void for_each(InputIterator first, InputIterator last, Function f) {
+---
+> Function for_each(InputIterator first, InputIterator last, Function f) {
+63a64
+>     return f;
+68c69
+<     while (first != last && *first != value) first++;
+---
+>     while (first != last && *first != value) ++first;
+75c76
+<     while (first != last && !pred(*first)) first++;
+---
+>     while (first != last && !pred(*first)) ++first;
+106c107
+< 	if (*first++ == value) n++;
+---
+> 	if (*first++ == value) ++n;
+113c114
+< 	if (pred(*first++)) n++;
+---
+> 	if (pred(*first++)) ++n;
+211c212
+< 	first++;
+---
+> 	++first;
+220c221
+< 	first++;
+---
+> 	++first;
+230c231
+< 	first++;
+---
+> 	++first;
+241c242
+< 	first++;
+---
+> 	++first;
+261c262
+< 	first++;
+---
+> 	++first;
+271c272
+< 	first++;
+---
+> 	++first;
+530c531
+<     for (RandomAccessIterator i = first + 1; i != last; i++)
+---
+>     for (RandomAccessIterator i = first + 1; i != last; ++i)
+544c545
+<     for (RandomAccessIterator i = first + 1; i != last; i++)
+---
+>     for (RandomAccessIterator i = first + 1; i != last; ++i)
+556c557
+< 		first++;
+---
+> 		++first;
+559c560
+< 	last--;
+---
+> 	--last;
+564c565
+< 		last--;
+---
+> 		--last;
+568c569
+< 	first++;
+---
+> 	++first;
+677,679c678,680
+< 	while (*first < pivot) first++;
+< 	last--;
+< 	while (pivot < *last) last--;
+---
+> 	while (*first < pivot) ++first;
+> 	--last;
+> 	while (pivot < *last) --last;
+682c683
+< 	first++;
+---
+> 	++first;
+691,693c692,694
+< 	while (comp(*first, pivot)) first++;
+< 	last--;
+< 	while (comp(pivot, *last)) last--;
+---
+> 	while (comp(*first, pivot)) ++first;
+> 	--last;
+> 	while (comp(pivot, *last)) --last;
+696c697
+< 	first++;
+---
+> 	++first;
+796c797
+<     for (RandomAccessIterator i = first + 1; i != last; i++)
+---
+>     for (RandomAccessIterator i = first + 1; i != last; ++i)
+804c805
+<     for (RandomAccessIterator i = first + 1; i != last; i++)
+---
+>     for (RandomAccessIterator i = first + 1; i != last; ++i)
+811c812
+<     for (RandomAccessIterator i = first; i != last; i++)
+---
+>     for (RandomAccessIterator i = first; i != last; ++i)
+825c826
+<     for (RandomAccessIterator i = first; i != last; i++)
+---
+>     for (RandomAccessIterator i = first; i != last; ++i)
+1242c1243
+<     for (RandomAccessIterator i = middle; i < last; i++)
+---
+>     for (RandomAccessIterator i = middle; i < last; ++i)
+1259c1260
+<     for (RandomAccessIterator i = middle; i < last; i++)
+---
+>     for (RandomAccessIterator i = middle; i < last; ++i)
+1288c1289
+< 	first++;
+---
+> 	++first;
+1320c1321
+< 	first++;
+---
+> 	++first;
+2201c2202
+< 	    first2++;
+---
+> 	    ++first2;
+2212c2213
+< 	    first1++;
+---
+> 	    ++first1;
+2214c2215
+< 	    first2++;
+---
+> 	    ++first2;
+2217c2218
+< 	    first2++;
+---
+> 	    ++first2;
+2229c2230
+< 	    first1++;
+---
+> 	    ++first1;
+2231c2232
+< 	    first2++;
+---
+> 	    ++first2;
+2234c2235
+< 	    first2++;
+---
+> 	    ++first2;
+2247c2248
+< 	    first2++;
+---
+> 	    ++first2;
+2249,2250c2250,2251
+< 	    first1++;
+< 	    first2++;
+---
+> 	    ++first1;
+> 	    ++first2;
+2264c2265
+< 	    first2++;
+---
+> 	    ++first2;
+2266,2267c2267,2268
+< 	    first1++;
+< 	    first2++;
+---
+> 	    ++first1;
+> 	    ++first2;
+2284,2285c2285,2286
+< 	    first1++;
+< 	    first2++;
+---
+> 	    ++first1;
+> 	    ++first2;
+2303,2304c2304,2305
+< 	    first1++;
+< 	    first2++;
+---
+> 	    ++first1;
+> 	    ++first2;
+
+==== diff old/algobase.h new/algobase.h
+
+122c122,127
+<     while (first != last) destroy(first++);
+---
+>     while (first != last) {
+> 	/* Borland bug */
+> 	destroy(first);
+> 	++first;
+> 	//destroy(first++);
+>     }
+173,174c178,179
+< 	first1++;
+< 	first2++;
+---
+> 	++first1;
+> 	++first2;
+185,186c190,191
+< 	first1++;
+< 	first2++;
+---
+> 	++first1;
+> 	++first2;
+
+==== diff old/defalloc.h new/defalloc.h
+
+38c38
+< 	cout << "out of memory" << endl; 
+---
+> 	cerr << "out of memory" << endl; 
+50c50
+< 	cout << "out of memory" << endl; 
+---
+> 	cerr << "out of memory" << endl; 
+61c61
+< 	cout << "out of memory" << endl; 
+---
+> 	cerr << "out of memory" << endl; 
+
+==== diff old/faralloc.h new/faralloc.h
+
+67c67
+< 	cout << "out of memory" << endl; 
+---
+> 	cerr << "out of memory" << endl; 
+
+==== diff old/function.h new/function.h
+
+246c246
+<     Result operator()(const Arg& x) const { return ptr(x); }
+---
+>     Result operator()(Arg x) const { return ptr(x); }
+260,262c260
+<     Result operator()(const Arg1& x, const Arg2& y) const {
+< 	return ptr(x, y); 
+<     }
+---
+>     Result operator()(Arg1 x, Arg2 y) const { return ptr(x, y); }
+
+==== diff old/iterator.h new/iterator.h
+
+130c130
+<     back_insert_iterator<Container> operator++(int) { return *this; }
+---
+>     back_insert_iterator<Container>& operator++(int) { return *this; }
+151c151
+<     front_insert_iterator<Container> operator++(int) { return *this; }
+---
+>     front_insert_iterator<Container>& operator++(int) { return *this; }
+392c392
+<     ostream_iterator<T> operator++(int) { return *this; } 
+---
+>     ostream_iterator<T>& operator++(int) { return *this; } 
+
+==== diff old/list.h new/list.h
+
+273c273,274
+< 	transfer(position, i, ++j);
+---
+> 	if (position == i || position == ++j) return;
+> 	transfer(position, i, j);
+427c428
+< 	    first1++;
+---
+> 	    ++first1;
+
+==== diff old/multiset.h new/multiset.h
+
+36,39c36,38
+<     typedef singleton<const Key> svalue_type;
+<     typedef rb_tree<key_type, svalue_type, 
+<                     select1st<svalue_type, key_type>, key_compare> rep_type;
+<     rep_type t;  // red-black tree representing map
+---
+>     typedef rb_tree<key_type, value_type, 
+>                     ident<value_type, key_type>, key_compare> rep_type;
+>     rep_type t;  // red-black tree representing multiset
+41c40
+<     typedef rep_type::reference reference;
+---
+>     typedef rep_type::const_reference reference;
+43,46c42,45
+<     typedef rep_type::iterator iterator;
+<     typedef iterator const_iterator;
+<     typedef rep_type::reverse_iterator reverse_iterator;
+<     typedef reverse_iterator const_reverse_iterator;
+---
+>     typedef rep_type::const_iterator iterator;
+>     typedef rep_type::const_iterator const_iterator;
+>     typedef rep_type::const_reverse_iterator reverse_iterator;
+>     typedef rep_type::const_reverse_iterator const_reverse_iterator;
+54c53
+<              const Compare& comp = Compare()) : t(comp, true) {
+---
+>         const Compare& comp = Compare()) : t(comp, true) {
+56c55
+<            t.insert(svalue_type(*i));
+---
+>            t.insert(*i);
+59,60c58,59
+<     multiset<Key, Compare>& operator=(const multiset<Key, Compare>& x) {
+<         t = x.t;
+---
+>     multiset<Key, Compare>& operator=(const multiset<Key, Compare>& x) { 
+>         t = x.t; 
+68,71c67,70
+<     iterator begin() const { return ((rep_type&)t).begin(); }
+<     iterator end() const { return ((rep_type&)t).end(); }
+<     reverse_iterator rbegin() const { return ((rep_type&)t).rbegin(); } 
+<     reverse_iterator rend() const { return ((rep_type&)t).rend(); }
+---
+>     iterator begin() const { return t.begin(); }
+>     iterator end() const { return t.end(); }
+>     reverse_iterator rbegin() const { return t.rbegin(); } 
+>     reverse_iterator rend() const { return t.rend(); }
+78c77,79
+<     iterator insert(const value_type& x) { return t.insert(x).first; }
+---
+>     iterator insert(const value_type& x) { 
+>         return t.insert(x).first;
+>     }
+80c81
+<         return t.insert(position, x);
+---
+>         return t.insert((rep_type::iterator&)position, x);
+84c85,91
+<            t.insert(svalue_type(*i));
+---
+>             t.insert(*i);
+>     }
+>     void erase(iterator position) { 
+>         t.erase((rep_type::iterator&)position); 
+>     }
+>     size_type erase(const key_type& x) { 
+>         return t.erase(x); 
+86,89c93,97
+<     void erase(iterator position) { t.erase(position); }
+<     size_type erase(const key_type& x) { return t.erase(x); }
+<     void erase(iterator first, iterator last) { t.erase(first, last); }
+<    
+---
+>     void erase(iterator first, iterator last) { 
+>         t.erase((rep_type::iterator&)first, 
+>                 (rep_type::iterator&)last); 
+>     }
+> 
+92,93c100,101
+<     iterator find(const key_type& x) const { return ((rep_type&)t).find(x); }
+<     size_type count(const key_type& x) const { return ((rep_type&)t).count(x); }
+---
+>     iterator find(const key_type& x) const { return t.find(x); }
+>     size_type count(const key_type& x) const { return t.count(x); }
+95c103
+<         return ((rep_type&)t).lower_bound(x);
+---
+>         return t.lower_bound(x);
+98c106
+<         return ((rep_type&)t).upper_bound(x); 
+---
+>         return t.upper_bound(x); 
+103c111
+<         return ((rep_type&)t).equal_range(x);
+---
+>         return t.equal_range(x);
+
+==== diff old/pair.h new/pair.h
+
+25d24
+<     pair() : first(T1()), second(T2()) {}
+
+==== diff old/projectn.h new/projectn.h
+
+21,26c21,23
+< template <class T>
+< struct singleton {
+<     T first;
+<     singleton(const T& a) : first(a) {}
+<     operator T() { return first; }
+<     singleton() : first(T()) {}
+---
+> template <class T, class U>
+> struct select1st : public unary_function<T, U> {
+>     const U& operator()(const T& x) const { return x.first; }
+30,31c27,28
+< struct select1st : unary_function<T, U> {
+<     const U& operator()(const T& x)  { return x.first; }
+---
+> struct ident : public unary_function<T, U> {
+>     const U& operator()(const T& x) const { return x; }
+
+==== diff old/set.h new/set.h
+
+36,39c36,38
+<     typedef singleton<const Key> svalue_type;
+<     typedef rb_tree<key_type, svalue_type, 
+<                     select1st<svalue_type, key_type>, key_compare> rep_type;
+<     rep_type t;  // red-black tree representing map
+---
+>     typedef rb_tree<key_type, value_type, 
+>                     ident<value_type, key_type>, key_compare> rep_type;
+>     rep_type t;  // red-black tree representing set
+41c40
+<     typedef rep_type::reference reference;
+---
+>     typedef rep_type::const_reference reference;
+43,46c42,45
+<     typedef rep_type::iterator iterator;
+<     typedef iterator const_iterator;
+<     typedef rep_type::reverse_iterator reverse_iterator;
+<     typedef reverse_iterator const_reverse_iterator;
+---
+>     typedef rep_type::const_iterator iterator;
+>     typedef rep_type::const_iterator const_iterator;
+>     typedef rep_type::const_reverse_iterator reverse_iterator;
+>     typedef rep_type::const_reverse_iterator const_reverse_iterator;
+56c55
+<            t.insert(svalue_type(*i));
+---
+>            t.insert(*i);
+68,71c67,70
+<     iterator begin() const { return ((rep_type&)t).begin(); }
+<     iterator end() const { return ((rep_type&)t).end(); }
+<     reverse_iterator rbegin() const { return ((rep_type&)t).rbegin(); } 
+<     reverse_iterator rend() const { return ((rep_type&)t).rend(); }
+---
+>     iterator begin() const { return t.begin(); }
+>     iterator end() const { return t.end(); }
+>     reverse_iterator rbegin() const { return t.rbegin(); } 
+>     reverse_iterator rend() const { return t.rend(); }
+80c79,82
+<     pair_iterator_bool insert(const value_type& x) { return t.insert(x); }
+---
+>     pair_iterator_bool insert(const value_type& x) { 
+>         pair<rep_type::iterator, bool> p = t.insert(x); 
+>         return pair<iterator, bool>(p.first, p.second);
+>     }
+82c84
+<         return t.insert(position, x);
+---
+>         return t.insert((rep_type::iterator&)position, x);
+86c88,98
+<            t.insert(svalue_type(*i));
+---
+>             t.insert(*i);
+>     }
+>     void erase(iterator position) { 
+>         t.erase((rep_type::iterator&)position); 
+>     }
+>     size_type erase(const key_type& x) { 
+>         return t.erase(x); 
+>     }
+>     void erase(iterator first, iterator last) { 
+>         t.erase((rep_type::iterator&)first, 
+>                 (rep_type::iterator&)last); 
+88,90d99
+<     void erase(iterator position) { t.erase(position); }
+<     size_type erase(const key_type& x) { return t.erase(x); }
+<     void erase(iterator first, iterator last) { t.erase(first, last); }
+94,95c103,104
+<     iterator find(const key_type& x) const { return ((rep_type&)t).find(x); }
+<     size_type count(const key_type& x) const { return ((rep_type&)t).count(x); }
+---
+>     iterator find(const key_type& x) const { return t.find(x); }
+>     size_type count(const key_type& x) const { return t.count(x); }
+97c106
+<         return ((rep_type&)t).lower_bound(x);
+---
+>         return t.lower_bound(x);
+100c109
+<         return ((rep_type&)t).upper_bound(x); 
+---
+>         return t.upper_bound(x); 
+105c114
+<         return ((rep_type&)t).equal_range(x);
+---
+>         return t.equal_range(x);
+
+==== diff old/tree.h new/tree.h
+
+296a297,298
+>     link_type __copy(link_type x, link_type p);
+>     void __erase(link_type x);
+318,320c320
+<            : node_count(0) {
+<         key_compare = comp;
+<         insert_always = always;
+---
+>            : node_count(0), key_compare(comp), insert_always(always) { 
+325,327c325
+<           : node_count(0) {
+<         key_compare = comp;
+<         insert_always = always;
+---
+>           : node_count(0), key_compare(comp), insert_always(always) { 
+332,338c330,342
+<             bool always = true) : node_count(0) {
+<         key_compare = x.key_compare;
+<         insert_always = always;
+<         init();
+<         for (rb_tree<Key, Value, KeyOfValue, Compare>::const_iterator 
+<                 i = x.begin(); i != x.end(); ++i)
+<             insert(end(), *i);
+---
+>             bool always = true) : node_count(x.node_count), 
+>                  key_compare(x.key_compare), insert_always(always) { 
+>         ++number_of_trees;
+>         header = get_node();
+>         color(header) = red;
+>         root() = __copy(x.root(), header);
+>         if (root() == NIL) {
+>             leftmost() = header;
+>             rightmost() = header;
+>         } else {
+> 	    leftmost() = minimum(root());
+>             rightmost() = maximum(root());
+>         }
+476c480
+<         // can't be done as in list because Key may be contant type
+---
+>         // can't be done as in list because Key may be a constant type
+478,480c482,490
+<         for (rb_tree<Key, Value, KeyOfValue, Compare>::const_iterator 
+<                 i = x.begin(); i != x.end(); ++i)
+<             insert(end(), *i);
+---
+>         root() = __copy(x.root(), header);
+>         if (root() == NIL) {
+>             leftmost() = header;
+>             rightmost() = header;
+>         } else {
+> 	    leftmost() = minimum(root());
+>             rightmost() = maximum(root());
+>         }
+>         node_count = x.node_count;
+551a562
+>     bool comp = true;
+554,567c565,566
+<         if (key_compare(KeyOfValue()(v), key(y)))
+<             x = left(x);
+<         else {
+<             x = right(x);
+<             if (!key_compare(key(y), KeyOfValue()(v))) {
+<                 // value(y) and v are equivalent according to key_compare
+<                 if (!insert_always) 
+<                     return pair_iterator_bool(iterator(y), false);
+<                 if (x != NIL) {
+<                     y = minimum(x);
+<                     break;
+<                 }
+<             }
+<         }
+---
+>         comp = key_compare(KeyOfValue()(v), key(x));
+>         x = comp ? left(x) : right(x);
+569c568,578
+<     return pair_iterator_bool(__insert(x, y, v), true);
+---
+>     if (insert_always)
+>         return pair_iterator_bool(__insert(x, y, v), true);
+>     iterator j = iterator(y);   
+>     if (comp)
+>         if (j == begin())     
+>             return pair_iterator_bool(__insert(x, y, v), true);
+>         else
+>             --j;
+>     if (key_compare(key(j.node), KeyOfValue()(v)))
+>         return pair_iterator_bool(__insert(x, y, v), true);
+>     return pair_iterator_bool(j, false);
+740a750,781
+> rb_tree<Key, Value, KeyOfValue, Compare>::link_type 
+> rb_tree<Key, Value, KeyOfValue, Compare>::__copy(link_type x, link_type p) {
+>    // structural copy
+>    link_type r = x;
+>    while (x != NIL) {
+>       link_type y = get_node();
+>       if (r == x) r = y;  // save for return value
+>       construct(value_allocator.address(value(y)), value(x));
+>       left(p) = y;
+>       parent(y) = p;
+>       color(y) = color(x);
+>       right(y) = __copy(right(x), y);
+>       p = y;
+>       x = left(x);
+>    }
+>    left(p) = NIL;
+>    return r;
+> }
+> 
+> template <class Key, class Value, class KeyOfValue, class Compare>
+> void rb_tree<Key, Value, KeyOfValue, Compare>::__erase(link_type x) {
+>     // erase without rebalancing
+>     while (x != NIL) {
+>        __erase(right(x));
+>        link_type y = left(x);
+>        destroy(value_allocator.address(value(x)));
+>        put_node(x);
+>        x = y;
+>     }
+> }
+> 
+> template <class Key, class Value, class KeyOfValue, class Compare>
+743c784,791
+<     while (first != last) erase(first++);
+---
+>     if (first == begin() && last == end() && node_count != 0) {
+>         __erase(root());
+>         leftmost() = header;
+>         root() = NIL;
+>         rightmost() = header;
+>         node_count = 0;
+>     } else
+>         while (first != last) erase(first++);
+754a803
+>     link_type y = header;
+755a805
+>     bool comp = false;
+757,762c807,809
+<         if (key_compare(k, key(x)))
+<             x = left(x);
+<         else if (key_compare(key(x), k))
+<             x = right(x);
+<         else 
+<             return iterator(x);
+---
+>         y = x;
+>         comp = key_compare(key(x), k);
+>         x = comp ? right(x) : left(x);
+764c811,813
+<     return end();
+---
+>     iterator j = iterator(y);   
+>     if (comp) ++j;
+>     return (j == end() || key_compare(k, key(j.node))) ? end() : j;
+769a819
+>     link_type y = header;
+770a821
+>     bool comp = false;
+772,777c823,825
+<         if (key_compare(k, key(x)))
+<             x = left(x);
+<         else if (key_compare(key(x), k))
+<             x = right(x);
+<         else 
+<             return const_iterator(x);
+---
+>         y = x;
+>         comp = key_compare(key(x), k);
+>         x = comp ? right(x) : left(x);
+779c827,829
+<     return end();
+---
+>     const_iterator j = const_iterator(y);   
+>     if (comp) ++j;
+>     return (j == end() || key_compare(k, key(j.node))) ? end() : j;
+795a846
+>     bool comp = false;
+798,801c849,850
+<         if (key_compare(key(x), k))
+<             x = right(x);
+<         else 
+<             x = left(x);
+---
+>         comp = key_compare(key(x), k);
+>         x = comp ? right(x) : left(x);
+803,806c852,853
+<     if (y == header || !key_compare(key(y), k)) 
+<         return iterator(y);
+<     iterator j = iterator(y);
+<     return ++j;
+---
+>     iterator j = iterator(y);   
+>     return comp ? ++j : j;
+813a861
+>     bool comp = false;
+816,819c864,865
+<         if (key_compare(key(x), k))
+<             x = right(x);
+<         else 
+<             x = left(x);
+---
+>         comp = key_compare(key(x), k);
+>         x = comp ? right(x) : left(x);
+821,824c867,868
+<     if (y == header || !key_compare(key(y), k)) 
+<         return const_iterator(y);
+<     const_iterator j = const_iterator(y);
+<     return ++j;
+---
+>     const_iterator j = const_iterator(y);   
+>     return comp ? ++j : j;
+831a876
+>     bool comp = true;
+834,837c879,880
+<         if (key_compare(k, key(x)))
+<             x = left(x);
+<         else 
+<             x = right(x);
+---
+>         comp = key_compare(k, key(x));
+>         x = comp ? left(x) : right(x);
+839,842c882,883
+<     if (y == header || key_compare(k, key(y)))
+<         return iterator(y);
+<     iterator j = iterator(y);
+<     return ++j;
+---
+>     iterator j = iterator(y);   
+>     return comp ? j : ++j;
+849a891
+>     bool comp = true;
+852,855c894,895
+<         if (key_compare(k, key(x)))
+<             x = left(x);
+<         else 
+<             x = right(x);
+---
+>         comp = key_compare(k, key(x));
+>         x = comp ? left(x) : right(x);
+857,860c897,898
+<     if (y == header || key_compare(k, key(y)))
+<         return const_iterator(y);
+<     const_iterator j = const_iterator(y);
+<     return ++j;
+---
+>     const_iterator j = const_iterator(y);   
+>     return comp ? j : ++j;
+861a900
+> 

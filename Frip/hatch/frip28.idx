@@ -1,0 +1,38 @@
+Package-Name:           /incoming/os2/frip28.zip
+Title:                  Frip, build 28, beta. Automatic FIDONET routing system.
+Version:                28, beta
+Author:                 Dmitry Zavalishin
+Author-Telephone:       +7 095 110-6728
+Author-Fax:             -
+Author-Postal:          Arteckovskaya 7-4-260, Moscow, Russia
+Author-Email:           dz@phantom.ru
+Maintained-by:          
+Postal-Address:         
+Telephone:              
+Fax:                    
+Electronic-Address:     
+Maintained-At:          
+
+Distribution-Type:      binary
+Restrictions:           There are OS/2, DOS-32 and Win95/NT versions.
+                        Dox are in English, and partlially in Russian
+Discussion-Groups:      RU.FRIP FIDONET echo
+Copying-Policy:         Freeware
+Modified-by:            
+
+Keywords:               FRIP FIDO FIDONET packer
+URI:                    
+Description:
+
+FRIP is a decentralized system, no central authority or control
+required. Each one, who needs that, sets up FRIP for his system and
+systems running FRIP start to exchange routing information packets
+called 'rips' or 'ads' here. Each ad carries information about one
+routing destination (either one node or complete network or even
+zone or domain) and gives information about which node mail addressed
+to that destination can be routed to. Each frip node once a while
+creates ads describing himself and broadcasts them around. Directly
+connected nodes receive this ad and send it along to their other links,
+and ad goes on and on until it makes it to a node, which knows shorter
+path to the given destination, that this ad came through.
+

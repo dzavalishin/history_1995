@@ -1,0 +1,49 @@
+Ä RU.FRIP (2:5020/32) ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ RU.FRIP Ä
+ Msg  : 231 of 238 -213                     Rcv Scn                                             
+ From : Anthony Antonov                     2:5010/77       15 Nov 95  09:59:04 
+ To   : Dmitry Zavalishin                                   15 Nov 95  17:13:28 
+ Subj : question                                                                                
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Hello Dmitry!
+
+Replying to a message of Dmitry Zavalishin to serg maslihin:
+
+
+ DZ> ‚ ¡¥â¥ 7 ”p¨¯ ¡ã¤¥â ­ ¯pï¬ãî ¯®¤¤¥p¦¨¢ âì bink outbound. Š ª, ªáâ â¨,
+ DZ> ã t-mail ãáâp®¥­ë ä ©«¡®ªáë ¨ ­¥â «¨ ¯p¨¬¥p  ª®¤ , £¥­¥pïé¥£® ¨¬ï
+ DZ> ä ©«¡®ªá ? ˆ ª ª ¤¥« ¥âáï ¨¬ï ­  HPFS outbound?
+
+ ”®p¬¨p®¢ ­¨¥ ¨¬¥­¨ ä ©«¡®ªá  ¤«ï â¬ë« . (dir_boxes ª â «®£ ¤«ï ¡®ªá®¢)
+
+char tr32[]="0123456789ABCDEFGHIJKLMNOPQRSTUV";
+
+char *get_dir_box(short zone,short net,short node,short point,short hold,char *where)
+{
+extern char dir_boxes[];
+
+    sprintf(where,"%s%c%c%c%c%c%c%c%c.%c%c%s",dir_boxes,
+   tr32[(unsigned)zone/32],
+          tr32[(unsigned)zone%32],
+
+   tr32[(unsigned)net/1024],
+          tr32[(unsigned)(net-(net/1024)*1024)/32],
+          tr32[(unsigned)net%32],
+
+   tr32[(unsigned)node/1024],
+          tr32[(unsigned)(node-(node/1024)*1024)/32],
+          tr32[(unsigned)node%32],
+
+   tr32[(unsigned)point/32],
+          tr32[(unsigned)point%32], 
+          hold? "H\\":"\\");
+
+    return where;
+}
+
+Bye
+    Anthony!
+
+--- FleetStreet 1.12.1 #123
+ * Origin: # AntA # Chelyabinsk, Russia  *Work*20:00-8:00(MSK+2)* (2:5010/77)
+
+

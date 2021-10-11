@@ -1,0 +1,260 @@
+22 May 1997: Fatal timeout system temp. shut down due to OFFs storm made :(
+
+22 Mar 1997: Fixed bug in DOS/NT versions - CRLFs was killed in files sent :(
+
+16 Mar 1997: Rewritten msgid base header handling, now DOS/OS2/NT versions
+             are msgid-base format compatible. Base format version number
+             increased to force base rebuild.
+
+             Added dupe rif name handling: now received rif will not get
+             stuck because of rif with same name in 'routed' dir.
+
+12 Mar 1997: StatLog fixed, now works ok.
+
+11 Mar 1997: Now RIPs from future (more than 24 hours from now) are killed.
+
+05 Mar 1997: Frip off handler will never send back ads (rescans). There
+             was really nasty bug in off handler, which caused loop 
+             routing in some cases.
+             Fixed dos/win32 packer/sender bug - dead loop in file copy code.
+
+12 Feb 1997: Now ignoring hidden files in all searches by mask.
+             (To honour T-Mail habits:)
+
+12 Feb 1997: Additional safe-checks added to .bsy code to make sure it 
+             will work ok even over NFS mounts without locking support.
+
+07 Feb 1997: Fixed bug with broadcasting off for our aka if our aka is
+             not listed in base for some reason.
+
+31 Jan 1997: New keyword (PackDirect) can be used to prevent packing of
+             direct netmail (polls, for example) with Frip. 
+             Bug fix: Frip will not pack freqs and update requests now.
+             Change: Now unpacking all the mail we have no route for.
+             Bug fix: changed the way Frip stores/loads database
+             to make it more fail-safe.
+
+21 Jan 1997: Added -NA flag to ads from .ad file. It makes sure the real
+             ad for this address will win anyway.
+
+19 Jan 1997: New feature: off-type rips are checked against dupe-base to 
+             prevent so-called off-storms. Such storms used to be when off
+             command is executed for address we have no routing at all
+             the nodes any more.
+
+07 Jan 1997: Bug fix: no rips would come from point to his boss due to
+             specific bug in seenby logic.
+
+             Added timestamps to path (via) marks. Now FRIP needs correct
+             TZ to be set.
+
+02 Jan 1997: Bug fix: attempt to pack message with file attach, which does
+             not exist resulted in packing message once each start of FRIP.
+
+             New capability flag RIFRIZ meaning that this FRIP is able to
+             receive RIFs compressed into the RIZ file.
+
+             StatLog setup parameter lets user specify file where all the
+             passing fripmail will be logged.
+
+29 Dec 1996: Bug fix: mail to addresses, announced with .ad files, now
+             will be unpacked here too. In general, everything, directed 
+             to address routed through our AKA will be unpacked.
+
+             Bug fix: now refusing to send mail, if routing for dest.
+             address points to our node.
+
+             Bug fix: DOS & NT version now change drive to one specified
+             in "dir" setup parameter at startup too.
+
+28 Dec 1996: PackFripMail setup parameter added. Now you can use different
+             netmail folders to send and receive frip mail.
+
+31 Jul 1996: frip off processing didn't send generated off-rips to links.
+             Frip netmail packer now recognizes kill/sent and fileattach 
+             attributes and acts accordingly.
+             Frip netmail unpacker now clears Sent, Received, Orphan, Local, 
+             Crash and Hold attribute bits from message header.
+             Fixed bug in netmail packer - Frip marked outgoing netmail as
+             files, thus making problems for unpacker on other side.
+             Links state database now created and maintaied by frip. Ping time
+             average for last 10 pings is counted, last ping time noted, link
+             capabilities and state saved. Not used by frip yet, just built.
+
+29 Jul 1996: Basic netmail routing. Add FripMail parameter telling Frip the
+             name of its netmail dir to use feature. Frip will try to send
+             netmail from that dir if it knows routing for it, and puts
+             received netmail there.
+
+25 Jul 1996: Written routing loss processing. If you are sure you have no
+             correct routing for some node just type "frip off <node>", and
+             frip will clean up routing info for that node and tell its 
+             neighbours about that problem.
+
+22 Jul 1996: Received file path is saved to .HISTORY EA under OS/2.
+
+
+22 Jul 1996: Received file descriptions are saved to .SUBJECT EA in
+             addition to FILES.BBS and DESCRIPT.ION files. Now OS/2
+             users can observe file description via file settings
+             (properties in Merlin) notebook, "file" page.
+             BUG: descriptions are not read from that EA yet.
+
+22 Jul 1996: FARA is able to transfer file descriptions too.
+
+22 Jul 1996: FARA (Frip Aided Routing of Attaches) basically implemented :).
+             Now you can say "frip send myfile.zip 777:9090/333@SuperNet"
+             and frip will route file to destination without help of
+             external packers & routers.
+             Todo: small .rif files should be compressed into the
+             .riz files.
+
+22 Jul 1996: AT LAST! Fixed interlocking. Now two frips will not work at
+             once.
+
+27 Feb 1996: Bug fix: frip tried to process *.rip in inbound dir but
+             was not able to because of error.
+             Now processing rips just after any unzip of a .riz file
+             to make sure pity FAT users will get better perofrmance.
+             Bug fix: Now checking 'to' address of a rip to match one of our
+             akas! That was a bad one... :(
+
+16 Jan 1996: Bug fix: database flags was lost on second run of frip. Fixed.
+             Minor bugfix: now frip refuses to work if no config. file found.
+             Now adding version name and current date/time to path lines.
+             Added 'viaself' conf. parameter.
+
+15 Jan 1996: Added wildness filters for links. Fixed bug in UnzipCmd 
+             processing - now inserting a space between command and args.
+             Now we're able to set link weights by setting up time to add
+             to incoming/outgoing rips - links.cfg parameter TIME+=.
+             Fixed error in unknown rip fields bypass - newline 
+             between unknown lines was missing.
+
+13 Jan 1996: Added simple int28 time release for DOS in semaphore wait mode.
+             Ad approvement system written. Look ap-files.txt for details,
+             but, sorry, there's russian only yet.
+             New conf. keyword ProcessedFlag - file with this name will
+             be created if possibility of routing change exist.
+
+10 Jan 1996: Fixed bug in b12 - filters was broken, now work again.
+
+04 Jan 1996: RIP types other than AD added, in idle mode. 
+             Once a while a PING RIP sent to all our neighbours to let them
+             measure link delay. No measuring done yet though.
+             Database records now timed out taking in account RIP travel time
+             so that routing will not switch to a very bad route
+             even occasionally. 
+             Now processing .ad files only if given permission in config, 
+             and FRIP automatically advertises its akas without special tuning.
+             Locking written - now two copies of frip will not run
+             at the same time, one will wait for other to complete.
+
+04 Jan 1996: Found & fixed huge memory hog in string class.
+             Added code to move rips and unzip rizs from inbound
+             without a special command file. Frip now changes directory
+             to its home as well. Config file name can be set in
+             'FRIP' environment variable. Inbound directory has
+             to be specified in conf. file.
+             Catching ^C & ^Break (at least in OS/2) & shutting down
+             correctly.
+
+09 Dec 1995: OS/2 and NT versions are using spawn() instead of system(),
+             so that no limit is imposed on a length of a command line
+             at all, even in Win95. Zip does its job in a single pass now.
+
+09 Dec 1995: Writing date/time of frip start to log.
+
+06 Dec 1995: Now added creation of map of routing - just storing processed
+             rips in a tree of subdirs.
+
+05 Dec 1995: CmdLimit parameter in conf. file. Default value for NT version
+             is 100 bytes now due to Win95 limits (oh holy shit...).
+             Optimized! Now up to 10 times faster when processing RIPs! :)
+             Now flushing database to disk every 20 rips for safety reasons.
+             Now debug output can be turned on/off from setup file.
+             Fixed little bug in timing code: part of frip thought there are
+             24 days in month and 24 months in a year :).
+
+             Sometimes frip considered 'fidonet.org' to be not equal to
+             'fidonet' because operator != was missed for class addr and
+             compiler used string::operatot != with addr::operator string
+             instead.
+
+01 Dec 1995: Fix: Added -C flag to unzip.
+
+28 Nov 1995: Fix: In DOS versions zip was used instead of pkzip.
+             Now converting '/' to '\' in DOS mode before executing
+             zip.
+             Fix: Now stripping leaing and trailing spaces when parsing
+             config. file.
+             New setup parameter - Ansi [On|Off]
+             NB: Now compiling with optimizer on.
+
+26 Nov 1995: Fix: Log file now opened in append, not overwrite mode.
+             Now zip command can be given as ZipCmd in config. file.
+
+24 Nov 1995: New setup parameter - AnnouncePeriod.
+
+22 Nov 1995: Fixed bug: now reannouncing if any .ad file changed.
+
+20 Nov 1995: Added HOLD keyword.
+
+16 Nov 1995: Bug fix in DeliverCommand code, TMail FAT/HPFS fileboxes
+             support, obsolette route replacement. If DeliverCommand
+             was commented out FRIP refused to update bink outbound
+             and fileboxes. Now fixed.
+
+15 Nov 1995: Alot of new frip.cfg parameters, Bink outbound support,
+             HPFS outbound preliminary support, log file added,
+             configurable deliver command line, route file line format,
+             various fixes.
+
+13 Nov 1995: Added new parameters to config. Fixed bug in temp. file
+             name generator (sometimes it used to leave '?'-s in name),
+             now before calling deliver converting filename to
+             fullpath with '\' instead of '/' as directories delimiter.
+
+11 Nov 1995: Error in deliv_at.cmd fixed.
+
+10 Nov 1995: Error in address parser fixed.
+
+10 Nov 1995: Compiled 16-bit DOS version. Don't use it, if possible!
+
+10 Nov 1995: Announcer rewritten in C too and made automatic.
+
+10 Nov 1995: Bug in address parser found: point number was ignored
+             if no trailing domain was given.
+
+ 9 Nov 1995: Rewritten in C, except for announcer module.
+
+29 Oct 1995: Now we automatically add all of our AKAs to outgoig
+             rip seenbys, so that we'll never get it back to our
+             other AKA, as it happened before.
+
+29 Oct 1995: Bugfix: own rips (from announce) was processed
+             incorrectly, generating crazy routes.
+
+
+29 Oct 1995: More colours :)
+
+
+29 Oct 1995: Speedup a bit: included text of fcanon into the frip.cmd
+
+28 Oct 1995: Main config file (frip.cfg) added - now it holds
+             addresses only. Used to prevent wildcard announces
+             from destroying detailed routing inside of wildcard's
+             area. Now you can safely let announe of, say, 2:5020/*
+             come to any node in 2:5020 and not destroy it's roting.
+
+28 Oct 1995: Colouring :)
+
+28 Oct 1995: deliv_sq.cmd now keeps silence while works
+
+28 Oct 1995: Now we put announces from ourselves into the base.
+             This helps against receiving our announces back from
+             other systems :).
+
+ 4 Oct 1995: When generating routing file, treat .0 as .*
+
+$Id: History.txt 1.1 1996/01/07 15:15:23 dz Exp $

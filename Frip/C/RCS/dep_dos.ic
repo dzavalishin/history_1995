@@ -1,0 +1,93 @@
+head	1.3;
+access;
+symbols
+	Beta_12:1.1;
+locks;
+comment	@# @;
+
+
+1.3
+date	96.01.22.19.25.18;	author dz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	96.01.14.01.06.31;	author dz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	96.01.07.20.21.01;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.3
+log
+@C Set, mostly works
+@
+text
+@/*\
+ *        The software included, file formats and basic algorithms are
+ *      copyright (C) 1995,96 by Dmitry Zavalishin. All rights reserved.
+ *
+ *	Module:	OS Dependent Thingies - DOS
+ *
+ *      $Log: dep_dos.ic $
+ *      Revision 1.2  1996/01/14 01:06:31  dz
+ *      beta 14
+ *
+ *      Revision 1.1  1996/01/07 20:21:01  dz
+ *      Initial revision
+ *
+ *
+ *
+\*/
+
+#include <i86.h>
+#include <dos.h>
+
+#define SYSDEP_ILOCK_WAIT
+void  ilock::wait( int time )
+    {
+    while( time -= 2 )
+        {
+        union REGS rr;
+        sleep(1);
+        for( int i = 10; i--; )
+#ifdef __386__
+            int386( 0x28, &rr, &rr );
+#else
+            int86( 0x28, &rr, &rr );
+#endif
+        }
+    }
+
+@
+
+
+1.2
+log
+@beta 14
+@
+text
+@d8 3
+d29 1
+d31 3
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d7 4
+a10 1
+ *      $Log:$
+d15 14
+@

@@ -1,0 +1,10 @@
+
+#include "package.h"
+
+
+static const char *package::file_extension = "pkg";
+
+
+
+
+

@@ -1,0 +1,36 @@
+
+Class hierarchy
+ links
+  ÀÄFripApp
+ string
+  ÃÄdomain_s
+  ÃÄistring
+  ÀÄmsgid
+ ios
+  ÃÄfstreambase
+  ³ ÃÄfstream(iostream)
+  ³ ÃÄifstream(istream)
+  ³ ÀÄofstream(ostream)
+  ÃÄistream
+  ³ ÃÄifstream(fstreambase)
+  ³ ÃÄiostream(ostream)
+  ³ ³ ÃÄfstream(fstreambase)
+  ³ ³ ÀÄiostream_withassign
+  ³ ÀÄistream_withassign
+  ÀÄostream
+    ÃÄiostream(istream)
+    ³ ÃÄfstream(fstreambase)
+    ³ ÀÄiostream_withassign
+    ÃÄofstream(fstreambase)
+    ÀÄostream_withassign
+ streambuf
+  ÀÄfilebuf
+ Empty_Ex
+  ÃÄGeneral_Ex
+  ³ ÃÄEx_Abort
+  ³ ÃÄEx_Arg
+  ³ ÃÄEx_EOF
+  ³ ÃÄEx_Errno
+  ³ ÃÄEx_Fail
+  ³ ÀÄEx_NoMemory
+  ÀÄNomem_Ex

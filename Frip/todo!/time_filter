@@ -1,0 +1,25 @@
+Hi,
+
+Replying to a message of Andrew Ivanov to dz:
+
+ AI> а можно такое ? А то затpахали меня мегатонны дpевних (за декабpь) но
+ AI> живучих pипов с crerator 2:5020/276 - и сделал я вот что:
+
+ AI> -------------------------------------------------------
+ AI> /* */
+ AI> 'grep -l creator.2:5020/276 *.rip | rxqueue'
+ AI> Do while queued()>0
+ AI>  parse pull 'File 'file':'
+ AI>  Call SysFileDelete file
+ AI> end
+ AI> -------------------------------------------------------
+
+Это которые от 97-го года, ити их мать?? Это фильтр на будущее ставить надо. Вот 
+сделаю.
+
+dz
+
+
+---
+ * Origin: he roses are red, the violetes are blue... (2:5020/32)
+

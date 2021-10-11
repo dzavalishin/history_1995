@@ -1,0 +1,135 @@
+Ä RU.FRIP (2:5020/32) ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ RU.FRIP Ä
+ Msg  : 220 of 224                          Rcv Scn                                             
+ From : Ivan Munitsin                       2:5020/418      15 Nov 95  00:21:28 
+ To   : Dmitry Zavalishin                                   15 Nov 95  08:32:20 
+ Subj : Re: question                                                                            
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Hi Dmitry!
+
+Tuesday November 14 1995, Dmitry Zavalishin writes to serg maslihin:
+
+DZ> Š ª, ªáâ â¨, ã t-mail ãáâp®¥­ë ä ©«¡®ªáë ¨ ­¥â «¨ ¯p¨¬¥p  ª®¤ ,
+DZ> £¥­¥pïé¥£® ¨¬ï ä ©«¡®ªá ?
+
+‚§ïâ® ¨§ ­ ¡®p  ¯p¨¬®ç¥ª ¯®¤ ­ §¢ ­¨¥¬ T-Rex.
+
+=== Cut ===
+/*= Configuration =================================================*/
+
+defzone=2                          /* Default Zone                 */
+address.0=1                        /* Number of addresses          */
+address.1='2:5020/418.0'           /* Full 4D ARCmail address      */
+/* address.2='214:1001/53.0'          Full 4D ARCmail address      */
+netmail='c:\fido\netmail'          /* Path to netmail              */
+filebox='\fido\boxes'            /* Path to fileboxes            */
+logfile='c:\fido\log\a2r.log'      /* Path & name of log file      */
+tickdir='á:\fido\t-fix\tic'        /* Directory to copy TIC files  */
+holddir='c:\fido\outbound'         /* Directory for outbound echo  */
+
+/*= Program code ==================================================*/
+[...¯®áª¨¯ ­®...]
+say center("Move echomail to fileboxes (c) Sergei Keler, 2:5030/178",79)
+say center("",79,"-")
+[...¯®áª¨¯ ­®...]
+/*===============================================================*/
+
+/*
+   Function ADDR2BOX(address, default_address)
+   Returns t-mail file-box name.
+*/
+
+addr2box: procedure
+   zone=0
+   net=0
+   node=0
+   point=0
+   parse arg addr,defaddr
+   box=''
+   parse var defaddr dzone':'dnet'/'dnode'.'dpoint
+   if pos(':',addr) > 0 then parse var addr zone':'net'/'node'.'point
+   else if pos('/',addr) > 0 then do
+        if pos('/',addr) > 1 then do
+             parse var addr net'/'node'.'point
+             zone=dzone
+        end
+        else do
+             parse var addr '/'node'.'point
+             zone=dzone
+             net=dnet
+        end
+   end
+   else if pos('.',addr) > 0 then do
+        if pos('.',addr) > 1 then do
+             parse var addr node'.'point
+             zone=dzone
+             net=dnet
+        end
+        else do
+             parse var addr '.'point
+             zone=dzone
+             net=dnet
+             node=dnode
+        end
+   end
+   else do
+       parse var addr node'.'point
+       zone=dzone
+       net=dnet
+   end
+
+   if point='' then point=0
+   if node='' then node=0
+   if net='' then net=0
+   if zone='' then zone=0
+   bz=dec2t(zone,'Z')
+   bn=dec2t(net,'Z')
+   bf=dec2t(node,'Z')
+   bp=dec2t(point,'Z')
+   /* 2 3 3 . 2 */
+   box=right(bz,2)''right(bn,3)''right(bf,3)'.'right(bp,2)
+return box
+
+/*
+   Function DEC2T(decimal_number[,'Z'|'B'])
+   Optional second parameter is:
+        Use leading zeros ('Z') or strip it ('B')
+
+   Returns 32-based number
+*/
+dec2t: procedure
+   parse upper arg in,z
+   out=""
+   astr='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+   do i=1 to 10
+        t2=in/32
+        in=trunc(t2)
+        t5=t2-in
+        t5=t5*32
+        t5=trunc(t5)
+        t3=t5+1
+        out=out''substr(astr,t3,1)
+   end
+   out=strip(out)
+   out=reverse(out)
+   if (z='') | (z='B') then do
+        flg=0
+        xout=''
+        do i=1 to 10
+             if flg = 1 then xout=xuot''substr(out,i,1)
+             else if substr(out,i,1) = "0" then xuot=xout' '
+             else xout=xout''substr(out,i,1)
+        end
+        out=strip(xout)
+   end
+return out
+
+[...¯®áª¨¯ ­®...]
+=== Cut ===
+
+Sincerely,
+Ivan
+
+--- GolDead 2.50.A0204+
+ * Origin: Moommy-House BBS | (095)324-3451 | V32b | 0:00-9:00 MSK (2:5020/418)
+
+

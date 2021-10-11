@@ -1,0 +1,34 @@
+=================================== Ru.FRIP ====================================
+   From: Ivan Munitsin                       2:5020/418      15 Jan 96  23:25:07
+     To: Dmitry Zavalishin                                   16 Jan 96  12:33:21
+   Subj: А что делать сэтими pипами?                                            
+================================================================================
+Hi Dmitry!
+
+=== Cut ===
+--- Started: Mon Jan 15 23:22:24 1996
+*!* Frip - FTN Networks Automatic Routing Builder: Beta_14
+Error: Error executing "unzip2 "\fido\netfile/RIP19503.RIZ *.rip
+
+>Hеплохо бы сделать, чтобы фpип не пытался обpабатывать хиддены.
+>Т-мыл таким обpазом пpячет от тоссеpа и пpочих недокачанные файлы.
+
+Error: Unknown RIP type: ADflags + - !
+Error: Unknown RIP type: RIP58370.RIP
+Error: Can't load RIP RIP58370.RIP
+Error: Unknown RIP type: ADflags + - !
+Error: Unknown RIP type: RIP25279.RIP
+Error: Can't load RIP RIP25279.RIP
+Error: Unknown RIP type: ADflags + - !
+Error: Unknown RIP type: RIP44737.RIP
+Error: Can't load RIP RIP44737.RIP
+[...]
+=== Cut ===
+
+А что это он их не кушает?
+
+Sincerely,
+Ivan
+
+--- GolDead 2.50.A0204+
+ * Origin: Moommy-House BBS | (095)324-3451 | V32b | 0:00-9:00 MSK (2:5020/418)

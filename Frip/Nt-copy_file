@@ -1,0 +1,52 @@
+The CopyFile function copies an existing file to a new file.
+
+BOOL CopyFile(    
+LPCTSTR  lpExistingFileName, // address of name of an existing file    
+LPCTSTR  lpNewFileName,      // address of filename to copy to    
+BOOL  bFailIfExists          // flag for operation if file exists 
+  );
+
+Parameters
+
+lpExistingFileName
+Points to a null-terminated string that specifies the name of an existing file. 
+
+lpNewFileName
+Points to a null-terminated string that specifies the name of the new file.
+
+bFailIfExists
+
+Specifies how this operation is to proceed if a file of the same 
+name as that specified by lpNewFileName already exists. If this 
+parameter is TRUE and the new file already exists, the function 
+fails. If this parameter is FALSE and the new file already exists, 
+the function overwrites the existing file and succeeds.
+
+Return Value
+If the function succeeds, the return value is TRUE.
+If the function fails, the return value is FALSE. 
+To get extended error information, call GetLastError.
+
+Remarks
+
+Security attributes for the existing file are not copied to the new file.
+File attributes (FILE_ATTRIBUTE_*) for the existing file are copied to 
+the new file. For example, if an existing file has the 
+FILE_ATTRIBUTE_READONLY file attribute, a copy created through a call to
+CopyFile will also have the FILE_ATTRIBUTE_READONLY file attribute. 
+For further information on file attributes, see CreateFile.
+
+See AlsoCreateFile, MoveFile
+
+
+MoveFileEx(
+    LPCWSTR lpExistingFileName,
+    LPCWSTR lpNewFileName,
+    DWORD dwFlags
+    );
+
+#define MOVEFILE_REPLACE_EXISTING   0x00000001
+#define MOVEFILE_COPY_ALLOWED       0x00000002
+#define MOVEFILE_DELAY_UNTIL_REBOOT 0x00000004
+
+

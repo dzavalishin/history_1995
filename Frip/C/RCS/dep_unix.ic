@@ -1,0 +1,36 @@
+head	1.1;
+access;
+symbols
+	Beta_12:1.1;
+locks;
+comment	@# @;
+
+
+1.1
+date	96.01.07.20.21.01;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@/*\
+ *        The software included, file formats and basic algorithms are
+ *      copyright (C) 1995,96 by Dmitry Zavalishin. All rights reserved.
+ *
+ *	Module:	OS Dependent Thingies - Unix
+ *
+ *      $Log:$
+ *
+ *
+\*/
+
+
+@

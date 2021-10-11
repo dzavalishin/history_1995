@@ -1,0 +1,837 @@
+[35mDebug:[0m id base ver 1, 207 pages of 512 bytes each
+[33m[1m*!* [0mFrip - FTN Automatic Routing System, Version 38
+[35mDebug:[0m base::load did 278
+[33m[1m*!* [0mNode 7:5020/328.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    30 days 13 hours,  0 hops
+[32m[1m*** [0mRoute created  30 days 12 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/738.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    36 days  7 hours,  3 hops
+[32m[1m*** [0mRoute created  27 days  2 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/285.13@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time     4 days  8 hours,  5 hops
+[32m[1m*** [0mRoute created  27 days  2 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/656.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    36 days  8 hours,  3 hops
+[32m[1m*** [0mRoute created  27 days  2 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/234.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    36 days  7 hours,  3 hops
+[32m[1m*** [0mRoute created  27 days  2 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/738.746@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time     4 days  7 hours,  5 hops
+[32m[1m*** [0mRoute created  27 days  2 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/403.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    36 days  7 hours,  3 hops
+[32m[1m*** [0mRoute created  27 days  2 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/770.0@fidonet routed via 2:5020/715.0@fidonet
+[32m[1m*** [0mRoute time    43 days  2 hours,  0 hops
+[32m[1m*** [0mRoute created  25 days 12 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 12:7095/2.0@boardnet routed via 2:5020/715.0@fidonet
+[32m[1m*** [0mRoute time    12 days  6 hours,  6 hops
+[32m[1m*** [0mRoute created  25 days 12 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.12@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.38@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.14@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  6 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.2@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.15@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.7@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.25@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.4@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.11@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.3@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.8@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.100@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.50@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.9@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.101@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/877.10@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created  24 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/238.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    31 days  3 hours,  2 hops
+[32m[1m*** [0mRoute created  24 days  6 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/189.0@fidonet routed via 2:5020/877.0@fidonet
+[32m[1m*** [0mRoute time     3 days  8 hours,  3 hops
+[32m[1m*** [0mRoute created  23 days 12 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/785.0@fidonet routed via 2:5020/518.0@fidonet
+[32m[1m*** [0mRoute time    12 days 14 hours,  2 hops
+[32m[1m*** [0mRoute created  23 days 11 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/225.0@fidonet routed via 7:1130/473.0@fidonet
+[32m[1m*** [0mRoute time    33 days 13 hours,  1 hops
+[32m[1m*** [0mRoute created  20 days  9 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/653.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    8:23,             4 hops
+[32m[1m*** [0mRoute created  19 days  8 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/122.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time     2 days  7 hours,  7 hops
+[32m[1m*** [0mRoute created  18 days  3 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/2707.0@fidonet routed via 7:1130/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days 19 hours,  2 hops
+[32m[1m*** [0mRoute created  16 days 12 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/1095.0@fidonet routed via 7:1130/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days 19 hours,  2 hops
+[32m[1m*** [0mRoute created  16 days 12 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/647.0@fidonet routed via 2:5020/215.0@fidonet
+[32m[1m*** [0mRoute time   11:01,             2 hops
+[32m[1m*** [0mRoute created  13 days  6 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/696.*@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time   -3:-51,            11 hops
+[32m[1m*** [0mRoute created  12 days 10 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/951.0@fidonet.org routed via 2:5020/251.0@FidoNet
+[32m[1m*** [0mRoute time    7:20,             2 hops
+[32m[1m*** [0mRoute created  12 days  4 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/251.40@fidonet.org routed via 2:5020/251.0@FidoNet
+[32m[1m*** [0mRoute time    7:20,             2 hops
+[32m[1m*** [0mRoute created  12 days  4 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/877.0@fidonet routed via 7:1130/473.0@fidonet
+[32m[1m*** [0mRoute time     1 days 10 hours,  3 hops
+[32m[1m*** [0mRoute created  11 days  9 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/877.0@fidonet routed via 2:5020/473.0@fidonet
+[32m[1m*** [0mRoute time     1 days 10 hours,  3 hops
+[32m[1m*** [0mRoute created  11 days  9 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/877.1@fidonet routed via 2:5020/473.0@fidonet
+[32m[1m*** [0mRoute time     1 days 10 hours,  3 hops
+[32m[1m*** [0mRoute created  11 days  9 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:50/0.0@fidonet routed via 2:5020/32.0@fidonet
+[32m[1m*** [0mRoute time    0:00,             0 hops
+[32m[1m*** [0mRoute created  10 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/269.0@fidonet routed via 2:5020/32.0@fidonet
+[32m[1m*** [0mRoute time    10 days  0 hours,  4 hops
+[32m[1m*** [0mRoute created  10 days 20 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/647.1@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days  8 hours,  3 hops
+[32m[1m*** [0mRoute created  10 days 14 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/655.31@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days 14 hours,  5 hops
+[32m[1m*** [0mRoute created  10 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/921.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days 14 hours,  5 hops
+[32m[1m*** [0mRoute created  10 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/627.21@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days 14 hours,  5 hops
+[32m[1m*** [0mRoute created  10 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/47.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5066/*.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5013/*.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5001/*.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 145:11/20.0@cybernet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:460/*.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/474.*@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:4615/*.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5022/*.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/639.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5049/6.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  1 hops
+[32m[1m*** [0mRoute created  10 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/215.0@fidonet routed via 2:5020/215.0@fidonet
+[32m[1m*** [0mRoute time   12:38,             1 hops
+[32m[1m*** [0mRoute created  10 days  4 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/1095.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    1:41,             5 hops
+[32m[1m*** [0mRoute created   9 days 21 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/2707.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    1:41,             5 hops
+[32m[1m*** [0mRoute created   9 days 21 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/79.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time     1 days  4 hours,  1 hops
+[32m[1m*** [0mRoute created   9 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/1079.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time     1 days  4 hours,  1 hops
+[32m[1m*** [0mRoute created   9 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/79.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time     1 days  4 hours,  1 hops
+[32m[1m*** [0mRoute created   9 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/310.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     1 days 19 hours,  6 hops
+[32m[1m*** [0mRoute created   9 days 13 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 7:1130/0.0@fidonet routed via 2:5020/328.0@fidonet
+[32m[1m*** [0mRoute time    35 days 16 hours,  1 hops
+[32m[1m*** [0mRoute created   9 days 12 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/20.0@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time   22:20,             3 hops
+[32m[1m*** [0mRoute created   9 days 10 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/876.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days 15 hours,  4 hops
+[32m[1m*** [0mRoute created   9 days 10 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/381.0@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time    33 days 18 hours,  6 hops
+[32m[1m*** [0mRoute created   9 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/257.0@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time    33 days 18 hours,  6 hops
+[32m[1m*** [0mRoute created   9 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/797.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    36 days  4 hours,  2 hops
+[32m[1m*** [0mRoute created   9 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/509.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    33 days 22 hours,  3 hops
+[32m[1m*** [0mRoute created   9 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/102.0@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     1 days  6 hours,  4 hops
+[32m[1m*** [0mRoute created   9 days 10 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/245.0@fidonet.org routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   9 days  3 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/235.0@fidonet.org routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   9 days  3 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/421.0@fidonet.org routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   9 days  3 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/642.0@fidonet.org routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   9 days  3 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/94.0@fidonet.org routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   9 days  3 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/513.0@fidonet.org routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   9 days  3 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/155.0@fidonet.org routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   9 days  3 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/18.0@fidonet.org routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    34 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   9 days  3 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/285.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    35 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   9 days  3 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/32.7801@fidonet routed via 2:5020/32.7801@fidonet
+[32m[1m*** [0mRoute time   12:13,             1 hops
+[32m[1m*** [0mRoute created   9 days  2 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/32.7801@fidonet routed via 2:5020/32.7801@fidonet
+[32m[1m*** [0mRoute time   12:14,             1 hops
+[32m[1m*** [0mRoute created   9 days  2 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/32.7802@fidonet routed via 2:5020/32.7802@fidonet
+[32m[1m*** [0mRoute time   12:13,             1 hops
+[32m[1m*** [0mRoute created   9 days  2 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/32.7802@fidonet routed via 2:5020/32.7802@fidonet
+[32m[1m*** [0mRoute time   12:13,             1 hops
+[32m[1m*** [0mRoute created   9 days  2 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/32.7803@fidonet routed via 2:5020/32.7803@fidonet
+[32m[1m*** [0mRoute time   12:07,             1 hops
+[32m[1m*** [0mRoute created   9 days  2 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/32.7803@fidonet routed via 2:5020/32.7803@fidonet
+[32m[1m*** [0mRoute time   12:07,             1 hops
+[32m[1m*** [0mRoute created   9 days  2 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/978.0@fidonet.org routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time     1 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   8 days 21 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/921.*@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time     3 days 12 hours,  5 hops
+[32m[1m*** [0mRoute created   8 days 15 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/647.18@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days  8 hours,  3 hops
+[32m[1m*** [0mRoute created   8 days 14 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/647.15@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days  8 hours,  3 hops
+[32m[1m*** [0mRoute created   8 days 14 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/32.54@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     1 days  1 hours,  1 hops
+[32m[1m*** [0mRoute created   8 days 14 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/328.0@fidonet routed via 2:5020/328.0@fidonet
+[32m[1m*** [0mRoute time   18:42,             1 hops
+[32m[1m*** [0mRoute created   8 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 500:1200/23.0@fidonet routed via 2:5020/518.0@fidonet
+[32m[1m*** [0mRoute time     1 days  9 hours,  1 hops
+[32m[1m*** [0mRoute created   8 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/64.7@fidonet routed via 2:5020/518.0@fidonet
+[32m[1m*** [0mRoute time     1 days  9 hours,  1 hops
+[32m[1m*** [0mRoute created   8 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/518.0@fidonet routed via 2:5020/518.0@fidonet
+[32m[1m*** [0mRoute time     1 days  9 hours,  1 hops
+[32m[1m*** [0mRoute created   8 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/518.518@fidonet routed via 2:5020/518.0@fidonet
+[32m[1m*** [0mRoute time     1 days  9 hours,  1 hops
+[32m[1m*** [0mRoute created   8 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/183.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/367.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/153.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/368.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/756.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/150.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/672.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/555.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/69.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/114.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/159.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/120.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/55.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/400.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/118.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/6.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/431.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/225.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/300.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/1060.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/467.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/456.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/390.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/883.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/40.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/608.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/141.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/214.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/392.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/41.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/524.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/428.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     1 days 20 hours,  3 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/630.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/175.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/146.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/438.0@fidonet.org routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   8 days 11 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/263.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    36 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   8 days  8 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/870.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days 17 hours,  0 hops
+[32m[1m*** [0mRoute created   7 days 17 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/520.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days 17 hours,  0 hops
+[32m[1m*** [0mRoute created   7 days 17 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/320.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days 17 hours,  0 hops
+[32m[1m*** [0mRoute created   7 days 17 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/163.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days 17 hours,  0 hops
+[32m[1m*** [0mRoute created   7 days 17 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/149.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days 17 hours,  0 hops
+[32m[1m*** [0mRoute created   7 days 17 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/1003.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days 17 hours,  0 hops
+[32m[1m*** [0mRoute created   7 days 17 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/998.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days 17 hours,  0 hops
+[32m[1m*** [0mRoute created   7 days 17 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/242.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days 17 hours,  0 hops
+[32m[1m*** [0mRoute created   7 days 17 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/380.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days 17 hours,  0 hops
+[32m[1m*** [0mRoute created   7 days 17 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/301.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/462.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/236.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 77:230/15.6@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5059/2.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5059/13.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5059/0.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/662.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/541.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5059/10.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 12:7095/1.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  0 hours,  0 hops
+[32m[1m*** [0mRoute created   6 days 19 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5025/18.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:4631/0.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:47/0.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:52/0.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:4647/3.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/514.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:4624/13.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/369.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5008/1.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:464/51.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/765.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:30/0.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5012/1.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:4631/13.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5082/0.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:35/0.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:466/1.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 7:4631/0.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:4613/204.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:4624/9.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5004/0.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/*.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:53/0.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/869.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:4621/33.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:4666/1.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5019/1.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time    34 days  2 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 16 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/20.18@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     1 days  4 hours,  3 hops
+[32m[1m*** [0mRoute created   6 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/532.473@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     1 days  4 hours,  3 hops
+[32m[1m*** [0mRoute created   6 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:4623/1.100@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time    35 days  7 hours,  5 hops
+[32m[1m*** [0mRoute created   6 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5057/*.0@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time    33 days 17 hours,  1 hops
+[32m[1m*** [0mRoute created   6 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/201.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    33 days 22 hours,  4 hops
+[32m[1m*** [0mRoute created   6 days  8 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 7:1130/473.1@fidonet routed via 7:1130/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days 16 hours,  4 hops
+[32m[1m*** [0mRoute created   6 days  8 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/473.0@fidonet routed via 7:1130/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days 16 hours,  4 hops
+[32m[1m*** [0mRoute created   6 days  8 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/104.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    4:03,             5 hops
+[32m[1m*** [0mRoute created   6 days  3 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/715.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time     3 days 18 hours,  5 hops
+[32m[1m*** [0mRoute created   5 days 16 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/484.0@fidonet routed via 2:5020/877.0@fidonet
+[32m[1m*** [0mRoute time     6 days 11 hours,  5 hops
+[32m[1m*** [0mRoute created   5 days  9 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/708.0@fidonet routed via 2:5020/877.0@fidonet
+[32m[1m*** [0mRoute time     6 days 11 hours,  5 hops
+[32m[1m*** [0mRoute created   5 days  9 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/194.*@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    5:11,             2 hops
+[32m[1m*** [0mRoute created   5 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/525.*@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    5:11,             2 hops
+[32m[1m*** [0mRoute created   5 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/423.*@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time   11:11,             2 hops
+[32m[1m*** [0mRoute created   5 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/476.*@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time   15:11,             2 hops
+[32m[1m*** [0mRoute created   5 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/1006.*@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time   11:11,             2 hops
+[32m[1m*** [0mRoute created   5 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/473.*@fidonet routed via 2:5020/215.0@fidonet
+[32m[1m*** [0mRoute time    34 days  1 hours,  0 hops
+[32m[1m*** [0mRoute created   5 days  0 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/1215.0@fidonet routed via 2:5020/251.0@FidoNet
+[32m[1m*** [0mRoute time    8:01,             5 hops
+[32m[1m*** [0mRoute created   4 days 19 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/764.0@fidonet routed via 7:1130/79.0@fidonet
+[32m[1m*** [0mRoute time     2 days 10 hours,  3 hops
+[32m[1m*** [0mRoute created   4 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 7:1130/1212.0@fidonet routed via 7:1130/79.0@fidonet
+[32m[1m*** [0mRoute time     3 days 10 hours,  4 hops
+[32m[1m*** [0mRoute created   4 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 7:7/388.0@fidonet routed via 7:1130/79.0@fidonet
+[32m[1m*** [0mRoute time     1 days 10 hours,  3 hops
+[32m[1m*** [0mRoute created   4 days  4 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/436.0@fidonet routed via 7:1130/79.0@fidonet
+[32m[1m*** [0mRoute time     2 days 10 hours,  3 hops
+[32m[1m*** [0mRoute created   4 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 7:1130/388.*@fidonet routed via 7:1130/79.0@fidonet
+[32m[1m*** [0mRoute time     2 days 10 hours,  3 hops
+[32m[1m*** [0mRoute created   4 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/764.*@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time     3 days 10 hours,  3 hops
+[32m[1m*** [0mRoute created   4 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/436.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time     3 days 10 hours,  3 hops
+[32m[1m*** [0mRoute created   4 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/388.*@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time     3 days 10 hours,  3 hops
+[32m[1m*** [0mRoute created   4 days  4 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/251.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time     1 days 14 hours,  4 hops
+[32m[1m*** [0mRoute created   4 days  4 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/144.0@FidoNet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time     1 days 13 hours,  5 hops
+[32m[1m*** [0mRoute created   4 days  4 hours ago, flags: + - !
+[33m[1m*!* [0mNode 98:7095/55.0@notnet routed via 7:1130/144.0@FidoNet
+[32m[1m*** [0mRoute time     1 days 18 hours,  6 hops
+[32m[1m*** [0mRoute created   4 days  0 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/1664.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time     1 days 18 hours,  6 hops
+[32m[1m*** [0mRoute created   4 days  0 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/54.*@fidonet routed via 2:5020/215.0@fidonet
+[32m[1m*** [0mRoute time     5 days  1 hours,  3 hops
+[32m[1m*** [0mRoute created   4 days  0 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 7:1130/144.0@FidoNet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time     1 days 14 hours,  4 hops
+[32m[1m*** [0mRoute created   3 days 23 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/251.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time     1 days 16 hours,  3 hops
+[32m[1m*** [0mRoute created   3 days 23 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:7/777.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time     1 days 16 hours,  3 hops
+[32m[1m*** [0mRoute created   3 days 23 hours ago, flags: + - !
+[33m[1m*!* [0mNode 102:5020/8.32@fidonet routed via 2:5020/32.0@fidonet
+[32m[1m*** [0mRoute time    0:00,             0 hops
+[32m[1m*** [0mRoute created   3 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:50/128.0@fidonet routed via 2:5020/32.0@fidonet
+[32m[1m*** [0mRoute time    0:00,             0 hops
+[32m[1m*** [0mRoute created   3 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:7/128.0@fidonet routed via 2:5020/32.0@fidonet
+[32m[1m*** [0mRoute time    0:00,             0 hops
+[32m[1m*** [0mRoute created   3 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/32.*@fidonet routed via 2:5020/32.0@fidonet
+[32m[1m*** [0mRoute time    0:00,             0 hops
+[32m[1m*** [0mRoute created   3 days 20 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 7:*/*.0@fidonet routed via 2:5020/32.0@fidonet
+[32m[1m*** [0mRoute time    0:00,             0 hops
+[32m[1m*** [0mRoute created   3 days 20 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 7:1130/32.0@fidonet routed via 2:5020/32.0@fidonet
+[32m[1m*** [0mRoute time    0:00,             0 hops
+[32m[1m*** [0mRoute created   3 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/32.0@fidonet routed via 2:5020/32.0@fidonet
+[32m[1m*** [0mRoute time    0:00,             0 hops
+[32m[1m*** [0mRoute created   3 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:7/0.0@fidonet routed via 2:5020/32.0@fidonet
+[32m[1m*** [0mRoute time    0:00,             0 hops
+[32m[1m*** [0mRoute created   3 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/879.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time     1 days 14 hours,  4 hops
+[32m[1m*** [0mRoute created   3 days 16 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/180.0@fidonet routed via 7:1130/79.0@fidonet
+[32m[1m*** [0mRoute time     1 days  2 hours,  2 hops
+[32m[1m*** [0mRoute created   3 days 14 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/180.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time     1 days  2 hours,  2 hops
+[32m[1m*** [0mRoute created   3 days 14 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/311.0@fidonet routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time     1 days  2 hours,  2 hops
+[32m[1m*** [0mRoute created   3 days 14 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/664.0@fidonet.org routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time   22:35,             3 hops
+[32m[1m*** [0mRoute created   3 days  9 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/440.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     3 days  3 hours,  3 hops
+[32m[1m*** [0mRoute created   3 days  7 hours ago, flags: + - !
+[33m[1m*!* [0mNode 963:1/*.0@viwanet routed via 2:5020/877.0@fidonet
+[32m[1m*** [0mRoute time    36 days  9 hours,  2 hops
+[32m[1m*** [0mRoute created   3 days  7 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/609.31@fidonet routed via 2:5020/877.0@fidonet
+[32m[1m*** [0mRoute time     1 days 10 hours,  2 hops
+[32m[1m*** [0mRoute created   3 days  7 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/877.6@fidonet routed via 2:5020/877.0@fidonet
+[32m[1m*** [0mRoute time     1 days 10 hours,  2 hops
+[32m[1m*** [0mRoute created   3 days  7 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/1664.*@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time     2 days 21 hours,  7 hops
+[32m[1m*** [0mRoute created   3 days  2 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 98:7095/55.*@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time     2 days  3 hours,  7 hops
+[32m[1m*** [0mRoute created   3 days  2 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/494.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  4 hours,  4 hops
+[32m[1m*** [0mRoute created   2 days 20 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/468.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    8:36,             6 hops
+[32m[1m*** [0mRoute created   2 days 20 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/758.0@fidonet routed via 2:5020/144.0@FidoNet
+[32m[1m*** [0mRoute time    33 days  4 hours,  5 hops
+[32m[1m*** [0mRoute created   2 days 20 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5088/*.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    39 days 18 hours,  4 hops
+[32m[1m*** [0mRoute created   2 days 13 hours ago, flags: + -NA,RES,RIF !
+[33m[1m*!* [0mNode 2:463/*.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    39 days 19 hours,  4 hops
+[32m[1m*** [0mRoute created   2 days 13 hours ago, flags: + -NA,RES,RIF !
+[33m[1m*!* [0mNode 2:5020/390.7@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     4 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created   2 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/304.8@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     4 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created   2 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/1067.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     4 days  0 hours,  4 hops
+[32m[1m*** [0mRoute created   2 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 9:4651/13.12@screamnet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     4 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created   2 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 15:95/13.0@rusnet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     4 days  5 hours,  4 hops
+[32m[1m*** [0mRoute created   2 days 13 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/50.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time    33 days 20 hours,  2 hops
+[32m[1m*** [0mRoute created   2 days 13 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 7:1130/102.0@fidonet routed via 7:1130/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days  8 hours,  2 hops
+[32m[1m*** [0mRoute created   2 days 11 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/717.0@FidoNet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time   14:28,             3 hops
+[32m[1m*** [0mRoute created   2 days 11 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/729.0@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time   13:27,             2 hops
+[32m[1m*** [0mRoute created   2 days 11 hours ago, flags: + - !
+[33m[1m*!* [0mNode 7:1130/729.0@fidonet routed via 7:1130/180.0@fidonet
+[32m[1m*** [0mRoute time     1 days  2 hours,  3 hops
+[32m[1m*** [0mRoute created   2 days  3 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/647.100@fidonet routed via 2:5020/251.0@FidoNet
+[32m[1m*** [0mRoute time    5:09,             4 hops
+[32m[1m*** [0mRoute created   1 days 19 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/104.115@fidonet routed via 2:5020/251.0@FidoNet
+[32m[1m*** [0mRoute time    5:09,             4 hops
+[32m[1m*** [0mRoute created   1 days 19 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/240.0@fidonet.org routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time     1 days  3 hours,  3 hops
+[32m[1m*** [0mRoute created   1 days 18 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/240.1@fidonet.org routed via 2:5020/1079.0@fidonet
+[32m[1m*** [0mRoute time     1 days  1 hours,  3 hops
+[32m[1m*** [0mRoute created   1 days 18 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/744.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time   21:54,             4 hops
+[32m[1m*** [0mRoute created   1 days 14 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/603.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    35 days 18 hours,  5 hops
+[32m[1m*** [0mRoute created   1 days 14 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/279.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    34 days 10 hours,  1 hops
+[32m[1m*** [0mRoute created   1 days 14 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/177.0@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time    35 days 18 hours,  5 hops
+[32m[1m*** [0mRoute created   1 days 14 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/477.0@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time   18:08,             3 hops
+[32m[1m*** [0mRoute created   1 days 12 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/469.0@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time   18:08,             3 hops
+[32m[1m*** [0mRoute created   1 days 12 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/532.0@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time   19:09,             5 hops
+[32m[1m*** [0mRoute created   1 days 12 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 7:4631/*.*@fidonet routed via 7:1130/180.0@fidonet
+[32m[1m*** [0mRoute time    34 days  7 hours,  3 hops
+[32m[1m*** [0mRoute created   1 days 10 hours ago, flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/901.13@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  4 hours,  3 hops
+[32m[1m*** [0mRoute created   1 days  9 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/1117.*@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  4 hours,  3 hops
+[32m[1m*** [0mRoute created   1 days  9 hours ago, flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/741.3@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  4 hours,  3 hops
+[32m[1m*** [0mRoute created   1 days  9 hours ago, flags: + - !
+[33m[1m*!* [0mNode 98:7095/81.13@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  5 hours,  3 hops
+[32m[1m*** [0mRoute created   1 days  9 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/681.13@fidonet routed via 2:5020/440.0@fidonet
+[32m[1m*** [0mRoute time     2 days  4 hours,  3 hops
+[32m[1m*** [0mRoute created   1 days  9 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/278.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time   18:07,             2 hops
+[32m[1m*** [0mRoute created   1 days  1 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5020/362.0@fidonet routed via 2:5020/180.0@fidonet
+[32m[1m*** [0mRoute time   21:36,             3 hops
+[32m[1m*** [0mRoute created   1 days  1 hours ago, flags: + - !
+[33m[1m*!* [0mNode 2:5030/*.0@fidonet routed via 2:5020/251.0@FidoNet
+[32m[1m*** [0mRoute time    36 days 18 hours,  7 hops
+[32m[1m*** [0mRoute created 22:19 ago,            flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/673.0@fidonet routed via 2:5020/251.0@FidoNet
+[32m[1m*** [0mRoute time    33 days 17 hours,  4 hops
+[32m[1m*** [0mRoute created 22:19 ago,            flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/322.0@fidonet routed via 2:5020/215.0@fidonet
+[32m[1m*** [0mRoute time    35 days  0 hours,  3 hops
+[32m[1m*** [0mRoute created 19:09 ago,            flags: + -NA,RES !
+[33m[1m*!* [0mNode 2:5020/1088.*@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     1 days  8 hours,  5 hops
+[32m[1m*** [0mRoute created 13:32 ago,            flags: + -NA !
+[33m[1m*!* [0mNode 2:5020/627.24@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     1 days  8 hours,  5 hops
+[32m[1m*** [0mRoute created 13:32 ago,            flags: + - !
+[33m[1m*!* [0mNode 2:5020/864.13@fidonet routed via 2:5020/647.0@fidonet
+[32m[1m*** [0mRoute time     1 days  8 hours,  5 hops
+[32m[1m*** [0mRoute created 13:32 ago,            flags: + - !
+[33m[1m*!* [0mNode 7:1130/328.0@fidonet routed via 2:5020/328.0@fidonet
+[32m[1m*** [0mRoute time     1 days 17 hours,  1 hops
+[32m[1m*** [0mRoute created 13:22 ago,            flags: + - !
+[33m[1m*!* [0mNode 2:5020/171.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time     1 days 13 hours,  3 hops
+[32m[1m*** [0mRoute created -2:-49 ago,            flags: + - !
+[33m[1m*!* [0mNode 2:5020/418.0@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time     1 days 14 hours,  3 hops
+[32m[1m*** [0mRoute created -2:-49 ago,            flags: + - !
+[33m[1m*!* [0mNode 2:5020/436.*@fidonet routed via 2:5020/79.0@fidonet
+[32m[1m*** [0mRoute time     3 days 19 hours,  3 hops
+[32m[1m*** [0mRoute created -2:-50 ago,            flags: + -NA !

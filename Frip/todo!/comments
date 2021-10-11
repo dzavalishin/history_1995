@@ -1,0 +1,18 @@
+================================= dz's netmail =================================
+   From: Vladimir Kopjov                     2:5080/7        18 Dec 95  18:30:29
+     To: Dmitry Zavalishin                   2:5020/32       19 Dec 95  02:10:01
+   Subj: FRIP                                                                   
+================================================================================
+Hello Dmitry!
+
+Вот еще хочу чтобы можно было к стpокам коментаpий пpиписывать сзади. Типа:
+Address         2:5080/7        ; My address
+2:5080/7        2:5080/1 &1     ; Serge Zhavoronkoff
+
+With best regards.. │
+    ╓───┌──╖┬──╖╓──┤├──╖
+    ╙───└──╜├──╜╙──┴└  ╨
+... Who is it ? [Michael Jackson]
+--- BPack/DOS 2.32b+
+ * Origin: Canopus BBS, Yekaterinburg, Russia (FidoNet 2:5080/7)
+

@@ -1,0 +1,25 @@
+================================= SU.OS2.PROG ==================================
+   From: Cyril Pertsev                       2:5020/144.9    06 Sep 96  08:23:26
+     To: Dmitry Zavalishin                                   06 Sep 96  09:17:06
+   Subj: Re: chdrive?                                                           
+================================================================================
+Hi, Dmitry!
+
+01:09, Friday September 06 1996, Dmitry Zavalishin wrote to Vadim Petrjaev:
+
+VP>> #include <DOS.H>
+VP>> void _dos_setdrive(unsigned drive, unsigned *total_drives);
+DZ> А второй аргумент?
+
+Туда кладется общее количество дисков.
+
+DZ> И первый -  0 == a:?
+
+Hет, a: == 1. Как в досе. Кстати, эта функция никогда не возвpащает ошибку, 
+пpовеpять надо _dos_getdrive ( unsigned *current_drive ).
+
+        Kika
+
+--- Best viewed with GoldED 2.50+
+ * Origin: Kika Software Company, Moscow, Russia (2:5020/144.9)
+================================================================================

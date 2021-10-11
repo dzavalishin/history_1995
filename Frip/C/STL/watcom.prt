@@ -1,0 +1,176 @@
+
+
+    CHANGES MADE TO THE HP STL DURING PORT TO WATCOM 10 COMPILER
+                        as of 9 April 1995
+
+
+ 	Comments on the behaviour of this port are welcome at 
+ 		       100101,2547@compuserve.com
+
+
+ 	
+               -----------------------------
+
+                        PROBLEM:
+
+Files unreadable in Notepad, apparently due to line-end characters.
+
+			FIX:
+
+I resaved all files from another editor to give them the standard MS-DOS
+line endings.
+
+               -----------------------------
+
+                        PROBLEM:
+
+Spurious warning messages appear because Watcom apparently does not like a 
+function pointer parameter to be declared like so;
+
+     func( int (*x) () ) ;
+
+but like so;
+
+     func( int *x() ) ;
+
+                          FIX:
+
+I changed this in FUNCTION.H (4 places) to get rid of the messages. Compiled
+executables are apparently identical.
+
+  
+               -----------------------------
+
+                        PROBLEM:
+
+The STL requirements state that the allocator's nested typedef size_type 
+can represent any non-negative value of its difference_type. In HP's STL, 
+this condition is not met in Watcom's Huge model, where size_t is 16 bits 
+and ptrdiff_t is 32 bits.
+
+                          FIX:
+
+I changed the allocator to use ptrdiff_t as its size_type. This, of 
+course, propagates through the entire STL.
+
+               -----------------------------
+
+
+        CHANGES MADE IN MY ORIGINAL RELEASE, 7 APRIL
+               
+               
+               -----------------------------
+
+                        PROBLEM:
+
+The Watcom compiler apparently cannot detect the fact that a class
+parameter to a template has inherited from an instance of another 
+template class. It is therefore unable to resolve 
+
+    iterator_category( container ) 
+    
+where container is of some container type which inherits an instantiation 
+of one of the five base iterator classes which HP declared in ITERATOR.H;
+
+template <class T, class Distance> struct input_iterator {};
+struct output_iterator {};
+template <class T, class Distance> struct forward_iterator {};
+template <class T, class Distance> struct bidirectional_iterator {};
+template <class T, class Distance> struct random_access_iterator {};
+
+
+                          FIX:
+
+My solution is to make them all inherit the appropriate iterator tag
+class. Near the start of ITERATOR.H, I removed the above 5 declarations
+and inserted these instead;
+
+
+template <class T, class Distance> struct input_iterator : public input_iterator_tag {};
+struct output_iterator : public output_iterator_tag {};
+template <class T, class Distance> struct forward_iterator : public forward_iterator_tag {};
+template <class T, class Distance> struct bidirectional_iterator : public bidirectional_iterator_tag {};
+template <class T, class Distance> struct random_access_iterator : public random_access_iterator_tag {};
+
+
+The compiler can resolve these base classes because they are not template
+classes. It can resolve the problematic expression to one of these template 
+functions, which I also added;
+
+
+inline input_iterator_tag iterator_category( input_iterator_tag  tag ) {  return tag ; }
+inline output_iterator_tag iterator_category( output_iterator_tag tag  ) {  return tag ; }
+inline forward_iterator_tag iterator_category( forward_iterator_tag tag  ) {  return tag ; }
+inline bidirectional_iterator_tag iterator_category( bidirectional_iterator_tag tag ) {  return tag ; }
+inline random_access_iterator_tag iterator_category( random_access_iterator_tag tag ) {  return tag ; }
+
+
+               -----------------------------
+
+                        PROBLEM:
+                          
+The Watcom compiler can not determine the value or distance type of an iterator
+(it would be one of the parameters to the template base class of the iterator)
+i.e. these expressions cannot be resolved;
+
+    value_type( MyIter )     distance_type( MyIter )
+
+
+                          FIX:
+
+For every iterator, I provided global functions that know the value and distance 
+types, and they will be the only ones that the expressions can possibly match up 
+to. The functions will be generated when the iterator class itself is generated, 
+i.e. by the expansion of a container template. 
+
+One can make a class template generate a global function (assuming that namespaces 
+are not in use) simply by making it a friend of the class, and putting the entire 
+friend function in the class template. In every STL container class, near the end, 
+I inserted these two complete friend functions;
+
+ friend value_type* value_type( iterator ) { return 0 ; }
+ friend difference_type* distance_type( iterator )
+  { return (difference_type*)(0) ; }
+
+Don't forget to provide the same friend functions in any container class 
+that you may design.
+
+               -----------------------------
+
+                        PROBLEM:
+
+I don't have a lot of spare time to devote to this port.
+
+                          FIX:
+
+I stripped out support for mixed model programming. Only the default 
+allocator is provided, and it always gets memory in the current memory model.
+
+
+               -----------------------------
+               
+                        PROBLEM:
+
+Watcom's idea of a template function which will accept any pointer type,
+const or not, is the opposite of HP's idea. Watcom have decided that this 
+function template, for example, will match up to any pointer type;
+
+        template <class T> void func(T*) { ...
+
+in other words, T* is a match for float* AND for const float*. HP have 
+apparently got it the other way around;
+
+        template <class T> void func(const T*) { ...
+        
+They expect this to match up to float* by virtue of T becoming float, and
+the compiler making the trivial conversion of float* to const float*.
+
+                          FIX:
+
+I changed STL template functions to match the Watcom rules where it seemed 
+appropriate.
+
+               -----------------------------
+
+                   David Byrden B.Eng.
+

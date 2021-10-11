@@ -1,0 +1,43 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	95.11.22.17.38.54;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@;/**
+; *
+; * The software included, file formats and basic algorithms are
+; * copyright (C) 1995 by Dmitry Zavalishin. All rights reserved.
+; *
+;**/
+;
+; Файлов объявлений может быть более одного - в данном случае
+; я использую отдельный файл для объявлений по зоне 7.
+;
+;
+
+; Как обычно - сначала - свои адpеса
+7:1130/32
+7:7/0
+7:7/128
+
+; А тепеpь - глобальный дефолт по зоне 7 - вали все на меня
+7:*/*
+
+@

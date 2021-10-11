@@ -1,0 +1,8 @@
+Archive Name: frip28.zip
+Program Description: Automagical FIDO mail routing system, OS/2 version
+Operating System Versions: 2.0 and later
+
+Your name: Dmitry Zavalishin
+Your email address: dz@phantom.ru
+
+Proposed directory for placement: comm

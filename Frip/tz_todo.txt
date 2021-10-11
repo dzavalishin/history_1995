@@ -1,0 +1,75 @@
+=================================== RU.FRIP ====================================
+   From: Serge Rodovnichenko                 2:5020/696      05 May 97  21:43:44
+     To: dz                                                  06 May 97  07:26:10
+   Subj: Итого. TZ                                                              
+================================================================================
+Hello dz!
+
+Hаписал я крутую программу :-)
+
+
+=== Begin test.cpp ===
+
+#include <time.h>
+#include <iostream.h>
+
+main()
+{
+  cout << "Without tzset()" << endl
+       << "_timezone:" <<_timezone
+       << ", _daylight:" << _daylight
+       << ", _tzname[1]:" << _tzname[1] << endl;
+
+  tzset();
+
+  cout << "With tzset()" << endl
+       << "_timezone:" <<_timezone
+       << ", _daylight:" << _daylight
+       << ", _tzname[1]:" << _tzname[1] << endl;
+
+   return 1;
+}
+=== End test.cpp ===
+
+Вот, что получилось без установленной (т.е. я ее в Autoexec.bat заремил и 
+перегрузился) переменной TZ:
+
+
+=== Begin No TZ variable.txt ===
+Without tzset()
+_timezone:-10800, _daylight:1, _tzname[1]:
+With tzset()
+_timezone:-10800, _daylight:1, _tzname[1]:
+=== End No TZ variable.txt ===
+
+Обрати внимание, таймзона, почему-то -3! т.е. там хранится то, что надо 
+прибавить к _локальному_ времени, чтобы получить UTC. _daylight соответственно 
+1. В хелпе, кстати, сказано, что если daylight saving отсутствует, то переменная 
+равна 0, если наличиствует, то _ненулевое_ значение. Есть предположение, что 
+количество часов :-)
+
+А вот с установленной переменной SET TZ=MSK+4MSD :
+
+=== Begin With TZ=MSK+4MSD variable.txt ===
+Without tzset()
+_timezone:14400, _daylight:1, _tzname[1]:MSD
+With tzset()
+_timezone:14400, _daylight:1, _tzname[1]:MSD
+=== End With TZ=MSK+4MSD variable.txt ===
+
+Опа! daylight остался, но его лучше не учитывать. :-) А остальное, вопреки 
+правилам, взято из переменной.
+
+Поэтому, вот предложение: а давай, если можно, хотя бы под Win32, проверять 
+наличие TZ= (я думаю, _tzname тут поможет), и если ее нет, пользоваться 
+системными настройками?
+
+Дело в том, что тут еще вроде работоспособный Argus на подходе и там тоже все от 
+TZ зависит. Вплоть до того, что override работы станций в U,Txx флагах 
+указывается. :-( Ладно, с Argus'ом пойду в Ru.Argus ныть...
+
+                                                  Serge (sandman@aha.ru)
+
+... Metallica for SysOp: Sleep with one eye open, grippin' your keyboard tight!
+--- GoldED/W32 3.00.Alpha4+
+ * Origin: Танюша Буланова Fan Club (2:5020/696)

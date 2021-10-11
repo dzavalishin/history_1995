@@ -1,0 +1,45 @@
+================================= dz's netmail =================================
+   From: shq@star.spb.ru                     2:50/128        30 Sep 96  15:47:50
+     To: Dmitry Zavalishin                   2:5020/32       30 Sep 96  15:47:50
+   Subj: What means Snail-mail ?                                                
+================================================================================
+ From: Kirill Shirokov <shq@star.spb.ru>
+To: Dmitry Zavalishin <dz@phantom.ru>
+Subject: What means Snail-mail ?
+Date: Mon, 30 Sep 1996 18:47:51 +0300
+ Encoding: 33 TEXT
+
+Hi, dz!
+
+What's up?
+
+SUBj.
+
+I've seen your frip pages. Some saucy critique:
+
+1. readme.htm is looking ugly. 
+
+(Tip: If you use russian, don't forget to add encoding info as following:
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=KOI8-R"> 
+<META HTTP-EQUIV="Content-Language" CONTENT="ru"> 
+(also, encoding could be ISO8859-5 or Win1251))
+
+2. The pages have no overall color design. That's catching one's eye.
+
+3. The color of visited links is unreadable.
+
+4. Frip user's guide is too big to view in browser window. May be, it's 
+better to:
+  a. divide it into several sections
+  b. make anchors and links to them (i.e. TRUE HYPERTEXT!)
+  c. Use <PRE>...</PRE> in examples.
+  d. Table of contents is really needed. (I've developed dynamic tree with 
+JavaScript. If you would like to use it -- please visit 
+http://betawww.star.spb.ru)
+
+That's all for today.. ;-)))
+
+Keep smiling,
+Kirill.
+
+================================================================================

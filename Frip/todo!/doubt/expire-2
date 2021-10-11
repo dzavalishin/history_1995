@@ -1,0 +1,18 @@
+=================================== Ru.FRIP ====================================
+   From: Leo V. Mironoff                     2:5020/293      17 Dec 95  17:49:05
+     To: Dmitry Zavalishin                                   17 Dec 95  22:40:20
+   Subj: Re: алгоритм                                                           
+================================================================================
+Hello Dmitry!
+
+Sunday December 17 1995 14:25, Leo V. Mironoff (2:5020/293) wrote to Dmitry 
+Zavalishin:
+
+LVM> f(x,i)=x/i, хотя IMHO она слишком сильно затухает, лучше нечто вроде
+LVM> x/(i**lambda), lambda==0.5..0.2.
+А еще лучше, f(x,i<k)==1, f(x,i>=k)==x/(i**lambda)
+
+:), Leo
+
+--- lvm@module.vympel.msk.ru
+ * Origin: - The Endless Quest - (2:5020/293)

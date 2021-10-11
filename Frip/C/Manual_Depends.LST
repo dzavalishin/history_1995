@@ -1,0 +1,7 @@
+
+
+app.h: \
+version.h except.h style.h strng.h addr.h rip.h rif.h conf.h base.h   \
+links.h msgid.h zip.h approve.h
+
+frip.h: app.h

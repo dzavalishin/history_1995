@@ -1,0 +1,142 @@
+================================= dz's netmail =================================
+   From: Sergey Okhapkin                     2:5020/47.3     01 Feb 97  16:01:10
+     To: Dmitry Zavalishin                   2:5020/32       04 Feb 97  03:40:20
+   Subj: OS/2 vs. NT                                                            
+================================================================================
+*** Answering a msg posted in area RU.OS.CMP (RU.OS.CMP).
+
+Hello Dmitry!
+
+Saturday February 01 1997, Dmitry Zavalishin writes to Sergey Okhapkin:
+
+ SO>> BackupRead().
+
+ DZ> Спасибо. Я уж и не надеялся...
+
+ DZ> dz
+
+ DZ> PS: А не зашвырнешь описание?
+
+Пора тебе, похоже, win32 sdk разживаться :-)
+
+
+The BackupRead function reads data associated with a specified file or directory 
+into a buffer. You use this function to back up a file or directory.
+BOOL BackupRead(
+
+
+    HANDLE  hFile,  // handle to file or directory
+    LPBYTE  lpBuffer,   // pointer to buffer to read to
+    DWORD  nNumberOfBytesToRead,    // number of bytes to read
+    LPDWORD  lpNumberOfBytesRead,   // pointer to variable to receive number of 
+bytes read
+    BOOL  bAbort,   // termination type
+    BOOL  bProcessSecurity, // process security flag
+    LPVOID  *lpContext  // pointer to pointer to internal context information
+   );
+Parameters
+hFile
+Handle to the file or directory being backed up. The function reads data 
+associated with this file. You obtain this handle by calling the CreateFile 
+function.
+The BackupRead function fails if CreateFile was called with the flag 
+FILE_FLAG_NO_BUFFERING. In this case, the GetLastError function returns the 
+value ERROR_INVALID_PARAMETER.
+lpBuffer
+Pointer to a buffer that the function writes data to.
+nNumberOfBytesToRead
+Specifies the length of the buffer.  The buffer size must be greater than the 
+size of a WIN32_STREAM_ID structure.
+lpNumberOfBytesRead
+Pointer to a variable that, when the function returns, contains the number of 
+bytes read.
+If the function return value is TRUE, and the variable pointed to by 
+lpNumberOfBytesRead is zero, then all the data associated with the file handle 
+has been read.
+bAbort
+Indicates whether BackupRead terminated abnormally. If this value is TRUE, the 
+operation terminates abnormally and all buffers are deallocated.
+bProcessSecurity
+Indicates whether the function will restore the access-control list (ACL) data 
+for the file or directory.
+If bProcessSecurity is TRUE, the ACL data will be backed up.
+lpContext
+Pointer to a variable that receives and holds a pointer to an internal data 
+structure used by BackupRead to maintain context information during a backup 
+operation.
+You must set the variable pointed to by lpContext to NULL before the first call 
+to BackupRead for the specified file or directory. The function allocates memory 
+for the data structure, and then sets the variable to point to that structure. 
+You must not change lpContext  or the variable that it points to between calls 
+to BackupRead.
+To release the memory used by the data structure, call BackupRead with the 
+bAbort parameter set to TRUE when the backup operation is complete.
+Return Value
+If the function succeeds, the return value is TRUE.
+If the function fails, the return value is FALSE, indicating that an I/O error 
+occurred. To get extended error information, call GetLastError.
+Remarks
+BackupRead processes all of the data pertaining to an opened object as a series 
+of discrete byte streams. Each stream is preceded by a 32-bit aligned 
+WIN32_STREAM_ID structure.
+Streams must be processed in the same order in which they were written to the 
+tape. This ordering enables applications to compare the data backed up against 
+the data on the source device. The data returned by BackupRead is to be used 
+only as input to the BackupWrite function. This data is returned as one large 
+data stream divided into substreams. The substreams are separated by 
+WIN32_STREAM_ID headers.
+If an error occurs while BackupRead is reading, the calling process can skip the 
+bad data by calling the BackupSeek function.
+See Also
+BackupWrite, BackupSeek, WIN32_STREAM_ID
+
+
+
+
+struct WIN32_STREAM_ID {
+    DWORD dwStreamId;
+    DWORD dwStreamAttributes;
+    LARGE_INTEGER Size;
+    DWORD dwStreamNameSize;
+    WCHAR  cStreamName[ ] ;
+}
+
+
+Members
+dwStreamId
+Specifies the type of data. This member can be one of the following values:
+
+Value   Meaning
+
+BACKUP_DATA Standard data
+BACKUP_EA_DATA  Extended attribute data
+BACKUP_SECURITY_DATA    Windows NT security descriptor data
+BACKUP_ALTERNATE_DATA   Alternative data streams
+BACKUP_LINK Hard link information
+dwStreamAttributes
+Specifies the attributes of data to facilitate cross-operating system transfer. 
+This member must be one or more of the following values:
+
+Value   Description
+
+STREAM_MODIFIED_WHEN_READ   Attribute set if the stream contains data that is 
+modified when read. Allows the backup application to know that verification of 
+data will fail.
+STREAM_CONTAINS_SECURITY    Stream contains security data (general attributes). 
+Allows the stream to be ignored on cross-operations restore.
+Size
+Specifies the size, in bytes, of data. Note that this is a 64-bit value.
+dwStreamNameSize
+Specifies the length of the name of the alternative data stream.
+cStreamName
+Specifies the name of the alternative data stream, in Unicode.
+See Also
+BackupRead, BackupSeek, BackupWrite
+
+
+
+Sergey
+
+--- GoldED/W32 2.51.A0901+
+
+================================================================================

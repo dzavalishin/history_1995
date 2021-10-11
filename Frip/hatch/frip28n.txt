@@ -1,0 +1,7 @@
+Archive Name: frip28n.zip
+Program Description: Automagical FIDO mail routing system, Win32 version
+Operating System Versions: Win95, Win NT 3.1 and later
+
+Your name: Dmitry Zavalishin
+Your email address: dz@phantom.ru
+
