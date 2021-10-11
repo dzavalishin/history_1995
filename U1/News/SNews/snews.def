@@ -1,0 +1,7 @@
+;******* UU2 Rnews2 Program Module Definition File (.DEF) ********
+;
+
+NAME SNews WINDOWCOMPAT
+DESCRIPTION 'U1 SNews'
+STACKSIZE 128000
+HEAPSIZE 512000

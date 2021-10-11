@@ -1,0 +1,46 @@
+;
+;
+;   List of registered users
+;
+; General form is:
+;
+;     uucp_name [parameters] fido_address fido_name
+;
+; parameters start with '-' or '/' and have form
+;
+;     -key=value
+;
+; currently these parameters are defined:
+;
+;     -from=domain	- used to define domain, used in uucp From: field
+;     -filedir=path	- directory to put fileattaches for this user to
+;
+; NB!
+;
+; uucp_name can have domain as well, but, currently, it will be ignored
+; for some reason.
+;
+;
+
+; Entry for postmaster
+postmaster          2:5020/32.0     Postmaster
+; Forward mail to UUCP to postmaster too
+uucp                2:5020/32.0     Postmaster
+
+; dz@isoft.msk.su, default domain used
+dz                  2:5020/32.0     Dmitry_Zavalishin
+; same as above
+dz@                 2:5020/32.0     Dmitry_Zavalishin
+
+; dz-1@dialnet.msk.su, explicit domain used
+dz-1@dialnet.msk.su 2:5020/23.4     Dmitry_Zavalishin_1
+
+; dz-2@pd.isoft.msk.su, partially defined domain - pasted to default
+dz-2@pd.            2:5020/23.77    Dmitry_Zavalishin_2
+
+; Entry for newsmaster
+newsmaster          2:5020/32.0     NewsMaster
+newsmaster          2:5020/23.55    NewsMaster
+newsmaster          2:5020/23.4     NewsMaster
+
+

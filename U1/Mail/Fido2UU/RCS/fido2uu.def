@@ -1,0 +1,27 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	96.03.09.11.32.31;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@NAME Fido2UU WINDOWCOMPAT
+DESCRIPTION 'U1 Fido2UU'
+STACKSIZE 128000
+HEAPSIZE 512000
+@

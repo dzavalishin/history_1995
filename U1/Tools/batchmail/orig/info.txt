@@ -1,0 +1,32 @@
+ * Usage:
+ *      batchmail [options] UUCP-destination-host address(es) < message
+ *
+ * Options:
+ *      -s_SIZE_        - size of a batch file in KB
+ *      -u_uux-option_  - option for UUX command (may be plural)
+ *      -f              - force flush batch file
+ *
+ * Batch file format:
+ *
+ *      msg_length checksum address address...\n
+ *      ...message...
+ *      msg_length checksum address\n
+ *      ...message...
+ *  etc
+ *      msg_length is a 7-digit decimal number of bytes in message
+ *      checksum is a 4-digit hexadecimal checksum of a body of the message
+ *
+ * EX:
+ *      0007453 fa90 chernenko@kgbvax piet@mcsun.eu.net
+ *      From luser Wed Nov 07 23:15:11 MSK 1990 remote from npole
+ *      Subject: April Fools Day joke
+ *      To: piet@mcsun.eu.net (Piet Beertema)
+ *      .....7327 bytes of bullshit.....
+ *
+ * Config file format:
+ *
+ *      uucp-hostname   [batch-size     [uux-options]]
+ * EX:
+ *      kgbvax          100             -z
+ *      npole           50
+ *      DEFAULT         100             -z -a

@@ -1,0 +1,29 @@
+===================================== UU2 ======================================
+   From: Alik Trakhtman                      2:465/10        10 Dec 95  23:40:00
+     To: Dmitry Zavalishin                                   11 Dec 95  04:30:07
+   Subj: FTN-овский адpес гейта - должен меняться динамически!!! ;)             
+================================================================================
+* Crossposted в NETMAIL
+* Crossposted в UU2
+
+Приветствую, Dmitry!
+
+>=== Cut Begin: SETUP.U1 ===
+;
+; There may be two records, which differ only in AKA part.
+;
+FTN fidonet 2:465/10.128@fidonet.org fidonet.org z=1-6
+FTN unitycom 16:6220/10.128@unitycom ftn.donetsk.ua z=16-16
+;
+>=== Cut End ===
+
+Это конечно пpекpасно, что я могу для pазных FTN-овских зон
+подставлять pазные домены.
+
+Hо почему это только для нетмейла, а что для эх/ньюсов так
+не возможно? :-( IMHO это не пpавильно.
+
+С наилучшими пожеланиями -  Alik
+
+--- E-Mail: alik@ftn.donetsk.ua
+ * Origin: MedNet (2:465/10)

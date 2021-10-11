@@ -1,0 +1,1361 @@
+.FIXEDFONT
+
+.entry OverView
+.title Title Page
+.par align center
+.ifdef OS2
+.insert code
+:p.
+:lines align=center.
+.end-code
+.endif
+                                     U U 2
+
+
+                              UUCP - FIDO gateway
+
+                                  Version 1.12
+
+.ifdef OS2
+.insert code
+:artwork align=center name='StarCube.BMP'.
+.end-code
+.endif
+
+
+.ifndef OS2
+
+
+
+                                ~Operator's guide~Guide~
+.else
+                                Operator's guide
+.endif
+
+
+
+                  Copyright (C) 1991-1994 by Dmitry Zavalishin.
+
+.ifdef OS2
+.insert code
+:elines.
+.end-code
+.endif
+.endpar
+
+.ifdef OS2
+~Go to Guide~Guide~
+~Go look at the cover picture~Cover-Picture~
+.endif
+.end-entry
+
+.ifdef OS2
+.entry Cover-Picture
+.title Cover Picture
+.insert code
+:artwork align=center name='uu2balls.BMP'.
+.end-code
+~Go to Guide~Guide~
+.end-entry
+.endif
+
+.entry Guide
+.title UU2 Guide
+
+      
+                                 UU2 Topics 
+
+      ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+
+
+        Chapter I       ~Introduction~Intro~
+        Chapter II      ~System Requirements~System-Requirements~
+        Chapter III     ~Hilights~Hilights~
+        Chapter IV      ~The way it works~The-way-it-works~
+        Chapter V       ~Setting up~Setting-up~
+        Chapter VI      ~Cooperation with...~Cooperation-with~
+        Chapter VII     ~Utilities~Utilities~
+        Chapter VIII    ~User's Manual~User's-Manual~
+        Chapter IX      ~Advanced operation~Advanced-operation~
+        Chapter X       ~Technical notes~Technical-notes~
+        Chapter XI      ~local specific (RelCom)~local-specific~
+        Chapter XII     ~My thanx to~Thanx~
+
+.end-entry
+.entry Intro
+.title Introduction
+
+     1.1: It is a beta version!
+
+          Hi, dear user!
+
+.par
+     Well, this is another beta version of UU2. It has bugs, it 
+does all but the things you need it to, it doesn't work at all... 
+Sure, I do my best to make it better and better, but don't judge 
+me too strictly, if something is wrong!
+.endpar
+
+
+     1.2: Overview
+
+.par
+     This product (hereinafter Gate) is the facility that
+enables you being the user both of UUCP network (such as
+Relcom, UUNET, etc.) and FIDO (FidoNet, LifNet, etc.) to
+integrate these networks. Gate is able to transfer messages
+from one network to another as well as integrate electronic
+conferences.
+.endpar
+
+     1.3: How to Get in Touch with the Author
+
+.par
+     If you want to get in touch with the author of this
+thing  with  your comments, questions, suggestions and
+swearing you may:
+.endpar
+         o  Subscribe to UU2 echo.
+
+         o  Send a letter via e-mail:
+
+          Internet
+                    dz@phantom.msk.su
+
+          UUCP
+                    funet.fi!kiae!dialnet!pd!dz
+
+          FIDO
+                    Dmitry Zavalishin, 2:5020/32
+
+         o  Call by telephone number: +7 (095) 110-6728
+
+         o  Send a snailmail letter to:
+
+          Zavalishin D.K.
+          Russia, Moscow, Artekovskaya str. 7-4, fl.260
+
+
+ ~(Next chapter)~System-requirements~
+
+.end-entry
+.entry System-requirements
+.title System Requirements
+
+     2.1: Hardware
+
+
+.par
+     No special hardware required. Current version of UU2
+will run on  any PC compatible machine, including PC XT,
+with 8086, V20 and up to 486 processor. I suppose it will
+work even on not "true-compatible"  machines, but if not -
+sorry, I had no such beast to test UU2 on.
+.endpar
+
+
+     2.2: Software
+
+
+.par
+     MS or PC-DOS 3.30 or later required. For those who runs
+OS/2: native OS/2 2.1 version is partially complete, contact me
+to get OS/2 executables.
+.endpar
+
+.par
+     UU2 was tested (by myself or betatesters) with: MS DOS
+5.0, OS/2 2.1 DOS box, Novell Netware 3.11, Lantastic, QEMM
+6.03 (stealth  mode), DesqView/X 1.0, FrontDoor 2.01-2.10,
+BinkleyTerm 2.50-2.55 (and some sideway betas, such as EE
+beta D), D'Bridge, Imail 1.10-1.21, Squish 1.00-1.01,
+TossScan (patched, see section  6.2.5 at page 18), Waffle
+UUCP 1.64-1.65, UUPC/Extended 1.11, UUPC/* by Ache 2.0-5.0.
+.endpar
+.par
+     In addition I must mention that UU2 was used in multichannel
+FIDO systems in a situation when gate modules work
+in both channels simultaneously.
+.endpar
+
+ ~(Next chapter)~Hilights~
+
+.end-entry
+.entry Hilights
+.title Hilights
+.par
+Two address convertion schemes at once: Traditional 
+(Z:N/F.P <--> pP.fF.nN.zZ.domain) and userlist-based one.
+.endpar
+
+.par
+Optional access restriction: You can define domains which are accessible  
+for non-registered FIDOnet-side user.
+.endpar
+
+.par
+News/echo gating in viamail/viauux/viarsh modes or via user-defined program.
+Compressed feeds supported.
+.endpar
+
+.par
+Complete activity log, optionally with debugging info.
+.endpar
+
+.par
+Statistics support: all the letters passing gateway are logged together  
+with their origin and destination address, direction (to or from fidonet) 
+and size. Just import this information to your DBMS and prepare any
+reports you like.
+.endpar
+
+.par
+Remote access module: broadcasts messages to all registered gate users, 
+sends help file on user request, etc.
+.endpar
+
+.par
+Easy way to add specific headlines to your letters. Need 
+'Return-Receipt-To:' or 'Distribution:' headline? Just write it in the 
+first line of the message text - gate will move it into the header of
+resulting uucp message.
+.endpar
+
+.par
+Cc, Return-Receipt supported.
+.endpar
+
+.par
+Automatic UUencode of (small) attached files.                                          
+.endpar
+
+.par
+Can be easily combined with nearly any UUCP clone.
+.endpar
+
+.par
+Handy uucp address representation in Fido messages - in almost all the 
+cases you don't need to add that stupid 'To:' line to your message.
+.endpar
+
+.par
+Advanced FIDO standards, such as FSC-0044, FSC-0035 are implemented.
+.endpar
+
+.par
+Unlimited number of echo/newsgroups supported. There is no limit at 
+all - adding more and more group names to list just slows conversion  
+down a bit. Gate caches in memory up to 10Kb of group definitions.
+.endpar
+
+.par
+Optional Cyrillic code tables conversion. Additional code conversion  
+tables can be added to new versions of gate.
+.endpar
+
+.par
+Large messages from UUCP to FIDO are PKZIPped and converted to    
+file-attaches on the fly.
+.endpar
+
+.par
+Filtering of control messages in UseNet news (such as cancel, newgroup...)
+.endpar
+
+.par
+Selective headline elimination system: Define which headlines you want 
+to see in FIDO messages. Definitions for netmail and echomail are 
+separate. Unwanted headlines can be stripped or hidden under ^A.
+.endpar
+
+.par
+Three log file formats - my own, BinkleyTerm and FrontDoor lookalike.
+.endpar
+
+.par
+Powerfull log file filter: all the messages are divided into classes. 
+You can turn logging of each class of messages on or off separately.
+.endpar
+
+.par
+Fidogate's 'Comment-To:' headline supported.
+.endpar
+
+.par
+Ability to add 'Distribution' headline to all the messages in any newsgroup.
+.endpar
+
+.par
+Well, i'm tired to  enumerate :)... Just set it up and try yourself!
+.endpar
+
+ ~(Next chapter)~The-way-it-works~
+
+.end-entry
+.entry The-way-it-works
+.title The way it works
+
+     4.1: Mail transfer
+
+
+     4.1.1  ... from FIDO to UUCP
+
+.par
+This is what FIDO2UU.EXE is needed for. Being executed,
+FIDO2UU.EXE performs the following steps:
+.endpar
+
+.par
+     1. Searches NETMAIL folder of your FIDO system for
+messages, that should be processed. Messages, that will be
+processed by FIDO2UU.EXE must have destination address, that
+is equal to the address, given in Address or NewsAddress
+parameter of UU2 setup, and destination user name that is
+equal to the name given in the Address parameter of  UU2
+setup or contains character '@'.
+.endpar
+
+.par
+     2. Each of the messages found is converted to UUCP-
+style one as follows:
+.endpar
+
+.par
+*  Origin address is searched in USERS.UU2 and replaced
+with corresponding UUCP one, if found. If more than
+one matching occurrence exists, first one is used. If
+origin address is not found in USERS.UU2, user is
+treated as not registered and some restrictions are
+applied. (See below). In this case address is
+converted to
+.endpar
+
+     FirstName_LastName@pPOINT.fNODE.nNET.zZONE.<UU2_DOMAIN>
+
+.par
+Where <UU2_DOMAIN> is a value of Domain parameter,
+given in UU2 setup file.
+.endpar
+
+.par
+* If FIDO destination username field contains '@', it's
+value is used as UUCP destination address. Otherwise,
+message is searched for the line of form: 'To:
+<uucp_address>' and value of <uucp_address> is used
+as destination.
+.endpar
+
+.par
+* Message is searched for FIDO-style CC lines, all  of
+those lines are converted to RFC-822 form and added
+to resulting message header to inform recipient about
+addresses where copies of letter was sent to.
+.endpar
+
+.par
+*  Message is searched for UU2-specific XCC lines ('XCC:
+<uucp_address>'). Uucp-addresses, that are given in
+those lines are added to those listed in CC headlines
+of resulting message, and copies of message are sent
+to those addresses, as well, as to primary destination address.
+.endpar
+
+.par
+*  Before sending message to destination or XCC address,
+validity of addresses  is checked, if  user is not  a
+registered one. Address assumed to be valid if all of
+it's parts,  @exept  for  local name  (as  defined  in
+RFC-822) are found among  the contents of Free  setup
+file parameter.
+.endpar
+
+*  Example:
+
+   SETUP.UU2 contains:
+       Free mycompany.com borland.com john.UUCP Frank
+
+
+   Valid addresses:
+
+       me@myhost.mycompany.com
+       john.UUCP!JohnHimSelf@borland.com
+       Hey@Frank%borland.com
+       Frank!root
+
+   Invalid addresses:
+
+       john!root
+       Somebody@borland.org
+
+.par
+*  Message beginning is searched for all other lines  of
+form 'Name: Value', and all of them are converted to
+UUCP message headlines.
+.endpar
+
+
+     4.1.2  ... from UUCP to FIDO
+
+.par
+     UU2FIDO.EXE is responsible for it. Your UUCP package
+must run this program instead of it's usual mail delivery
+program (rmail or sendmail). To achieve that you need to
+rename UU2FIDO.EXE to RMAIL.EXE or SENDMAIL.EXE, according
+to what name mail delivery program has in your package. Make
+sure you have not deleted original delivery program - gate
+needs it to be able send mail to UUCP side.
+.endpar
+.par
+     Another way to set up gate can be used if your UUCP is
+able to call external delivery program to deliver mail to
+specified domains. In this case you don't need to rename
+anything at all - just set up your UUCP package to call
+UU2FIDO.EXE. (For detailed discussion on this method please
+see section 6.1.1 at page 13).
+.endpar
+
+
+     4.1.3  Viamail news entry point
+
+.par
+     If one of the delivery addresses is 'newsmaster' (this
+name is configurable, of course), the letter will be sent to
+the echo-mail too. For example, (if the configuration is the
+same as it is in SETUP.UU2 file of documentation) execution
+of the command "uu2fido dz newsmaster < news_article" will
+lead to the sending of file contents to the user dz and,
+what is more, to the conversion of file contents into echo-
+packet in compliance with the contents of Newsgroups
+headline. (In fact, UU2FIDO.EXE just stores the copy of
+message in the UU2 inbound news spool. The conversion to
+echo-packet is performed by UNBATCH.EXE)
+.endpar
+
+
+     4.2: News transfer
+
+
+     4.2.1  ... Echo-Mail to News
+
+.par
+     This is a quite sophisticated process. Snews and batch
+programs are responsible for it. To have the echo being
+sent, your echo-processor has to make the packet with echo-
+mail. The packet must be made for the  address placed in
+NEWSADDRESS parameter of configuration file and it must not
+be compressed by some compression program. In particular,
+there is a possibility to create  non-compressed packets in
+Imail 1.21 echo-processor. After starting with key -s,
+SNEWS.EXE will search for the letters which have been sent
+to NEWSADDRESS with echo-packet attached to them among
+netmail and then snews program will try to convert and
+delete the echo-packet. You may also attach snews to echo-
+processor as an additional compression program. In such a
+mode the program converts the packet and deletes it instead
+of compressing it. Nevertheless, it does  not surprise the
+echo-processor usually. The only trouble is that the
+processor in this case generates the letter to which, as it
+seems to him, the file is attached. You may clean these
+letters by running SNEWS.EXE -s, but what is more likely,
+the echo-processor will delete them in its next pass.
+.endpar
+.par
+     The program SNEWS.EXE converts the letters of FIDO
+format into UseNet format and places them in the special
+directory, from whitch they may be taken by the program
+BATCH.EXE later on. As a result of BATCH.EXE operation the
+letters are converted into the news packets. In turn, the
+packets are sent to the  receiving systems using method,
+specified in configuration file (FEEDS.UU2) for that system.
+.endpar
+
+     4.2.2  ... News to Echo
+
+.par
+     The recieving of news also proceeds by two stages. On
+the first stage, uu2fido (ViaMail) or rnews (@VaiUux) program
+receives the news packet and places it into inbound spool-
+directory. The program UU2FIDO.EXE considers as news
+everything, that have been sent to the address, placed in
+the configuration file in the parameter NEWSMASTER. The
+contents of the spool-directory is handled by UNBATCH.EXE.
+This program converts news to echo-packets addressed to your
+node and places them in the your FIDO software inbound files
+directory. Usually it is enough for your echo-processor to
+find it there and to import.
+.endpar
+
+ ~(Next chapter)~Setting-up~
+
+.end-entry
+.entry Setting-up
+.title Setting things up
+.par
+     Ok, in general, installation of UU2 is not too
+complex... for experienced FIDOnet sysop... who understands
+UUCP technology as well :). Here's the common case described
+step-by-step:
+.endpar
+
+1.  Find (or create) good lovely directory to put all the junk to.
+
+2.  Copy all the files there.
+
+3.  Edit UU2 setup file.
+.par
+    Here you will need to tell the gate which thing it
+must call to send uucp mail (RmailEXE parameter). Usually  
+it will be something like rmail.exe or sendmail.exe - refer 
+to your UUCP package to find this out and...
+.endpar
+
+.par
+ o 1st way: rename it! You'll have to replace original 
+RMAIL.EXE (or whatever you have) with UU2FIDO.EXE. So:
+.endpar
+
+    1.  Rename RMAIL.EXE to (say) UURMAIL.EXE
+
+    2.  Rename UU2FIDO.EXE to RMAIL.EXE
+
+    3.  In SETUP.UU2 set RmailEXE parameter to have value UURMAIL.EXE.
+
+.par
+ o 2nd way: Make sure your UUCP package's RMAIL.EXE will 
+call uu2fido to deliver letters to domain you're going to  
+use for FIDO/FTN mail. Don't rename anything, in SETUP.UU2 
+set RmailEXE parameter to have value RMAIL.EXE (or whatever 
+it happens to be in your UUCP package).
+.endpar
+
+.par
+4. Set UU2 environment variable in your AUTOEXEC file -
+it must contain the name of directory you put UU2 setup files to.
+.endpar
+
+.par
+5. Go to your echoprocessor setup and tell echoprocessor
+that you've got a new compression program called UU2, and that 
+it is known that to compress mail packet with that program 
+echoprocessor must execute 'SNEWS.EXE name.pkt' or 
+'SNEWS.EXE -i anything name.pkt'. You will use this 'compression' 
+program to export echoes to gate. Assign it to the node or point
+which address you have in NewsAddress setup parameter of UU2, 
+than add that address to export list of any echo you wand to 
+gate out.
+.endpar
+
+
+
+ ~(Next chapter)~Cooperation-with~
+
+.end-entry
+.entry Cooperation-with
+.title Cooperation with
+.par
+   In the following subsections I'm describing 'interesting' 
+details of UU2 installation together with a different 3-rd party 
+software packages.
+.endpar
+
+.par
+   If you can't find your beloved mailer, uucp package or packer here,  
+please try to install UU2 without additional help :) and send me any 
+information you want me to include in this chapter :).
+.endpar
+
+
+   ~UUCP packages~Cooperation-UUCP-packages~      
+   ~Echo-Processors~Cooperation-Echo-Processors~
+
+
+ ~(Next chapter)~Utilities~
+
+.end-entry
+.entry Cooperation-UUCP-packages
+.title Cooperatin with UUCP packages
+
+
+         ~Waffle 1.65~Cooperation-with-Waffle-1.65~    ~UUPC/1.11 Extended~Cooperation-with-UUPC/1.11-Extended~    ~UUPC/* by Ache~Cooperation-with-UUPC/*-by-Ache~
+
+.end-entry
+.entry Cooperation-with-Waffle-1.65
+.title Cooperation with Waffle 1.65
+
+.par
+   As it was said before, there's two differrent ways of UU2
+installation exist - one with replacing RMAIL.EXE with
+UU2FIDO.EXE, and one without such replacement.
+.endpar
+
+     >>> Replacing rmail.exe
+
+.par
+   Rename (Waffle's) RMAIL.EXE to UURMAIL.EXE, rename (UU2's)
+UU2FIDO.EXE to RMAIL.EXE and put it to the directory where
+RMAIL.EXE was, in SETUP.UU2 write:
+.endpar
+
+          RmailEXE <correct_drive_&_dir>\uurmail.exe
+          RmailExitL -1
+          RmailExitR 0
+
+     >>> Cooperating with RMAIL.EXE
+
+Don't rename anything. In SETUP.UU2 write
+
+          RmailEXE <correct_drive_&_dir>\rmail.exe
+          RmailExitL -1
+          RmailExitR 0
+
+In <waffle_dir>\uucp\paths write:
+
+          .fidonet.org                   | <UU2_dir>\uu2fido.exe
+          <UU2_domain>                   | <UU2_dir>\uu2fido.exe
+
+
+.par
+NB! Make sure you didn't set PassUnknownBack mode in UU2 setup!
+.endpar
+
+
+     See also:
+        ~Cooperation with UUCP packages~Cooperation-UUCP-packages~
+        ~Cooperation with Echo processors~Cooperation-Echo-Processors~
+
+.end-entry
+.entry Cooperation-with-UUPC/1.11-Extended
+.title Cooperation with UUPC/1.11 Extended
+
+     >>> Replacing rmail.exe
+
+.par
+     Rename (uupc's) RMAIL.EXE to UURMAIL.EXE, rename (UU2's)
+UU2FIDO.EXE to RMAIL.EXE and put it to the directory where
+RMAIL.EXE was, in SETUP.UU2 write:
+.endpar
+
+          RmailEXE <correct_drive_&_dir>\uurmail.exe
+          RmailExitL -1
+          RmailExitR 0
+
+
+     >>> Cooperating with RMAIL.EXE
+
+.par
+NB! The following method was not tested, I'm not sure it works.
+.endpar
+
+Don't rename anything. In SETUP.UU2 write
+
+          RmailEXE <correct_drive_&_dir>\rmail.exe
+          RmailExitL -1
+          RmailExitR 0
+
+In <uupc_dir>\conf\hostpath write:
+
+          .fidonet.org                   | <UU2_dir>\uupc2uu2.bat
+          <UU2_domain>                   | <UU2_dir>\uupc2uu2.bat
+
+In <UU2_dir>\uupc2uu2.bat write:
+
+          <UU2_dir>\uu2fido %3@%2
+
+
+.par
+NB! Make sure you didn't set PassUnknownBack mode in UU2 setup!
+.endpar
+
+     See also:
+        ~Cooperation with UUCP packages~Cooperation-UUCP-packages~
+        ~Cooperation with Echo processors~Cooperation-Echo-Processors~
+
+.end-entry
+.entry Cooperation-with-UUPC/*-by-Ache
+.title Cooperation with UUPC/* by Ache
+
+Versions supported:
+
+     3.00 - completely
+
+     4.07 - no viauux news reception possible
+
+     5.00 - PassUnknownBack will not work well.
+
+.par
+    Installation is nearly the same as for UUPC 1.11. The only
+difference is the value of the following items in SETUP.UU2:
+.endpar
+
+          RmailExitL          0
+          RmailExitR          48
+
+
+     See also:
+        ~Cooperation with UUCP packages~Cooperation-UUCP-packages~
+        ~Cooperation with Echo processors~Cooperation-Echo-Processors~
+
+.end-entry
+.entry Cooperation-Echo-Processors
+.title Cooperation with Echo-processors
+
+      ~Squish 1.01~Cooperation-with-Squish-1.01~  
+      ~GEcho 1.00~Cooperation-with-GEcho-1.00~  
+      ~IMail 1.21~Cooperation-with-IMail-1.21~  
+      ~FastEcho~Cooperation-with-FastEcho~
+      ~TossScan 1.0~Cooperation-with-TossScan-1.0~
+
+   See also:
+      ~Cooperation with UUCP packages~Cooperation-UUCP-packages~
+
+.end-entry
+.entry Cooperation-with-Squish-1.01
+.title Cooperation with Squish 1.01
+
+The following is how to export echoes to gate:
+
+SETUP.UU2:
+
+          ...
+          Address             2:5020/23.0@fidonet.org uucp
+          NewsAddress         2:5020/23.1@fidonet.org
+          ...
+
+ECHOES.UU2:
+
+          ...
+          fido.bermudian.sysop          Bermudian.Sysop
+          fido.bermudian.talks          Bermudian.Talks
+          ...
+
+SQUISH.CFG:
+
+          ...
+          Address 2:5020/23
+          ...
+          Compress compress.cfg
+          Routing route.cfg
+          ...
+          Pack UU2 2:5020/23.1
+          ...
+          ; The following two groups are to be gated to news
+          ;
+          EchoArea Bermudian.Sysop x:/Somewhere/bsys -$m200 2:5020/23.1
+          EchoArea Bermudian.Talks x:/Somewhere/btlk -$m200 2:5020/23.1
+          ...
+
+COMPRESS.CFG:
+
+          ...
+          Archiver UU2
+                 Extension UU2
+                 Ident 0,NothingOfAGreatValue
+                 Add x:\uu2\snews %f
+          End Archiver
+          ...
+
+ROUTE.CFG:
+          Send hold file 2:5020/23.1
+
+     See also:
+        ~Cooperation with UUCP packages~Cooperation-UUCP-packages~
+        ~Cooperation with Echo processors~Cooperation-Echo-Processors~
+
+.end-entry
+.entry Cooperation-with-GEcho-1.00
+.title Cooperation with GEcho 1.00
+
+The following is how to export echoes to gate:
+
+System data/Compression programs/8 menu:
+
+.par
+.ifdef OS2
+.insert code
+:p.
+:cgraphic.
+.end-code
+.endif
+          ีอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออธ
+          ณ                                                               ณ
+          ณþARC PKPAK -a       ีอออออออออออออออออออออออออ   8 ธ           ณ
+          ณ ARJ ARJ a -e -m1 -sณ                              ณ           ณ
+          ณ LZH LHA a /mt      ณ Program  SNEWS               ณ           ณ
+          ณ PAK PAK A /L /ST   ณ Switches -i                  ณ           ณ
+          ณ ZIP PKZIP -ao      ณ Memory   640                 ณ           ณ
+          ณ ZOO ZOO a:         ณ                              ณ           ณ
+          ณ SQZ SQZ a /q0 /z3  ิออออออออออออออออออออออออออออออพ           ณ
+          ณ   8                                                           ณ
+          ณ   9                                                           ณ
+          ณ  10                                                           ณ
+          ณ GUS {+}                                                       ณ
+          ณ                                                               ณ
+          ิอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออพ
+.ifdef OS2
+.insert code
+:ecgraphic.
+.end-code
+.endif
+.endpar
+
+Node manager menu:
+
+.par
+.ifdef OS2
+.insert code
+:p.
+:cgraphic.
+.end-code
+.endif
+          ี New entry ออออออออออออออออออออออออออออออออ Node manager ธ
+          ณ                                                         ณ
+          ณ Node address        2:5020/23.1                         ณ
+          ณ Sysop name                                              ณ
+          ณ Route via           2:5020/23.1                         ณ
+          ณ Packet password                                         ณ
+          ณ AreaMgr password                                        ณ
+          ณ Authorized groups                                       ณ
+          ณ Remote maintenance  No                                  ณ
+          ณ Allow rescan        No                                  ณ
+          ณ Forward requests    No                                  ณ
+          ณ Send notify list    No                                  ณ
+          ณ Compression type    SNEWS -i                            ณ
+          ณ Mail archive status Hold                                ณ
+          ณ Direct              Yes                                 ณ
+          ณ                                                         ณ
+          ิอออออออออออออออออออออออออออออออออออออออออออออออออออออออออพ
+.ifdef OS2
+.insert code
+:ecgraphic.
+.end-code
+.endif
+.endpar
+
+Add 2:5020/23.1 to the export list of all areas you want to gate to UseNet.
+
+     See also:
+        ~Cooperation with UUCP packages~Cooperation-UUCP-packages~
+        ~Cooperation with Echo processors~Cooperation-Echo-Processors~
+
+.end-entry
+.entry Cooperation-with-IMail-1.21
+.title Cooperation with IMail 1.21
+
+Compression Programs menu:
+
+          Program 8      snews -i
+
+Node Export Manager menu:
+
+.par
+.ifdef OS2
+.insert code
+:p.
+:cgraphic.
+.end-code
+.endif
+          Address        2:5020/23.1
+          Password
+          Groups
+          Direct         Y
+          Remote Maint   N
+          Status         Hold
+          Program        snews -i
+          Capability     Type 2+
+          CW Handling    Force
+.ifdef OS2
+.insert code
+:ecgraphic.
+.end-code
+.endif
+.endpar
+
+.par
+In General configuration/Product codes menu add product code 'CC'.
+.endpar
+
+.par
+Add node 2:5020/23.1 to the export list of all echoes you want to 
+export to UseNet.
+.endpar
+
+     See also:
+        ~Cooperation with UUCP packages~Cooperation-UUCP-packages~
+        ~Cooperation with Echo processors~Cooperation-Echo-Processors~
+
+.end-entry
+.entry Cooperation-with-FastEcho
+.title Cooperation with FastEcho
+
+Edit/Compression Programs menu:
+
+.par
+.ifdef OS2
+.insert code
+:p.
+:cgraphic.
+.end-code
+.endif
+          ีออออออออออออออออออออออออออออออออออออออออออCompression Programsอธ
+          ณ    Tag  Command                                               ณ
+          ณฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤณ
+          ณ A) UU2  snews -i                                              ณ
+          ณ B) ฐฐฐ                                                        ณ
+          ณ C)                                                            ณ
+          ณ D)                                                            ณ
+          ณ E)                                                            ณ
+          ณ F)                                                            ณ
+          ณ G)                                                            ณ
+          ณ H)                                                            ณ
+          ิอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออพ
+.ifdef OS2
+.insert code
+:ecgraphic.
+.end-code
+.endif
+.endpar
+
+Edit/Node Configuration menu:
+
+.par
+.ifdef OS2
+.insert code
+:p.
+:cgraphic.
+.end-code
+.endif
+          ีออออออออออออออออออออออออออออออออออออNode-Managerอธ
+          ณ                                                 ณ
+          ณ     Node: 2:5020/23.1                     4D: Y ณ
+          ณ                                      Tosscan: N ณ
+          ณ Your Aka: 2:5020/23.0               D'Bridge: N ณ
+          ณ                                 ARCmail 0.60: N ณ
+          ณ Password:                             Direct: Y ณ
+          ณ                                        Crash: N ณ
+          ณ                                         Hold: Y ณ
+          ณ   Packer: UU2                      Umlaut: None ณ
+          ณ                                                 ณ
+          ิอออออออออออออออออออออออออออออออออออออออออออออออออพ
+.ifdef OS2
+.insert code
+:ecgraphic.
+.end-code
+.endif
+.endpar
+
+.par
+Add 2:5020/23.1 to the export list of echoes you want to gate to UseNet.
+.endpar
+
+     See also:
+        ~Cooperation with UUCP packages~Cooperation-UUCP-packages~
+        ~Cooperation with Echo processors~Cooperation-Echo-Processors~
+
+.end-entry
+.entry Cooperation-with-TossScan-1.0
+.title Cooperation with TossScan 1.0
+
+.par
+   In general, UU2 shouldn't be used with TossScan since TossScan 
+strips off '@' character from FIDO message headers.
+.endpar
+
+
+     See also:
+        ~Cooperation with UUCP packages~Cooperation-UUCP-packages~
+        ~Cooperation with Echo processors~Cooperation-Echo-Processors~
+
+.end-entry
+.entry Utilities
+.Title Utilities
+
+     7.1: Remote control unit
+
+
+.par
+     This utility (GREMOTE.EXE), being started without any
+parameters, searches the letters which have been sent to the
+user with the name Gate and when found them, the utility
+tries to find and execute the commands contained in letter.
+It should be noted that the letters may come through Gate
+too - gremote ignores the lines of the RFC822 letter header.
+.endpar
+
+          Gremote understands the following commands:
+
+     HELP          
+.par
+Sends back a note concerning GREMOTE comands together with the 
+contents of special file (See HELPFILE config. file option).
+.endpar
+
+     USERS ~(Secure)~Gremote-secure~
+.par
+Sends the list of ~registered~Registered-Users~ gate users.
+.endpar
+
+     ECHOES
+.par
+Sends the list of gated echo-, news-groups.
+.endpar
+
+     NOTIFY ~(Secure)~Gremote-secure~
+.par
+Sends the letters to the all the ~registered~Registered-Users~ users of 
+gate with reminding, that they are gate users, what their address is and 
+how they may ask for help.
+.endpar
+
+     BROADCAST ~(Secure)~Gremote-secure~
+.par
+Distributes text following the comand (up to the end of the message)  
+to the all the ~registered~Registered-Users~ users.
+.endpar
+
+
+
+     7.2: Statistics analyzer
+
+
+Still in alpha testing, sorry.
+
+
+.end-entry
+
+.popup Gremote-secure
+.title Secure (Privileged) GRemote commands:
+The privileged commands may be executed only 
+when a valid password is given. To use such 
+commands you need to pass password in the 
+Subject field of the letter.
+.end-popup
+
+.popup Registered-Users
+.title Registered Users:
+Registered users are the users, which are 
+mentioned in the USERS.UU2 configuration file.
+.end-popup
+
+.entry User's-manual
+.title User's manual
+
+     8.1: Sending letters via gate (FIDO side)
+
+
+     8.1.1  Address
+
+.par
+     Well, you going to send a letter to Internet. Recipient's 
+address is "jack@jpc.super.org", gate you will use is placed  
+at 1:333/22 and it's "magic name" is UUCP. (Gate's magic name  
+can be set up in ADDRESS parameter of configuration file.) Two 
+ways exist to prepare that letter.
+.endpar
+
+    First method:
+
+.par
+    FIDO destination address of letter must be "UUCP, 1:333/22", 
+the very first line of letter text must be "To: jack@jpc.super.org".
+.endpar
+
+    Second method:
+
+.par
+    FIDO destination address  must be  "jack@jpc.super.org, 1:333/22". 
+This method is much more convinient, but can be used only if Internet 
+address is short enough to fit into the FIDO username field.
+.endpar
+
+
+     8.1.2  Netmail reply
+
+.par
+     When replying to letter, which came from gate, you always
+have correct FIDO destination address, because UU2 makes FIDO 
+letter "from" field to contain best kind of address possible, 
+filling username subfield with Internet address if it is short 
+enough, or with gate's magic name otherwise. In the latter case 
+you need to type in "To: Internet_address" in the first line of 
+your reply manually (Unless your message editor supports 
+FTS-0034/35 recommendations). Note that Internet address of the  
+person you replying to can be found in a special kludge line 
+(REPLYTO) UU2 inserts.
+.endpar
+
+     8.1.3  Receipt Request
+
+.par
+     Letters with RRQ flag are confirmed with a fragment of
+the gate log file, which corresponds to the processing of the 
+letter. In addition, resulting uucp letter will carry
+Return-Receipt-Request headline.
+.endpar
+
+     8.1.4  Additional headlines
+
+.par
+     In the very first lines of the letter you may insert the 
+lines like "name: value". They must be started from the first 
+position and must not have blanks between a keyword and a colon. 
+It is desireable to make the first letters of the key words capital. 
+All the lines of such a form (down to the first line not answering  
+to this description) are considered to be the lines of RFC822-header 
+of the letter and are placed there. Their width is limited by 75 
+symbols.
+.endpar
+
+.par
+.ifdef OS2
+.insert code
+:p.
+:cgraphic.
+.end-code
+.endif
+          Example:
+          |
+          |To: myfriend@somewhere.us
+          |To: news@kiae.su
+          |Newsgroups: comp.lang.std.c++
+          |Distribution: su
+          |Return-Receipt-To: me@mydomain.su
+          |
+          |<- this is the left border of editor window :)
+.ifdef OS2
+.insert code
+:ecgraphic.
+.end-code
+.endif
+.endpar
+
+     8.1.5  CC feature
+
+.par
+     To send a letter to the several addresses in uucp network you 
+may use the following way: place at the very beginning of the letter   
+the line 'xcc: address one_more_address ...'. Abbreviation 'xcc'  
+(instead of the usual 'cc') is chosen so that the line would not be
+interpreted by FIDO software.
+.endpar
+
+     8.1.6  Text formatting
+
+.par
+     Gate will automatically reformat the lines with the width more 
+than 80 characters. Formatting is executed without right border 
+indentation and hyphenation. Unfortunately, by now it is not possible  
+to disable the formating despite of the fact, that sometimes I want 
+to (to transfer wide table, for example). On the other hand, not every  
+network may transfer the letters with the line's width more than 80
+symbols, so gate in some sense provides @standartability to your 
+letters.
+.endpar
+
+     8.1.7  UUENCODE
+
+.par
+     If you need to send a small file to Internet, you don't have to 
+encode it yourself and stuff into the letter. Just attach file to the 
+letter, and UU2 will uuencode it for you and send along with the text 
+of letter. Please don't attach large files, 'cause  UU2 does not split  
+'em up into the parts before encoding and resulting letter will be too 
+large to pass through.
+.endpar
+
+
+     8.2: Sending letters via gate (UUCP side)
+
+
+     8.2.1  Comment-To
+
+.par
+     When posting an article into the newsgroup which is gated to  
+FIDO with UU2, you can force gate to set FIDO echomail message 'To'  
+field to anything you want using a special "Comment-To:" headline. 
+Syntax of that headline is "Comment-To: User Name <address>". User 
+name given will replace the usual "To: All" in resulting echo message,  
+and address is simply ignored.
+.endpar
+
+.end-entry
+.entry Advanced-operation
+.title Adanced operation
+
+
+
+
+
+
+
+
+.end-entry
+.entry Technical-notes
+.title Technical Notes
+
+
+     10.1: General
+
+
+.par
+The FTSC assigned product code for UU2 is CC hexadecimal.
+.endpar
+
+.par
+UU2 supports 3D/4D and partially 5D addresses.
+.endpar
+
+.par
+UU2 creates and is able to receive Type 2+ packets, provided they 
+have correct capability word as well as it's validation copy.
+.endpar
+
+.par
+UU2 batcher doesn't add '#! cunbatch' line at the beginning of 
+compressed UseNet batches. It is assumed that UU2 will be used  
+with Cnews as the receiver of batches, which doesn't need 
+'#! cunbatch' header.
+.endpar
+
+.par
+Echo-News gateing: text, that follows origin line will be stripped.
+.endpar
+
+.par
+Executable files are not compressed because of overlays contained in.
+.endpar
+
+.par
+UU2 never gives up timeslices in multitasking environment since  
+there's no situations when UU2 waits for some event to happen.
+.endpar
+
+.par
+I did my best to make sure UU2 will not cause any problems on the 
+network or under multitasker, but nothing is guaranteed. But if you  
+encounter some problem related to file locking or something else
+related to multitasking environment, please feel free to inform me.
+.endpar
+
+
+     10.2: Standards supported
+
+
+.par
+     UU2 supports FIDO standards FTS-0001, FTS-0004, FTS-0009,  
+FSC-0035, FSC-0044, FSC-0053 and Internet standards RFC-822, 
+RFC-1036, RFC-1123.
+.endpar
+
+
+     10.3: FIDO kludge lines
+
+
+          Kludge lines parsed:
+
+.par
+FMPT, TOPT,  INTL,  FLAGS, DOMAIN,  MSGID,  REPLY, PID.
+.endpar
+
+          Kludge lines created:
+
+.par
+FMPT, TOPT,  DOMAIN,  INTL, FLAGS,  MSGID,  REPLY, REPLYADDR, 
+REPLYTO, PID.
+.endpar
+
+.par
+Please note that UU2 never attempts to find letter origin address 
+in MSGID field.
+.endpar
+
+
+     10.4: A word on errors handling
+
+
+.par
+     In short, Gate registers errors in the protocol and makes
+the following efforts to secure your property if it failed
+to do something:
+.endpar
+
+         -  Delivery error to UUCP
+
+.par
+The letter will be generated to the sender of the initial message  
+and to the postmaster. The letter contains the corresponded fragment  
+of the UU2 log file and text of the original letter.
+.endpar
+
+         -  The recipient was not found during delievery to FIDO
+
+.par
+The original letter will be sent to the postmaster. If he is also not 
+found in the users' list - so much the worse for you. The letter is 
+simply lost.
+.endpar
+
+         -  The news-group  has  not  found  in  the  list  while
+            converting of news into echo
+
+The letter will be sent to the echo named bad_group.
+
+.par
+         -  The echo-group has not found while converting of echo
+            into news
+.endpar
+
+The letter will be ignored.
+
+.par
+     Among the all fatal errors the worst ones are those, that may 
+occure during delievery of the letter from UUCP. They, usually result 
+in loss of the letter, because some of UUCP packages, when delivering 
+received messages, simply ignore exit codes, returned by delivery program.
+.endpar
+
+
+
+.end-entry
+.entry Local-specific
+.title local specific
+     11.1: Newsserver
+
+
+     11.2: uunpack
+
+
+
+
+.end-entry
+.entry Thanx
+.title Thanx...
+
+          People I'm really thankfull to...
+
+.par
+     Alex Belyaev, Alex Popov, Alex Rudnev, Alex Selkov, Alex Sherbakov,   
+Alex Snigerev, Alex Young, Andew Bloschintsev, Andrew Chernov (Ache),  
+Andrew Kovalev, Andy Nickolayev, Boris Mostovoy, Boris Tyshkievitch,   
+Dmitry Baronov, Dmitry Khrustalev, Egons Bush, Eric Fletcher (Eugeny 
+Chupriyanov), Eugene Crosser, Eugene Peskin, Fyodor Evseev, Gena Rez, 
+Gennady Zvonov, Grubina Olga (Russian dox edition), Harry Bush, Igor 
+Sviridov, Joseph Urban, Kira Stratonnokova (my wife!), Kirill Lebedew, 
+Mark Patterson, Max Mikheenkov, Michael Bravo, Mike Skulkin, Natasha
+Razdaeva (partial dox translation to english), Nikki Chumakov, Oleg
+Nesterov, Oleg Polovinkin, Peter Zeltins, Sergey Ryzshkov (Initiation!),  
+Sergic Dobridnuk, Vad Potapov, Vadim Getmanshchuck, Valery Bardin and 
+all the Relcom team (Relcom network!), Yuri PQ, Yuri Yashnev (Financial 
+support), Serge Terekhov
+.endpar
+
+
+.par
+     If you feel you must be mentioned in this list, but is
+not, I am sorry, sorry, sorry... Please, forgive me - it is
+really hard to recall all the people I discussed UU2 with!
+.endpar
+
+
+.end-entry
+
+

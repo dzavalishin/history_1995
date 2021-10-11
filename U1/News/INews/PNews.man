@@ -1,0 +1,126 @@
+                                                         PNEWS(1)
+
+
+
+NAME
+     Pnews - a program for posting news articles
+
+SYNOPSIS
+     Pnews newsgroup title
+       or
+     Pnews -h headerfile [oldarticle]
+       or
+     Pnews
+
+DESCRIPTION
+     Pnews is a friendly interface for posting news articles.  It
+     will ask several questions, then allow you to enter your
+     article, and then post it using the inews(1) program.  If
+     you type h and a carriage return at any point, Pnews will
+     tell you what it wants to know.
+
+     The -h form is used when invoked from rn.  If your editor
+     can edit multiple files, and you want the article to which
+     you are replying to show up as an alternate file, define the
+     environment variable NEWSPOSTER as "Pnews -h %h %A".  You
+     can also modify the the NEWSHEADER environment variable to
+     change the header file that rn passes to Pnews.
+
+ENVIRONMENT
+     AUTHORCOPY
+             If defined, contains the name of a file to which the
+             finished article will be appended.
+
+             Default: article not saved
+
+     DOTDIR  Where to find your dot files, if they aren't in your
+             home directory.  This is primarily for accounts
+             which are shared by more than one person.
+
+             Default: $HOME
+
+     EDITOR  The editor you want to use, if VISUAL is undefined.
+
+             Default: whatever your news administrator installed,
+             usually vi.
+
+     HOME    Your home directory.
+
+             Default: $LOGDIR
+
+     LOGDIR  Your home directory if HOME is undefined.
+
+     LOGNAME Your login name, if USER is undefined.
+
+             Default: value of "whoami".
+
+
+
+
+                                                                1
+
+
+
+
+
+
+PNEWS(1)
+
+
+
+     NAME    Your full name.
+
+             Default: name from /etc/passwd, or ~/.fullname.
+
+     ORGANIZATION
+             Either the name of your organization, or the name of
+             a file containing the name of your organization.
+
+             Default: whatever your news administrator chose.
+
+     USER    Your login name.
+
+             Default: $LOGNAME
+
+     VISUAL  The editor you want to use.
+
+             Default: $EDITOR
+
+FILES
+     $DOTDIR/.article
+     ~/dead.article
+
+SEE ALSO
+     rn(1), Rnmail(1), inews(1)
+
+DIAGNOSTICS
+BUGS
+     Not the speediest program in the world, but maybe that's a
+     blessing to the net.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2

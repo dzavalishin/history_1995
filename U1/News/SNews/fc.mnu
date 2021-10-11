@@ -1,0 +1,10 @@
+F2: make
+    nmake /nologo
+
+F4: debug
+    copy PKT\01b89af0.out  .
+    start ipmd snews.exe 01b89af0.out
+
+F5: test
+    copy PKT\*.pkt  .
+    snews.exe *.pkt

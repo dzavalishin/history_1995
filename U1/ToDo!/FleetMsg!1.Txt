@@ -1,0 +1,35 @@
+========================== dz's netmail (jam format) ===========================
+   From: Yurik V. Nazaroff                   2:5020/769      07 Mar 97  04:26:38
+     To: Dmitry Zavalishin                   2:5020/32       08 Mar 97  00:29:02
+   Subj: Re: Twit news on my station                                            
+================================================================================
+From: "Yurik V. Nazaroff" <yurik@nazaroff.msk.ru>
+
+In article <857441783@f32.n5020.z2.ftn> you wrote:
+
+
+> Replying to a message of Basil Dolmatov to Sergej Qkowlew:
+
+>  BD> 03 Mar 97 11:13, Sergej Qkowlew wrote to All:
+
+>  SQ>> TrackNet        NETMAIL_DEVNUL      -f"postal@mail.only" -a2:50/128
+
+>  BD> Hи хрена ж себе доменчик верхнего уровня....
+
+>  BD> to: dz
+>  BD> Дим, гейт много какие хедеры режет, если не сложно, поставь ловилку на
+>  BD> такой адрес, чтобы было письмо "в полном облачении", я на этого
+>  BD> спаммера INTERNIC натравлю. :-E~
+
+> Я лучше переведу гейт на режим хайданья вместо резки - пойдет?
+
+> dz
+
+
+а можно Newsgroups: не резать и гейтовать как \1RFC-Newsgroups ?
+Естественно когда там содержиться > 1 newsgroup.
+
+Yurik
+Via ifmail 2:5020/769@fidonet, Fri Mar 7 1997 at 04:26 (2.9)
+Via T-Mail 2508.DOS 2:5020/322, 07 Mar 97  10:00:58
+Recd from 2:5020/322 @19970307.225442.UTC+4

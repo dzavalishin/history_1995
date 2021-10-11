@@ -1,0 +1,14 @@
+Log levels list:
+
+  a		- Address conversions
+  e		- Echomail info
+  n		- News info
+  b		- batched news
+  c		- compression
+  f		- file attaches
+  u		- user info
+  x		- Rexx log operator output
+
+  #		- chitchat (nothing to do, all done, etc)
+  %     - Timings, metrics
+  $		- Mail logging

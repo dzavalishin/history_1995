@@ -1,0 +1,358 @@
+þ 18 Jun 92 (0.96f)
+
+  û Ok, writing UUCP-package-specific code. New conf. file keyword UUCP
+    selects type of UUCP environment gate works in. Values:
+
+    Ache30       - UUPC/* 3.0
+    UUPC11R      - UUPC/Extended 1.11R
+    Waffle       - as is
+
+    The only difference this keyword makes is the way UUPC calls
+    rmail/uusmail program. In Ache30 mode rmail gets called with
+    "-f from-address" and, possibly, with -u flag.
+
+þ 29 May 92 (0.96e)
+
+  û Unbatch - bugs in kiae-batch decoder with koi-alt code conversions
+    fixed.
+
+  û gremote: Now skips RFC-822 headlines in the beginning of message.
+             Handy if you use to talk with gremote from uucp side.
+             (My thanx to Igor Sviridov for this idea)
+
+
+þ 26 May 92 (0.96e)
+
+  û Unbatch (0.96c-d) bug fixed - now marks splitted article parts
+    with number in subject. This affects dupe checking process in
+    some echo-processors, as went out...
+
+þ 25 May 92 (0.96d)
+
+  û KIAE-type unpacker bugs fixed: cyrillic code conversion, letters
+    splitting, MSGID generation.
+
+
+þ 17 May 92 (0.96c)
+
+  û NB! New KIAE newsserver support added. You need:
+	1. set USE_UNBATCH=Yes
+	2. Add parameter InNewsSpool to your SETUP.UU2
+	3. Prepare a copy of uunpack.exe
+	4. Run unbatch.exe after uuio
+
+	Detailed description:
+	UU2FIDO now can be used together with unbatch.exe - set env.
+	variable USE_UNBATCH to let UU2FIDO put all the incoming news
+	in spool direcory (InNewsSpool). Spool directory can be processed
+	later with unbatch.exe, which is able to handle compressed article
+	batches, produced by newsserv@kiae.su.
+	NB! uunpack.exe must be somewhere in PATH. Request uunpack from
+	kiae, please, to be able to use this option.
+
+þ 16 May 92 (0.96c)
+
+  û UU2FIDO (news gateing) - Now adds line " * Realname: <name>" to
+    the beginning of gated article.
+
+þ 20 Apr 92 (0.96b)
+
+  û UU2FIDO: Bug in PassUnknownBack mode with uusmail parameters 
+    passing fixed. Thanx Boris Tyshkiewitch.
+
+  û All: UU2 complex refused to work with ADDRESS parameter with
+    zero node number (for example, 13:1/0). Fixed. Thanx Alex 
+    Popov.
+
+þ 18 Apr 92 (0.96b)
+
+  û FIDO2UU: For free-mode use in Fido-type networks: new conf.
+        file parameter added: FreeDomain <domain.name> - used for
+        generation of uucp letter 'from' field when gating letter
+        from free mode user. Default value is 'fidonet.org'.
+
+        Examples:
+
+        Conf. line                      Resulting 'from' address
+        -------------------------       -------------------------------------
+        FreeDomain fidonet.org          First.Last@f??.n??.z??.fidonet.org
+        FreeDomain dialnet.msk.su       First.Last@f??.n??.z??.dialnet.msk.su
+
+þ 17 Apr 92 (0.96b)
+
+  û UU2 echo created - subscribe please! (Available from 5020/23, 
+    32, 54 and 5030/2)
+
+  û UU2FIDO: Bug in From address parser/convertor fixed: Now 
+    FSC-0035-style kludge will contain uucp address, doesn't
+    matter how long it occured to be.
+
+
+þ 13 Apr 92 (0.96a)
+
+  û Happy birthday to me :)
+
+  û ZipLimit keyword would accept values up to 32767, now fixed - up
+    to 65535. (Thanx to Alex Popov)
+
+þ 8 Apr 92 (0.95h)
+
+  û Added new conf. file parameter for Cnews support: OutNewsSpool -
+    directory, used to hold outbound newsarticles. Now writing Cnews
+    batcher :).
+
+þ 7 Apr 92 (0.95h)
+
+  û UU2FIDO: FSC35 headlines generation added to uucp->echo convertor.
+    From/Reply-To headlines are stripped now.
+
+  û New conf. parameter: LogLevel <letters_set>. Each letter enables
+    logging of some kind of information:
+
+	#	- Chitchat: messages like "nothing to do", "all done", etc
+	a	- address conversion info
+	b	- batched news processing info
+	c	- compression/decompression processes
+	e	- echomail related items
+	f	- file attaches
+	n	- news in general
+	u	- user info (logging of each netmail letter passed)
+
+    Example: "LogLevel ue" - log only passed letters and echo articles info.
+
+    By default LogLevel will be set to "abcefnu". (All useful info)
+    Setting debug mode on turns full logging anyway.
+
+þ 6 Apr 92 (0.95h)
+
+  û UUENCODE bug fixed (thanx Alexey Beliaev): file for encoding
+    was opened in text mode.
+
+þ  2 Apr 92 (0.95g)
+
+  û All: Bug in config. parser caused by optimizer caught.
+
+þ 30 Mar 92 (0.95g)
+
+  û UU2FIDO: FSC-0035 support written. (REPLYADDR/REPLYTO kludges)
+
+þ 23 Mar 92 (0.95g)
+
+  û UU2FIDO: New conf. file parameter: ZipLimit <Number>
+	Sets the minimal size of letters which will be sent
+	as pkzipped file-attach.
+
+	NB!
+	FIDO software can't handle very big messages! Default
+	value for ZipLimit (8K) is good enough. In any case
+	don't let UU2 to create FIDO messages bigger than 16K!
+
+
+þ 23 Mar 92 (0.95f)
+
+  û ECHO2UU: Bug fix in References: headline generator.
+
+
+þ 22 Mar 92 (0.95f)
+
+  û FIDO2UU: Now converts only messages sent to addresses, specified in
+    gate config. file (Address or NewsAddress). (Exept when flag "ToAnyAddr"
+    stated in conf. file) [One more gift for Bravo Mike:)]
+
+þ 21 Mar 92 (0.95f)
+
+  û Config. file parser completely rewritten. Now understands 3D FIDO
+    adresses withno .0 and parameters with spaces in them (origin, etc).
+    (Thanks Bravo!:)
+
+  û Size of echo-news names table increased from 30 to 60 entries.
+
+  û Fixed (One more time!!) date field parser to make it understand
+    full (19..) year number.
+
+þ 17 Mar 92 (0.95f)
+
+  û New config. option: Code_UF_Flag. Turns on conditional
+    code conversion mode in uu2fido. With this option
+    uu2fido performs code table conversion if called with -u
+    command-line option. Can be used with Demos/* UUPC.
+
+  û Got my own product code - 0xCC! :) Now packets generated
+    by UU2FIDO are marked with my own code, instead of
+    D'Bridge's one. This means that you will have troubles
+    using UU2 with TossScan in point environment. Please,
+    inform me, if you really need UU2 to represent itself
+    as D'Bridge. (Or, simply, throw TossScan away - you
+    will have a lot of troubles with this tosser because
+    it eats '@' in From/To fields.:)
+
+  û If you don't want FIDO2UU to perform that stupid local
+    delivery check, sipmly state 'RmailExitL -1' in config.
+    file.
+
+
+þ 5 Mar 92 (0.95e)
+
+  û New ability - pass mail to unknown destination back
+    to uucp. Conf. file flag - PassUnknownBack. 
+    How does it work: Let's suppose gate (uu2fido) gets 
+    started with address strange_man@some.domain
+       1. Gate strips out domain and searches it's users
+          table for name strange_man. If found, sends
+          mail to corresponding FIDO address.
+       2. If Free mode is on, gate tries to parse address
+          as .fidonet.org type one.
+       3. If failed, and PassUnknownBack flag is set,
+          gate calls uucp rmail (uusmail) program
+          with that address to give uccp a chance
+          to deliver message.
+
+    Hope, it will let you use gate without destruction of
+    your uucp environment :)
+
+þ 3 Mar 92 (0.95)
+
+  û Config. file parser bug with Rmail parameter fixed. Use 
+    RmailExe instead of it.
+
+  û Reckognition of 19XX in Date: field written.
+
+  û Bug with origin line buffer overflow fixed.
+
+þ 22 Feb 92 (0.95)
+
+  û int/long problem fixed in unbatch.
+
+  û Probems with temp files creation partially solved in rnews.
+    Still can't process too big newsfeeds (more then 1Mb at once).
+
+þ 9 Feb 92 (0.95)
+
+  û Bug in report period calculations (statistics report generator 
+    and gremote) fixed.
+
+  û Unbatch - added ability to run 'compress -d' on .z files.
+
+  û Conf. file parameter added: NewsPath - our node name. Used to
+    form Path: headline and to check for dupeloops.
+
+þ 8 Feb 92 (0.95)
+
+  û At last! Cc:! :)
+    Must be written as 'xcc: addr1 addr2...' in the first lines
+    of fido message. Any number of xcc lines allowed, but total
+    length of all addresses including main one must not exceed
+    maximum DOS command line length minus length of 'from' adress.
+
+  û Ok, starting to play with rnews. For the first, one more conf.
+    file parameter: InNewsSpool - gives the name of directory where
+    inbound news batches will be stored. RNEWS written - analyzes
+    it's stdin, and copies it into that directory, strippig cunbatch
+    header, if any. Gives strange names to files with extensions:
+    .A - one article
+    .B - non-compressed batch
+    .Z - compressed something
+
+  û UNBATCH written. Searches InNewsSpool for batches and cuts them
+    into articles - separate files with .A extension. Those files
+    can be converted to .PKT with 'uu2fido newsmaster_addr < art'
+    Note: You should decompress .Z files yourself.
+
+þ 5 Feb 92 (0.95)
+
+  û FREE mode destination domains restriction written - you
+    can list permitted destination domains after FREE keyword
+    in conf. file. I'm sure there's a lot of bugs...
+
+    3 Mar 92 PS: And one of them - you must list at least one 
+                 domain or it will work unpredictably :(
+
+þ 3 Feb 92 (0.95)
+
+  û News->echo gate: ^APTH: kludge added.
+
+
+þ  2 Feb 92 (0.95)
+
+  û Code table selection added. Conf. parameter Code_FU
+    can be used to select code conversion to be used in
+    FIDO->UUCP part(s) of gate. Valid values are 'None'
+    and 'CP866-KOI8'. (Note: UUCP->FIDO gate allways
+    converts KOI8 to CP866. Yet.)
+
+þ 31 Jan 92 (0.95)
+
+  û echo2uu now generates Path:,Message-Id:,References: headlines
+    to let UseNet newsreaders to build reply links. Added conf.
+    file parameter - GateId <Gate_ident_string> - used to identify
+    particular gate in Organization: headline to prevent dupeloop
+    via stupid newsserver. This parameter must be unique in all the
+    UU2 gate instances. Otherwise one gate will not pass to FIDO 
+    side messages that got to UseNet from FIDO via other one.
+
+þ 30 Jan 92 (0.95)
+
+  û Config. file now has name SETUP.UU2, environment variable
+    which points to conf. file dir renamed to UU2, user list
+    taken out of setup to its own file which name must be given
+    in the setup file as UserList=c:\uupc\users.uu2
+    Keywords can be written IN ANY CASE!! :)
+
+  û New conf. file option StoreFiles=dir gives location of
+    outbound (FIDO) files directory.
+
+  û Overlaid version started
+
+  û Optional %XFM/%XTO kludges generation written but is not
+    turned on. Will be turned on on demand.
+
+  û Gate control sequences parser started - control sequences
+    will have form '%Gate: name=value'. Must be in the very
+    first lines of message and start from col. 1
+
+  û Rmail execution paramtrized - name of .exe file and exit
+    codes can be set up in conf. file as follows:
+
+    RMail=c:\uupc\uusmail.exe   ; Which program to call to deliver to uucp
+    RMailExitL=0                ; Exit code in a case of local delivery
+    RMailExitR=48               ; Exit code in a case of remote delivery
+
+    Default values are "uusmail.exe", 0 and 48 respectively.
+
+
+
+þ 27 Jan 92 (0.95)
+
+  û Whoop! One more date parser bug fix - now understands
+    timezones in numeric form such as +0200 and parses 'em.
+
+  û One more bug fix with month - previous code refused to
+    pass through date with month=0 (Jan). Fixed.
+
+  û Now FIDO2UU ignores InTransit letters
+
+  û Attached files uuencoding written, but not tested (todo: btoa)
+
+
+
+
+þ 2 Dec 91 (0.95)
+
+  û Once more fixed bugs in message date conversion :)
+
+  û Added password protection to Gremote
+
+  û Changed log function to add program name at delimiter
+
+  û Added broadcast function and help file to Gremote
+
+  û Fixed bug with .MSG date field overflow
+
+  û Marked version as 0.95
+
+
+
+þ 7 Nov 91 (0.94)
+
+  û Bug fix - date of message had incorrect (next) month.
+

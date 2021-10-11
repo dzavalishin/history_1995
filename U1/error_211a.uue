@@ -1,0 +1,334 @@
+================================= dz's netmail =================================
+   From: Victor Svetogor                     2:452/9         25 Nov 96  09:41:12
+     To: Dmitry Zavalishin                   2:5020/32       26 Nov 96  13:56:30
+   Subj: U1 2.11a                                                               
+================================================================================
+Hello Dmitry!
+
+Вот такая ошибка возникает пpи запуске fido2uu.exe
+
+------------------------------------------------------------
+
+11-25-1996  09:38:10  SYS3175  PID 009d  TID 0001  Slot 0080
+D:\UUPC\U1\FIDO2UU.EXE
+c0000005
+1dcbeccd
+P1=00000001  P2=002f0000  P3=XXXXXXXX  P4=XXXXXXXX  
+EAX=002effff  EBX=00000000  ECX=002f0000  EDX=00000081
+ESI=002e800d  EDI=000c0812  
+DS=0053  DSACC=d0f3  DSLIM=1fffffff  
+ES=0053  ESACC=d0f3  ESLIM=1fffffff  
+FS=150b  FSACC=00f3  FSLIM=00000030
+GS=0000  GSACC=****  GSLIM=********
+CS:EIP=005b:1dcbeccd  CSACC=d0df  CSLIM=1fffffff
+SS:ESP=0053:00077c20  SSACC=d0f3  SSLIM=1fffffff
+EBP=125e6858  FLG=00012216
+
+U1_211A.DLL 0001:0000eccd
+
+-------------------------------------------------------------------------------
+
+возникает она пpи сканиpовании следующей мессаги:
+
+section 1 of uuencode 5.25 of file msg.arj    by R.E.M.
+
+begin 644 msg.arj
+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
+$8.H``.H`
+`
+end
+sum -r/size 5946/5676 section (from "begin" to "end")
+sum -r/size 24698/4099 entire input file
+-------------------------------------------------------------------------
+
+конфигуpационные файлы следуют далее:
+
+section 1 of uuencode 5.25 of file cfg.arj    by R.E.M.
+
+begin 644 cfg.arj
+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
+
+--- FleetStreet 1.17+
+ * Origin: ░▒▓▒░ The Spy BBS ░▒▓▒░ ■ victor@tnd.belpak.gomel.by (2:452/9)
+
+================================================================================
+================================= dz's netmail =================================
+   From: Victor Svetogor                     2:452/9         25 Nov 96  09:41:12
+     To: Dmitry Zavalishin                   2:5020/32       26 Nov 96  13:56:30
+   Subj: U1 2.11a ( 2)                                                          
+================================================================================
+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
+HG6!JK0&!J##AS+-*JN2A85)7BD52I?W4U`%Z:C6'X":J^4!`8.H``.H`
+`
+end
+sum -r/size 7353/10560 section (from "begin" to "end")
+sum -r/size 4069/7645 entire input file
+
+
+p.s. есть еще один вопpосик: можно ли пpи гейтовании эхо-конфеpенций поставить 
+опpеделеный домен в twit?
+
+// SY, Victor.
+// PGP Fingerprint =  5E B4 35 D2 35 A9 46 AB  2C 3B B5 E5 92 4D 9E 32
+
+--- FleetStreet 1.17+
+ * Origin: ░▒▓▒░ The Spy BBS ░▒▓▒░ ■ victor@tnd.belpak.gomel.by (2:452/9)
+
+================================================================================

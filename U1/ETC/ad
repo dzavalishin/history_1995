@@ -1,0 +1,98 @@
+       __    __   __    __   _______            ________   ________   _______
+       ) )   ) )  ) )   ) )       ) )           ) )   ) )  ) )   )_)       ) )
+      / /   / /  / /   / /       / /           / /   / /  / /             / /
+     / /   / /  / /   / /       / /           / /   / /  (_(____         / /
+    / /   / /  / /   / /  _____(_(           / /   / /        ) )  _____(_(
+   / /   / /  / /   / /  / /                / /   / /  __    / /  / /
+  (_(___(_(  (_(___(_(  (_(_____    FOR    (_(___(_(  (_(___(_(  (_(_____
+                                                  
+                   __    __   ________   __   __   __   ________
+                   ) )   ) )  ) )   )_)  ) )  ) )  ) )  ) )   )_)
+                  / /   / /  / /        / /  / /  / /  / /
+                 / /\  / /  / /__ /    / /  / /  / /  (_(____
+                / /  \/ /  / /   /    / /  / /  / /        ) )
+               / /   / /  / /   __   / /  / /  / /  __    / /
+              (_(   (_(  (_(___(_(  (_(__(_(__(_(  (_(___(_(
+
+
+
+Here I'm announcing wide beta testing of UU2/2 version 1.99e. It is a
+uucp/fido gateing software written by yours truly dz here in Moscow,
+Russia, Planet Earth, Solar... and so on. :) This is OS/2 only program
+with hypertext-style (.INF) dox in English, the most interesting features
+of which are:
+
+
++ Netmail gating, free mode or address table mode with limited
+  access. Both can be combined.
+
++ news/echo gating - viamail/viauux/viarsh modes, or via user-defined program.
+  Compressed feeds supported.
+
++ Statistics records in log file
+
++ Easy way to add specific headlines to your letters. Need
+  'Return-Receipt-To:' or 'Distribution:' line? Just write
+  it in the first line of the message text - gate will move
+  it to the header of resulting uucp message.
+
++ Cc, Return-Receipt supported
+
++ Automatic UUencode of small attached files (FIDO-UUCP direction)
+
++ Complete activity log, optionally with debugging
+
++ Can be easily combined with nearly any UUCP clone
+
++ OS/2 sendmail compatible.
+
++ Handy uucp address representation in Fido messages - in almost all
+  the cases you need not add that stupid 'To:' line to your message!
+
++ Advanced FIDO standards, such as FSC-0044, FSC-0035 are implemented.
+
++ Unlimited number of echo/newsgroups supported.
+
++ Optional Cyrillic code tables conversion. Additional code conversion
+  tables can be added to new versions of gate.
+
++ Large messages from Internet to FIDO are compressed and converted to
+  file-attaches on the fly.
+
++ Selective headlines elimination/hiding.
+
++ Filtering of control messages in UseNet news (such as cancel, newgroup...)
+
++ Newsfeed: in addition to gateing news ro fido U1 is able to feed
+  articles to other hosts via uux, mail, rsh (tcp/ip) or user-written
+  program.
+
++ Rexx!! Now you can alter the way U1 works with rexx scripts!
+
++ Crosspost guard: stops crossposted messages (usually ads:-) from
+  getting to the guarded echoes.
+
++ Well, i'm tired to enumerate :)... set it up and try!
+
+
+--------------------------------------------------------------------------
+
+
+Join UU2 fileecho to receive hot new UU2 updates quickly.
+
+UU2 echo and fileecho are available from:
+	2:5020/32, 2:5030/124
+
+Note that version for OS/2 is called U1, not UU2. (UU2/2 = U1, got it?;)
+
+Current alphas/betas of U1 are available via FTP:
+	ftp.kiae.su, pub/os2/fido/au1_os2.zip and bu1_os2.zip
+
+
+ FIDO:           Dmitry Zavalishin, 2:5020/32, (0:00-6:00 MSK)
+ Internet:       dz@phantom.ru
+ Phone:          +7 (095) 110-6728, 120-0898
+ SnailMail:      Moscow, Arteckovskaya 7-4 260
+
+                                Yours truly Dmitry Zavalishin
+

@@ -1,0 +1,12 @@
+/************************ UU2 UU2FILE ***************************\
+ *
+ *	Copyright (C) 1991 by Infinity Soft
+ *
+ *	Module 	:	.
+ *
+ *      $Log:   Q:/news/snews/vcs/main.c_v  $
+ *      
+ *
+\*/
+
+#include    "uu2file.h"

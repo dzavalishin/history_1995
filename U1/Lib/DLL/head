@@ -1,0 +1,19 @@
+/************************ UU2 library ***************************\
+ *
+ *	Copyright (C) 1991 by Infinity Soft
+ *
+ *	Module 	:
+ *
+ *      $Log: head $
+# Revision 1.1  1995/04/06  23:33:30  dz
+# Initial revision
+#
+ *
+ *
+\*/
+
+#include	<style.h>
+#include	<stdlib.h>
+
+#include	".h"
+

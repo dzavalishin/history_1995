@@ -1,0 +1,6 @@
+MAKE Version 3.7  Copyright (c) 1987, 1994 Borland International
+	bcc +OS2.CFG -c scan.c 
+Borland C++ Version 4.1 Copyright (c) 1993, 1994 Borland International
+scan.c:
+	tlink /v /Toe /ap /Ld:\BIN\BCOS2\LIB;d:\BIN\BCOS2\classlib\LIB;..\..\lib\OUT\OS2 -S:10000 @MAKE0000.@@@
+Turbo Link  Version 1.5 for OS/2 Copyright (c) 1994 Borland International

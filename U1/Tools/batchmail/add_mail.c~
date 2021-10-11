@@ -1,0 +1,10 @@
+
+#include <BatchMail.h>
+
+
+
+void BatchMailApp::do_add_mail()
+    {
+    }
+
+

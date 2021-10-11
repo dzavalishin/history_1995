@@ -1,0 +1,78 @@
+head     1.1;
+access   ;
+symbols  ;
+locks    ;
+comment  @# @;
+
+
+1.1
+date     90.12.10.16.53.47;  author avg;  state Exp;
+branches ;
+next     ;
+
+
+desc
+@
+@
+
+
+
+1.1
+log
+@Initial revision
+@
+text
+@#
+# Sending and receiving batched mail
+#
+# $Header$
+# $Log$
+#
+
+RLIB=/usr/lib/relcom
+RBIN=/usr/bin
+
+#
+# Set R=X if you have sources without RCS archive files
+#
+R=
+RCS=RCS
+COFLAGS=-q
+
+SHELL=/bin/sh
+D=.
+SD=.
+CF=
+
+all: $(D)/batchmail $(D)/rbmail
+
+$(D)/batchmail: batchmail.c
+	cd $(D); $(CC) $(CFLAGS) -o batchmail $(SD)/batchmail.c
+
+$(D)/rbmail: rbmail.c
+	cd $(D); $(CC) $(CFLAGS) -o rbmail $(SD)/rbmail.c
+
+install: $(UU)inst
+
+Ninst ninst:
+
+Yinst yinst: ${CF}mkall
+	cp $(D)/rbmail $(RBIN)/rbmail
+	chown bin $(RBIN)/rbmail
+	chgrp bin $(RBIN)/rbmail
+	chmod 755 $(RBIN)/rbmail
+	cp $(D)/batchmail $(RLIB)/batchmail
+	chown uucp $(RLIB)/batchmail
+	chgrp uucp $(RLIB)/batchmail
+	chmod 4755 $(RLIB)/batchmail
+
+mkall:  all
+Cmkall:
+
+#
+# Handling RCS archives
+#
+$(R)batchmail.c: $(RCS)/batchmail.c,v ;  co $(COFLAGS) batchmail.c
+$(R)rbmail.c:    $(RCS)/rbmail.c,v ;     co $(COFLAGS) rbmail.c
+$(R)Makefile:    $(RCS)/Makefile,v ;     co $(COFLAGS) Makefile
+@

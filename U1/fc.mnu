@@ -1,0 +1,18 @@
+F2: Make all
+	nmake /nologo all
+
+F3: Make alpha
+	nmake /nologo alpha
+
+F4: Make hatch alpha
+	nmake /nologo ahatch
+
+F5: Make hatch alpha dox
+	nmake /nologo hatch_dox
+
+F6: Make beta
+	nmake /nologo beta
+
+F7: Make hatch beta
+	nmake /nologo hatch_beta
+

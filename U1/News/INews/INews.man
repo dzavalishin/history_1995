@@ -1,0 +1,126 @@
+                                                         INEWS(1)
+
+
+
+NAME
+     inews - `user-friendly' news-posting front-end for relaynews
+
+SYNOPSIS
+     inews -p [ file ... ]
+     inews [ -h ] [ -x excluded-site ] [ -A ] [ -M ] [ -V ] [ -W
+     ] [ -N ]
+     [ -a Approved:-contents ] [ -c Control:-contents ] [ -d
+     Distribution:-contents ] [ -e Expires:-contents ] [ -f
+     From:-contents ] [ -n Newsgroups:-contents ] [ -o
+     Organization:-contents ] [ -r Reply-To:-contents ] [ -t
+     Subject:-contents ] [ -C newsgroup ] [ -F References:-
+     contents ] [ file ...  ]
+
+DESCRIPTION
+     Inews injects an article into the news flow, installing it
+     locally and broadcasting it (if appropriate) onto the net-
+     work.  The article is read from files or standard input if
+     none.  Inews adds and alters headers, notably Message-ID:,
+     From: and Path:, deletes invisible characters, and appends
+     the first four lines of $HOME/.signature, if any, to the
+     article, and then hands it to relaynews(8), provided the
+     newsgroup(s) are unmoderated.  If any of the groups are
+     moderated, the article will instead be mailed to the modera-
+     tor of one of the moderated newsgroups in the Newsgroups:
+     header.
+
+     inews -p files is exactly equivalent to invoking cat files |
+     relaynews -r, where files may be an empty list; there is no
+     automatic recovery of the input file(s) in case of errors,
+     full disks or other problems.  Normal usage is inews -h,
+     which assumes the presence of at least Subject: and News-
+     groups: headers in the article.  -h tells inews that the
+     article starts with headers; otherwise it starts with the
+     article body.  -x prevents transmission to site excluded-
+     site.  -A waits until enough space becomes free in
+     /usr/spool/news.  -M does nothing, for B news compatibility.
+     -V causes relaynews to emit a log file line on stdout after
+     processing is complete, by having relaynews not redirect
+     stdout and stderr to /usr/lib/news/log and
+     /usr/lib/news/errlog. -W waits for relaynews to complete,
+     instead of running it in the background and not waiting.  -N
+     suppresses posting and produces on standard output the arti-
+     cle that would have otherwise been posted; the resultant
+     article will have been checked for illegalities as usual and
+     will be suitable as input to relaynews(8).
+
+     The rest of the options are inherited from B news and exist
+     only for backward-compatibility with news readers.  They
+     should not be used by humans, as they are equivalent to
+     adding the obvious headers, with two small twists: -f gen-
+     erates From: From:-contents which generates a Sender:
+
+
+
+                                                                1
+
+
+
+
+
+
+INEWS(1)
+
+
+
+     user@host header if there is no Sender: header in the input,
+     and -C tells you to use addgroup for local group creations
+     and tells you what to feed to inews -h for global ones.
+
+FILES
+     /usr/lib/news/active
+                         contains (un)moderated flag
+     /usr/lib/news/mailpaths
+                         routes to moderators, Internet gateway
+     /usr/lib/news/mailname
+                         the name of this cluster of machines for
+                         purposes of mail, including any domain
+     /usr/lib/news/server
+                         the hostname of this cluster's server
+     /usr/lib/news/whoami
+                         the name of this cluster for purposes of
+                         news
+     /usr/lib/news/bin/inject/anne.jones
+                         header censor
+     $HOME/.signature    your name and network addresses (no
+                         line-printer graphics, please)
+     $HOME/dead.article  saved article in case of errors or prob-
+                         lems
+     /tmp/in*            temporaries
+
+SEE ALSO
+     mail(1), news(5), newsaux(8), relaynews(8)
+
+DIAGNOSTICS
+     inews can take several seconds to run, so it almost immedi-
+     ately begins running in the background; error messages may
+     appear somewhat later, perhaps in the midst of other
+     activity.
+
+HISTORY
+     Written by Geoff Collyer at the University of Toronto as
+     part of the C news project.
+
+BUGS
+     Inews should be unnecessary; its only useful function is
+     adding Message-ID: headers and most novices use Pnews, which
+     could invoke relaynews directly.
+
+     Inews is an enormous shell script currently and can fail if
+     any of the underlying Unix tools fail.  This typically hap-
+     pens with very long input lines.  Parts of inews are due to
+     be replaced at the first available opportunity, so some of
+     these problems may vanish in future.
+
+
+
+
+
+
+
+2

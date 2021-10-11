@@ -1,0 +1,7 @@
+This quick hack can be used to prepare mail to be sent with uucp.
+All it does is make sure message has proper "From_..remote from"
+header. It uses available parts of existing From_ line, if any, and
+builds other ones itself.
+
+         dz
+

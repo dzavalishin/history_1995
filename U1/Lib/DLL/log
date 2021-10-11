@@ -1,0 +1,154 @@
+
+Operating System/2 Program Maintenance Utility
+Version 3.00.006 Mar 15 1995
+Copyright (C) IBM Corporation 1988-1995
+Copyright (C) Microsoft Corp. 1988-1991
+All rights reserved.
+
+	makedep
+MAKEDEP v.3, (c) 1994 by Hartmut Obendorf
+*.CPP
+*.C
+app.obj:	app.h 
+catch.obj:	log.h setup.h stat.h 
+checklib.obj:	setup.h log.h 
+checkmsg.obj:	
+dateconv.obj:	
+datetok.obj:	dateconv.h datetok.h datetok.tbl 
+elist.obj:	setup.h log.h elist.h elist_c.h dllinits.h 
+elist_c.obj:	setup.h log.h elist.h elist_c.h 
+enc_part.obj:	file2uu.h 
+fa2strng.obj:	style.h log.h fidoaddr.h 
+fa2ua.obj:	style.h log.h fidoaddr.h 
+ffolder.obj:	ffolder.h 
+fidoaddr.obj:	style.h log.h ftn_msg.h 
+freedom.obj:	setup.h log.h freedom.h 
+ftn.obj:	ftn.h log.h 
+ftn_att.obj:	ftn_msg.h ..\..\version.h 
+ftn_date.obj:	ftn_msg.h 
+ftn_deb.obj:	ftn_msg.h 
+ftn_flags.obj:	ftn_msg.h 
+ftn_msg.obj:	ftn_msg.h 
+ftn_new.obj:	ftn_msg.h 
+ftn_rw.obj:	ftn_msg.h 
+fuserdef.obj:	userlist.h setup.h log.h 
+getindat.obj:	datec.h dateconv.h datetok.h 
+hl_match.obj:	hl_match.h 
+ign_name.obj:	setup.h log.h 
+log.obj:	app.h log.h setup.h stat.h dllinits.h 
+new_usr.obj:	setup.h log.h new_usr.h 
+recode.obj:	recode.h recode.tbl 
+rexxcall.obj:	rexx.h dllinits.h 
+rexxfunc.obj:	rexx.h dllinits.h 
+rexxscom.obj:	rexx.h dllinits.h 
+rfc.obj:	rfc.h 
+rfc_date.obj:	datec.h 
+setup.obj:	setup.h log.h defset.h userlist.h ..\..\version.h 
+set_tab.obj:	setup.h ftn.h log.h 
+spool.obj:	spool.h uu2io.h ..\..\version.h ..\..\u1.h dllinits.h 
+stat.obj:	log.h setup.h stat.h dllinits.h 
+strng.obj:	strng.h 
+tic.obj:	tic.h tic_kw.h ..\..\version.h 
+tic_clr.obj:	tic.h 
+tic_fill.obj:	tic.h tic_kw.h 
+tic_kw.obj:	style.h tic_kw.h 
+tic_save.obj:	tic.h ..\..\version.h 
+ua2fa.obj:	uucpaddr.h 
+userlist.obj:	userlist.h setup.h log.h 
+uucpaddr.obj:	uucpaddr.h 
+uutraver.obj:	uucpaddr.h 
+zmain.obj:	uucpaddr.h 
+_dll_init.obj:	dllinits.h 
+	cat >U1.DEF D:\TMP\8e300000.CTN.
+	icc /Tdp /I /B"/NOO" /B"/NOE" /O"/DEB" /Ti /Ge- /FeU1_209c.DLL /Ms /Q _Dll_Init.obj strng.obj app.obj ffolder.obj fidoaddr.obj fa2ua.obj fa2strng.obj  spool.obj hl_match.obj rfc.obj ftn.obj elist.obj elist_c.obj  freedom.obj log.obj recode.obj setup.obj set_tab.obj stat.obj  new_usr.obj fuserdef.obj userlist.obj  dateconv.obj datetok.obj getindat.obj rfc_date.obj  ua2fa.obj uucpaddr.obj uutraver.obj  FTN_Msg.obj FTN_Att.obj FTN_Date.obj FTN_Deb.obj FTN_New.obj  FTN_Rw.obj FTN_Flags.obj  RexxCall.obj RexxScom.obj RexxFunc.obj REXX.LIB dde4cc.lib u1.def
+warning EDC0640: Excess text "/DEB" ignored on /O option.
+Object Modules [.obj]: /NOE /nologo /de /noi /align:16 /exepack +
+Object Modules [.obj]: "_Dll_Init.obj" +
+Object Modules [.obj]: "strng.obj" +
+Object Modules [.obj]: "app.obj" +
+Object Modules [.obj]: "ffolder.obj" +
+Object Modules [.obj]: "fidoaddr.obj" +
+Object Modules [.obj]: "fa2ua.obj" +
+Object Modules [.obj]: "fa2strng.obj" +
+Object Modules [.obj]: "spool.obj" +
+Object Modules [.obj]: "hl_match.obj" +
+Object Modules [.obj]: "rfc.obj" +
+Object Modules [.obj]: "ftn.obj" +
+Object Modules [.obj]: "elist.obj" +
+Object Modules [.obj]: "elist_c.obj" +
+Object Modules [.obj]: "freedom.obj" +
+Object Modules [.obj]: "log.obj" +
+Object Modules [.obj]: "recode.obj" +
+Object Modules [.obj]: "setup.obj" +
+Object Modules [.obj]: "set_tab.obj" +
+Object Modules [.obj]: "stat.obj" +
+Object Modules [.obj]: "new_usr.obj" +
+Object Modules [.obj]: "fuserdef.obj" +
+Object Modules [.obj]: "userlist.obj" +
+Object Modules [.obj]: "dateconv.obj" +
+Object Modules [.obj]: "datetok.obj" +
+Object Modules [.obj]: "getindat.obj" +
+Object Modules [.obj]: "rfc_date.obj" +
+Object Modules [.obj]: "ua2fa.obj" +
+Object Modules [.obj]: "uucpaddr.obj" +
+Object Modules [.obj]: "uutraver.obj" +
+Object Modules [.obj]: "FTN_Msg.obj" +
+Object Modules [.obj]: "FTN_Att.obj" +
+Object Modules [.obj]: "FTN_Date.obj" +
+Object Modules [.obj]: "FTN_Deb.obj" +
+Object Modules [.obj]: "FTN_New.obj" +
+Object Modules [.obj]: "FTN_Rw.obj" +
+Object Modules [.obj]: "FTN_Flags.obj" +
+Object Modules [.obj]: "RexxCall.obj" +
+Object Modules [.obj]: "RexxScom.obj" +
+Object Modules [.obj]: "RexxFunc.obj" +
+Object Modules [.obj]: ".\tempinc\iesseq.obj" +
+Object Modules [.obj]: ".\tempinc\ilnseq.obj" +
+Object Modules [.obj]: "D:\TMP\c08F0AAA.lib"
+Run File [_Dll_Init.exe]: "U1_209c.DLL"
+List File [nul.map]: 
+Libraries [.lib]: "REXX.LIB" +
+Libraries [.lib]: "dde4cc.lib"
+Definitions File [nul.def]: "u1.def"
+	IMPLIB /NoLogo U1_209c.LIB U1_209c.DLL
+	copy U1_209c.DLL C:\Local\DLL
+D:\U1\Lib\DLL\U1_209c.DLL => C:\Local\DLL\U1_209c.DLL
+     1 file copied
+	copy U1_209c.LIB ..\out
+D:\U1\Lib\DLL\U1_209c.LIB => D:\U1\Lib\out\U1_209c.LIB
+     1 file copied
+	copy *.h ..\out
+D:\U1\Lib\DLL\App.h => D:\U1\Lib\out\App.h
+D:\U1\Lib\DLL\DateC.h => D:\U1\Lib\out\DateC.h
+D:\U1\Lib\DLL\DateConv.h => D:\U1\Lib\out\DateConv.h
+D:\U1\Lib\DLL\DateTok.h => D:\U1\Lib\out\DateTok.h
+D:\U1\Lib\DLL\DefSet.h => D:\U1\Lib\out\DefSet.h
+D:\U1\Lib\DLL\DLLInits.h => D:\U1\Lib\out\DLLInits.h
+D:\U1\Lib\DLL\EList.h => D:\U1\Lib\out\EList.h
+D:\U1\Lib\DLL\EList_C.h => D:\U1\Lib\out\EList_C.h
+D:\U1\Lib\DLL\FFolder.h => D:\U1\Lib\out\FFolder.h
+D:\U1\Lib\DLL\FidoAddr.h => D:\U1\Lib\out\FidoAddr.h
+D:\U1\Lib\DLL\Fido_Pkt.h => D:\U1\Lib\out\Fido_Pkt.h
+D:\U1\Lib\DLL\FreeDom.h => D:\U1\Lib\out\FreeDom.h
+D:\U1\Lib\DLL\FTN.H => D:\U1\Lib\out\FTN.H
+D:\U1\Lib\DLL\Ftn_Msg.h => D:\U1\Lib\out\Ftn_Msg.h
+D:\U1\Lib\DLL\Ftn_Str.h => D:\U1\Lib\out\Ftn_Str.h
+D:\U1\Lib\DLL\HL_Match.h => D:\U1\Lib\out\HL_Match.h
+D:\U1\Lib\DLL\Log.h => D:\U1\Lib\out\Log.h
+D:\U1\Lib\DLL\New_Usr.h => D:\U1\Lib\out\New_Usr.h
+D:\U1\Lib\DLL\ObjTypes.h => D:\U1\Lib\out\ObjTypes.h
+D:\U1\Lib\DLL\Recode.h => D:\U1\Lib\out\Recode.h
+D:\U1\Lib\DLL\Rexx.h => D:\U1\Lib\out\Rexx.h
+D:\U1\Lib\DLL\RFC.H => D:\U1\Lib\out\RFC.H
+D:\U1\Lib\DLL\Setup.H => D:\U1\Lib\out\Setup.H
+D:\U1\Lib\DLL\Spool.h => D:\U1\Lib\out\Spool.h
+D:\U1\Lib\DLL\Stat.h => D:\U1\Lib\out\Stat.h
+D:\U1\Lib\DLL\Strng.h => D:\U1\Lib\out\Strng.h
+D:\U1\Lib\DLL\Style.h => D:\U1\Lib\out\Style.h
+D:\U1\Lib\DLL\Tic.h => D:\U1\Lib\out\Tic.h
+D:\U1\Lib\DLL\Tic_kw.h => D:\U1\Lib\out\Tic_kw.h
+D:\U1\Lib\DLL\UserList.h => D:\U1\Lib\out\UserList.h
+D:\U1\Lib\DLL\UU2Dir.h => D:\U1\Lib\out\UU2Dir.h
+D:\U1\Lib\DLL\UU2IO.h => D:\U1\Lib\out\UU2IO.h
+D:\U1\Lib\DLL\UUCPAddr.h => D:\U1\Lib\out\UUCPAddr.h
+    33 files copied

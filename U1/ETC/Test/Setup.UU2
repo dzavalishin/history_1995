@@ -1,0 +1,126 @@
+;CnewsFeed
+
+FTN FidoNet     2:50/128@fidonet           fidonet.org             z=1-7
+FTN FidoNet     2:5020/32@fidonet          fidonet.org             z=1-7
+FTN FidoNet     2:5020/128@fidonet         fidonet.org             z=1-7
+
+;FTN FidoNet     2:5020/32@fidonet          gate.phantom.msk.su     z=2-2
+;FTN FidoNet     2:50/128@fidonet           fidonet.org             z=1-6
+
+
+FTN FidoNet     7:5020/32@fidonet          fidonet.org             z=1-7
+;FTN FidoNet     7:5020/128@fidonet         gate.phantom.msk.su     z=2-2
+
+
+ftn lifnet	102:702/32@lifnet          lifnet.phantom.msk.su   z=102-102
+ftn businet	128:5020/32@businet        businet.phantom.msk.su  z=128-128
+
+Magic UUCP
+;Magic Relcom
+
+TruncateSentAttaches
+AttHelpFile d:\Net\uu2\Attach.HLP
+AttachStem dz-G
+
+pktSize   20000
+
+EchoAddress             2:50/128@fidonet 2:5020/32@fidonet
+
+
+;Address                 2:5020/32.0     UUCP
+NetMail                 d:\net\mail
+NetFile                 d:\Spool\In
+Domain                  gate.phantom.ru
+PostMaster              postmaster
+UserList                d:\net\uu2\users.uu2
+TZ			+0300
+
+; Optional parameters                                      ;
+
+Uucp                    Waffle
+LogStyle                FrontDoor
+Log                     d:\Spool\log\uu2
+;LogLevel                au%$
+LogLevel                bcdefghijklmnopqrstvwxyzACDFGHIJKLMNOPQRSTUVWXYZ%$
+
+; Following parameters define which RFC headlines to eliminate
+; when converting messages from UUCP to FIDO.
+
+MailPassHL *
+MailHideHL Receiv* Resent-*
+MailKillHL Message-ID
+
+Announce
+
+;Free                    su ua by ew msk kiae demos dialnet isoft xroads abnet
+;FreeDomain              fidonet.org
+Free
+;FreeDomain gate.phantom.msk.su
+
+;PassUnknownBack
+
+Code_FU                 CP866-KOI8
+Code_UF                 KOI8-CP866
+
+RmailExe                d:\net\waf\bin\rmail.exe
+
+RmailExitL              -1    ; Others
+RmailExitR              0     ; Others
+
+UuxExe                  d:\net\waf\bin\uux.exe
+
+; Maximal size of message to pass to FIDO netmail without
+; conversion to file-attach.
+;
+ZipLimit                14000
+
+FlagDir                 d:\Tmp
+
+StatDir                 d:\Spool\log
+
+StoreFiles              d:\Spool\UU2\gate.out
+
+; News/Echo gate parameters                                ;
+
+
+;NewsAddress             2:5020/128    NewsGate
+
+NewsMaster              newsmaster
+
+;Origin                  Phantom of Infinity Soft Labs
+Organization            Phantom of Infinity Soft Labs
+
+NewsPassHL *
+NewsHideHL X-* Organization Resent-* Distribution NNTP-Posting-Host References
+NewsKillHL Path Lines Newsgroups From Subject Message-Id Reply-To Date Sender Followups-To Mime-* Content-*
+
+NewsPath                                phangate!phantom!gate.phantom.msk.su!gate.phantom.ru
+
+EchoList                                d:\net\uu2\echoes.uu2
+
+FeedList                                d:\net\uu2\feeds.uu2
+
+EchoMsgSize                             14000
+
+; Gremote parameters                                       ;
+
+HelpFile                d:\net\uu2\gatehelp.txt
+
+PassWord                Goodbye-Darling
+
+NewsBadGroupMSG         Separate
+NewsControlMSG          Separate ; Kill
+
+
+
+;GateId gate.dialnet.msk.su
+InNewsSpool  d:\Spool\UU2\News.IN
+OutNewsSpool d:\Spool\UU2\News.OUT
+
+InFileSpool  d:\Spool\UU2\File.IN
+OutfileSpool d:\Spool\UU2\File.OUT
+
+
+
+
+

@@ -1,0 +1,31 @@
+
+Hi!
+
+In a msg of <01 Sep 124>, jim@vclub.vega.msk.su writes to Dmitry Zavalishin:
+
+
+ jvms>     I've received your test and now I am very interesting with the
+ jvms> program you use for the gateway to Relcom. I am so need something like
+ jvms> it. 
+
+
+Just wondering - do you have some problems with russian? 
+Well, this is my own program - i call it "dedicated" gate. It works in tandem 
+with uupc package from demos in MessyDOS environment. At this moment it can't 
+be used as a generic gate, 'cause it has a table of users and represents each 
+user with correct internet address. For example, you got this letter from 
+dz@dialnet..., but any other gate will represent me as 
+'Dmitry.Zavalishin@f32.n5020.z2.fidonet.org'. The main purpose of this gate is 
+to distribute access to Relcom among known and restricted number of users, 
+working under DOS. Right now it works (as you can see), but still in 
+beta-testing stage. I can give it to you for free if you're going to use it in 
+non-commercial environment, or you can buy released version for 600 rub. 
+(cash) to use it in business sphere. Release is planned on the 
+beginning of November or so.
+
+Yours truly Dmitry
+
+PS: Alternatively, I can give you sources of 'FIDOGATE' package for free :)
+
+--- GoldED 2.31p+
+ * Origin:  Silent Infinity Surrounds Your Mind  (FidoNet 2:5020/32)

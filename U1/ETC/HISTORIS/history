@@ -1,0 +1,53 @@
+þ 10 Apr 94 (1.90e)
+
+  û Fixed bug that caused the following diagnostics without reason: 
+    "Elc: EchoList cache unable to fit into the given memory limits!".
+
+  û Fixed overlay problem with DOS executables, caused 'Divide error'
+    diagnostics at startup.
+
+  û To make full use of OS/2 2.x virtual memory, echolist cache size
+    was set to 100Kb in OS/2 version. (10Kb in DOS version).
+
+þ 23 Apr 94 (1.91a)
+
+  û New Setup.UU2 parameter: CnewsFeed. Makes UU2 to act as a simple 
+    Cnews-type system - feed received cnews articles back to uucp.
+    Additionally, batch.exe now is able to check outgoung article's
+    path against destination host name or it's aliases, as stated in
+    Feeds.UU2, to prevent dupe loops.
+
+þ 02 May 93 (1.91a)
+
+  û Obsolete setup parameter: FlagDir. New parameter: KickUUCPFlag
+    gives the name of file to create when something was sent to UUCP
+    side.
+
+  û setup.uu2: AttachStem parameter gives first four letters for
+    file-attaches, created by uu2fido.
+
+  û Fixed a bug in ftn/domain mapper, that caused problems
+    with parsing fido addresses with domains. Improved origin
+    address scanning in snews.exe. Added new default action to
+    fido->uucp address mapper in snews.exe - now it uses default
+    gate domain to build 'from' address if no corresponding FTN
+    found.
+
+
+þ 04 May 93 (1.91a)
+
+  û Fixed memory allocation bug in address convertor code, caused
+    exceptions in unbatch/uu2fido.
+
+
+
+þ 2 Jan 94 (1.90b)
+
+  û Unbatch: Bug, caused seen-by to vanish in some cases, fixed.
+    Feature: if Origin keyword is not defined, origin line takes
+    its text from UseNet Organization headline.
+
+  û All: New RFC-based code table had no 0x8D replaced - fixed.
+
+
+

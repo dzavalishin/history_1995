@@ -1,0 +1,12 @@
+/************************ UU2 FILE2UU ***************************\
+ *
+ *	Copyright (C) 1991 by Infinity Soft
+ *
+ *	Module 	:	Scan outfile spool for TICs
+ *
+ *      $Log:   Q:/news/snews/vcs/main.c_v  $
+ *      
+ *
+\*/
+
+#include    "file2uu.h"

@@ -1,0 +1,41 @@
+
+Operating System/2 Program Maintenance Utility
+Version 3.00.006 Mar 15 1995
+Copyright (C) IBM Corporation 1988-1995
+Copyright (C) Microsoft Corp. 1988-1991
+All rights reserved.
+
+	icc /Tdp /I..\..\lib\Out /B"/NOO" /B"/DEB" /Feuu2fido.exe /Ms /Q main.obj  sendlett.obj  sendfile.obj  send.obj  sendspool.obj  runsmail.obj  rfc_msg.obj  rfc_load.obj  uuparse.obj  address.obj dde4cc.lib ..\..\lib\Out\U1_209a.LIB uu2fido.Def
+Object Modules [.obj]: /NOO /DEB /nologo /noi /align:16 /exepack /base:65536 +
+Object Modules [.obj]: "main.obj" +
+Object Modules [.obj]: "sendlett.obj" +
+Object Modules [.obj]: "sendfile.obj" +
+Object Modules [.obj]: "send.obj" +
+Object Modules [.obj]: "sendspool.obj" +
+Object Modules [.obj]: "runsmail.obj" +
+Object Modules [.obj]: "rfc_msg.obj" +
+Object Modules [.obj]: "rfc_load.obj" +
+Object Modules [.obj]: "uuparse.obj" +
+Object Modules [.obj]: "address.obj" +
+Object Modules [.obj]: ".\tempinc\iesseq.obj" +
+Object Modules [.obj]: ".\tempinc\ilnseq.obj" +
+Object Modules [.obj]: "D:\TMP\c1739AAA.lib"
+Run File [main.exe]: "uu2fido.exe"
+List File [nul.map]: 
+Libraries [.lib]: "dde4cc.lib" +
+Libraries [.lib]: "..\..\lib\Out\U1_209a.LIB"
+Definitions File [nul.def]: "uu2fido.Def"
+
+send.obj(Send.c) :  error L2029: 'Uu2FidoApp::send_letter(RFC_Msg&,fido_msg*,const string&)' : unresolved external
+send.obj(Send.c) :  error L2029: 'RFC_headlines::operator[](const string&)' : unresolved external
+sendfile.obj(SendFile.c) :  error L2029: 'RFC_headlines::operator[](const string&)' : unresolved external
+send.obj(Send.c) :  error L2029: 'RFC_Msg::get_gm_time()' : unresolved external
+send.obj(Send.c) :  error L2029: 'Uu2FidoApp::remap_addr(fido_user&,string&,const char*)' : unresolved external
+send.obj(Send.c) :  error L2029: 'Uu2FidoApp::spool_news()' : unresolved external
+send.obj(Send.c) :  error L2029: 'RFC_Msg::size()' : unresolved external
+sendfile.obj(SendFile.c) :  error L2029: 'RFC_Msg::size()' : unresolved external
+runsmail.obj(RunSMail.c) :  error L2029: 'RFC_envelope::from_string()' : unresolved external
+send.obj(Send.c) :  error L2029: 'RFC_Msg::get_headline(string&,const string)' : unresolved external
+
+
+There were 8 errors detected

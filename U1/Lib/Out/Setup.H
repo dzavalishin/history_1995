@@ -1,0 +1,249 @@
+/************************ UUCP to FIDO convertor ***************************\
+ *
+ *	Copyright (C) 1991 by Infinity Soft
+ *
+ *	Module 	:	Setup module header
+ *
+ *      $Log: Setup.H $
+ *      Revision 1.4  1995/11/05 13:52:48  dz
+ *      current.
+ *
+ * Revision 1.3  1995/04/13  11:06:28  dz
+ * debug
+ *
+ * Revision 1.2  1995/04/06  23:33:30  dz
+ * checkpoint
+ *
+ * Revision 1.1  1995/03/11  18:04:17  dz
+ * Initial revision
+ *
+ *      
+ *         Rev 1.6   07 Jun 1993 17:58:46   dz
+ *      update
+ *      
+ *         Rev 1.5   15 Nov 1992 00:14:46   dz
+ *      Announce_module flag added
+ *      
+ *         Rev 1.4   14 Nov 1992 19:30:54   dz
+ *      Defaults taken out, new fields added
+ *      
+ *         Rev 1.3   23 Mar 1992 23:04:40   dz
+ *      New fields, default values definitions.
+ *
+ *         Rev 1.2   04 Feb 1992 22:16:26   dz
+ *      A lot of new fields
+ *      
+ *         Rev 1.1   11 Oct 1991 05:11:54   dz
+ *      New items added to conf. record.
+ *      
+ *         Rev 1.0   12 Sep 1991 01:29:18   dz
+ *      Initial revision.
+ *
+ *
+\*/
+
+
+
+#ifndef	SETUP_H
+#define	SETUP_H
+
+#include "strng.h"
+
+
+#include "fidoaddr.h"
+#include "ftn.h"
+
+#include	<uu2dir.h>
+//#include	<strng.h>
+
+#pragma pack(1)
+
+
+#define	MAXUSER		150
+
+struct freedom								// Free domain! :)
+	{
+	char			*domain;
+	struct freedom	*next;					// Link
+	};
+
+enum uucp_type								// UUCP package type
+	{
+	UUCP_Unknown,							// Too bad :(
+	UUCP_Ache30,							// Ache's UUPC/* 3.0
+	UUCP_11R,								// UUPC/extended 1.11R
+	UUCP_Waffle,								// Waffle 1.64
+        UUCP_Sendmail
+	};
+
+enum KPH_mode
+	{
+    MSG_Separate    = 0,
+	MSG_Kill        = 1,
+    MSG_Pass        = 2,
+	MSG_Hold        = 3
+	};
+
+enum Log_style
+    {
+    LOG_Default     = 0,
+    LOG_Bink        = 1,
+    LOG_Frodo       = 2
+    };
+
+
+// ------------------ General setup struct.
+
+struct setup
+	{
+//	fido_addr		our_addr;				// Address of our node
+//	fido_addr		news_addr;				// Pseudo addr of news origin
+
+	fido_addr		echo_to_addr;			// Address to send echo packets to
+	fido_addr		echo_from_addr;			// Pseudo addr of echo packets origin
+
+	// Rexx proc. names
+	String			rexx_u2f_addr;	// preprocess uucp address for UU2Fido
+	String			rexx_f2u_addr;
+	String			rexx_u2f_pack;  // procedure to compress file attachment
+	String			rexx_gremote_cmd;  // GRemote command handler
+	String			rexx_kick_uucp;  // Thing to execute when we think it is time to make uucp call
+
+
+
+	String			magic;					// Gate's magic username
+
+	bool			to_any_addr;			// For FIDO2UU: Process messages to ANY address, select only by name field
+
+	bool			free_mode;				// Pass non-registered users (Not implemented)
+	struct freedom	*free_domains;			// List of domains to which any FIDO user can send mail
+
+	bool			pass_unknown_back;		// Pass mail to unknown users back to uusmail.exe
+	bool			pass_unknown_along;		// Pass mail to unknown users to FIDO side, to gate master
+	bool                    send_error_notification;        // uu2fido will send a message to sender if address is wrong
+
+	bool			announce_module;		// When module starts, print its name
+        bool                    enable_frip;                    // send attaches with frip, if possible
+
+	String			netmail_dir;		// FroDo netmail dir
+	String			netfile_dir;		// Directory to put .PKT files to (FroDo file dir)
+	String			infile_dirs;		// List of dirs sepereated with ';', where incoming file-attaches can be found
+	String			flag_dir;			// Directory to create flag files in
+
+	String			kick_uucp_flag;		// Name of file to create when something new sent to UUCP side
+
+	String          log_file;           // Where to put logging info
+	String			log_level;			// Which kinds of messages to log
+	int             log_style;          // In fact of type LOG_style
+        bool            log_debug;
+
+	String          help_file;          // Where can I get help for user
+	String          attach_help_file;          // Where can I get text to put into the file attach message
+	String			stat_dir;			// Where to put statistics
+	String			newsin_dir;			// Inound news spool (for rnews/unbatch)
+	String			newsout_dir;		// Outbound news spool
+
+	String			filein_dir;			// Inound uucp files spool
+	String			fileout_dir;		// Outbound uucp files spool
+
+	String			store_dir;			// Where to put stored files
+
+	String			recode_dir;     // Place to look for codetables in
+
+	unsigned int	zip_limit;				// Messages of which size send as zipped file attaches
+	unsigned long	pkt_size;				// Maximal size of packet file
+	unsigned int    part_size;              // Maximal size of echomail message
+	unsigned int    from_field_size;        // Maximal size of FIDO message 'from' field
+
+	bool			truncate_sent_attaches;		//
+
+	String			def_domain;			// Default Internet domain
+//	String			free_domain;		// Internet domain for free mode addresses (instead of fidonet.org)
+	String			origin;				// Echo messages origin
+	String			organization;		// Organization name
+	String			gate_id;			// Used in ViaMail mode for self identification and dupeloop awareness
+	String			tz;					// Time zone line
+	String			news_path;          // Name to put/check for in Path: headline. Default - domain
+	String                  attach_stem;		// First four letters of file-attach name. Last four are digits
+
+	String			postmaster;			// (UUCP address) Gate keeper
+	String			newsmaster;			// (UUCP address) News to this person are gated to echoes
+
+	String			password;           // Gremote passowrd
+	String			userlist_file;      // UserList file
+	String			echolist_file;      // EchoList file
+	String			feedlist_file;      // List of UseNet feeds
+	String			rulelist_file;      // List of newsgroups rules files
+
+	String			newusr_file;        // List of addresses of new users (see new_usr.c)
+
+	String			rmail_exe_name;     // rmail.exe file name
+	int             rmail_exitl;            // With this exitcode rmail must exit after successfull local delivery
+	int             rmail_exitr;            // With this exitcode rmail must exit after successfull remote delivery
+
+	String			uux_exe_name;       // uux.exe file name
+
+	String			code_fu;            // Name of code conversion table, FIDO->UUCP
+	String			code_uf;            // ---//---, UUCP->FIDO
+	bool			code_fu_flag;			// uu2fido: Yes - turn recoding on only with -u flag. No - recode allways.
+
+	uucp_type		uucp;					// Kind of UUCP package we're working with
+	bool			uucp_rmail_ffrom;		// Yes: rmail -f <from_addr>  No: rmail -f <Letter_file>
+	bool			at_to_percent_in_from_;		// Yes: change '@' to '%' in From_
+
+	String			mail_pass_hl;   // Headlines to pass in mail messages
+	String			mail_hide_hl;   // Headlines to hide (^A) in mail messages
+	String			mail_kill_hl;   // Headlines to kill in mail messages
+
+	String			news_pass_hl;   // Headlines to pass in news messages
+	String			news_hide_hl;   // Headlines to hide (^A) in news messages
+	String			news_kill_hl;   // Headlines to kill in news messages
+
+	String			news_grade;	// Grade to call uux for rnews with
+
+	// in fact of type KPH_mode
+    int             news_control_msg;       // What we should do with control messages in news
+    int             news_bad_group_msg;     // What we should do with messages having unknown group in news
+
+    bool            no_crosspost;           // Post message only to the first area found, ignore crossposting
+
+    bool            no_flags_kludge;        // Don't generate ^AFLAGS!
+
+
+    string          batchmail_spool;        // Grade to call uux for rnews with
+
+//
+// Cnews mode
+//
+
+    bool            cnews_feed_back; // Send all the received articles to batch spool
+
+//
+//  Compartibility options
+//
+    bool            old_stats;      // Maintain old (.STT) style statistics files?
+
+
+	};
+
+extern setup _Export			conf;
+
+
+// ------------------ Funcs
+
+bool _Export	get_setup( void );
+bool	parse_ctl_str( char *def );
+void	check_required_keywords();		// Call fatal() if setup isn't complete
+
+//bool	check_ignname( char *name );	// Ignore messages from such a name?
+//bool	add_ignname( char *name );		// Add a name to ignored list
+
+
+
+#pragma pack()
+
+
+#endif
+
+
+

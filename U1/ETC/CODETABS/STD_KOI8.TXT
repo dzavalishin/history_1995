@@ -1,0 +1,65 @@
+─ My netmail (2:5020/23.77@fidonet.org) ─────────────────────────── MY_NETMAIL ─
+ Msg  : #565 [24]                           Rcv Pvt K/s                         
+ From : ache@astral.msk.su                  2:5020/23       Mon 11 Jan 93 23:22 
+ To   : Dmitry Zavalishin                   2:5020/23.77                        
+ Subj : Re: Final koi8 charset                                                  
+────────────────────────────────────────────────────────────────────────────────
+Received:  by gate.dialnet.msk.su (UU2FIDO 1.13b)
+           for dz@pd.dialnet.msk.su;
+           Tue, 12 Jan 1993 2:38:46 +0300
+From astral!astral.msk.su!ache%astral.msk.su Tue Jan 12 02:13:18 GMT 1993 remote
+from kiae
+To: "Dmitry Zavalishin" <dz@pd.dialnet.msk.su>
+In-Reply-To: <1840.726778179@saukh.relcom.msk.su>; from "Nickolay Saukh" at Mon,
+11 Jan 1993 21:49:39 +0300
+Organization: Ha-oh-lahm Yetzirah
+Date: Tue, 12 Jan 1993 02:22:49 +0300
+From: "Andrew A. Chernov, Black Mage" <ache@astral.msk.su>
+Return-Receipt-To: ache@astral.msk.su
+Subject: Re: Final koi8 charset
+
+In message <1840.726778179@saukh.relcom.msk.su> Nickolay Saukh writes:
+
+>| In a msg of <Monday January 11 1993>, nms@ussr.eu.net writes to Dmitry
+>| Zavalishin:
+>|
+>|  n> | This is russian charsest standard as replacement of dead-born ISO
+>|  n> 8859-
+>| 5
+>|
+>| Гм. А глянуть-то на нее можно? Это чье вообще поpождение? Ache?
+>
+>Все вопросы к ache.
+
+Привет, вот кодировка, есть однозначные таблицы с alt codes.
+С твоей (гейтовской) она различается видимо только двумя символами.
+
+Here is russian charset probably becomes standard.
+
+Character definitions according to ISO 10646
+
+referenceset
+ !"  %&'()*+,-./0123456789:;<=>?
+ ABCDEFGHIJKLMNOPQRSTUVWXYZ    _
+ abcdefghijklmnopqrstuvwxyz
+
+charset koi8
+NU SH SX EX ET EQ AK BL BS HT LF VT FF CR SO SI
+DL D1 D2 D3 D4 NK SY EB CN EM SB EC FS GS RS US
+SP ! " Nb DO % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ?
+At A B C D E F G H I J K L M N O P Q R S T U V W X Y Z <( // )> '> _
+'! a b c d e f g h i j k l m n o p q r s t u v w x y z (! !! !) '? DT
+.S :S ?S vv vl vL Vl Dl dL VL VV LD UL Ul uL dl
+ur uh dh Iu hh vh vR Vr UR DR UH Il VR HH VH uH
+Uh dH Dh io uR dR Dr Vh vH ul dr FB LB lB RB TB
+Ur =< >= IO vr DH -: ?2 DG sB .M RT nS 2S fS NS
+ju a= b= c= d= e= f= g= h= i= j= k= l= m= n= o=
+p= ja r= s= t= u= z% v= %' y= z= s% je sc c% ='
+JU A= B= C= D= E= F= G= H= I= J= K= L= M= N= O=
+P= JA R= S= T= U= Z% V= %" Y= Z= S% JE Sc C% ="
+--
+In-This-Life:  Andrew A. Chernov    |  "Hay mas dicha, mas contento
+Internet:      ache@astral.msk.su   |  "Que adorar una hermosura
+Organization:  The RELCOM Corp.,    |  "Brujuleada entre los lejos
+               Moscow, Russia       |  "De lo imposible?!"  (Calderon)
+

@@ -1,0 +1,106 @@
+app.obj:	app.h 
+
+catch.obj:	log.h setup.h stat.h 
+
+checklib.obj:	setup.h log.h 
+
+checkmsg.obj:	
+
+dateconv.obj:	
+
+datetok.obj:	dateconv.h datetok.h datetok.tbl 
+
+elist.obj:	setup.h log.h elist.h elist_c.h dllinits.h 
+
+elist_c.obj:	setup.h log.h elist.h elist_c.h 
+
+enc_part.obj:	file2uu.h 
+
+fa2strng.obj:	style.h log.h fidoaddr.h 
+
+fa2ua.obj:	style.h log.h fidoaddr.h 
+
+ffolder.obj:	ffolder.h 
+
+fidoaddr.obj:	style.h log.h ftn_msg.h 
+
+freedom.obj:	setup.h log.h freedom.h 
+
+ftn.obj:	ftn.h log.h 
+
+ftn_att.obj:	ftn_msg.h ..\..\version.h 
+
+ftn_date.obj:	ftn_msg.h log.h 
+
+ftn_deb.obj:	ftn_msg.h 
+
+ftn_flags.obj:	ftn_msg.h 
+
+ftn_msg.obj:	ftn_msg.h 
+
+ftn_new.obj:	ftn_msg.h 
+
+ftn_rw.obj:	ftn_msg.h 
+
+fuserdef.obj:	userlist.h setup.h log.h 
+
+getindat.obj:	datec.h dateconv.h datetok.h 
+
+hl_match.obj:	hl_match.h 
+
+ign_name.obj:	setup.h log.h 
+
+log.obj:	app.h log.h setup.h stat.h dllinits.h 
+
+new_usr.obj:	setup.h log.h new_usr.h 
+
+parse.obj:	strng.h 
+
+recode.obj:	recode.h recode.tbl 
+
+rexxcall.obj:	rexx.h dllinits.h 
+
+rexxfunc.obj:	rexx.h dllinits.h 
+
+rexxscom.obj:	rexx.h dllinits.h 
+
+rfc.obj:	rfc.h 
+
+rfc_date.obj:	log.h datec.h 
+
+rfc_load.obj:	hl.h rfc_msg.h ..\..\version.h 
+
+rfc_msg.obj:	hl.h rfc_msg.h 
+
+setup.obj:	setup.h log.h defset.h userlist.h ..\..\version.h 
+
+set_tab.obj:	setup.h ftn.h log.h 
+
+spool.obj:	spool.h uu2io.h ..\..\version.h ..\..\u1.h dllinits.h 
+
+stat.obj:	log.h setup.h stat.h dllinits.h 
+
+strng.obj:	strng.h 
+
+tic.obj:	tic.h tic_kw.h ..\..\version.h 
+
+tic_clr.obj:	tic.h 
+
+tic_fill.obj:	tic.h tic_kw.h 
+
+tic_kw.obj:	style.h tic_kw.h 
+
+tic_save.obj:	tic.h ..\..\version.h 
+
+ua2fa.obj:	uucpaddr.h 
+
+userlist.obj:	userlist.h setup.h log.h 
+
+uucpaddr.obj:	uucpaddr.h 
+
+uutraver.obj:	uucpaddr.h 
+
+zmain.obj:	uucpaddr.h 
+
+_dll_init.obj:	dllinits.h 
+

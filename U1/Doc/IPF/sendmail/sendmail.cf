@@ -1,0 +1,395 @@
+:xmp.
+
+# The unqualified (domain-less) name of the mail relay
+DVkiae
+
+# The fully-qualified domain name of the mail hub
+DHkiae.su
+
+# Domain of the gate
+DGgate.phantom.ru
+
+# list of our subdomains we send mail to directly with UUCP
+CU db try test
+
+# list of our subdomains we send mail to directly with SMTP - не отлаживал, не факт, что pаботает
+CS smtptest
+
+
+# Version # of this file
+DZ1.6dz
+DvIBM OS/2 sendmail v.1.3.2
+
+# Official canonical hostname.
+#
+# Do not bother setting macro $w (hostname) since sendmail will 
+# set it for us anyway.
+Dj$w
+
+
+# Класс разделителей, запрещенных в имени домена.
+CB! % @ : ^
+
+
+
+
+#
+# Standard macros
+#
+
+# Name used for error messages
+DnMailer-Daemon
+# UNIX header format
+DlFrom $g  $d
+# Delimiter (operator) characters
+Do.:%@!^=/[]
+# Format of a total name
+Dq<$g>
+
+#
+# Options
+#
+
+# Process messages in the background.
+#Odbackground
+# interactive (foreground) delivery
+Odi
+# Accept oldstyle addresses
+Oo
+# SMTP read timeout
+Or15m
+# Queue directory
+OQc:\tcpip\etc\mqueue
+# Always queue for safety
+Os
+# Time to live in the queue
+OT5d
+# aliases
+#OAc:/tcpip/etc/aliases
+
+# send error messages to postmaster
+OPpostmaster
+
+
+#
+# Message precedences
+# Note: use equal weight so we can let relay decide what to do
+#
+Pfirst-class=10
+Pspecial-delivery=100
+Pjunk=0
+Pbulk=-60
+
+#
+# Trusted users
+# Note: not used by OS/2 sendmail
+#
+Troot daemon
+
+#
+# Required headers
+#
+HReceived: $?sfrom $s $.by $j ($v/$Z) id $i$?m for $m$.$?r with $r$.; $b
+H?D?Date: $a
+H?F?From: $q
+H?M?Message-Id: <$t.$i@$j>
+H?D?Resent-Date: $a
+H?F?Resent-From: $q
+H?M?Resent-Message-Id: <$t.$i@$j>
+H?x?Full-Name: $x
+H?P?Return-Path: <$g>
+# Return-Path гонит лажу, пока не смотpел, почему.
+
+# Routing
+S0
+
+# RFC 1123 не рекомендует выполнять маршрутизацию вида @a,@b,@c:user<@d>.
+# Шлем сразу на user@d.
+R@$+:$+			$2			так гораздо проще
+
+R$*<@phantom.msk.su>		$:$1<@$w>		"свой" домен - к стандарту
+R$*<@$*.phantom.msk.su>		$:$1<@$2.$w>		приводим к стандартному домену
+R$*<@phantom.uucp>			$:$1<@$w>		"свой" домен - к стандарту
+R$*<@gate.dialnet.msk.su>		$:$1<@$w>		"свой" домен - к стандарту
+R$*<@fido.dialnet.msk.su>		$:$1<@$w>		"свой" домен - к стандарту
+
+# Обрабатываем глобальные синонимы.
+#R$*<@$*>		$:$>9$1<@$2>		запускаем правило 9
+
+# Адрес вида [1.2.3.4], преобразуем в имя, запрашивая name-сервер.
+R$*<@[$+]>		$:$1<@$[[$2]$]>		обращение к BIND
+# С name-сервером ничего не получилось.
+R$*<@[$+]>		$#smtp$@[$2]$:$1@[$2]	выбираем SMTP
+
+# Наш домен - локальная почта.
+R$*<@phantom.uucp>			$1<@$w>		приводим к стандартному домену
+R$*<@phantom.msk.su>		$1<@$w>		приводим к стандартному домену
+R$*<@$*.phantom.msk.su>		$1<@$2.$w>		приводим к стандартному домену
+R$*<@gate.dialnet.msk.su>		$1<@$w>		приводим к стандартному домену
+R$*<@fido.dialnet.msk.su>		$1<@$w>		приводим к стандартному домену
+
+# Переадресация через локальную машину.
+# Повторяем все сначала через правила 3 и 0.
+R$*!$*<@$w>		$@$>0$>3$1!$2		host!user@myname => host!user
+R$*%$*<@$w>	$@$>0$>3$1%$2		host%user@myname => host%user
+
+
+
+
+R$+<@$+.fidonet.org.phantom.msk.su>	$1<@$2.fidonet.org>
+R$+<@$+.fidonet.org.phantom.ru>		$1<@$2.fidonet.org>
+
+R$*<@$-.fidonet.org>				$1<@$2.n5020.z2.fidonet.org>
+R$*<@$-.$-.fidonet.org>			$1<@$2.$3.z2.fidonet.org>
+
+
+# Гнусный мен шлет на наш нефидошный домен фидошную почту. Попpавим адpес.
+Cz z1 z2 z3 z4 z5 z6 z7 
+
+R$*<@$*.$=z.$w>				$#uu2 $@$1@$2.$3.fidonet.org $:$1@$2.$3.fidonet.org
+
+R$+<@$*.$=z.fido.phantom.ru>		$#uu2 $@$1@$2.$3.fidonet.org $:$1@$2.$3.fidonet.org
+R$+<@$*.$=z.gate.phantom.ru>		$#uu2 $@$1@$2.$3.fidonet.org $:$1@$2.$3.fidonet.org
+
+R$+<@$+.fido.phantom.msk.su>		$#error$:Undefined subdomain of phantom.msk.su
+R$+<@$+.gate.phantom.msk.su>		$#error$:Undefined subdomain of phantom.msk.su
+
+
+
+R$*<@$G>				$#uu2 $@$1 $:$1
+R$*<@fido.phantom.ru>		$#uu2 $@$1 $:$1
+R$*<@gate.phantom.ru>		$#uu2 $@$1 $:$1
+
+R$*<@$w>			$#uu2 $@$1 $:$1
+
+# subdomains we send mail to directly with UUCP
+R$*<@$=U.$w>			$#uucp $@$2   $:$1@$2.$w
+
+# subdomains we send mail to directly with SMTP 
+R$*<@$=S.$w>			$#smtp $@$2.$w   $:$1@$2.$w
+
+
+R$*<@fidonet.fidonet.org>		$#uucp $@kiae  $:$1@fidonet.fidonet.org
+R$*<@$*.fidonet.fidonet.org>		$#uucp $@kiae  $:$1@$2.fidonet.fidonet.org
+
+R$*<@$*.apc.org>			$#uucp $@glas  $:$1@$2.apc.org
+
+
+R$*<@$*.$=z.fidonet.org>			$#uu2 $@$1@$2.$3.fidonet.org $:$1@$2.$3.fidonet.org
+R$=z!$*<@fidonet.org>			$#uu2 $@fidonet.org!$1!$2 $:fidonet.org!$1!$2
+
+# unknown subdomain
+R$*<@$*.$w>			$#error $: Undefined subdomain of $w
+
+# default to relay host
+R$*<@$*>			$#uucp $@$V $:$1@$2
+
+# Пустой адрес - ошибка
+R@			$#error $: Invalid address
+
+# Локальная доставка.
+R$*<@$w>		$#uu2$:$1
+R$*<@>		$#uu2$:$1
+R$+			$#uu2$:$1
+
+
+
+
+
+
+
+# 
+# ===============================    S3    ================================================
+#
+S3
+
+# Обрабатываем пустой адрес как вырожденный случай.
+R$*<>$*			$@@			некий спецсимвол
+
+
+R$*<$*<$*>$*>$*		$3		denest
+R$*<$+>$*		$2		basic RFC822 parsing
+R$*<>$*			$n		RFC1123 <>
+
+# Все ^ заменяем на !.
+R$*^$*			$1!$2			давно устарело
+
+# RFC 1123 не рекомендует выполнять маршрутизацию вида <@a,@b,@c:user@d>.
+# Перепишем как @a,@b,@c:user<@d>.  В правиле 0 отбросим все, что
+# до двоеточия.	 Но оно может пригодиться для "From_".
+# dz: эта штука вызывает цикл в S3 ниже
+#R$+:$*@$+		$:$1:$2<@$3>		одно мучение
+
+# dz: я его пpосто выкидываю.
+R@$+,@$+:$*		@$2:$3		отpежем все пpефиксы вида "@domain,"
+R@$+:$*		$2		а тепеpь и оставшийся @domain: состpижем
+
+# dz: впpочем, можно и пpеобpазовать к @a,@b,@c:user<@d>
+#R@$+:$*@$*		$:@$1:$2<@$3>	но после этого циклится кто-то ниже
+
+
+# Обычный адрес в стиле internet.
+R$+@$+			$:$1<@$2>		домен заключаем в <скобки>
+R$+<$+@$+>		$1$2<@$3>		a<b@c> => ab<@c>
+
+# Приведение синонимов к полным именам.	 Обращение к BIND.
+R$*<@$->		$:$1<@$[$2$:$2$]>	ищем записи типа CNAME
+
+# Канонический вид готов.
+R$+<@$+>		$@$1<@$2>		получилось ab<@c>
+
+# UUCP-переадресация через себя
+R$w!$*			$1			myname!addr => addr
+Rphantom.uucp!$*			$1			myname!addr => addr
+Rphantom!$*				$1			myname!addr => addr
+Rphantom.msk.su!$*			$1			myname!addr => addr
+Rgate.dialnet.msk.su!$*			$1			myname!addr => addr
+Rfido.dialnet.msk.su!$*			$1			myname!addr => addr
+
+# UUCP-адрес в доменной адресации, преобразуем в internet.
+R$*.$~B!$*		$@$3<@$1.$2>		ab.c!de => de<@ab.c>
+
+# Типичный UUCP-адрес, добавляем ".uucp".
+R$~B!$*			$@$2<@$1.uucp>		ab!cd => cd<@ab.uucp>
+
+# Адрес вида user%host, приведем к виду a%b%c@d.
+R$*%$*		$1@$2			все @ заменим на %
+R$*@$*@$*		$1%$2@$3		последний % на @
+R$*@$*			$@$1<@$2>		поставим скобки
+
+# Просто user.	Дописываем свой домен.
+R$*			$@$1<@$w>		добавляем свой домен
+
+
+
+
+
+#-------------------------------------------
+# Правилo 4: преобразование во внешнюю форму
+#-------------------------------------------
+S4
+
+R@			$@			пустой <> адрес
+
+# Преобразование адреса вида 1.2.3.4 в имя домена.  Обращение к BIND.
+R$*<@[$+]>		$:$1<@$[[$2]$]>		приведение численного адреса
+
+# Еще одно обращение к BIND.  Приведение синонимов к полным именам.
+# В принципе, можно этого не делать, если relay сделает это за нас,
+# но при этом письмо может пойти по весьма странному пути.
+R$*<@$->		$:$1<@$[$2$:$2$]>	ищем записи типа CNAME
+
+# Убираем угловые скобки.
+R$*<@$+.uucp>		$2!$1			приводим в человеческий вид
+R$*<$+>			$1$2			приводим в человеческий вид
+
+# Удаляем повторяющиеся домены.
+#R$+%$=w@$=w		$1@$w			u%host@host => u@host
+#R$+%$w@$w		$1@$w			u%host@host => u@host
+
+
+
+
+
+#-------------------
+# Правилo 10: пустое
+#-------------------
+S10
+
+#------------------------------------
+# Правилo 11: отправитель на конверте
+#------------------------------------
+# Перевод адресов From_ в банговую нотацию
+# для отслеживания маршрута статистикой.
+S11
+
+# Из множеств "имен собственных" выбираем стандартное.
+R$*<@phantom.ru>			$:$1<@$w>		"свой" домен - к стандарту
+R$*<@phantom.uucp>			$:$1<@$w>		"свой" домен - к стандарту
+R$*<@phantom.msk.su>		$:$1<@$w>		"свой" домен - к стандарту
+R$*<@gate.dialnet.msk.su>		$:$1<@$w>		"свой" домен - к стандарту
+R$*<@fido.dialnet.msk.su>		$:$1<@$w>		"свой" домен - к стандарту
+
+# Приведение синонимов к полным именам.	 Обращение к BIND.
+#R$*<@$->		$:$1<@$[$2$:$2$]>	ищем записи типа CNAME
+
+# Маршрут вида @a,@b,@c:user<@d>.
+R$*@$*,@$*:$*<$*>	$1$2!@$3:$4<$5>		@a,@b:u<@h> -> a!@b:u<@h>
+R$*@$*:$*<$*>		$1$2:$3<$4>		a!@b:u<@h> -> a!b!u<@h>
+
+# Теперь разберем обычную форму
+R$*@$*<@$*>		$1%$2<@$3>		лишние @ на %
+R$*:$*<@$*>		$1!$3!$2		убрали все @ и :
+R$*<@$*>		$2!$1			убрали все @
+
+# Ставим маркер ^ и передвигаем его на имя пользователя.
+R$*			$:^$1^			поставили ^
+R$*^$*!$*		$1$2!^$3		двигаем вправо
+
+# Маршрут вида u%a%b%c.
+R$*^$*%$*^$*		$1^$3^!$2$4		a%b%c -> c!b!a
+R$*^$*			$1$2			убираем ^
+
+# Убираем свое имя из пути.
+R$w!$*			$2			убираем свое имя
+Rphantom.uucp!$*			$1			убираем свое имя
+Rphantom.msk.su!$*			$1			убираем свое имя
+Rgate.dialnet.msk.su!$*			$1			убираем свое имя
+Rfido.dialnet.msk.su!$*			$1			убираем свое имя
+Rlocalhost!$*		$1			отрезаем localhost
+
+# Убираем ".uucp" из адресов.
+R$~B.uucp!$*		$1!$2
+R$*!$~B.uucp!$*		$1!$2!$3
+
+# Добавляем свое имя.
+# (dz - у нас это добавляет suux.exe)
+#R$*			$:$w!$1
+
+#-----------------------------------
+# Правилo 12: получатель на конверте
+#-----------------------------------
+S12
+
+# RFC 1123 не рекомендует выполнять маршрутизацию вида @a,@b,@c:user<@d>.
+# Шлем сразу на user@d.
+R@$+:$+			$2			жить стало веселей
+
+#-------------------------------------------------------
+# Правилo 13: получатель на конверте, в банговой нотации
+#-------------------------------------------------------
+S13
+
+R$*			$:$>12$1		запускаем правило 12
+
+# Возврат в банговую нотацию. Применяется для переадресации в сеть,
+# не понимающую адресов в стиле internet.
+R$+<@$+.uucp>		$2!$1			u@h.uucp => h!u
+R$+<@$*>		$2!$1			u@h => h!u
+
+
+
+
+
+#
+# Mail Delivery Agents - пеpвые 3 не используются, хотя ничто не
+# мешает пpи необходимости использовать SMTP.
+#
+Msmtp,	P=[IPC], F=mDFMuCX, S=0, R=0, A=IPC $h
+Mlocal, P=c:\tcpip\umail\umailer.exe, F=lsDFP,  S=10, R=20, A=-dest c:\tcpip\umail\server\inbox -to $u
+Mprog,  P=xxx, A=Nothing special
+
+# Послать по uucp на хост из $@ с адpесом $:
+
+# хpенов sendmail не стpоит "remote from" в From_, так что пpиходится извpащаться
+#Muucp, P=n:\net\uupc\bin\uux.exe, A=-x2 -p -n -r $h!rmail $u, Flags=Uupm,   Maxsize=1000000,  Sender=11/10,   Recipient=12
+Muucp, P=C:\tcpip\XBIN\suux.exe, A=phantom $h!rmail $u, Flags=Uupm,   Maxsize=1000000,  Sender=10,   Recipient=12
+
+# загейтовать в ФИДО, адpес - $:, флаг -x1 нужен - иначе у сендмейла 
+# глючит запускало внешних мейлеpов
+
+Muu2,  P=C:\tcpip\XBIN\uu2fido.exe, A=-x1 $u,   Flags=upm,   Maxsize=1000000,  Sender=10,   Recipient=12
+
+
+# Sendmail configuration file *must* end with a newline - do not remove below newline
+:exmp.

@@ -1,0 +1,14 @@
+F1: Edit
+    b uu2.hdf
+
+F2: Compile
+    helpc uu2.hdf 
+
+F3: View
+    helpeng.exe uu2 
+
+F5: Compile for OS/2
+    helpc /OS2 uu2.hdf
+
+F6: Copy to a:
+    copy uu2.ipf a:

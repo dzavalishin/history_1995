@@ -1,0 +1,16 @@
+address.obj:	uu2fido.h 
+
+main.obj:	uu2fido.h 
+
+router.obj:	uu2fido.h 
+
+runsmail.obj:	uu2fido.h 
+
+send.obj:	uu2fido.h 
+
+sendfile.obj:	uu2fido.h 
+
+sendlett.obj:	uu2fido.h 
+
+sendspool.obj:	uu2fido.h 
+

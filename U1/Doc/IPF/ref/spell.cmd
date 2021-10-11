@@ -1,0 +1,2 @@
+SET ISPELL-LITE=D:\Bin\ISPELL\
+D:\Bin\Ispell\ISPELITE.EXE %1 %2 %3 %4 %5 %6 %7 %8 %9

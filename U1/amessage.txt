@@ -1,0 +1,49 @@
+       __    __   __    __   _______            ________   ________   _______
+       ) )   ) )  ) )   ) )       ) )           ) )   ) )  ) )   )_)       ) )
+      / /   / /  / /   / /       / /           / /   / /  / /             / /
+     / /   / /  / /   / /       / /           / /   / /  (_(____         / /
+    / /   / /  / /   / /  _____(_(           / /   / /        ) )  _____(_(
+   / /   / /  / /   / /  / /                / /   / /  __    / /  / /
+  (_(___(_(  (_(___(_(  (_(_____    FOR    (_(___(_(  (_(___(_(  (_(_____
+                                                  
+                   __    __   ________   __   __   __   ________
+                   ) )   ) )  ) )   )_)  ) )  ) )  ) )  ) )   )_)
+                  / /   / /  / /        / /  / /  / /  / /
+                 / /\  / /  / /__ /    / /  / /  / /  (_(____
+                / /  \/ /  / /   /    / /  / /  / /        ) )
+               / /   / /  / /   __   / /  / /  / /  __    / /
+              (_(   (_(  (_(___(_(  (_(__(_(__(_(  (_(___(_(
+
+
+
+
+! U1 Builder: version number changed to 2.11a
+
+þ 12 Jul 96
+
+  û Fido2UU: Setup parameter Rexx.Kick.uucp gives name of Rexx
+    script to be executed when mail is passed to uucp.
+
+
+--------------------------------------------------------------------------
+
+
+Join UU2 fileecho to receive hot new UU2 updates quickly. Contact
+me if you want to become registered user.
+
+UU2 echo and fileecho is available from	2:5020/32
+
+
+Note that version for OS/2 is called U1, not UU2. (UU2/2 = U1, got it?;)
+
+Current alphas/betas of U1 are available via FTP:
+	ftp.kiae.su, pub/os2/fido/au1_os2.zip & bu1_os2.zip
+
+
+ FIDO:           Dmitry Zavalishin, 2:5020/32, (0:00-6:00 MSK)
+ Internet:       dz@phantom.ru
+ Phone:          +7 (095) 110-6728, 120-0898
+ SnailMail:      Moscow, Arteckovskaya 7-4 260
+
+                                Yours truly Dmitry Zavalishin
+

@@ -1,0 +1,13 @@
+F2: make
+    nmake /nologo
+
+F4: Debug
+    start ipmd unbatch.exe
+
+F8: Trace
+    start IXTRA.EXE unbatch.exe
+
+F9: view
+    start IDCGRAPH.EXE UNBATCH.TRC
+
+

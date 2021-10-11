@@ -1,0 +1,536 @@
+head	1.3;
+access;
+symbols;
+locks;
+comment	@#   @;
+
+
+1.3
+date	96.03.09.01.36.59;	author dz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	95.04.13.11.23.01;	author dz;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	95.03.11.18.34.07;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@U1 MakeFile
+@
+
+
+1.3
+log
+@*** empty log message ***
+@
+text
+@###########################################################################
+#
+#       $Log: MakeFile $
+#   Revision 1.2  1995/04/13  11:23:01  dz
+#   Before translation to C Set
+#
+#   Revision 1.1  1995/03/11  18:34:07  dz
+#   Initial revision
+#
+#
+#
+
+M=nmake /nologo -f main.mak 
+
+###########################################################################
+#
+#       Goals
+#
+#
+
+all:	main.mak
+	$(M) all
+
+help:
+        @@echo make all/hot/local/doc/sig/alpha/hatch_alpha
+
+hot:    main.mak
+	$(M) hot
+    
+sig:    main.mak
+	$(M) sig
+
+alpha:  main.mak
+	$(M) alpha
+
+ahatch: hatch_alpha
+
+hatcha: hatch_alpha
+
+hatch_alpha:      main.mak
+	$(M) hatch_alpha
+
+hatch_dox:      main.mak
+	$(M) hatch_dox
+
+doc:    main.mak
+	$(M) doc
+
+dox:    main.mak
+	$(M) dox
+
+
+beta:  main.mak
+	$(M) "NODEBUG = yes" beta
+
+bhatch: hatch_beta
+
+hatchb: hatch_beta
+
+hatch_beta:      main.mak
+	$(M) "NODEBUG = yes" hatch_beta
+
+
+clean:	main.mak
+	$(M) clean
+
+Libs: main.mak
+	$(M) Libs
+
+
+
+
+###########################################################################
+#
+#       Create file used to set variable to current U1
+#       version number. Used (included) in hatch.mak
+#
+
+main.mak: dllver.mak version.mak
+    nmake /nologo -f hot.mak ver_mark
+    touch main.mak
+
+dllver.mak: version.exe
+    version.exe -d > dllver.mak
+
+version.mak: version.exe
+    version.exe > version.mak
+
+version.exe: version.c version.h
+    icc /Q version.c
+    $(M) clean
+@
+
+
+1.2
+log
+@Before translation to C Set
+@
+text
+@d4 3
+d13 1
+a13 52
+
+
+#
+#       Definitions
+#
+#
+
+#
+# Root of U1 tree
+#
+WE=d:\u1
+
+#
+# System & compiler
+#
+#!ifdef __OS2__
+SYS=OS2
+SM2=2
+M_OUT=OUT\OS2Dist.OUT
+L_OUT=OUT\OS2Dist.LCL
+STRIP=copy
+ZIP=zip -j -g
+MAKER=make
+#!endif
+
+#!ifndef SYS
+#!error this is OS2 only version
+#!endif
+
+
+#
+# Where to put hot version and alpha revision
+#
+HOT_DIR=d:\U1\Out
+HOT_FILE=HU1_$(SYS).zip
+HOT_SIG_FILE=HU1_$(SYS).SIG
+AR_DIR=d:\U1\Out
+AR_FILE=AU1_$(SYS).zip
+
+#
+# Where to put internal stuff
+#
+
+U1_LIBS=$(WE)\LIB\OUT\$(SYS)
+
+#
+# Other defs
+#
+
+LIBS = $(U1_LIBS)\fido.lib $(U1_LIBS)\U1.lib $(U1_LIBS)\uucp.lib
+LHDR = $(WE)\lib\fido\*.h $(WE)\lib\uucp\*.h $(WE)\lib\U1\*.h $(WE)\*.h
+PGP  = m:\pgp\pgp
+d21 3
+d27 2
+a28 17
+!ifndef __OS2__
+SENDRULE_DEP=$(L_OUT)\sendrule.exe
+!endif
+
+
+all:	\
+        $(M_OUT)\rnews.exe $(M_OUT)\unbatch.exe                         \
+        $(M_OUT)\snews.exe $(M_OUT)\batch.exe                           \
+        $(M_OUT)\setup.U1 $(M_OUT)\users.U1 $(M_OUT)\feeds.U1        \
+        $(M_OUT)\echoes.U1 $(M_OUT)\read.me                            \
+        $(M_OUT)\uu2fido.exe $(M_OUT)\fido2uu.exe $(M_OUT)\gremote.exe  
+#        $(L_OUT)\file2uu.exe $(L_OUT)\getfatt.exe                       
+#        $(SENDRULE_DEP)
+#        $(M_OUT)\U1.doc $(M_OUT)\setup.doc $(M_OUT)\worlds.doc         \
+#        $(M_OUT)\uustat.exe                                             \
+
+hot:    $(HOT_DIR)\$(HOT_FILE)   sig
+d30 2
+a31 55
+sig:    $(HOT_DIR)\$(HOT_SIG_FILE)
+
+alpha:  $(AR_DIR)\$(AR_FILE)
+
+hatch_alpha:       version.mak $(AR_DIR)\$(AR_FILE)
+    $(MAKER) -f hatch.mak -DSYS=$(SYS) -DDIR=$(AR_DIR) -DFILE=$(AR_FILE) alpha
+
+
+doc:    $(M_OUT)\U1.doc
+
+#local:  l:\gate\uu2fido.exe l:\gate\fido2uu.exe l:\uupc\sendmail.exe l:\gate\rnews.exe l:\uupc\rnews.exe l:\gate\unbatch.exe l:\gate\batch.exe l:\gate\snews.exe
+
+#clean:
+#	cd U1fido ^ make clean
+
+###########################################################################
+#
+#       Create libs
+#
+#
+
+
+
+$(U1_LIBS)\fido.lib: $(WE)\*.h $(WE)\lib\fido\*.c $(WE)\lib\fido\*.h
+        cd lib\fido
+        make -f $(SYS).MAK -DOUT_DIR=$(U1_LIBS) install
+        cd ..\..
+
+$(U1_LIBS)\uucp.lib: $(WE)\*.h $(WE)\lib\uucp\*.c $(WE)\lib\uucp\*.h
+        cd lib\uucp
+        make -f $(SYS).MAK -DOUT_DIR=$(U1_LIBS) install
+        cd ..\..
+
+$(U1_LIBS)\U1.lib: $(WE)\*.h $(WE)\lib\U1\*.c $(WE)\lib\U1\*.h
+        cd lib\U1
+        make -f $(SYS).MAK -DOUT_DIR=$(U1_LIBS) install
+        cd ..\..
+
+
+###########################################################################
+#
+#       Compile/tdstrip/pkilite programs
+#
+#
+
+
+$(M_OUT)\fido2uu.exe:   mail\fido2uu\bcc_$(SYS).obj\fido2uu.exe
+        $(STRIP) mail\fido2uu\bcc_$(SYS).obj\fido2uu.exe $(M_OUT)\fido2uu.exe
+
+mail\fido2uu\bcc_$(SYS).obj\fido2uu.exe: mail\fido2uu\*.c mail\fido2uu\*.h $(LIBS) $(LHDR)
+        cd mail\fido2uu
+#        bc /m fido2uu$(SM2).prj
+        make -f $(SYS).MAK
+        cd ..\..
+
+d33 2
+a34 2
+$(M_OUT)\uu2fido.exe:   mail\uu2fido\bcc_$(SYS).obj\uu2fido.exe
+        $(STRIP) mail\uu2fido\bcc_$(SYS).obj\uu2fido.exe $(M_OUT)\uu2fido.exe
+d36 1
+a36 4
+mail\uu2fido\bcc_$(SYS).obj\uu2fido.exe: mail\uu2fido\*.c mail\uu2fido\*.h $(LIBS) $(LHDR)
+        cd mail\uu2fido
+        make -f $(SYS).MAK
+	cd ..\..
+d38 1
+d40 2
+a41 2
+$(M_OUT)\gremote.exe:   tools\remote\bcc_$(SYS).obj\gremote.exe
+        $(STRIP) tools\remote\bcc_$(SYS).obj\gremote.exe $(M_OUT)\gremote.exe
+d43 2
+a44 4
+tools\remote\bcc_$(SYS).obj\gremote.exe: tools\remote\*.c tools\remote\*.h $(LIBS) $(LHDR)
+        cd tools\remote
+        make -f $(SYS).MAK
+        cd ..\..
+d46 2
+d49 2
+a50 2
+#$(M_OUT)\uustat.exe:    tools\uustat\uustat.exe
+#        $(STRIP) tools\uustat\uustat.exe $(M_OUT)\uustat.exe
+a51 48
+#tools\uustat\uustat.exe: tools\uustat\*.c tools\uustat\*.h $(LHDR)
+#        cd tools\uustat
+#        make -f $(SYS).MAK
+#        cd ..\..
+
+$(M_OUT)\unbatch.exe:    news\unbatch\bcc_$(SYS).obj\unbatch.exe
+        $(STRIP) news\unbatch\bcc_$(SYS).obj\unbatch.exe $(M_OUT)\unbatch.exe
+
+news\unbatch\bcc_$(SYS).obj\unbatch.exe: news\unbatch\*.c news\unbatch\*.h $(LIBS) $(LHDR)
+        cd news\unbatch
+        make -f $(SYS).MAK
+        cd ..\..
+
+$(M_OUT)\rnews.exe:    news\rnews\bcc_$(SYS).obj\rnews.exe
+        $(STRIP) news\rnews\bcc_$(SYS).obj\rnews.exe $(M_OUT)\rnews.exe
+
+news\rnews\bcc_$(SYS).obj\rnews.exe: news\rnews\*.c news\rnews\*.h $(LIBS) $(LHDR)
+        cd news\rnews
+        make -f $(SYS).MAK
+        cd ..\..
+
+
+#
+# snews/batch
+#
+
+
+$(M_OUT)\batch.exe:    news\batch\bcc_$(SYS).obj\batch.exe
+        $(STRIP) news\batch\bcc_$(SYS).obj\batch.exe $(M_OUT)\batch.exe
+
+news\batch\bcc_$(SYS).obj\batch.exe: news\batch\*.c news\batch\*.h $(LIBS) $(LHDR)
+        cd news\batch
+        make -f $(SYS).MAK
+        cd ..\..
+
+$(M_OUT)\snews.exe:    news\snews\bcc_$(SYS).obj\snews.exe
+        $(STRIP) news\snews\bcc_$(SYS).obj\snews.exe $(M_OUT)\snews.exe
+
+news\snews\bcc_$(SYS).obj\snews.exe: news\snews\*.c news\snews\*.h $(LIBS) $(LHDR)
+        cd news\snews
+        make -f $(SYS).MAK
+        cd ..\..
+
+
+
+#
+# Local utils
+#
+d53 2
+a54 2
+#$(L_OUT)\sendrule.exe:    tools\sendrule\sendrule.exe
+#        $(STRIP) tools\sendrule\sendrule.exe $(L_OUT)\sendrule.exe
+d56 1
+a56 4
+#tools\sendrule\sendrule.exe: tools\sendrule\*.c tools\sendrule\*.h $(LIBS) $(LHDR)
+#        cd tools\sendrule
+#        make -f $(SYS).MAK
+#        cd ..\..
+d58 1
+d60 2
+a62 2
+$(L_OUT)\file2uu.exe:    file\file2uu\bcc_$(SYS).obj\file2uu.exe
+        $(STRIP) file\file2uu\bcc_$(SYS).obj\file2uu.exe $(L_OUT)\file2uu.exe
+d64 2
+a65 4
+file\file2uu\bcc_$(SYS).obj\file2uu.exe: file\file2uu\*.c file\file2uu\*.h $(LIBS) $(LHDR)
+        cd file\file2uu
+        make -f $(SYS).MAK
+        cd ..\..
+d67 2
+a68 8
+
+$(L_OUT)\getfatt.exe:    file\getfatt\bcc_$(SYS).obj\getfatt.exe
+        $(STRIP) file\getfatt\BCC_$(SYS).OBJ\getfatt.exe $(L_OUT)\getfatt.exe
+
+file\getfatt\bcc_$(SYS).obj\getfatt.exe: file\getfatt\*.c file\getfatt\*.h $(LIBS) $(LHDR)
+        cd file\getfatt
+        make -f $(SYS).MAK
+        cd ..\..
+a74 78
+#       Copy example setup files, etc
+#
+#
+
+$(M_OUT)\setup.U1:		doc\setup.U1
+    copy doc\setup.U1 $(M_OUT)\setup.U1
+
+$(M_OUT)\users.U1:     doc\users.U1
+    copy doc\users.U1 $(M_OUT)\users.U1
+
+$(M_OUT)\feeds.U1:     doc\feeds.U1
+    copy doc\feeds.U1 $(M_OUT)\feeds.U1
+
+$(M_OUT)\echoes.U1:    doc\echoes.U1
+    copy doc\echoes.U1 $(M_OUT)\echoes.U1
+
+$(M_OUT)\read.me:            doc\read.me
+        copy doc\read.me $(M_OUT)\read.me
+
+$(M_OUT)\U1_flow.pcx:          etc\U1_111w.pcx
+	copy etc\U1_111w.pcx $<
+
+###########################################################################
+#
+#       Pack archives
+#
+#
+
+
+
+###########################################################################
+#
+#       Pack & copy hot/alpha version to BBS
+#
+#
+
+U1_LIST1 = $(M_OUT)\uu2fido.exe $(M_OUT)\fido2uu.exe history
+#U1_LIST2 = $(M_OUT)\gremote.exe $(M_OUT)\uustat.exe $(M_OUT)\read.me
+U1_LIST2 = $(M_OUT)\gremote.exe $(M_OUT)\read.me
+U1_LIST3 = $(M_OUT)\U1.doc $(M_OUT)\worlds.doc $(M_OUT)\setup.doc
+U1_LIST4 = $(M_OUT)\setup.U1 $(M_OUT)\users.U1 $(M_OUT)\U1_flow.pcx
+U1_LIST5 = $(M_OUT)\unbatch.exe $(M_OUT)\rnews.exe $(M_OUT)\echoes.U1
+U1_LIST6 = $(M_OUT)\feeds.U1 $(M_OUT)\batch.exe $(M_OUT)\snews.exe
+
+$(HOT_DIR)\$(HOT_FILE): $(U1_LIST1) $(U1_LIST2) $(U1_LIST3) $(U1_LIST4) $(U1_LIST5) $(U1_LIST6)
+        del /q    $<
+        del /q $(HOT_DIR)\$(HOT_SIG_FILE)
+        arj a -e  $< $(U1_LIST1)
+        arj a -e  $< $(U1_LIST2)
+        arj a -e  $< $(U1_LIST3)
+        arj a -e  $< $(U1_LIST4)
+        arj a -e  $< $(U1_LIST5)
+        arj a -e  $< $(U1_LIST6)
+
+$(HOT_DIR)\$(HOT_SIG_FILE):    $(HOT_DIR)\$(HOT_FILE)
+        $(PGP) -sb $(HOT_DIR)\$(HOT_FILE) -o $(HOT_DIR)\$(HOT_SIG_FILE)
+
+
+
+#
+#         Alpha version
+#
+
+#$(AR_DIR)\$(AR_FILE): $(U1_LIST1) $(U1_LIST2) $(U1_LIST3) $(U1_LIST4) $(U1_LIST5) $(U1_LIST6)
+# No dox yet
+$(AR_DIR)\$(AR_FILE): $(U1_LIST1) $(U1_LIST2) $(U1_LIST4) $(U1_LIST5) $(U1_LIST6)
+        -del /q    $<
+        $(ZIP)  $< $(U1_LIST1)
+        $(ZIP)  $< $(U1_LIST2)
+#        $(ZIP)  $< $(U1_LIST3)
+        $(ZIP)  $< $(U1_LIST4)
+        $(ZIP)  $< $(U1_LIST5)
+        $(ZIP)  $< $(U1_LIST6)
+        $(ZIP)  $< hot.txt
+
+
+###########################################################################
+#
+d79 4
+d91 1
+a91 56
+
+###########################################################################
+#
+#       Copy hot .EXE to local directories
+#
+#
+
+
+l:\gate\uu2fido.exe:    $(M_OUT)\uu2fido.exe
+    copy $(M_OUT)\uu2fido.exe $<
+
+l:\gate\fido2uu.exe:    $(M_OUT)\fido2uu.exe
+    copy $(M_OUT)\fido2uu.exe $<
+
+l:\uupc\sendmail.exe:   $(M_OUT)\uu2fido.exe
+    copy $(M_OUT)\uu2fido.exe $<
+
+l:\gate\rnews.exe:      $(M_OUT)\rnews.exe
+    copy $(M_OUT)\rnews.exe $<
+
+l:\uupc\rnews.exe:      $(M_OUT)\rnews.exe
+    copy $(M_OUT)\rnews.exe $<
+
+l:\gate\unbatch.exe:    $(M_OUT)\unbatch.exe
+    copy $(M_OUT)\unbatch.exe $<
+
+l:\gate\batch.exe:      $(M_OUT)\batch.exe
+    copy $(M_OUT)\batch.exe $<
+
+l:\gate\snews.exe:      $(M_OUT)\snews.exe
+    copy $(M_OUT)\snews.exe $<
+
+l:\gate\gremote.exe:    $(M_OUT)\gremote.exe
+    copy $(M_OUT)\gremote.exe $<
+
+
+
+###########################################################################
+#
+#       Send to betatesters a message about new hot version
+#
+#
+
+news: hot.txt
+    sendnews.bat
+    copy /b hot.txt + history history.new
+    del history
+    ren history.new history
+    copy etc\hot.tpl hot.txt
+
+
+
+
+
+
+
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d3 3
+a5 1
+#       $Log:$
+d8 1
+d25 1
+a25 1
+!ifdef __OS2__
+d33 1
+a33 1
+!endif
+d35 3
+a37 3
+!ifndef SYS
+!error this is OS2 only version
+!endif
+d330 2
+d337 1
+a337 1
+    bcc version.c
+@

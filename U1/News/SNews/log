@@ -1,0 +1,15 @@
+MAKE Version 3.7  Copyright (c) 1987, 1994 Borland International
+	copy MAKE0001.@@@ OS2.cfg
+D:\U1\News\SNEWS\MAKE0001.@@@ => D:\U1\News\SNEWS\OS2.cfg
+     1 file(s) copied
+	bcc  +OS2.CFG -c unpack.c send.c scan.c read.c origin.c main.c 
+Borland C++ Version 4.1 Copyright (c) 1993, 1994 Borland International
+unpack.c:
+send.c:
+scan.c:
+read.c:
+origin.c:
+Warning origin.c 123: Temporary used for parameter 'ap' in call to 'fido_addr::aparse(const char * &)' in function get_origin(char *,fido_addr &,char *)
+main.c:
+	tlink  /Toe /ap /Lf:\bin\bcos2\LIB;..\..\lib\out\os2 @MAKE0000.@@@
+Turbo Link  Version 1.5 for OS/2 Copyright (c) 1994 Borland International

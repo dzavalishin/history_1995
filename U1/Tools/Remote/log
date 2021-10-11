@@ -1,0 +1,51 @@
+
+Operating System/2 Program Maintenance Utility
+Version 3.00.006 Mar 15 1995
+Copyright (C) IBM Corporation 1988-1995
+Copyright (C) Microsoft Corp. 1988-1991
+All rights reserved.
+
+	icc /Ti+ /I..\..\lib\Out /Tdp /Ge+ /Ms /Q+ /c ffolder.c
+FFolder.c(39:30) : error EDC3330: "ffolder(const string&)" cannot have an initializer list.
+   41       |        restart_flag = Yes;
+FFolder.c(41:1) : error EDC3013: "restart_flag" is undefined.
+   42       |        opened_flag = No;
+FFolder.c(42:1) : error EDC3013: "opened_flag" is undefined.
+   45       |~ffolder()
+===============^
+FFolder.c(45:1) : error EDC3090: Syntax error - expected "declarator" and found "~".
+   53       |        close();
+FFolder.c(53:1) : error EDC3080: Wrong number of arguments for "close(int)".
+   63       |        h =   (-1);
+FFolder.c(63:1) : error EDC3013: "h" is undefined.
+   65       |        rc = DosFindFirst( dir_v.c_str(), &h, 0x27, &ff, sizeof(ff), &count, 1 );
+FFolder.c(65:1) : error EDC3013: "dir_v" is undefined.
+   71       |                restart_flag = No;
+FFolder.c(71:1) : error EDC3013: "restart_flag" is undefined.
+   72       |                opened_flag;
+FFolder.c(72:1) : error EDC3013: "opened_flag" is undefined.
+   79       |                close();
+FFolder.c(79:1) : error EDC3080: Wrong number of arguments for "close(int)".
+   83       |        error( EC_OS_Error, EI_Full, "FindFirst rc = %d", rc );
+FFolder.c(83:1) : error EDC3055: "exit_code_t" cannot be converted to "error_info_t".
+FFolder.c(83:1) : informational EDC3306: The previous message applies to argument 1 of function "::error(error_info_t,const char*,...)".
+   95       |        rc = DosFindNext( h, &ff, sizeof(ff), &count );
+FFolder.c(95:1) : error EDC3013: "h" is undefined.
+  107       |                close();
+FFolder.c(107:1) : error EDC3080: Wrong number of arguments for "close(int)".
+  114       |        error( EC_OS_Error, EI_Full, "FindNext rc = %d", rc );
+FFolder.c(114:1) : error EDC3055: "exit_code_t" cannot be converted to "error_info_t".
+FFolder.c(114:1) : informational EDC3306: The previous message applies to argument 1 of function "::error(error_info_t,const char*,...)".
+  125       |                rc = restart_flag ? do_restart( s ) : do_continue( s );
+FFolder.c(125:1) : error EDC3013: "restart_flag" is undefined.
+FFolder.c(125:1) : error EDC3013: "rc" is undefined.
+  130       |                } while( !msg_file( s ) );
+FFolder.c(130:1) : error EDC3055: "string" cannot be converted to "const char*".
+FFolder.c(130:1) : informational EDC3306: The previous message applies to argument 1 of function "msg_file(const char*)".
+  146       |        if( !opened_flag ) return;
+FFolder.c(146:1) : error EDC3013: "opened_flag" is undefined.
+FFolder.c(146:1) : warning EDC3331: Return value of type "bool" is expected.
+  148       |        restart_flag = Yes;
+FFolder.c(148:1) : error EDC3013: "restart_flag" is undefined.
+  150       |        if( (rc = DosFindClose( h )) != 0 )
+FFolder.c(150:1) : error EDC3013: "h" is undefined.

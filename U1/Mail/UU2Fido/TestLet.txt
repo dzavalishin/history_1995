@@ -1,0 +1,95 @@
+From kiae!dialnet!grr-mew
+Date: Thu, 31 Oct 91 00:04:12 EET
+X-Class: Slow
+To: netters,
+ another-netters
+Sender: L-usenet@kiae.su
+From: Dumb_Tester@very-long-domain.about.dialnet.msk.su (Grr-Mew)
+Subject: [NEWS] Notes from ISO/CCITT messaging standards meeting October 91
+Message-ID: <875644*JPALME@SKHB.dafa.se>
+Approved: usenet@ics.uci.edu
+X400-Received: by /PRMD=QZ/ADMD=TEDE/C=SE/;
+X400-Received: by /PRMD=QZ/ADMD=TEDE/C=SE/;
+    Relayed; 30 Oct 91 12:13:08+0100
+
+Notes from the meeting with the joint ISO/CCITT meeting
+on messaging standards, the Hague, October 1991.
+=======================================================
+
+The main object of this meeting was to finally polish
+the 1992 version of the X.400 standard. Personally I
+participated in the subgroup on group communication
+standards, a group which did not plan to present any
+results for the 1992 version of X.400. I will report in
+separate messages from the discussions in the group
+communication group.
+
+The 1992 version of the standard may be the first where
+the CCITT and ISO version of the standard are offprints
+of exactly the same text. CCITT will also for the first
+time accept input of standards text for printing in
+machine-readable format, which will avoid a lot of
+typographical errors.
+
+Work has been done to reduce the number of differences
+between the ISO and the CCITT version of the standard.
+For example, instead of the word "standard" in the ISO
+version and the word "recommendation" in the CCITT
+version, the term "specification" will be used in both
+versions. Those few cases where CCITT and ISO still
+differ may be included in both standards and marked in
+the text to indicate both alternative forms.
+
+CCITT has included some features, for example the
+general text body part, which previously was only
+present in the ISO version of the standard.
+
+Important issues in this meeting were:
+
+Final resolution of outstanding defect reports on the
+old standard.
+
+Example of defects: There is a sequence of parameter-
+attributes in IPM for extended body parts, which
+corresponds to data-values. However, if a body part is
+missing, the correspondence between the sequences is not
+clear. Solution: Insert a NULL value in the parameter
+sequence so that the correspondence can still be kept.
+
+Final solution of outstanding problems on the
+interworking between telefacsimile and X.400. In
+particular, there are problems about notifications for
+such interworking which have been clarified.
+
+Accounting management for MHS.
+
+A new annex E to F.400 describing how to handle multi-
+national PRMD-s.
+
+A whole new X.400 part on voice messaging.
+
+A new voice body part. (Not the same as voice messaging,
+a voice body part is used together with other types of
+bodies in a multi-media message.)
+
+An autosubmitted indication in P2 to indicate that a
+message has been submitted automatically by a machine or
+program without human intervention.
+
+A notification-extension facility in IPM.
+
+On the controversial issue of whether to use semicolon
+(;) or slash (/) as a separator between fields in the
+business-card format of OR-adresses, no agreement could
+be reached. A new PDAM vote will be sent to ISO member
+bodies. They will then be allowed to choose between
+three alternatives: Only semicolon, only slash or to
+allow both. For each of these three alternatives, they
+will be allowed to vote "yes", "do not like but can
+accept" and "no".
+
+On the matter of PICS for MOTIS/X.400, the present PICS
+are partly of bad quality, and no one is willing to do
+the work of improving them. Because of this, maybe no
+PICS will be published at all, at least not by ISO.
+

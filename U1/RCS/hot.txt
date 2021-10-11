@@ -1,0 +1,1182 @@
+head	1.53;
+access;
+symbols;
+locks;
+comment	@--- @;
+
+
+1.53
+date	96.12.07.07.23.44;	author Builder;	state Exp;
+branches;
+next	1.52;
+
+1.52
+date	96.12.07.06.18.53;	author Builder;	state Exp;
+branches;
+next	1.51;
+
+1.51
+date	96.09.22.11.40.44;	author Builder;	state Exp;
+branches;
+next	1.50;
+
+1.50
+date	96.09.02.17.50.39;	author Builder;	state Exp;
+branches;
+next	1.49;
+
+1.49
+date	96.07.12.16.16.05;	author Builder;	state Exp;
+branches;
+next	1.48;
+
+1.48
+date	96.06.29.16.15.38;	author Builder;	state Exp;
+branches;
+next	1.47;
+
+1.47
+date	96.06.29.16.14.19;	author Builder;	state Exp;
+branches;
+next	1.46;
+
+1.46
+date	96.06.13.04.42.45;	author Builder;	state Exp;
+branches;
+next	1.45;
+
+1.45
+date	96.05.20.21.17.45;	author Builder;	state Exp;
+branches;
+next	1.44;
+
+1.44
+date	96.05.20.18.33.32;	author Builder;	state Exp;
+branches;
+next	1.43;
+
+1.43
+date	96.05.06.21.00.38;	author Builder;	state Exp;
+branches;
+next	1.42;
+
+1.42
+date	96.04.13.22.31.20;	author Builder;	state Exp;
+branches;
+next	1.41;
+
+1.41
+date	96.04.11.23.13.49;	author Builder;	state Exp;
+branches;
+next	1.40;
+
+1.40
+date	96.04.08.20.14.34;	author Builder;	state Exp;
+branches;
+next	1.39;
+
+1.39
+date	96.03.27.21.34.24;	author Builder;	state Exp;
+branches;
+next	1.38;
+
+1.38
+date	96.03.27.12.08.21;	author Builder;	state Exp;
+branches;
+next	1.37;
+
+1.37
+date	96.03.21.21.13.51;	author Builder;	state Exp;
+branches;
+next	1.36;
+
+1.36
+date	96.03.15.08.53.27;	author Builder;	state Exp;
+branches;
+next	1.35;
+
+1.35
+date	96.03.13.23.58.41;	author Builder;	state Exp;
+branches;
+next	1.34;
+
+1.34
+date	96.03.09.01.54.53;	author Builder;	state Exp;
+branches;
+next	1.33;
+
+1.33
+date	96.03.09.01.54.27;	author Builder;	state Exp;
+branches;
+next	1.32;
+
+1.32
+date	96.03.09.01.53.55;	author Builder;	state Exp;
+branches;
+next	1.31;
+
+1.31
+date	96.03.09.01.53.38;	author Builder;	state Exp;
+branches;
+next	1.30;
+
+1.30
+date	96.03.09.01.52.06;	author Builder;	state Exp;
+branches;
+next	1.29;
+
+1.29
+date	96.03.09.00.53.31;	author Builder;	state Exp;
+branches;
+next	1.28;
+
+1.28
+date	96.03.08.23.52.56;	author Builder;	state Exp;
+branches;
+next	1.27;
+
+1.27
+date	96.02.28.20.05.30;	author Builder;	state Exp;
+branches;
+next	1.26;
+
+1.26
+date	96.01.25.01.15.23;	author Builder;	state Exp;
+branches;
+next	1.25;
+
+1.25
+date	95.11.14.03.50.44;	author Builder;	state Exp;
+branches;
+next	1.24;
+
+1.24
+date	95.11.14.03.21.34;	author Builder;	state Exp;
+branches;
+next	1.23;
+
+1.23
+date	95.11.10.01.34.17;	author Builder;	state Exp;
+branches;
+next	1.22;
+
+1.22
+date	95.11.05.17.43.42;	author Builder;	state Exp;
+branches;
+next	1.21;
+
+1.21
+date	95.08.06.23.31.51;	author Builder;	state Exp;
+branches;
+next	1.20;
+
+1.20
+date	95.08.06.14.51.23;	author Builder;	state Exp;
+branches;
+next	1.19;
+
+1.19
+date	95.08.02.05.44.12;	author Builder;	state Exp;
+branches;
+next	1.18;
+
+1.18
+date	95.08.01.23.51.43;	author Builder;	state Exp;
+branches;
+next	1.17;
+
+1.17
+date	95.07.28.15.35.19;	author Builder;	state Exp;
+branches;
+next	1.16;
+
+1.16
+date	95.07.28.15.18.57;	author Builder;	state Exp;
+branches;
+next	1.15;
+
+1.15
+date	95.07.28.15.17.15;	author Builder;	state Exp;
+branches;
+next	1.14;
+
+1.14
+date	95.07.28.15.05.41;	author Builder;	state Exp;
+branches;
+next	1.13;
+
+1.13
+date	95.07.05.22.06.28;	author Builder;	state Exp;
+branches;
+next	1.12;
+
+1.12
+date	95.07.05.21.30.12;	author Builder;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	95.07.05.21.29.39;	author Builder;	state Exp;
+branches;
+next	1.10;
+
+1.10
+date	95.07.02.01.25.13;	author Builder;	state Exp;
+branches;
+next	1.9;
+
+1.9
+date	95.07.01.22.47.18;	author Builder;	state Exp;
+branches;
+next	1.8;
+
+1.8
+date	95.06.30.03.42.43;	author Builder;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	95.06.30.03.26.14;	author Builder;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	95.06.29.23.52.45;	author Builder;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	95.05.08.23.57.14;	author Builder;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	95.05.08.23.40.45;	author Builder;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	95.05.08.23.39.49;	author dz;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	95.05.08.23.39.05;	author Builder;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	95.05.08.23.34.50;	author Builder;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.53
+log
+@Version 2.11e
+@
+text
+@ 
+! U1 Builder: version number changed to 2.11d 
+ 
+
+! U1 Builder: version number changed to 2.11c
+
+
+! U1 Builder: version number changed to 2.11b
+
+
+! U1 Builder: version number changed to 2.11a
+
+þ 12 Jul 96
+
+  û Fido2UU: Setup parameter Rexx.Kick.uucp gives name of Rexx
+    script to be executed when mail is passed to uucp.
+
+@
+
+
+1.52
+log
+@Version 2.11d
+@
+text
+@d1 3
+@
+
+
+1.51
+log
+@Version 2.11c
+@
+text
+@d2 3
+@
+
+
+1.50
+log
+@Version 2.11b
+@
+text
+@d2 3
+@
+
+
+1.49
+log
+@Version 2.11a
+@
+text
+@a0 1
+þ 9 Mar 96
+d2 6
+a7 1
+  û ....
+@
+
+
+1.48
+log
+@Version 2.10a
+@
+text
+@d1 1
+d3 1
+a3 101
+! U1 Builder: version number changed to 2.09u
+
+
+þ 14 Jun 96
+
+  û Fido2UU: UUCP type 'sendmail' added. Not tested well.
+
+! U1 Builder: version number changed to 2.09t
+
+
+þ 21 May 96
+
+  û Fido2UU: Now _CORRECTLY_ :) waiting for rmail termination 
+    before proceeding to the next message.
+
+! U1 Builder: version number changed to 2.09s
+
+
+! U1 Builder: version number changed to 2.09r
+
+
+þ 06 May 96
+
+  û Fido2UU: Fixed error: trap on incorrect date/time in fido message.
+    Fixed error: First line of messages was lost during conversion.
+    Glitch: now waiting for rmail termination before proceeding to
+    the next message.
+
+! U1 Builder: version number changed to 2.09q
+
+
+! U1 Builder: version number changed to 2.09p
+
+
+þ 12 Apr 96
+
+  û UU2Fido: ^AVia date convertor trapped on 'received' lines with
+    incorrect syntax (no ';' before date string). Fixed.
+
+  û Fido2UU: Error messages are sent from 'sysop', not from the magic
+    name now to prevent infinite message bouncing between two programs.
+
+! U1 Builder: version number changed to 2.09o
+
+
+þ  8 Apr 96
+
+  û Fido2UU: Fixed bug in date conversion: month was incorrect.
+
+þ  1 Apr 96
+
+  û UU2Fido: ^Avia date was incorrect. Fixed.
+
+  û Batch: Fixed minor bug: stdout was lost after running 
+    compression program.
+
+  û Fido2UU, UU2Fido: Date: headline now contains original message 
+    date, not date of gateing.
+
+  û All: ^AVia lines have UTC-based time/date.
+
+
+! U1 Builder: version number changed to 2.09n
+
+þ 27 Mar 96
+
+  û Snews: Command line parameter '-v' added to turn on verbose operation.
+    Default is to print only a dot per message.
+
+! U1 Builder: version number changed to 2.09m
+
+þ 27 Mar 96
+
+  û Fido2UU: Headline generation logic redone - now adding Sender if
+    from/reply-to are replaced by FIDO message contents. Some critical
+    headlines can't be replaced by FIDO massage any more. Fixed bug with
+    1-character lines. Message size now calculated again.
+
+! U1 Builder: version number changed to 2.09l
+
+þ 22 Mar 96
+
+  û Fido2UU: Regressions (loss of empty lines, error in uuencode) fixed.
+    Found a reason for Fido2UU not to kill messages sometimes. Fixed.
+
+þ 16 Mar 96
+
+  û Fido2UU: Fixed problem (loop forever) with attaches uuencode block.
+    Corrected from_ address (converted to bang form) to make sure error
+    reports will go to sender, not to gatemaster or unknown user @@ gate 
+    domain.
+
+! U1 Builder: version number changed to 2.09k
+
+
+! U1 Builder: version number changed to 2.09j
+
+þ 14 Mar 96
+
+  û All: There was an error in general command line parser: any args
+    after an general option was ignored, causing loss of mail sometimes :(
+@
+
+
+1.47
+log
+@Version 2.09u
+@
+text
+@d2 3
+@
+
+
+1.46
+log
+@Version 2.09t
+@
+text
+@d2 7
+@
+
+
+1.45
+log
+@Version 2.09s
+@
+text
+@d2 5
+@
+
+
+1.44
+log
+@Version 2.09s
+@
+text
+@d2 3
+@
+
+
+1.43
+log
+@Version 2.09r
+@
+text
+@d2 3
+@
+
+
+1.42
+log
+@Version 2.09q
+@
+text
+@d2 10
+@
+
+
+1.41
+log
+@Version 2.09p
+@
+text
+@d2 3
+d9 3
+@
+
+
+1.40
+log
+@Version 2.09o
+@
+text
+@d2 8
+@
+
+
+1.39
+log
+@Version 2.09n
+@
+text
+@d1 20
+@
+
+
+1.38
+log
+@Version 2.09m
+@
+text
+@d1 13
+@
+
+
+1.37
+log
+@Version 2.09l
+@
+text
+@d1 3
+d7 1
+@
+
+
+1.36
+log
+@Version 2.09k
+@
+text
+@d1 13
+@
+
+
+1.35
+log
+@Version 2.09j
+@
+text
+@d2 1
+a2 1
+! U1 Builder: version number changed to 2.09i
+@
+
+
+1.34
+log
+@Version 2.09i
+@
+text
+@a0 1
+þ 9 May 95
+d2 6
+a7 1
+  û ....
+@
+
+
+1.33
+log
+@Version 2.09h
+@
+text
+@d1 1
+d3 1
+a3 78
+! U1 Builder: version number changed to 2.09h
+
+
+! U1 Builder: version number changed to 2.09h
+
+
+! U1 Builder: version number changed to 2.09h
+
+
+! U1 Builder: version number changed to 2.09h
+
+þ  8 Mar 96
+
+  û All: Loadable codetables support written. Conf. file parameter RecodeDir
+    must point to a directory where table files are stored. Table file must
+    be exactly 128 bytes long and its name must be equal to the name of
+    recode table as given in configs.
+
+! U1 Builder: version number changed to 2.09g
+
+þ  8 Mar 96
+
+  û uu2fido: ^AVia lines order reversed, date/time parsing bug fixed.
+  û fido2uu: There was '\n' forgotten in a message formatter. That caused
+    formatter malfunction and extremely long lines in a uucp letters. Fixed.
+
+
+þ 28 Feb 96
+
+  û All: At last! -x <number> command line arg parsed (and ignored)
+
+! U1 Builder: version number changed to 2.09f
+
+þ 28 Feb 96
+
+  û uu2fido: Converting Received and X400-Received headlines to ^AVia.
+
+! U1 Builder: version number changed to 2.09e
+
+
+! U1 Builder: version number changed to 2.09d
+
+
+! U1 Builder: version number changed to 2.09c
+
+þ 10 Nov 95
+
+  û uu2fido: Mistakenly converted codetable back to original when
+    mail is sent as fileattach. Fixed.
+
+  û uu2fido: ^A was missing in Via kludge line. Fixed.
+
+  û fido2uu: Only first message was processed each run. Fixed.
+
+! U1 Builder: version number changed to 2.09b
+
+
+! U1 Builder: version number changed to 2.09a
+
+þ  4 Nov 95
+
+  û All: Using new common command line parser. General cleanup
+    of all code. Increased size of user table to 1000.
+
+  û uu2fido: now returns exit code if is not able to do its job.
+    Also can send error message to originator if destination address is
+    not parsable or not in user table.
+
+  û uu2fido: Seriously rewritten, now using new base classes for FTN
+    and RFC messages access. Virtually no limit imposed on the length
+    of RFC-style headlines. Adding '^AVia' line. MailHideHL now really
+    does its job.
+
+  û fido2uu: Seriously rewritten, now using new base classes for FTN
+    messages access. 'Reply-To' headline now generated.
+
+  û NB! Due to a large amount of new/rewritten code in this version
+    it's stability is questionable. Be carefull!
+@
+
+
+1.32
+log
+@Version 2.09h
+@
+text
+@d10 3
+@
+
+
+1.31
+log
+@Version 2.09h
+@
+text
+@d7 3
+@
+
+
+1.30
+log
+@Version 2.09h
+@
+text
+@d4 3
+@
+
+
+1.29
+log
+@Version 2.09h
+@
+text
+@d1 3
+@
+
+
+1.28
+log
+@Version 2.09g
+@
+text
+@d3 9
+@
+
+
+1.27
+log
+@Version 2.09f
+@
+text
+@d1 13
+@
+
+
+1.26
+log
+@Version 2.09e
+@
+text
+@d1 1
+d3 3
+a5 1
+! U1 Builder: version number changed to 2.09d
+@
+
+
+1.25
+log
+@Version 2.09d
+@
+text
+@d5 3
+@
+
+
+1.24
+log
+@Version 2.09d
+@
+text
+@d2 3
+@
+
+
+1.23
+log
+@Version 2.09c
+@
+text
+@d1 3
+d8 4
+@
+
+
+1.22
+log
+@Version 2.09b
+@
+text
+@d1 7
+d13 3
+d20 7
+d28 2
+@
+
+
+1.21
+log
+@Version 2.09a
+@
+text
+@a0 1
+þ 9 May 95
+d2 9
+a10 1
+  û ....
+@
+
+
+1.20
+log
+@Version 1.99g
+@
+text
+@d1 1
+d3 1
+a3 78
+! U1 Builder: version number changed to 1.99f
+
+þ 02 Aug 95
+
+  û All: FTN domain matching is not too strict now. When comparing
+    dotless domain with a domain, comtaining dot, latter one is
+    treated as if it had only part preceding a dot. For example,
+    domains 'fidonet' and 'fidonet.org' are considered equal, but
+    'fidonet.org' is not equal to 'fidonet.ftn'.
+
+! U1 Builder: version number changed to 1.99e
+
+þ 30 Jul 95
+
+  û All: Log file time represenation changed to 24 hours.
+
+  û snews.exe: sometimes skipped over some letters in packets. Fixed.
+    As a side effect snews is nearly twice as fast now! On my node
+    1.99a did 2-2.5 messages a second and 1.99f does 4-5!
+
+  û snews.exe: now can process wildcards too.
+
+! U1 Builder: version number changed to 1.99d
+
+þ 28 Jul 95
+
+  û All: There was fatal error in fatal exit routine :) - fixed.
+    Improved diagnostic printout - errno text printed now, if
+    appropriate.
+
+  û rnews.exe: -file option was not able to process wildcards. Fixed.
+
+! U1 Builder: version number changed to 1.99c
+
+
+! U1 Builder: version number changed to 1.99b
+
+þ 02 Jul 95
+
+  û GRemote.exe: recompiled with C/Set. Still has disabled parts but
+    can reply to help requests, at least...
+
+  û GRemote.exe: now command set of GRemote can be extended with 
+    Rexx scripts! Name of Rexx program is given in Rexx.Gremote.Cmd
+    setup parameter. See hooks documentation for details.
+
+! U1 Builder: version number changed to 1.99a
+
+þ 30 Jun 95
+
+  û Snews.exe: messages to undefined areas was silently discarded. Now
+    error message is generated. Kludges RFC-Message-Id, RFC-References, 
+    RFC-Path, RFC-Distribution now recognized and converted
+    to corresponding headlines.
+
+  û Snews.exe: REPLYADDR and RFC-From are used to create From: headline,
+    if possible.
+
+  û Unbatch.exe: X-RFC-Message-ID changed to RFC-Message-ID to match 
+    Eugene Crosser's ifmail way of headline tunnelling. All the
+    headlines passing to FTN side get "RFC-" prefix added for the same
+    purpose. X-FTN group now used to create FTN to/msgid/reply.
+
+  û UU2Fido.exe: UUCP messages with Return-Receipt-To headline get RRQ
+    attribute when converted to FTN format.
+
+  û Unbatch.exe: New newsgroup/echo pair definition modifier 
+    XPostGuard=Yes|No. When set to Yes, prevents crossposted newsarticles
+    from passing to this echoarea.
+
+  û All: New setup parameter NoFlagsKludge, turns off generation of
+    ^AFLAGS in netmail at all. For use with brain-damaged software
+    that can't tolerate this kludge. I _DO_NOT_ recommend to turn
+    ^AFLAGS off!
+
+  û Batch.exe: New setup parameter NewsGrade sets grade to send uucp
+    job with when sending news via uux. Works with uupc/ext only.
+
+@
+
+
+1.19
+log
+@Version 1.99f
+@
+text
+@d1 3
+d19 2
+@
+
+
+1.18
+log
+@Version 1.99e
+@
+text
+@d1 10
+d16 2
+@
+
+
+1.17
+log
+@Version 1.99d
+@
+text
+@d1 8
+d14 2
+@
+
+
+1.16
+log
+@Version 1.99c
+@
+text
+@d1 1
+d3 3
+a5 5
+! U1 Builder: version number changed to 1.99c
+
+
+! U1 Builder: version number changed to 1.99c
+
+@
+
+
+1.15
+log
+@Version 1.99c
+@
+text
+@d8 3
+@
+
+
+1.14
+log
+@Version 1.99c
+@
+text
+@d5 3
+@
+
+
+1.13
+log
+@Version 1.99c
+@
+text
+@a4 3
+! U1 Builder: version number changed to 1.99c
+
+
+@
+
+
+1.12
+log
+@Version 1.99c
+@
+text
+@d5 3
+@
+
+
+1.11
+log
+@Version 1.99c
+@
+text
+@d2 3
+@
+
+
+1.10
+log
+@Version 1.99b
+@
+text
+@d1 3
+d8 4
+@
+
+
+1.9
+log
+@Version 1.99a
+@
+text
+@d1 1
+d3 2
+a4 1
+! U1 Builder: version number changed to 1.98u
+d6 1
+a6 5
+
+! U1 Builder: version number changed to 1.98u
+
+
+! U1 Builder: version number changed to 1.98u
+@
+
+
+1.8
+log
+@Version 1.98u
+@
+text
+@d7 3
+@
+
+
+1.7
+log
+@Version 1.98u
+@
+text
+@d4 3
+@
+
+
+1.6
+log
+@Version 1.98u
+@
+text
+@d1 3
+d15 19
+a33 1
+    Eugene Crosser's ifmail way of headline tunnelling.
+@
+
+
+1.5
+log
+@Version 1.98t
+@
+text
+@d1 1
+d3 4
+a6 1
+! U1 Builder: version number changed to 1.98t
+d8 2
+a9 1
+þ 04 May 95 (1.98q)
+d11 2
+a12 89
+  û Snews: Sometimes crashed on incorrect dates in packed messages.
+    Now reports error and replaces incorrect date with current.
+
+þ 01 May 95 (1.98k)
+
+  û Fido2UU: Fixed bug in CC: processing
+
+þ 12 Apr 95 (1.98k)
+
+  û Dmitry Zavalishin: Happy Birthday To Me :).
+
+þ 12 Apr 95 (1.98j)
+
+  û Now using IBM C++ Set to compile gate, because of Borland's errors.
+
+  û Immediate result of IBM's compiler: profiling of unbatch let me
+    speed it up once again.
+
+  û Fido2UU: would finish processing before all the mail available
+    was gated. Now keeps it going until nothing can be found twice
+    in a line.
+
+  û Fido2UU: (long standing one) Used to send error messages to 
+    posmaster's fido address with empty 'to' user name. Fixed!
+
+þ 06 Apr 95 (1.98g)
+
+  û unbatch, snews: removed limit on echo/newsgroup table cache size,
+    now preloading it at once. This change improved unbatch performance
+    up to 1.5-2.5 times it was before.
+
+þ 07 Mar 95 (1.98g)
+
+  û uu2fido: New modifier to userdefinition made: -filedir=path.
+    Now you have per-user control of where file attaches for this 
+    user are put to. (This proposal came from Fyodor Ustinov.)
+
+þ 06 Mar 95 (1.98f)
+
+  û rnews: Do not exit when unknown args are given. UUPC 1.12k uuxqt
+    sometimes gives us some shit at a command line :(.
+
+  û batch: New delivery mode added: viauux -snews, see feeds.u1 for
+    explanation.
+
+
+þ 24 Jan 95 (1.98f)
+
+  û rnews: Found a cause of traps too. :) Fixed.
+
+
+þ 17 Jan 95 (1.98e)
+
+  û Unbatch: It was possible to get year number > 99, that caused
+    packet structure to be broken. Now checking year number, and
+    stripping most significant digits if it was > 99. (so 107 -> 07, etc).
+
+  û Batch: There was error in CNewsFeed mode that caused batch to
+    send articles with big newsgroups list back to node they came from.
+
+  û Batch: Found a cause of traps. Fixed.
+
+
+þ 10 Jan 95 (1.98d)
+
+  û Unbatch: Bug with code table conversion in CnewsFeed fixed, now unbatch
+    converts text to FIDO-side cpodetable before placing it in out news
+    spool.
+
+þ 20 Dec 94 (1.98c)
+
+  û Unbatch: bug with REPLYTO fixed - username part was missing, making it
+    unusable for message editors. X-RFC-Message-ID now generated.
+
+þ  4 Dec 94 (1.98b)
+
+  û UU2Fido: Config. keywords MailPassHL/MailHideHL/MailKillHL now can filter
+    from_ headline too. To get rid of from_ just put following line:
+
+        MailKillHL from_
+
+    UU2Fido: Now can be used with real pipe at stdin. (Workaround with temp
+    file used.) This means compatibility with UUPC 1.12 for OS/2!
+
+þ  2 Dec 94 (1.98b)
+
+  û Bug in echo list code fixed - sometimes U1 insisted that specific
+    newsgroup/echo pair is not defined in echoes.u1, even if it is.
+
+@
+
+
+1.4
+log
+@Version 1.98t
+@
+text
+@d1 3
+@
+
+
+1.3
+log
+@none
+@
+text
+@a0 4
+
+
+! U1 Builder: version number changed to 1.98t
+
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d2 1
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d1 3
+@

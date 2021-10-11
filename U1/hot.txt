@@ -1,0 +1,21 @@
+ 
+! U1 Builder: version number changed to 2.11e 
+ 
+ 
+! U1 Builder: version number changed to 2.11d 
+ 
+
+! U1 Builder: version number changed to 2.11c
+
+
+! U1 Builder: version number changed to 2.11b
+
+
+! U1 Builder: version number changed to 2.11a
+
+þ 12 Jul 96
+
+  û Fido2UU: Setup parameter Rexx.Kick.uucp gives name of Rexx
+    script to be executed when mail is passed to uucp.
+
+

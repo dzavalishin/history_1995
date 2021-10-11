@@ -1,0 +1,23 @@
+
+postmaster          2:5020/32.256     Postmaster
+uucp                2:5020/32.256     Postmaster
+
+; dz@isoft,msk.su, default domain used
+;dz                  2:5020/32.256     Dmitry_Zavalishin
+; same as above
+;dz@                 2:5020/32.256     Dmitry_Zavalishin
+
+; dz@dialnet.msk.su, explicit domain used
+;dz@dialnet.msk.su 2:5020/32     Dmitry_Zavalishin_1
+
+; dz@pd.isoft.msk.su, partially defined domain - pasted to default
+;dz@pd.            2:5020/32.77    Dmitry_Zavalishin_2
+
+; Entry for newsmaster
+newsmaster          2:5020/32.256     NewsMaster
+newsmaster          2:5020/32    NewsMaster
+
+; Enables access to gremote.exe from uucp side
+gate                2:5020/32       gate
+
+

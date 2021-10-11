@@ -1,0 +1,6 @@
+GCC=gcc -x c++ -I/lib/uu2 -I/lib/fido -Ic:/include -Ij:/bc/classlib/include -S
+
+
+main.o: main.c
+    $(GCC) main.c
+

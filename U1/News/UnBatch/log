@@ -1,0 +1,3 @@
+MAKE Version 3.7  Copyright (c) 1987, 1994 Borland International
+	icc /Ti+ /B"/DEB" /Feunbatch.exe /Ms /Q+ FTNFrom.obj Open_PKT.obj SendNews.obj ToSpool.obj chg_ext.obj decomp.obj get_art.obj gethdr.obj getopt.obj gr2area.obj kiae_unb.obj main.obj mktemp.obj scan.obj unbatch.obj uuparse.obj vread.obj vread_bf.obj vread_fi.obj vread_wi.obj ..\..\lib\dll\U1.Lib
+Fatal: Command arguments too long

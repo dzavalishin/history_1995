@@ -1,0 +1,654 @@
+From cpuv1!L-relcom@kiae.su Wed Oct  9 14:07:55 EET 1991 remote from kiae
+Received: by relcom.kiae.su; Wed,  9 Oct 91 14:07:32 +0002 (EET DST)
+X-Class: Slow
+To: netters
+Sender: L-relcom@kiae.su
+Newsgroups: test
+From:  "Gate Test Data File" <gatest@test.su>
+Subject: [NEWS] ASTRA Server Announcement (fwd)
+Message-ID: <9110091102.AA02103@dvv.hq.demos.su>
+Originator: daemon@cpuv1
+Reply-To: gatest@test.su
+Organization: unknown
+Date: Wed, 9 Oct 91 13:02:15 MSK
+
+Forwarded message:
+From dvv Wed Oct  9 12:02:00 1991
+Message-Id: <199110090744.AA01205@fuug.fi>
+Date:          Wed, 9 Oct 1991 09:51:20 SET
+From: ESRA DELEN <ESRA@TREARN.BITNET>
+Subject:       ASTRA Server Announcement
+To: dvv@dvv.hq.demos.su
+
+
+
+       ASTRA - An Access System for Databases Distributed
+6                    on EARN/BITNET
+7
+8
+9
+0
+1  Address:
+2  ASTRA
+3  CNUCE - CNR
+4  Via Santa Maria, 36
+5  56100 Pisa, Italy
+6
+7
+8  E-mail: ASTRA@ICNUCEVM
+9
+0  Phone: 39-50-593248
+1
+2  Description:
+3ASTRA service is  created to access databases on EARN/BITNET
+4by the users of  the  academic community.The initial data is
+5provided by  IBM  and consisted of  IBM  study  contracts in
+6Europe and  United States.  ASTRA  service  allows  users to
+7retrieve data  stored in ASTRA databases in  CNUCE,  Pisa as
+8well as the data stored  anywhere on the network.  Users can
+9retrieve the documents and the software  and reports related
+0to  the  search  criteria  they define.  The  databases  are
+1accessible by ASTRA with the same user interface.  Users can
+2submit data to the system as well as retrieve data.
+3
+4
+5If you have, at your site, a database and if you are willing
+6to make this database available to all the network community
+7please contact us. The language or the Database Management
+8System of the database doesnt matter.
+9
+0  Network access and usage:
+1ASTRA    database   is   accessible   by   EARN/BITNET   and
+2non-EARN/BITNET users. For EARN/BITNET users user interfaces
+3for IBM VM/CMS and DEC VAX/VMS  are developed.  Also a batch
+4language format has been developed for non-EARN/BITNET users
+5and users of different operating systems.
+6
+7To access the ASTRA  system  the EARN/BITNET  user must have
+8the user  interface on his disk.  The user  interface can be
+9obtained from ASTRADB@ICNUCEVM with the following commands:
+0                GET ASTRA EXEC      * For IBM VM/CMS interface
+1                GET ASTRA PAS       * For DEC VAX/VMS interface
+2
+3After the  fiels  are  received  and stored on the  disk the
+4server is accessed by entering
+5                ASTRA               * For IBM VM/CMS users
+6                RUN ASTRA           * For DEC VAX/VMS users
+7
+8The  detailed information on the  system can be retrieved by
+9getting the file ASTRA INFO from ASTRADB@ICNUCEVM.
+0
+1For  non-EARN/BITNET  users  and users  of  other  operating
+2systems  a  batch  language is  developed.  Following  is an
+3example of the batch language:
+4
+5StartRequest: Username: <username> Host: <host>
+6Dbname: <dbname> Typeresult: <typeresult>
+7= <querytext>
+8= <querytext>
+9------
+0= <querytext>
+1Printformat: <format>
+2Dbname: <dbname> Typeresult: <typeresult>
+3= <querytext>
+4= <querytext>
+5------
+6= <querytext>
+7Printformat: <format>
+8------
+9------
+0------
+1Printformat: <format>
+2Dbname: <dbname> Typeresult: <typeresult>
+3= <querytext>
+4= <querytext>
+5------
+6= <querytext>
+7Printformat: <format>
+8EndRequest:
+9where:
+0    <username> is the name of the user.
+1    <host> is the computer name site.
+2    <dbname> is the name of one of the available
+3databases on ASTRA system.
+4    <typeresult> is the type of required result:
+5
+6    Numeric : means the number of the selected documents.
+7    Document : means the documents selected.
+8    Software : means the software belonging to the selected documents.
+9
+0    <querytext> is the query request in STAIRS/CMS query language or
+1in the Host system query language (SQL stored query, ISIS query language)
+2    <format>  is the format required :
+3
+4    STAIRS mail format specification
+5    ISIS stored format name
+6    SQL interface specfication: H=Y/N,F=T/C
+7
+8    H=Y/N : if the heading is required or not
+9    F=T/C : if is required a Tabular or Commadelimited format.
+0
+1
+2
+3  Who can use ASTRA:
+4  There is no limitation to ASTRA usage.
+5  For further information please contact ESRA@ICNUCEVM.CNUCE.CNR.IT
+6
+7  Miscellaneous:
+8  Following is a list of databases accessible by ASTRA service.
+9
+0
+1
+2ACSC : IBM Study Contracts (Europe 1987)
+3    It contains  the description  of several joint  projects between
+4    IBM and Academic institutions (in English).
+5AEP7 : AEP database (1987)
+6    The Advanced Educational Project  database (University of Texas)
+7    (in English).
+8ANTO :  Bibliographical references on paints
+9    The  bibliographic list  keeps track  of photos  located in  the
+0    'Gabinetto  Fotografico  Nazionale'   concerning  the  paintings
+1    belonging  to some  Museums and  Galleries located  in Rome  (in
+2    Italian).
+3ARCH : Florence Historical Archive
+4    The  description  of  the  Historical Archive  in  Florence  (in
+5    Italian).
+6BBSD : Teaching software
+7    Description  of software  packages  in  education for  different
+8    machines (in Italian).
+9BIBV : Bibliography Italian volcanoes
+0    Bibliography  on  historic  activity of  Italian  volcanoes,  by
+1    Istituto di  Geocronologia e  Geochimica Isotopica -  CNR, Pisa,
+2    Italy &  by Gruppo  Nazionale per la  Vulcanologia -  CNR, Pisa,
+3    Italy (in Italian).
+4BIBL : Italian Bibliographical Project
+5    Description of  the italian project related  to bibliography (in
+6    Italian).
+7BIBL85 : CNR publications 1985
+8    Publications, books, communications,  internal technical reports
+9    and other publications produced by  the CNR institute in 1985 (1
+0    document for each institute ) (in Italian).
+BIED : Bureau International Education
+    Documents related to education (in English).
+BIG :Geotechnical Italian Bibliography
+    Bibliographic  references  on  geotechnical  papers  of  Italian
+    Authors  published on  periodical issues,  congress proceedings,
+    technical reports,  theses (in Italian with  partial translation
+    in English).
+BOD : EARN-BOD Documents
+    The documents produced  by and for the EARN  Board of Directors.
+    This  database  is a  logical  database  of BODDOC  and  BODPRIV
+    databases.
+BODDOC : EARN-BOD Public Documents
+    The EARN Board of Directors  documents accessible by every user,
+    i.  e.  unrestricted papers.  (in English)
+BODPRIV : EARN-BOD Private Documents
+    The EARN Board of Directors private documents accessible only by
+    the EARN Executive  Committee and EARN Board  of Directors.  (in
+    English)
+BREV : CNR patents
+    Description  of the  National  Council of  Research patents  (in
+    Italian).
+CLAS : Classificazione IDG  -  Senato
+    Correspondences  beetween IDG  and Italian  Senate keywords  (in
+    Italian)
+CORI : Contratto Ricerca
+    All  the  documents relating  to  the  italian law  on  research
+    contracts (in Italian).
+CPUB : CIM publications
+    This database contains the abstracts  of papers published by the
+    students and the  staff of the CIM Institute.   The abstracts of
+    the CIM Institute researchers,  reports of the students' theses,
+    PhD &  MSc theses of the  graduate students are included  in the
+    database.
+DARC : ECC Directives
+    EEC  Environmental Directives  and  state  of implementation  in
+    Italy (in Italian).
+DOBIS : Library Database List
+    This  database  is a  logical  database  containing DOBISMO  and
+    DOBISPG databases
+DOBISMO : Modena Library Database
+    This database contains the documents in the Modena Library.  (in
+    Italian)
+DOBISPG : Perugia Library Database
+    This  database contains  the documents  in the  Perugia Library.
+    (in Italian)
+EARN : Database List
+    This  database is  a logical  database containing  EXEC and  BOD
+    databases.
+EUDI : Eudised (European Council)
+    Documents related to Eudised (in English).
+EXEC : Database List
+    This  database  is a  logical  database  containing EXECDOC  and
+    EXECPRIV databases.
+EXECDOC : EARNEXEC Public Documents
+    The EARN Executive Committee documents accessible by every user,
+    i.  e.  unrestricted papers.  (in English)
+EXECPRIV : EARNEXEC Private Documents
+    The EARN  Executive Committee private documents  accessible only
+    by the  EARN Executive  Committee and  EARN Board  of Directors.
+    (in English)
+FINALIZ : CNR Target projects
+    The description of the strategic research projects (in Italian).
+GARR : Italian National Network Database
+    This database contains the  documents about the Italian National
+    GARR network (in Italian).
+GEOCH : Geochemistry Database
+    This  database   contains  the   reports  and   documents  about
+    geochemistry researches in Italy (in Italian).
+GEOL : Bibliography on Earth Science
+    Bibliography   on   Earth  Science.    (1980-1989).    Currently
+    accessible only to Italian people (in French).
+GEOLOGY : database list
+    Contains the following databases: BIBV, GEOL, GEOCH, QUAT, BIG.
+IBMPROJ : database list
+    Contains the following databases: AEP7, STAR, ACSC.
+INTR : INTERNET database
+    The documents and reports related to INTERNET (in English).
+LEGI : Literature for young
+    Description of books and publications for children (in English).
+LGFI : Literature for young (from Segnalibro)
+    Description of books and publications for children (in Italian).
+META : ASTRA Meta-database
+    The ASTRA META database  Contains general informations about the
+    databases accessible from the  service.  Each document describes
+    a database, its  structure, the people responsible  for the data
+    and for the local support.  Sometimes some notes are appended to
+    the document to help the user in understanding the main contents
+    (in English).
+MMUD :
+
+OASIS : Academic software system
+    Online academic software  information system, Illinois education
+    consortium.  Catalog on microcomputer software suited for use in
+    higher education.
+ONCO : Oncologic database
+    The bibliographic  list keeps track  of the work  concerning the
+    ongoing researches related  to the oncology field  in Italy; the
+    list includes works from  different research groups in different
+    institutions (in English).
+ORGANI84 : CNR - Institutes  1984
+    Description of  the research  activities carried  on in  the CNR
+    Institutes in 1984 (in Italian).
+ORGANI85 : CNR - Institutes  1985
+    Description of  the research  activities carried  on in  the CNR
+    Institutes in 1985 (in Italian).
+PFPS : CNR Strategic projects
+    The description of the target research projects (in Italian)
+QUAT : Quaternary Geology and Paleontology
+    Description  of  research  activities,   in  Italy,  related  to
+    quaternary geology and paleontology (in English).
+RIC85 : CNR Research 1985
+    Description  of  the  CNR  research  projects  during  1985  (in
+    Italian).
+RIC86 : CNR Research 1986
+    Description  of  the  CNR  research  projects  during  1986  (in
+    Italian).
+RIC87 : CNR Research 1987
+    Description  of  the  CNR  research  projects  during  1987  (in
+    Italian).
+RIED : Resources in Education Documents
+    Documents related to education from 1981 (in English).
+RIEO : Resources in Education
+    Documents related to education until 1980 (in English).
+RMB0 : Computational Linguistic database
+    Description of the books and  the documents recorded on magnetic
+    tapes at  the Institute of  Computational Linguistic in  Pisa as
+    source of information for linguistic analisys (in Italian).
+SICP : CNR project
+    CNR projects on parallel computing (in Italian).
+SOFT : Softinfo database
+    The  Softinfo   database  is   managed  by  the   University  of
+    Bridgeport.
+    It  contains  informations  about   IBM  PCs  (and  compatibles)
+    software   There  are   four  type   of  sources:   professional
+    associations, journals, directories and databases (in English).
+STAR : IBM Study Contracts  1988
+    The ASTRA database initially containing IBM Europe joint project
+    descriptions (SOFTWARE and REPORTS) (in English).
+STOP : database on law
+    The aim of  the database is to  document the political-juridical
+    discussion,  "de jure  condendo";  the articles  of printing  of
+    Italian opinion,  which seems very  important for the  legal and
+    juridical institutions.
+STRATEG : CNR Strategic projects
+    The description of the target research projects (in Italian).
+
+
+
+    This database contains the  documents about the Italian National
+    GARR network (in Italian).
+GEOCH : Geochemistry Database
+    This  database   contains  the   reports  and   documents  about
+    geochemistry researches in Italy (in Italian).
+GEOL : Bibliography on Earth Science
+    Bibliography   on   Earth  Science.    (1980-1989).    Currently
+    accessible only to Italian people (in French).
+GEOLOGY : database list
+    Contains the following databases: BIBV, GEOL, GEOCH, QUAT, BIG.
+IBMPROJ : database list
+    Contains the following databases: AEP7, STAR, ACSC.
+INTR : INTERNET database
+    The documents and reports related to INTERNET (in English).
+LEGI : Literature for young
+    Description of books and publications for children (in English).
+LGFI : Literature for young (from Segnalibro)
+    Description of books and publications for children (in Italian).
+META : ASTRA Meta-database
+    The ASTRA META database  Contains general informations about the
+    databases accessible from the  service.  Each document describes
+    a database, its  structure, the people responsible  for the data
+    and for the local support.  Sometimes some notes are appended to
+    the document to help the user in understanding the main contents
+    (in English).
+MMUD :
+
+OASIS : Academic software system
+    Online academic software  information system, Illinois education
+    consortium.  Catalog on microcomputer software suited for use in
+    higher education.
+ONCO : Oncologic database
+    The bibliographic  list keeps track  of the work  concerning the
+    ongoing researches related  to the oncology field  in Italy; the
+    list includes works from  different research groups in different
+    institutions (in English).
+ORGANI84 : CNR - Institutes  1984
+    Description of  the research  activities carried  on in  the CNR
+    Institutes in 1984 (in Italian).
+ORGANI85 : CNR - Institutes  1985
+    Description of  the research  activities carried  on in  the CNR
+    Institutes in 1985 (in Italian).
+PFPS : CNR Strategic projects
+    The description of the target research projects (in Italian)
+QUAT : Quaternary Geology and Paleontology
+    Description  of  research  activities,   in  Italy,  related  to
+    quaternary geology and paleontology (in English).
+RIC85 : CNR Research 1985
+    Description  of  the  CNR  research  projects  during  1985  (in
+    Italian).
+RIC86 : CNR Research 1986
+    Description  of  the  CNR  research  projects  during  1986  (in
+    Italian).
+RIC87 : CNR Research 1987
+    Description  of  the  CNR  research  projects  during  1987  (in
+    Italian).
+RIED : Resources in Education Documents
+    Documents related to education from 1981 (in English).
+RIEO : Resources in Education
+    Documents related to education until 1980 (in English).
+RMB0 : Computational Linguistic database
+    Description of the books and  the documents recorded on magnetic
+    tapes at  the Institute of  Computational Linguistic in  Pisa as
+    source of information for linguistic analisys (in Italian).
+SICP : CNR project
+    CNR projects on parallel computing (in Italian).
+SOFT : Softinfo database
+    The  Softinfo   database  is   managed  by  the   University  of
+    Bridgeport.
+    It  contains  informations  about   IBM  PCs  (and  compatibles)
+    software   There  are   four  type   of  sources:   professional
+    associations, journals, directories and databases (in English).
+STAR : IBM Study Contracts  1988
+    The ASTRA database initially containing IBM Europe joint project
+    descriptions (SOFTWARE and REPORTS) (in English).
+STOP : database on law
+    The aim of  the database is to  document the political-juridical
+    discussion,  "de jure  condendo";  the articles  of printing  of
+    Italian opinion,  which seems very  important for the  legal and
+    juridical institutions.
+STRATEG : CNR Strategic projects
+    The description of the target research projects (in Italian).
+
+
+    This database contains the  documents about the Italian National
+    GARR network (in Italian).
+GEOCH : Geochemistry Database
+    This  database   contains  the   reports  and   documents  about
+    geochemistry researches in Italy (in Italian).
+GEOL : Bibliography on Earth Science
+    Bibliography   on   Earth  Science.    (1980-1989).    Currently
+    accessible only to Italian people (in French).
+GEOLOGY : database list
+    Contains the following databases: BIBV, GEOL, GEOCH, QUAT, BIG.
+IBMPROJ : database list
+    Contains the following databases: AEP7, STAR, ACSC.
+INTR : INTERNET database
+    The documents and reports related to INTERNET (in English).
+LEGI : Literature for young
+    Description of books and publications for children (in English).
+LGFI : Literature for young (from Segnalibro)
+    Description of books and publications for children (in Italian).
+META : ASTRA Meta-database
+    The ASTRA META database  Contains general informations about the
+    databases accessible from the  service.  Each document describes
+    a database, its  structure, the people responsible  for the data
+    and for the local support.  Sometimes some notes are appended to
+    the document to help the user in understanding the main contents
+    (in English).
+MMUD :
+
+OASIS : Academic software system
+    Online academic software  information system, Illinois education
+    consortium.  Catalog on microcomputer software suited for use in
+    higher education.
+ONCO : Oncologic database
+    The bibliographic  list keeps track  of the work  concerning the
+    ongoing researches related  to the oncology field  in Italy; the
+    list includes works from  different research groups in different
+    institutions (in English).
+ORGANI84 : CNR - Institutes  1984
+    Description of  the research  activities carried  on in  the CNR
+    Institutes in 1984 (in Italian).
+ORGANI85 : CNR - Institutes  1985
+    Description of  the research  activities carried  on in  the CNR
+    Institutes in 1985 (in Italian).
+PFPS : CNR Strategic projects
+    The description of the target research projects (in Italian)
+QUAT : Quaternary Geology and Paleontology
+    Description  of  research  activities,   in  Italy,  related  to
+    quaternary geology and paleontology (in English).
+RIC85 : CNR Research 1985
+    Description  of  the  CNR  research  projects  during  1985  (in
+    Italian).
+RIC86 : CNR Research 1986
+    Description  of  the  CNR  research  projects  during  1986  (in
+    Italian).
+RIC87 : CNR Research 1987
+    Description  of  the  CNR  research  projects  during  1987  (in
+    Italian).
+RIED : Resources in Education Documents
+    Documents related to education from 1981 (in English).
+RIEO : Resources in Education
+    Documents related to education until 1980 (in English).
+RMB0 : Computational Linguistic database
+    Description of the books and  the documents recorded on magnetic
+    tapes at  the Institute of  Computational Linguistic in  Pisa as
+    source of information for linguistic analisys (in Italian).
+SICP : CNR project
+    CNR projects on parallel computing (in Italian).
+SOFT : Softinfo database
+    The  Softinfo   database  is   managed  by  the   University  of
+    Bridgeport.
+    It  contains  informations  about   IBM  PCs  (and  compatibles)
+    software   There  are   four  type   of  sources:   professional
+    associations, journals, directories and databases (in English).
+STAR : IBM Study Contracts  1988
+    The ASTRA database initially containing IBM Europe joint project
+    descriptions (SOFTWARE and REPORTS) (in English).
+STOP : database on law
+    The aim of  the database is to  document the political-juridical
+    discussion,  "de jure  condendo";  the articles  of printing  of
+    Italian opinion,  which seems very  important for the  legal and
+    juridical institutions.
+STRATEG : CNR Strategic projects
+    The description of the target research projects (in Italian).
+
+
+    This database contains the  documents about the Italian National
+    GARR network (in Italian).
+GEOCH : Geochemistry Database
+    This  database   contains  the   reports  and   documents  about
+    geochemistry researches in Italy (in Italian).
+GEOL : Bibliography on Earth Science
+    Bibliography   on   Earth  Science.    (1980-1989).    Currently
+    accessible only to Italian people (in French).
+GEOLOGY : database list
+    Contains the following databases: BIBV, GEOL, GEOCH, QUAT, BIG.
+IBMPROJ : database list
+    Contains the following databases: AEP7, STAR, ACSC.
+INTR : INTERNET database
+    The documents and reports related to INTERNET (in English).
+LEGI : Literature for young
+    Description of books and publications for children (in English).
+LGFI : Literature for young (from Segnalibro)
+    Description of books and publications for children (in Italian).
+META : ASTRA Meta-database
+    The ASTRA META database  Contains general informations about the
+    databases accessible from the  service.  Each document describes
+    a database, its  structure, the people responsible  for the data
+    and for the local support.  Sometimes some notes are appended to
+    the document to help the user in understanding the main contents
+    (in English).
+MMUD :
+
+OASIS : Academic software system
+    Online academic software  information system, Illinois education
+    consortium.  Catalog on microcomputer software suited for use in
+    higher education.
+ONCO : Oncologic database
+    The bibliographic  list keeps track  of the work  concerning the
+    ongoing researches related  to the oncology field  in Italy; the
+    list includes works from  different research groups in different
+    institutions (in English).
+ORGANI84 : CNR - Institutes  1984
+    Description of  the research  activities carried  on in  the CNR
+    Institutes in 1984 (in Italian).
+ORGANI85 : CNR - Institutes  1985
+    Description of  the research  activities carried  on in  the CNR
+    Institutes in 1985 (in Italian).
+PFPS : CNR Strategic projects
+    The description of the target research projects (in Italian)
+QUAT : Quaternary Geology and Paleontology
+    Description  of  research  activities,   in  Italy,  related  to
+    quaternary geology and paleontology (in English).
+RIC85 : CNR Research 1985
+    Description  of  the  CNR  research  projects  during  1985  (in
+    Italian).
+RIC86 : CNR Research 1986
+    Description  of  the  CNR  research  projects  during  1986  (in
+    Italian).
+RIC87 : CNR Research 1987
+    Description  of  the  CNR  research  projects  during  1987  (in
+    Italian).
+RIED : Resources in Education Documents
+    Documents related to education from 1981 (in English).
+RIEO : Resources in Education
+    Documents related to education until 1980 (in English).
+RMB0 : Computational Linguistic database
+    Description of the books and  the documents recorded on magnetic
+    tapes at  the Institute of  Computational Linguistic in  Pisa as
+    source of information for linguistic analisys (in Italian).
+SICP : CNR project
+    CNR projects on parallel computing (in Italian).
+SOFT : Softinfo database
+    The  Softinfo   database  is   managed  by  the   University  of
+    Bridgeport.
+    It  contains  informations  about   IBM  PCs  (and  compatibles)
+    software   There  are   four  type   of  sources:   professional
+    associations, journals, directories and databases (in English).
+STAR : IBM Study Contracts  1988
+    The ASTRA database initially containing IBM Europe joint project
+    descriptions (SOFTWARE and REPORTS) (in English).
+STOP : database on law
+    The aim of  the database is to  document the political-juridical
+    discussion,  "de jure  condendo";  the articles  of printing  of
+    Italian opinion,  which seems very  important for the  legal and
+    juridical institutions.
+STRATEG : CNR Strategic projects
+    The description of the target research projects (in Italian).
+
+
+    This database contains the  documents about the Italian National
+    GARR network (in Italian).
+GEOCH : Geochemistry Database
+    This  database   contains  the   reports  and   documents  about
+    geochemistry researches in Italy (in Italian).
+GEOL : Bibliography on Earth Science
+    Bibliography   on   Earth  Science.    (1980-1989).    Currently
+    accessible only to Italian people (in French).
+GEOLOGY : database list
+    Contains the following databases: BIBV, GEOL, GEOCH, QUAT, BIG.
+IBMPROJ : database list
+    Contains the following databases: AEP7, STAR, ACSC.
+INTR : INTERNET database
+    The documents and reports related to INTERNET (in English).
+LEGI : Literature for young
+    Description of books and publications for children (in English).
+LGFI : Literature for young (from Segnalibro)
+    Description of books and publications for children (in Italian).
+META : ASTRA Meta-database
+    The ASTRA META database  Contains general informations about the
+    databases accessible from the  service.  Each document describes
+    a database, its  structure, the people responsible  for the data
+    and for the local support.  Sometimes some notes are appended to
+    the document to help the user in understanding the main contents
+    (in English).
+MMUD :
+
+OASIS : Academic software system
+    Online academic software  information system, Illinois education
+    consortium.  Catalog on microcomputer software suited for use in
+    higher education.
+ONCO : Oncologic database
+    The bibliographic  list keeps track  of the work  concerning the
+    ongoing researches related  to the oncology field  in Italy; the
+    list includes works from  different research groups in different
+    institutions (in English).
+ORGANI84 : CNR - Institutes  1984
+    Description of  the research  activities carried  on in  the CNR
+    Institutes in 1984 (in Italian).
+ORGANI85 : CNR - Institutes  1985
+    Description of  the research  activities carried  on in  the CNR
+    Institutes in 1985 (in Italian).
+PFPS : CNR Strategic projects
+    The description of the target research projects (in Italian)
+QUAT : Quaternary Geology and Paleontology
+    Description  of  research  activities,   in  Italy,  related  to
+    quaternary geology and paleontology (in English).
+RIC85 : CNR Research 1985
+    Description  of  the  CNR  research  projects  during  1985  (in
+    Italian).
+RIC86 : CNR Research 1986
+    Description  of  the  CNR  research  projects  during  1986  (in
+    Italian).
+RIC87 : CNR Research 1987
+    Description  of  the  CNR  research  projects  during  1987  (in
+    Italian).
+RIED : Resources in Education Documents
+    Documents related to education from 1981 (in English).
+RIEO : Resources in Education
+    Documents related to education until 1980 (in English).
+RMB0 : Computational Linguistic database
+    Description of the books and  the documents recorded on magnetic
+    tapes at  the Institute of  Computational Linguistic in  Pisa as
+    source of information for linguistic analisys (in Italian).
+SICP : CNR project
+    CNR projects on parallel computing (in Italian).
+SOFT : Softinfo database
+    The  Softinfo   database  is   managed  by  the   University  of
+    Bridgeport.
+    It  contains  informations  about   IBM  PCs  (and  compatibles)
+    software   There  are   four  type   of  sources:   professional
+    associations, journals, directories and databases (in English).
+STAR : IBM Study Contracts  1988
+    The ASTRA database initially containing IBM Europe joint project
+    descriptions (SOFTWARE and REPORTS) (in English).
+STOP : database on law
+    The aim of  the database is to  document the political-juridical
+    discussion,  "de jure  condendo";  the articles  of printing  of
+    Italian opinion,  which seems very  important for the  legal and
+    juridical institutions.
+STRATEG : CNR Strategic projects
+    The description of the target research projects (in Italian).
+
+

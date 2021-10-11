@@ -1,0 +1,260 @@
+; Note that this list may be searched by UU2 in any order!
+;
+; Additional flags may be given after echo name in {}.
+;
+;  InFile=dir           - Store all incoming articles to dir
+;  Distrib=dom          - Add 'Distribution' headline
+;  Dir=FU|UF|Both|None  - Direction of conversion
+;  RegOnly=Yes|No       - Pass letters from registered users only (F->U)
+;
+;
+; Newsgroup name                     Echo name
+
+;relcom.currency                      rel.currency { InFile=d:\store\echo\mfe\currency\in }
+
+dz.uu2                               uu2
+dz.pvt.5020.32                       pvt.5020.32 { RegOnly=No }
+
+dz.ftp.list.users                    ftp.list.users { RegOnly=Yes }
+dz.elo.list							 elo.list { regOnly=Yes }
+
+dz.links                             dz.links
+
+dz.fido.n5020.crisis                 N5020.CRISIS
+
+fido.ru.aviation                     ru.aviation
+
+comp.binaries.os2                    u.comp.bin.os2   { Dir=UF InFile=d:\store\uufiles\cb.OS2 }
+
+;
+; Relcom groups list (supplied by Alex Popov)
+;
+
+;                    *****    Business   ******
+
+;relcom.commerce.computers             rel.c.computers 
+relcom.commerce.computers             dev.null
+
+relcom.exnet                          dev.null
+;relcom.exnet.quote                    rel.exnet.quote
+;relcom.infomarket.quote               rel.infomarket.quote
+;relcom.infomarket.talk                rel.infomarket.talks
+relcom.wtc                            dev.null
+
+;               *****   Programming   ******
+relcom.msdos                          rel.msdos
+relcom.sources                        rel.sources
+relcom.x                              rel.x
+
+;               *****   Networking    ******
+relcom.archives                       rel.archives
+relcom.archives.d                     rel.archives.d
+relcom.bbs                            rel.bbs
+relcom.maps                           rel.maps
+relcom.netnews                        rel.netnews
+relcom.netnews.big                    rel.netnews.big
+relcom.postmasters                    rel.postmasters
+relcom.postmasters.d                  rel.postmasters.d
+relcom.penpals                        rel.penpals
+
+;               *******   Misc.   **********
+relcom.music                          rel.music
+relcom.politics                       rel.politics
+relcom.talk                           rel.talk
+relcom.teleputing                     rel.teleputing
+relcom.terms                          rel.terms
+relcom.test                           rel.test
+relcom.test1                          rel.test
+relcom.fido.test                      testing
+relcom.test                           testing
+relcom.games                          rel.games 
+relcom.newusers                       rel.newusers 
+relcom.humor                          rel.humor 
+relcom.tcpip                          rel.tcpip
+relcom.kids                           rel.kids 
+relcom.rferl                          rel.rferl
+relcom.education                      rel.education
+
+relcom.comp.dbms.foxpro               rel.comp.dbms.foxpro
+relcom.comp.clarion                   rel.comp.clarion 
+relcom.comp.binaries                  rel.comp.binaries 
+relcom.comp.demo.d                    rel.comp.demo.d
+relcom.comp.os.vms                    rel.comp.os.vms 
+relcom.comp.lang.pascal               rel.comp.lang.pascal
+relcom.comp.animation                rel.comp.animation
+relcom.comp.sources.d                rel.comp.sources.d
+relcom.msdos.sources                rel.msdos.sources
+relcom.comp.gis                       rel.comp.gis
+
+relcom.fido.ru.hacker                 rel.ru.hacker
+relcom.fido.su.hardw                  rel.su.hardw
+relcom.fido.su.softw                  rel.su.softw 
+
+relcom.fido.su.virus                  su.virus
+relcom.fido.su.books                  su.books
+relcom.fido.su.magic 	              su.magic 
+
+relcom.comp.os.os2                    su.os2 
+relcom.comp.os.os2.marginal           su.os2.marginal
+relcom.comp.os.os2.drv                su.os2.drv
+relcom.comp.os.os2.faq.d              su.os2.faq.d
+relcom.comp.os.os2.src                su.os2.src
+
+relcom.fido.su.general                su.general 
+relcom.fido.ru.strack                 ru.strack 
+relcom.fido.ru.modem                  ru.modem
+relcom.lan                            su.net
+relcom.lan.wanted                     su.net.wanted
+relcom.fido.flirt                     pvt.flirt 
+relcom.fido.su.dbms                   su.dbms 
+relcom.fido.ru.fax                    ru.fax 
+relcom.comp.os.windows                su.windows 
+relcom.comp.os.windows.nt             su.windows.nt
+relcom.comp.os.windows.prog           su.windows.prog
+relcom.fido.ru.unix                   ru.unix 
+relcom.fido.su.c-c++                  su.c_cpp
+relcom.fido.ru.networks               ru.networks
+relcom.fido.su.tolkien                su.tolkien
+relcom.comp.lang.forth                su.forth
+relcom.fido.su.forth                  su.forth
+
+relcom.relarn.general                 rel.relarn.general
+relcom.relarn.science                 rel.relarn.science
+
+relcom.internic.net-happenings        dev.null
+relcom.fido.spb.business              dev.null
+relcom.ads                            dev.null
+relcom.ads.comp                       dev.null
+relcom.commerce.audio-video           dev.null
+relcom.commerce.chemical              dev.null
+relcom.commerce.construction          dev.null
+relcom.commerce.consume               dev.null
+relcom.commerce.energy                dev.null
+relcom.commerce.estate                dev.null
+relcom.commerce.food                  dev.null
+relcom.commerce.household             dev.null
+relcom.commerce.infoserv              dev.null
+relcom.commerce.machinery             dev.null
+relcom.commerce.metals                dev.null
+relcom.commerce.money                 dev.null
+relcom.commerce.orgtech               dev.null
+relcom.commerce.other                 dev.null
+relcom.commerce.stocks                dev.null
+relcom.commerce.transport             dev.null
+relcom.commerce.jobs                  dev.null
+relcom.commerce.talk                  dev.null
+relcom.commerce                       dev.null
+
+relcom.currency                       dev.null
+
+relcom.demos.commerce                 dev.null
+relcom.exnet                          dev.null
+
+relcom.consumers                      rel.consumers
+relcom.jusinf                         rel.jusinf
+
+;relcom-list.internic.net-happenings   rel.list.internic.net-happ { Dir=UF } 
+
+relcom.comp.dbms.clipper              rel.comp.dbms.clipper
+relcom.comp.security                  rel.comp.security
+relcom.arts.qwerty                    rel.arts.qwerty
+relcom.arts.epic                      rel.arts.epic
+relcom.banktech                       rel.banktech
+
+relcom.comp.crosstools                ru.crosstools
+
+dz.fido.su.left                       su.left
+dz.fido.mo.sysoeff                    mo.sysoeff
+
+
+
+dz.fido.spb.general                spb.general
+dz.fido.spb.efl                    spb.efl
+;dz.fido.su.os2.faq.d               SU.OS2.FAQ.D
+;dz.fido.su.os2.marginal           SU.OS2.MARGINAL
+;dz.fido.su.os2.drv                 SU.OS2.DRV
+dz.fido.su.hardw.hsmodem        SU.HARDW.HSMODEM
+dz.fido.survival.guide             SURVIVAL.GUIDE
+dz.fido.su.graphics                SU.GRAPHICS
+dz.fido.ru.sex                      RU.SEX
+dz.fido.russian.sex                RUSSIAN.SEX
+dz.fido.ru.anekdot                 RU.ANEKDOT { Dir=FU }
+dz.fido.binkley.rus                BINKLEY.RUS
+dz.fido.ru.phreaks                 RU.PHREAKS
+dz.fido.mo.echo                    MO.ECHO
+dz.fido.su.hitech                  SU.HITECH
+dz.fido.su.hardw.pc.sound          SU.HARDW.PC.SOUND
+dz.fido.su.sysop.gating            SU.SYSOP.GATING
+dz.fido.fido7.sound                FIDO7.SOUND
+dz.fido.fido.anywhere              FIDO.ANYWHERE
+dz.fido.mo.job                     MO.JOB
+dz.fido.pvt.exchange               PVT.EXCHANGE
+dz.fido.ru.hacker                  RU.HACKER
+dz.fido.mistress.rus               MISTRESS.RUS
+dz.fido.humor.filtered             HUMOR.FILTERED { Dir=FU }
+dz.fido.nice.sources               NICE.SOURCES { Dir=FU }
+dz.fido.ru.martial_arts            RU.Martial_Arts
+
+dz.fido.pvt.sysop                  PVT.SYSOP
+
+dz.fido.pvt.exch.black.log	pvt.exch.black.log
+dz.fido.pvt.exch.comm		pvt.exch.comm
+dz.fido.pvt.exch.other		pvt.exch.other
+dz.fido.pvt.exch.audiovideo	pvt.exch.audiovideo
+dz.fido.pvt.exch.el.parts	pvt.exch.el.parts
+dz.fido.pvt.exch.computer	pvt.exch.computer
+dz.fido.pvt.exch.talk		pvt.exch.talk
+
+
+
+
+
+comp.os.os2.advocacy               COMP.OS.OS2.ADVOCACY
+comp.os.os2.multimedia             COMP.OS.OS2.MULTIMEDIA
+comp.os.os2.misc                   COMP.OS.OS2.MISC
+comp.os.os2.setup                  COMP.OS.OS2.SETUP
+comp.os.os2.beta                   COMP.OS.OS2.BETA
+;comp.os.os2.programmer             COMP.OS.OS2.PROG
+comp.os.os2.programmer.misc        COMP.OS.OS2.PROG.MISC
+comp.os.os2.programmer.tools       COMP.OS.OS2.PROG.TOOLS
+comp.os.os2.programmer.oop         COMP.OS.OS2.PROG.OOP
+comp.os.os2.apps                   COMP.OS.OS2.APPS
+comp.os.os2.games                  COMP.OS.OS2.GAMES
+comp.os.os2.bugs                   COMP.OS.OS2.BUGS
+comp.os.os2.networking.misc        COMP.OS.OS2.NETWORKING
+comp.os.os2.networking.tcp-ip      COMP.OS.OS2.NETWORKING.TCP-IP
+comp.os.os2.networking             COMP.OS.OS2.NETWORKING
+comp.os.os2.programmer.porting     COMP.OS.OS2.PROG.PORT
+comp.os.os2.announce               COMP.OS.OS2.ANNOUNCE
+comp.os.os2.ver1x                  dev.null
+
+comp.lang.tcl                      Comp.Lang.TCL
+
+comp.sys.powerpc                   Comp.Sys.PowerPC
+comp.lang.rexx                     Comp.Lang.REXX
+alt.humor.best-of-usenet           Alt.Humor.Best-of-UseNet
+alt.humor.best-of-usenet.d         Alt.Humor.Best-of-UseNet.d
+rec.humor.funny                    Rec.Humor.Funny
+news.answers                       News.Answers
+comp.unix.bsd                      Comp.Unix.BSD
+
+
+
+dz.fido.su.music		   SU.MUSIC
+
+dz.fido.1992-net                   1992-NET
+
+; -- LifNet -------------------------------------------------------- LifNet --
+
+dz.lifnet.interuser.lif            INTERUSER.LIF
+dz.lifnet.taize                    TAIZE
+
+
+
+
+
+
+
+
+
+

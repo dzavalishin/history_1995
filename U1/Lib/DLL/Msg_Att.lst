@@ -1,0 +1,35 @@
+Msg_Att.c                                                                                      04/13/95 14:46:55     Page     1
+                                      * * * * *   P R O L O G   * * * * *
+
+ Compiler . . . . . . . . . . . . : IBM C/C++ Tools Version 2.01 
+ Command options:
+    Compiler mode . . . . . . . . : C++
+    Program name. . . . . . . . . : Msg_Att.c
+    Assemble name . . . . . . . . : "Msg_Att.asm"
+    Object name . . . . . . . . . : "Msg_Att.obj"
+    Listing name. . . . . . . . . : Msg_Att.lst
+    Compiler options. . . . . . . : /C+  /Fa+ /Fb- /Fc- /Fd+ /Fi- /Fl+ /Fm- /Fo+ /Fw- /Gd- /Ge- /Gf- /Gh- /Gi+ /Gm- /Gn- /Gr- 
+                                  : /Gs+ /Gt- /Gu- /Gw- /Gx- /J+  /L+  /La- /Lb- /Le- /Lf- /Li- /Lj- /Ls- /Lx- /Ly- /O+  /Ol- 
+                                  : /Om- /Op+ /Os+ /P-  /Pc- /Pd- /Pe- /Q+  /Sd- /Sh- /Si- /Sm- /Sn- /Sv- /Ti+ /Tm- /Tx- /Xi- 
+                                  : /Wcls- /Wcmp- /Wcnd- /Wcns- /Wcnv- /Wcpy- /Wdcl- /Weff- /Wenu- /Wext- /Wgen- /Wgnr- /Wgot- 
+                                  : /Wini- /Wlan- /Wobs- /Word- /Wpar- /Wpor- /Wppc- /Wppt- /Wpro- /Wrea- /Wret- /Wtrd- /Wtru- 
+                                  : /Wund- /Wuni- /Wuse- /Wvft- 
+                                  : /Ms  /Re  /Se  /Sp4  /G3  /W3  /H255  /Lp66  /N  /Oi0  /Su-
+                                  : /I
+                                  : /Lt
+                                  : /Lu
+                                  : /B
+                                  : /V
+                                  : /Ft+
+Msg_Att.c                                                                                      04/13/95 14:46:55     Page     2
+Msg_Att.c                                                                                      04/13/95 14:46:55     Page     3
+Msg_Att.c                                                                                      04/13/95 14:46:55     Page     4
+                             * * * * *   M E S S A G E   S U M M A R Y   * * * * *
+
+        Total            Informational(00)          Warning(10)          Error(30)            Severe Error(40)
+
+          0                    0                        0                   0                        0
+
+                        * * * * *   E N D   O F   M E S S A G E   S U M M A R Y   * * * * *
+
+                             * * * * *   E N D   O F   C O M P I L A T I O N   * * * * *

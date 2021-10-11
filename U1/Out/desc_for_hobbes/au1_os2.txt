@@ -1,0 +1,8 @@
+Archive Name: au1_os2.zip
+Program Description: UUCP/FIDO gateway ver 1.99e alpha
+Operating System Versions: 2.0 and later
+
+Your name: Dmitry Zavalishin
+Your email address: dz@phantom.ru
+
+Proposed directory for placement: comm

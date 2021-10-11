@@ -1,0 +1,19 @@
+þ 17 Jan 95 (1.92d)
+
+  û Unbatch: It was possible to get year number > 99, that caused
+    packet structure to be broken. Now checking year number, and
+    setting it to 17 if it was > 99.
+
+  û Batch: There was error in CNewsFeed mode that caused batch to
+    send articles with big newsgroups list back to node they came from.
+
+þ  6 May 94 (1.92c)
+
+  û Snews: rewritten Message-ID/References headline generation to
+    conform widely used conventions. Added X-FTN-To, X-FTN-MsgID
+    and X-FTN-Reply headlines to carry original FTN info intact.
+    This will improve compliance with Eugene Crosser's gate too.
+    Organization keyword can be ommited from conf. file now, and
+    contents of Organization headline will be taken from the
+    fido message Origin, if it can be found.
+

@@ -1,0 +1,52 @@
+Hello Dmitry!
+
+Thursday February 29 1996 17:36, Dmitry Zavalishin wrote to Alexander Vasilyev:
+
+ AV>> 5) Пpи конвеpтации большого письма в аттач UU2FIDO зачем-то pугается
+ AV>> на невозможность откpытия какого-то файла '', хотя все делает
+ AV>> пpавильно (Я не стал особенно pазбиpаться, пpосто поставил пpедел
+ AV>> побольше ;)))) )
+ DZ> Разберись, исправим.
+
+  --------  U1 UU2Fido 2.09d [OS2/C Set] (Nov 14 1995): Sat Mar 02 18:48:02 1996
+- 18:48:02  Parm Announce=<Yes>
+- 18:48:02  Parm SendErrorNote=<Yes>
+- 18:48:02  Parm Code_FU=<CP866-KOI8>
+- 18:48:02  Parm Code_UF=<KOI8-CP866>
+- 18:48:02  Parm RMailEXE=<d:\uupc\uurmail.exe>
+- 18:48:02  Parm RMailExitL=<-1>
+- 18:48:02  Parm RMailExitR=<0>
+- 18:48:02  Parm UUXEXE=<d:\uupc\uux.exe>
+- 18:48:02  Parm ZipLimit=<4000>
+- 18:48:02  Parm EchoAddress=<2:5030/214.128@fidonet    2:5030/214.0@fidonet>
+- 18:48:02  Parm NewsMaster=<newsmaster>
+- 18:48:02  Parm NewsPassHL=<*>
+- 18:48:02  Parm NewsHideHL=<X-* Organization Resent-* Distribution From>
+- 18:48:02  Parm NewsKillHL=<Path Lines Newsgroups Subject Message-Id Reply-To 
+Date Sender X-FTN-*>
+- 18:48:02  Parm EchoList=<d:\fido\u1\echoes.u1>
+- 18:48:02  Parm FeedList=<d:\fido\u1\feeds.u1>
+- 18:48:02  Parm PktSize=<100000>
+- 18:48:02  Parm HelpFile=<d:\fido\u1\gatehelp.txt>
+- 18:48:02  Parm NewsBadGroupMSG=<Separate>
+- 18:48:02  Parm NewsControlMSG=<Separate>
+- 18:48:02  Arg: vsk@vsk.tepkom.spb.su
+- 18:48:02  send( msg, vsk@vsk.tepkom.spb.su )
+- 18:48:02  Converting vsk@vsk.tepkom.spb.su to fido address
+- 18:48:02  No domain, trying to match zone num: 2:5030/214.0
+- 18:48:02  No domain, trying to match zone num: 2:5030/214.0
+- 18:48:02  No domain, trying to match zone num: 2:5030/214.0
+- 18:48:02  2zip|~2zip: size 6096, limit 4000
+# 18:48:02  Nothing to do - no messages found
+>? 18:48:03  Error: Can't open ''
+>= 18:48:03   Info : DosErrno: 0, errno: 29 (Message file not found.)
+a 18:48:03  Message to : Alexander Vasilyev, 2:5030/214.0
+$ 18:48:03  "Mail", "2:5030/214.0", "vsk@vsk.tepkom.spb.su", "not free", "to 
+fido", 6096
+% 18:48:03  Run 2 secs., Mail: 1 msgs, 0.50 /s, News: 0 msgs, 0.00 /s
+  --------  End of U1 UU2Fido 2.09d [OS2/C Set] (Nov 14 1995)
+
+Vsk.
+
+--- GoldED/2 2.50+
+ * Origin: >> Super Agent X00 << (2:5030/214)

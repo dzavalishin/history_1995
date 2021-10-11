@@ -1,0 +1,147 @@
+       __    __   __    __   _______            ________   ________   _______
+       ) )   ) )  ) )   ) )       ) )           ) )   ) )  ) )   )_)       ) )
+      / /   / /  / /   / /       / /           / /   / /  / /             / /
+     / /   / /  / /   / /       / /           / /   / /  (_(____         / /
+    / /   / /  / /   / /  _____(_(           / /   / /        ) )  _____(_(
+   / /   / /  / /   / /  / /                / /   / /  __    / /  / /
+  (_(___(_(  (_(___(_(  (_(_____    FOR    (_(___(_(  (_(___(_(  (_(_____
+                                                  
+                   __    __   ________   __   __   __   ________
+                   ) )   ) )  ) )   )_)  ) )  ) )  ) )  ) )   )_)
+                  / /   / /  / /        / /  / /  / /  / /
+                 / /\  / /  / /__ /    / /  / /  / /  (_(____
+                / /  \/ /  / /   /    / /  / /  / /        ) )
+               / /   / /  / /   __   / /  / /  / /  __    / /
+              (_(   (_(  (_(___(_(  (_(__(_(__(_(  (_(___(_(
+
+
+
+
+! U1 Builder: version number changed to 2.10a
+
+
+! U1 Builder: version number changed to 2.09u
+
+
+þ 14 Jun 96
+
+  û Fido2UU: UUCP type 'sendmail' added. Not tested well.
+
+! U1 Builder: version number changed to 2.09t
+
+
+þ 21 May 96
+
+  û Fido2UU: Now _CORRECTLY_ :) waiting for rmail termination 
+    before proceeding to the next message.
+
+! U1 Builder: version number changed to 2.09s
+
+
+! U1 Builder: version number changed to 2.09r
+
+
+þ 06 May 96
+
+  û Fido2UU: Fixed error: trap on incorrect date/time in fido message.
+    Fixed error: First line of messages was lost during conversion.
+    Glitch: now waiting for rmail termination before proceeding to
+    the next message.
+
+! U1 Builder: version number changed to 2.09q
+
+
+! U1 Builder: version number changed to 2.09p
+
+
+þ 12 Apr 96
+
+  û UU2Fido: ^AVia date convertor trapped on 'received' lines with
+    incorrect syntax (no ';' before date string). Fixed.
+
+  û Fido2UU: Error messages are sent from 'sysop', not from the magic
+    name now to prevent infinite message bouncing between two programs.
+
+! U1 Builder: version number changed to 2.09o
+
+
+þ  8 Apr 96
+
+  û Fido2UU: Fixed bug in date conversion: month was incorrect.
+
+þ  1 Apr 96
+
+  û UU2Fido: ^Avia date was incorrect. Fixed.
+
+  û Batch: Fixed minor bug: stdout was lost after running 
+    compression program.
+
+  û Fido2UU, UU2Fido: Date: headline now contains original message 
+    date, not date of gateing.
+
+  û All: ^AVia lines have UTC-based time/date.
+
+
+! U1 Builder: version number changed to 2.09n
+
+þ 27 Mar 96
+
+  û Snews: Command line parameter '-v' added to turn on verbose operation.
+    Default is to print only a dot per message.
+
+! U1 Builder: version number changed to 2.09m
+
+þ 27 Mar 96
+
+  û Fido2UU: Headline generation logic redone - now adding Sender if
+    from/reply-to are replaced by FIDO message contents. Some critical
+    headlines can't be replaced by FIDO massage any more. Fixed bug with
+    1-character lines. Message size now calculated again.
+
+! U1 Builder: version number changed to 2.09l
+
+þ 22 Mar 96
+
+  û Fido2UU: Regressions (loss of empty lines, error in uuencode) fixed.
+    Found a reason for Fido2UU not to kill messages sometimes. Fixed.
+
+þ 16 Mar 96
+
+  û Fido2UU: Fixed problem (loop forever) with attaches uuencode block.
+    Corrected from_ address (converted to bang form) to make sure error
+    reports will go to sender, not to gatemaster or unknown user @ gate 
+    domain.
+
+! U1 Builder: version number changed to 2.09k
+
+
+! U1 Builder: version number changed to 2.09j
+
+þ 14 Mar 96
+
+  û All: There was an error in general command line parser: any args
+    after an general option was ignored, causing loss of mail sometimes :(
+
+
+--------------------------------------------------------------------------
+
+
+Join UU2 fileecho to receive hot new UU2 updates quickly. Contact
+me if you want to become registered user.
+
+UU2 echo and fileecho is available from	2:5020/32
+
+
+Note that version for OS/2 is called U1, not UU2. (UU2/2 = U1, got it?;)
+
+Current alphas/betas of U1 are available via FTP:
+	ftp.kiae.su, pub/os2/fido/au1_os2.zip & bu1_os2.zip
+
+
+ FIDO:           Dmitry Zavalishin, 2:5020/32, (0:00-6:00 MSK)
+ Internet:       dz@phantom.ru
+ Phone:          +7 (095) 110-6728, 120-0898
+ SnailMail:      Moscow, Arteckovskaya 7-4 260
+
+                                Yours truly Dmitry Zavalishin
+

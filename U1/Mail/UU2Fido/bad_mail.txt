@@ -1,0 +1,54 @@
+From freefall.FreeBSD.ORG!owner-freebsd-scsi@relay1.kiae.su  Sat Mar 30 12:40:34 1996
+Received: from gateway.tiasur.tomsk.su (gateway.tiasur.tomsk.su [194.226.60.34]) by tiasur.tomsk.su (8.6.12/8.6.9) with ESMTP id MAA09644 for <chch@tiasur.tomsk.su>; Sat, 30 Mar 1996 12:39:19 +0700
+Received: from tiasur.tomsk.su (tiasur.tomsk.su [194.226.60.36]) by gateway.tiasur.tomsk.su (8.6.12/8.6.9) with ESMTP id MAA00517 for <chch@gateway.tiasur.tomsk.su>; Sat, 30 Mar 1996 12:37:47 +0700
+Received: from mpeks.tomsk.su (mpeks.tomsk.su [193.124.182.120]) by tiasur.tomsk.su (8.6.12/8.6.9) with ESMTP id MAA08993 for <chch@gateway.tiasur.tomsk.su>; Sat, 30 Mar 1996 12:36:25 +0700
+Received: from kiae.UUCP (uucp@localhost) by mpeks.tomsk.su (8.6.11/8.6.9) with UUCP id UAA28583 for chch@gateway.tiasur.tomsk.su; Fri, 29 Mar 1996 20:20:28 +0700
+Received: from freefall.FreeBSD.ORG by sequent.kiae.su with SMTP id AA06813
+  (5.65.kiae-2  for <chch@gateway.tiasur.tomsk.su>); Fri, 29 Mar 1996 14:38:59 +0300
+Received: from localhost (daemon@localhost)
+          by freefall.freebsd.org (8.7.3/8.7.3) with SMTP id DAA05441
+          Fri, 29 Mar 1996 03:12:17 -0800 (PST)
+Received: (from root@localhost)
+          by freefall.freebsd.org (8.7.3/8.7.3) id DAA05163
+          for freebsd-scsi-outgoing; Fri, 29 Mar 1996 03:09:15 -0800 (PST)
+Received: from hda.com ([199.232.245.30])
+          by freefall.freebsd.org (8.7.3/8.7.3) with SMTP id DAA05156
+          for <freebsd-scsi@freebsd.org>; Fri, 29 Mar 1996 03:09:10 -0800 (PST)
+Received: (from dufault@localhost) by hda.com (8.6.11/8.6.9) id FAA07880; Fri, 29 Mar 1996 05:59:13 -0500
+From: Peter Dufault <dufault@hda.com>
+Message-Id: <199603291059.FAA07880@hda.com>
+Subject: Re: SCSI refresh
+To: joerg_wunsch@uriah.heep.sax.de
+Date: Fri, 29 Mar 1996 05:59:12 -0500 (EST)
+Cc: freebsd-scsi@freebsd.org, khetan@chain.iafrica.com
+In-Reply-To: <199603290838.JAA29451@uriah.heep.sax.de> from "J Wunsch" at Mar 29, 96 09:38:51 am
+Reply-To: hdalog@zipnet.net
+X-Mailer: ELM [version 2.4 PL24]
+Content-Type: text
+Sender: owner-freebsd-scsi@freebsd.org
+X-Loop: FreeBSD.org
+Precedence: bulk
+
+> 
+> As Khetan Gajjar wrote:
+> 
+> > > Of course -- but all you need is *just one* device on the SCSI bus.
+> > > The -r option will reprobe the entire bus then.  That's why i gave you
+> > > /dev/rsd0.ctl as an example.
+> > 
+> > Unfortunately, CD-ROM is *only* device on scsi bus :(
+> 
+> Peter Dufault was thinking about a /dev/superscsi or something like
+> this some time ago, but apparently, it has never made its way into the
+> code.
+
+It is in the code (character major 49)
+but doesn't work properly when there aren't any SCSI devices at all -
+I recently tested that.
+
+-- 
+Temporarily via "hdalog@zipnet.net"...
+
+Peter Dufault               Real-Time Machine Control and Simulation
+HD Associates, Inc.         Voice: 508 433 6936
+dufault@hda.com             Fax:   508 433 5267

@@ -1,0 +1,69 @@
+;
+; Newsgroup name                Echo name
+
+;                    *****    Коммеpция   ******
+relcom.ads                            rel.ads
+relcom.ads.comp                       rel.ads.comp
+relcom.commerce                       rel.commerce
+relcom.commerce.audio-video           rel.c.av
+relcom.commerce.chemical              rel.c.chemical
+relcom.commerce.construction          rel.c.construct
+relcom.commerce.consume               rel.c.consume
+relcom.commerce.energy                rel.c.energy
+relcom.commerce.estate                rel.c.estate
+relcom.commerce.food                  rel.c.food
+relcom.commerce.household             rel.c.house
+relcom.commerce.infoserv              rel.c.infoserv
+relcom.commerce.machinery             rel.c.machinery
+relcom.commerce.metals                rel.c.metals
+relcom.commerce.money                 rel.c.money
+relcom.commerce.orgtech               rel.c.orgtech
+relcom.commerce.other		      rel.c.other
+relcom.commerce.stocks                rel.c.stocks
+relcom.commerce.transport             rel.c.transport
+relcom.exnet                          rel.exnet
+relcom.exnet.quote                    rel.exnet.quote
+relcom.infomarket.quote               rel.infomarket.quote
+relcom.infomarket.talk                rel.infomarket.talks
+relcom.mn.economics                   rel.mn.economics
+relcom.mn.faxdigest                   rel.mn.faxdigest
+relcom.mn.laws                        rel.mn.laws
+relcom.mn.newspaper                   rel.mn.newspaper
+relcom.wtc                            rel.wtc
+
+;               *****   Пpогpаммиpование   ******
+relcom.fido.ru.hacker                 ru.hacker
+relcom.fido.ru.unix                   ru.unix
+relcom.fido.su.c-c++                  su.c-cpp
+relcom.fido.su.hardw                  su.hardw
+relcom.fido.su.softw                  su.softw
+relcom.fido.su.virus                  su.virus
+relcom.msdos                          rel.msdos
+relcom.sources                        rel.sources
+relcom.unix                           ru.unix
+relcom.x                              rel.x
+
+;               *****     Сетевые дела    ******
+relcom.archives                       rel.archives
+relcom.archives.d                     rel.archives.d
+relcom.bbs                            rel.bbs
+relcom.fido.ru.networks               ru.networks
+relcom.fido.testing                   testing
+relcom.maps                           rel.maps
+relcom.netnews                        rel.netnews
+relcom.netnews.big                    rel.netnews.big
+relcom.postmasters                    rel.postmasters
+relcom.postmasters.d                  rel.postmasters.d
+
+;               *******     Разное       **********
+relcom.fido.su.books                  su.books
+relcom.fido.su.music                  su.music
+relcom.fido.su.general                su.general
+relcom.fido.su.pol                    su.pol
+relcom.fido.su.tolkien                rel.tolkien
+relcom.music                          SU.MUSIC
+relcom.politics                       rel.politics
+relcom.talk                           rel.talk
+relcom.teleputing                     rel.teleputing
+relcom.terms                          rel.terms
+

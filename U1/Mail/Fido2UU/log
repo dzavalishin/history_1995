@@ -1,0 +1,29 @@
+
+Operating System/2 Program Maintenance Utility
+Version 3.00.006 Mar 15 1995
+Copyright (C) IBM Corporation 1988-1995
+Copyright (C) Microsoft Corp. 1988-1991
+All rights reserved.
+
+	icc /Tdp /B"/NOO"  /Fefido2uu.exe /Ms /Q address.obj  send_err.obj  send_ack.obj  runsmail.obj  gatectl.obj  convert.obj  select.obj  mainloop.obj  main.obj  uuencode.obj  encode.obj ..\..\lib\Out\U1_209a.LIB /I..\..\lib\Out dde4cc.lib fido2uu.Def
+Object Modules [.obj]: /NOO /nologo /noi /align:16 /exepack /base:65536 +
+Object Modules [.obj]: "address.obj" +
+Object Modules [.obj]: "send_err.obj" +
+Object Modules [.obj]: "send_ack.obj" +
+Object Modules [.obj]: "runsmail.obj" +
+Object Modules [.obj]: "gatectl.obj" +
+Object Modules [.obj]: "convert.obj" +
+Object Modules [.obj]: "select.obj" +
+Object Modules [.obj]: "mainloop.obj" +
+Object Modules [.obj]: "main.obj" +
+Object Modules [.obj]: "uuencode.obj" +
+Object Modules [.obj]: "encode.obj" +
+Object Modules [.obj]: ".\tempinc\ibagks.obj" +
+Object Modules [.obj]: ".\tempinc\ikssseq.obj" +
+Object Modules [.obj]: ".\tempinc\ilnseq.obj" +
+Object Modules [.obj]: "D:\TMP\c019AAAA.lib"
+Run File [address.exe]: "fido2uu.exe"
+List File [nul.map]: 
+Libraries [.lib]: "..\..\lib\Out\U1_209a.LIB" +
+Libraries [.lib]: "dde4cc.lib"
+Definitions File [nul.def]: "fido2uu.Def"

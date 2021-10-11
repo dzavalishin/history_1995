@@ -1,0 +1,453 @@
+;                                                          ;
+; Sample config. file for U1 version 1.98                  ;
+;                                                          ;
+; NB!                                                      ;
+; Please, make sure you set all the parameters correctly!  ;
+;                                                          ;
+; -------------------------------------------------------- ;
+;                                                          ;
+; Text from semicolon to end of line is a comment.         ;
+; Keywords can be written in any case (even mixed).        ;
+; Maximum line length is 1024 characters.                  ;
+;                                                          ;
+; All the flag fields assumed to mean 'Yes', if no 'No'    ;
+; appended. I.e:                                           ;
+;   Announce    Yes  - Turn option on                      ;
+;   Announce    No   - Turn option off                     ;
+;   Announce         - Turn option on                      ;
+;   Announce    XYZ  - Turn option on, issue error message ;
+;                                                          ;
+;__________________________________________________________;
+
+;==========================================================;
+;                                                          ;
+; Required parameters                                      ;
+;                                                          ;
+;==========================================================;
+
+; FTN Adrdress/Mapping definition(s) - up to 20 allowed
+;
+; This record describes FTN gate operates in, sets gate
+; address in that network and defines UUCP address mapping.
+;
+; Format:
+;    FTN Name AKA UUCP-Domain [z=FZ-TZ]
+;
+; Name: Short name of Fido Technology Network described
+; AKA: Our address in that network, INCLUDING DOMAIN
+; UUCP-Domain: domain to use for this FTN on UUCP side
+; FZ-TZ: Lower and upper value of zone number - used for domain guessing.
+; 
+; There may be records, which differ only in AKA part.
+;
+FTN fidonet 2:5020/32.256@fidonet.org fidonet.org z=1-6
+FTN fidonet 2:5020/32.512@fidonet.org fidonet.org z=1-6
+
+; Magic name of our gate. Usually - UUCP.
+; Used to send mail to be gated to, if uucp address is too
+; long to fit in 36 characters.
+Magic UUCP
+
+; Your FIDO mailer netmail directory. Netmail folder must be in
+; *.MSG format for gate to work properly.
+;
+NetMail                 n:\mail
+
+; Directory where your FIDO mailer stores received files and
+; where your echo-processor searches for inbound echo-packets.
+;
+NetFile                 n:\files\in
+
+; Additional directories to scan fileattaches in
+;
+;InFiles                 n:\files\in\insecure,n:\files\in\unlisted
+
+
+; Your Internet domain. If you have no one, use machine-name.UUCP
+;
+Domain                  isoft.msk.su
+
+; UUCP-name of postmaster - person, who is responsible for gate
+; operation. Copies of gate error report letters will be sent
+; to him/her. Also he will receive all the letters, which address
+; was not understood by gate (If not in PassUnknownBack mode).
+;
+; NB!
+; There must be corresponding entry in userlist, for example:
+;      postmaster   2:5020/32 Post_Master
+;
+PostMaster              postmaster
+
+; File with list of registered gate users.
+; Default name: none
+;
+UserList                u:\gate\users.u1
+
+; Timezone in format +/-HHMM. Moscow is +0300/+0400.
+TZ			+0300
+
+;==========================================================;
+;                                                          ;
+; Optional parameters                                      ;
+;                                                          ;
+;==========================================================;
+
+; uucp package type. Valid types:
+;      ache30        - uupc/*, coop. Demos, vers. 3.0
+;      uupc11r       - uupc/ext 1.11R
+;      waffle        - waffle 1.64
+;      sendmail      - sendmail used in place of uucp rmail.
+;
+Uucp                    Ache30
+
+; If set to Yes, From_ line will have '@' replaced with '%'
+; in it. Some packages require it, some - not. Default to yes.
+;
+;PercentInFrom No
+
+; Defines the format of log file. Possible values:
+;         Default    - Selects own format of log
+;         Binkley    - BinkleyTerm lookalike mode
+;         FrontDoor  - you see...
+;
+; NB!!
+; This one must be placed _BEFORE_ Log keyword.
+;
+LogStyle                Default
+
+; Name of gate operation log file.
+;
+Log                     u:\gate\u1.log
+
+; Used to select information you want to see in log file. Turn
+; debug mode on to get _complete_ log, then look at it and select
+; key-letters of records you like to see.
+;
+LogLevel                axu%$
+
+; Following parameters define which RFC headlines to eliminate
+; when converting messages from UUCP to FIDO.
+;
+; Folollowing setup means: first line enables all headlines,
+; second one tells to hide under ^A everything that starts
+; with "Receiv" or "Resent-" (not implemented yet), and last
+; tells to eliminate "Message-Id" and "From_" anyway.
+;
+; NB!
+; To eliminate leading UUCP From line, use "From_" as shown below.
+
+MailPassHL *
+MailHideHL Receiv* Resent-*
+MailKillHL Message-ID From_  X-FTN-*
+
+
+; Use Debug flag to get detailed logging. Produces _very_ large
+; logs.
+;
+;Debug
+
+; With this flag most U1 modules will display it's names
+; when started.
+Announce	Yes
+
+; This keyword enables use of gate by persons not registered
+; in userlist. If used alone, enables access to any
+; uucp/internet address. To limit access list permitted
+; domains and/or uucp machine names after keyword.
+;
+; In this example the following addresses will be valid:
+;       user@subdomain.msk.su
+;       kiae!msk.su!user
+;       user@smthng%msk.su@somewhere.kiae.su
+;       @msk.su:user@hq.demos.su
+;
+; Next ones will be bounced:
+;       service%nic.ddn.mil@kiae.su
+;       demos!fuug.fi!henry@ford.us
+;
+Free                    su ua by ew msk kiae demos dialnet isoft
+
+; The following three keywords are enabling different kinds of
+; hadling for uucp to fido letters with incorrect addresses.
+; You can use any combination of them as appropriate in your case.
+
+; This flag can be used if you want to use gate together with 
+; usual uucp environment. In PassUnknownBack mode gate passes
+; letters it cannot deliver to FIDO back to rmail.
+; In general, I do not recommend you to use this feature.
+;
+;PassUnknownBack No
+
+; Pass letters with unknown destination to FIDO side, to postmaster.
+; This mode is turned on by default. I recommend you to turn it off
+; if your gate will handle a lot of mail.
+;
+;PassUnknownAlong No
+
+; Send error notification message to the sender of the letter.
+; This mode is turned on by default as well.
+;
+SendErrorNote Yes
+
+
+; (For cyrillic code table conversion)
+; Code table name to use for fido/uucp conversion. (Used by FIDO2UU)
+Code_FU                 None
+
+; Code table name to use for uucp/fido conversion. (Used by UU2FIDO & UNBATCH)
+;Code_UF                KOI8-CP866
+
+; Without this keyword uucp-fido koi8/cp866 decoder will be used
+; every time. This keyword specifies mode, in which code conversion
+; will only take place if uu2fido called with -u flag. You will need
+; this mode if you interested in cyrillic characters code translation
+; and use U1 with UUPC/* in PassUnknownBack mode.
+;Code_UF_flag
+
+
+; Name of uucp mail delivery agent.
+RmailExe                u:\uupc\uusmail.exe
+
+; Rmail must return this code if letter delivered to local uucp postbox.
+; (This is an error condition for gate. Use -1 to disable.)
+;RmailExitL              0    ; For UUPC/Ache
+RmailExitL              -1    ; Others
+
+; This return code must correspond to remote delivery case.
+;RmailExitR              48   ; For UUPC/Ache
+RmailExitR              0     ; Others
+
+; Name of uucp remote execution program
+UuxExe                  u:\uupc\uux.exe
+
+; Maximal size of message to pass to FIDO netmail without
+; conversion to file-attach.
+;
+ZipLimit                16384
+
+; Name of file to create when something new sent to UUCP side
+;
+;KickUUCPFlag           u:\net\bink\btexit77.01
+;KickUUCPFlag           u:\net\bink\fdexit77.01
+
+; Obsolete, ignored in this version
+;
+; Directory to create flag-file in. Flag file created when
+; fido2uu sends mail to uucp, and can be used to run uucico
+; (or uuio) conditionally.
+;
+; Default value: %U1%\flags
+; Directory will be created automatically, if not exists.
+;
+;FlagDir                 u:\gate
+
+; Directory to put statistics files in. See documentation on
+; using statistics. (In short, statistics file has binary
+; format and can be converted to ASCII form with uustat.exe)
+;
+; Default value: %U1%\stat
+; Directory will be created automatically, if not exists.
+;
+;StatDir                 u:\gate\stat
+
+; Directory where you hold your outbound files. Used to hold
+; file-attaches created by uu2fido.
+;
+; Default value: %U1%\gate.out
+; Directory will be created automatically, if not exists.
+;
+;StoreFiles              u:\gate\gate.out
+
+;  Sets maximal length of contents of FIDO message 'from name' field.
+;  If uucp address to be placed in from field is longer than this
+;  parameter's value, uucp address will be replaced with gate magic name.
+;
+;  Default value: 35.
+;
+;FidoFromFieldSize       36
+
+
+;  Points to a directory where loadable code table files are stored. 
+;  Table file must be exactly 128 bytes long and its name must be 
+;  equal to the name of recode table as given in configs.
+
+;RecodeDir               u:\gate\CodeTables
+
+;==========================================================;
+;                                                          ;
+; News/Echo gate parameters                                ;
+;                                                          ;
+;==========================================================;
+
+
+; Address pair, used by news gate. Will be used for
+; echo packet headers, FIDO PATH/SEEN-BY lines. 
+; First address is an address of newsgate. It will be used
+; in 'From' field of .PKT files, generated by gate. Second one
+; is an address these .PKTs will have in 'To' field.
+;
+EchoAddress    2:5020/128.0@fidonet.org    2:5020/32.256@fidonet.org
+
+; Uucp username of ViaMail receiver. Your newsfeed must send
+; news to this address in your domain in ViaMail mode.
+; There must be corresponding entry in user table.
+;
+NewsMaster              newsmaster
+
+; Origin line added to echo messages by gate. If not defined,
+; origin line is built from Usenet message Organization headline.
+;
+;Origin                  Infinity Soft Labs
+
+; Used to form Organization headline in outgoing news articles.
+;
+Organization            Infinity Soft Labs
+
+; Selective headlines elimination. See Mail{Pass/Hide/Kill}HL above.
+; Note that NewsHideHl is implemented, unlike MailHideHL.
+;
+
+NewsPassHL *
+NewsHideHL X-* Organization Resent-* Distribution From
+NewsKillHL Path Lines Newsgroups Subject Message-Id Reply-To Date Sender X-FTN-*
+
+;   This string is appended to Organization headline and used to
+; check for dupes from uucp side. (Yes, path headline is 
+; generated and checked too, but when U1 used with newsserver,
+; this method doesn't work because newsservers strips path
+; headlines)
+;   Default value for this parameter contains your domain name.
+;
+;GateId                  (isoft_gate)
+
+; Used to hold incoming news articles.
+;
+; Default value: %U1%\news.in
+; Directory will be created automatically, if not exists.
+;
+;InNewsSpool                             u:\gate\news.in
+
+; Used to hold outgoing news articles.
+;
+; Default value: %U1%\news.out
+; Directory will be created automatically, if not exists.
+;
+;OutNewsSpool                            u:\gate\news.out
+
+; Thing gate will put in 'Path:' headline of outgoing
+; news articles and check for in incoming ones to find dupes.
+; You can set complex things here like 'isoft!isoft.msk.su' -
+; all the string will be put to 'Path:' headline of outgoing messages,
+; but incoming message's path will be checked only against first
+; component of this parameter's value (in our example - 'isoft').
+; Please don't include 'newsgate' or something like username -
+; U1 adds '!newsgate' to path line automatically.
+;
+NewsPath                                isoft!isoft.msk.su
+
+; List of gated newsgroup/echo names: used for group name translation
+;
+EchoList                                u:\gate\echoes.u1
+
+; List of uucp nodes we send gated news to. See example.
+;
+FeedList                                u:\gate\feeds.u1
+
+; Makes U1 to act as a simple Cnews-type system - feed
+; received cnews articles back to uucp
+;
+;CnewsFeed
+
+; Max. size of echomail message gate will create. 
+; Default - 12 Kbytes. (Note: previous version default 
+; value was 5 Kbytes.)
+;
+;EchoMsgSize				12000
+
+; Recommended size of .PKT files created by gate
+;
+PktSize 400000
+
+;==========================================================;
+;                                                          ;
+; Gremote parameters                                       ;
+;                                                          ;
+;==========================================================;
+
+; Gremote sends this file in responce to 'help' command.
+;
+HelpFile                u:\gate\gatehelp.txt
+
+; Password for privileged gremote commands.
+;
+PassWord                Oh-John!-Oh-No!
+
+; Defines the way of processing of messages, which
+; have no known newsgroup tag in their Newsgroups: headline
+;
+;    Possibe values:
+;
+;       Separate - Put message to special echo. (UU2.BAD_GROUP)
+;       Kill     - Don't process (delete) it.
+;       Pass     - Pass unchanged.
+;                  (Use last group name from Newsgroups headline as echo tag)
+;
+NewsBadGroupMSG         Separate
+
+; Defines the way of processing of messages, which
+; have Control: headline.
+;
+;    Possibe values:
+;
+;       Separate - Put message to special echo. (UU2.CONTROL)
+;       Kill     - Don't process (delete) it.
+;       Pass     - Pass unchanged.
+;
+NewsControlMSG         Separate
+
+; Turn off crossposting. Messages from usenet to FIDO
+; will be posted only to the first area found in Echoes.U1
+;
+;NoCrossPost
+
+;==========================================================;
+;                                                          ;
+; Reserved for extension                                   ;
+;                                                          ;
+;==========================================================;
+
+; Used to hold files (FIDO-UUCP).
+;
+; Default value: %U1%\file.in
+; Directory will be created automatically, if not exists.
+;
+;InFileSpool                             u:\gate\file.in
+
+; Used to hold files (UUCP-FIDO).
+;
+; Default value: %U1%\file.out
+; Directory will be created automatically, if not exists.
+;
+;OutFileSpool                            u:\gate\file.out
+
+;
+; End of sample configuration file.
+;
+
+
+;==========================================================;
+;                                                          ;
+; Rexx hooks                                               ;
+;                                                          ;
+;==========================================================;
+
+
+;Rexx.Gremote.Cmd u:\gate\GRemote.Rexx
+
+;Rexx.U2F.Address u:\gate\U2FAddr.Rexx
+;Rexx.U2F.Pack    u:\gate\U2FPAck.Rexx
+
+;Rexx.F2U.Address u:\gate\F2UAddr.Rexx
+
+;Rexx.Kick.uucp   u:\gate\Kick_UUCP.Rexx
+

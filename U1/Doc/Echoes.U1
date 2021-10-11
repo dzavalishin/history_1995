@@ -1,0 +1,75 @@
+; Note that this list may be searched by U1 in any order!
+;
+; Additional flags may be given after echo name in {}.
+;
+;  InFile=dir           - Store all incoming articles to dir
+;  Distrib=dom          - Add 'Distribution' headline
+;  Dir=FU|UF|Both|None  - Direction of conversion
+;  RegOnly=Yes|No       - Pass letters from registered users only (F->U)
+;  XPostGuard=Yes|No    - If news article has > 1 newsgroup, don't send it to this echo
+;
+; Newsgroup name                     Echo name
+
+comp.binaries.os2                    u.comp.bin.os2   { Dir=UF InFile=f:\uufiles\cbip }
+comp.os.os2                          u.comp.os.os2
+comp.os.os2.apps                     u.comp.os.os2.apps
+comp.os.os2.misc                     u.comp.os.os2.misc
+comp.os.os2.programmer               u.comp.os.os2.prog
+
+;
+; Relcom groups list (supplied by Alex Popov)
+;
+
+;                    *****    Business   ******
+relcom.ads                            rel.ads
+relcom.ads.comp                       rel.ads.comp
+relcom.commerce                       rel.commerce
+relcom.commerce.audio-video           rel.c.av
+relcom.commerce.chemical              rel.c.chemical
+relcom.commerce.construction          rel.c.construct
+relcom.commerce.consume               rel.c.consume
+relcom.commerce.energy                rel.c.energy
+relcom.commerce.estate                rel.c.estate
+relcom.commerce.food                  rel.c.food
+relcom.commerce.household             rel.c.house
+relcom.commerce.infoserv              rel.c.infoserv
+relcom.commerce.machinery             rel.c.machinery
+relcom.commerce.metals                rel.c.metals
+relcom.commerce.money                 rel.c.money
+relcom.commerce.orgtech               rel.c.orgtech
+relcom.commerce.other                 rel.c.other
+relcom.commerce.stocks                rel.c.stocks
+relcom.commerce.transport             rel.c.transport
+relcom.exnet                          rel.exnet
+relcom.exnet.quote                    rel.exnet.quote
+relcom.infomarket.quote               rel.infomarket.quote
+relcom.infomarket.talk                rel.infomarket.talks
+relcom.mn.economics                   rel.mn.economics
+relcom.mn.faxdigest                   rel.mn.faxdigest
+relcom.mn.laws                        rel.mn.laws
+relcom.mn.newspaper                   rel.mn.newspaper
+relcom.wtc                            rel.wtc
+
+;               *****   Programming   ******
+relcom.msdos                          rel.msdos
+relcom.sources                        rel.sources
+relcom.x                              rel.x
+
+;               *****   Networking    ******
+relcom.archives                       rel.archives
+relcom.archives.d                     rel.archives.d
+relcom.bbs                            rel.bbs
+relcom.maps                           rel.maps
+relcom.netnews                        rel.netnews
+relcom.netnews.big                    rel.netnews.big
+relcom.postmasters                    rel.postmasters
+relcom.postmasters.d                  rel.postmasters.d
+
+;               *******   Misc.   **********
+relcom.music                          rel.music
+relcom.politics                       rel.politics
+relcom.talk                           rel.talk
+relcom.teleputing                     rel.teleputing
+relcom.terms                          rel.terms
+relcom.test                           rel.test
+

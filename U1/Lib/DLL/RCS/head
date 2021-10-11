@@ -1,0 +1,39 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	95.04.06.23.33.30;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@/************************ UU2 library ***************************\
+ *
+ *	Copyright (C) 1991 by Infinity Soft
+ *
+ *	Module 	:
+ *
+ *      $Log:$
+ *
+ *
+\*/
+
+#include	<style.h>
+#include	<stdlib.h>
+
+#include	".h"
+
+@

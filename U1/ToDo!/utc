@@ -1,0 +1,25 @@
+================================= dz's netmail =================================
+   From: victor@tnd.belpak.gomel.by          2:50/128        09 Oct 96  12:42:46
+     To: Dmitry Zavalishin                   2:5020/32       09 Oct 96  12:42:46
+   Subj: U1                                                                     
+================================================================================
+ Return-Receipt-To: victor@tnd.belpak.gomel.by
+To: dz@phantom.ru
+Date: Wed,  9 Oct 1996 15:42:46 +0300
+From: Victor Svetogor <victor@tnd.belpak.gomel.by>
+Reply-To: Victor Svetogor <victor@tnd.belpak.gomel.by>
+Errors-To: victor@tnd.belpak.gomel.by
+Subject: U1
+
+Hello Dmitry!
+
+А почему subj в клюдже @Via показывает местное вpемя, а не UTC? Можно ли 
+это как-нить пофиксить? и можно ли научить subj понимать SET TZ?
+
+// SY, Victor!
+// Fingerprint =  5E B4 35 D2 35 A9 46 AB  2C 3B B5 E5 92 4D 9E 32
+
+--- FleetStreet 1.17+
+ * Origin: TransOilDiagnostic (2:452/9)
+
+================================================================================

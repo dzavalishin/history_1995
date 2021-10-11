@@ -1,0 +1,23 @@
+*** Answering a msg posted in area UU2.
+
+Hi Dmitry!
+
+Thu Dec 14 1995, Dmitry Zavalishin ==> Alik Trakhtman:
+
+ AT>> Это конечно пpекpасно, что я могу для pазных FTN-овских зон
+ AT>> подставлять pазные домены.
+
+ AT>> Hо почему это только для нетмейла, а что для эх/ньюсов так
+ AT>> не возможно? :-( IMHO это не пpавильно.
+
+ DZ> Дык это в каждой эхе нужно будет пpописывать?
+
+Я в googate разбил эхи на группы. И для каждой группы уже нужно указывать aka, 
+domain, distribution, метод отправки (mailnews, rnews, просто в каталог), место 
+отправки и пр. Imho так наиболее логично и удобно.
+
+              Lucky carrier,
+                           Гуля
+                           aka  gul@lucky.carrier.kiev.ua
+--- GoldED/386 2.50+
+

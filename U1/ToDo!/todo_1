@@ -1,0 +1,39 @@
+================================= dz's netmail =================================
+   From: Thomas.Hilgert@aldur.org            2:50/128        09 Jan 96  22:19:00
+     To: Dmitry Zavalishin                   2:5020/32       09 Jan 96  22:19:00
+   Subj: U1                                                                     
+================================================================================
+ Received:  by gate.phantom.ru (UU2FIDO 1.99f [OS2/C Set]) for 
+dz@gate.phantom.ru; Wed, 10 Jan 1996 07:18:04 +0300
+To: dz@phantom.ru
+From: Thomas Hilgert <Thomas.Hilgert@aldur.org>
+Subject: U1
+Date: Tue,  9 Jan 1996 23:19:01 +0100
+
+Hi,
+here are some hint's what user wish for the next version:
+
+1 - News mapping with wildcard
+    comp.* allows to pass all news in the areas comp.*
+
+2 - Node Setup in users.u1
+    After adding a node to users.u1 This shut be handelt as a host in unix.
+    Example:
+    Map 2:2448/103 to aldur.aldur.org
+                            ^^^^^^^^^^-Domainname
+    Map 2:2448/46  to smile.aldur.org
+    All Users of smile should recieve mail via the gate. Without a entry in
+    Users.u1
+
+Thats all and thanks for the good work of your gate.
+
+
+
+
+CU
+       Thomas
+
+--- GoldED/2 2.50.A0715+
+
+
+

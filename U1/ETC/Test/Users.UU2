@@ -1,0 +1,73 @@
+;
+;   List of registered users
+;
+
+; Entry for postmaster
+postmaster /from=phantom.ru         2:5020/32.0@fidonet     Postmaster
+postmaster /from=phantom.ru         2:5020/32.0             Postmaster
+uucp       /from=phantom.ru         2:5020/32.0     Postmaster
+root       /from=phantom.ru         2:5020/32.0     Postmaster
+
+uucp       /from=phantom.ru         2:5020/32       Rules Robot
+
+dz   /from=phantom.ru               2:5020/32.0@fidonet     Dmitry_Zavalishin
+dz   /from=phantom.ru               2:5020/32.0     Dmitry_Zavalishin
+
+kira /from=phantom.ru               2:5020/32@fidonet       Kira_Stratonnikova
+kira /from=phantom.ru               2:5020/32               Kira_Stratonnikova
+kira /from=phantom.ru               2:5020/32               Kira_Zavalishina
+
+newsmaster /from=phantom.ru         2:5020/32.0     NewsMaster
+
+; Enables access to gremote.exe from uucp side
+;gate                2:5020/23       gate
+
+basil                2:5020/140.1           Basil_Dolmatov
+basil                2:5020/140.0           Basil_Dolmatov
+
+gin                  2:5020/32.33           Ilya_Pologintsev
+
+pvad                 2:5020/37.16@fidonet   Vad_Potapov
+pvad                 2:5020/37.16           Vad_Potapov
+de                   2:5020/102.1@fidonet   Dmitry_Efimov 
+de                   2:5020/102.1           Dmitry_Efimov 
+
+kl                   2:5020/251             Kirill_Lebedev
+kl                   2:5020/51              Kirill_Lebedev
+
+pw                   2:5020/30              Ivan_Ryabov
+
+; FIDO chiefs, backboners or moderators
+
+starder              2:5020/23.6@fidonet     Alex_Iliynsky
+starder              2:5020/23.6             Alex_Iliynsky
+max                  2:5020/23               Max_Mikheenkov
+mikel                2:5020/35.0@fidonet     Mikel_Lavrentyev
+mikel                2:5020/35.0             Mikel_Lavrentyev
+mikel                2:5020/35.1             Mikel_Lavrentyev
+gosha                2:5020/134              Gosha_Zafievsky
+rickm                2:5010/14               Rick_Murray
+igorg                2:5020/49@fidonet       Igor_Grischenko
+igorg                2:5020/49               Igor_Grischenko
+yz                   2:490/11.0@fidonet      Yura_Zaitsev
+yz                   2:490/11.0              Yura_Zaitsev
+marck                2:5020/268              Dmitry_Morozovsky
+suvor                2:5020/268.15           Andrew_Suvorow
+
+; ???
+
+sni         					2:5050/10.0     Sergei_Nickolaev
+sni         					2:5050/10.1     Sergei_Nickolaev
+elk         					2:5030/15.1     Andy_Elkin
+elk         					2:5030/15.0     Andy_Elkin
+calm        					2:5020/2.0      Valentin_Uholkin
+
+ssakharov           2:5020/35.39              Sasha_Sakharov
+
+; to help netmail to go directly
+
+qaz@mcosm.msk.su     /from=mcosm.msk.su 2:5020/202      Vsevolod_Shabad
+syrkin@mcosm.msk.su  /from=mcosm.msk.su 2:5020/182.2     Mark_Syrkin
+
+
+

@@ -1,0 +1,94 @@
+###########################################################################
+#
+#       $Log: MakeFile $
+#       Revision 1.3  1996/03/09 01:36:59  dz
+#       *** empty log message ***
+#
+#   Revision 1.2  1995/04/13  11:23:01  dz
+#   Before translation to C Set
+#
+#   Revision 1.1  1995/03/11  18:34:07  dz
+#   Initial revision
+#
+#
+#
+
+M=nmake /nologo -f main.mak 
+
+###########################################################################
+#
+#       Goals
+#
+#
+
+all:	main.mak
+	$(M) all
+
+help:
+        @echo make all/hot/local/doc/sig/alpha/hatch_alpha
+
+hot:    main.mak
+	$(M) hot
+    
+sig:    main.mak
+	$(M) sig
+
+alpha:  main.mak
+	$(M) alpha
+
+ahatch: hatch_alpha
+
+hatcha: hatch_alpha
+
+hatch_alpha:      main.mak
+	$(M) hatch_alpha
+
+hatch_dox:      main.mak
+	$(M) hatch_dox
+
+doc:    main.mak
+	$(M) doc
+
+dox:    main.mak
+	$(M) dox
+
+
+beta:  main.mak
+	$(M) "NODEBUG = yes" beta
+
+bhatch: hatch_beta
+
+hatchb: hatch_beta
+
+hatch_beta:      main.mak
+	$(M) "NODEBUG = yes" hatch_beta
+
+
+clean:	main.mak
+	$(M) clean
+
+Libs: main.mak
+	$(M) Libs
+
+
+
+
+###########################################################################
+#
+#       Create file used to set variable to current U1
+#       version number. Used (included) in hatch.mak
+#
+
+main.mak: dllver.mak version.mak
+    nmake /nologo -f hot.mak ver_mark
+    touch main.mak
+
+dllver.mak: version.exe
+    version.exe -d > dllver.mak
+
+version.mak: version.exe
+    version.exe > version.mak
+
+version.exe: version.c version.h
+    icc /Q version.c
+    $(M) clean

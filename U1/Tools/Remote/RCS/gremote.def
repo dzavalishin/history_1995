@@ -1,0 +1,27 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@#   @;
+
+
+1.1
+date	95.07.01.21.21.24;	author dz;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@NAME GRemote WINDOWCOMPAT
+DESCRIPTION 'U1 Remote Control Unit'
+STACKSIZE 128000
+HEAPSIZE 512000
+@
