@@ -1,0 +1,115 @@
+!include dllver.mak
+
+!ifndef NODEBUG
+DEB=-Ti
+DEBLINK=-B"/DEB"
+#OPT=-O
+!else
+OPT=-O
+!endif
+
+MAKE=make /nologo 
+
+#STL=;D:\usr\Include\stl\cset 
+
+#IPATH = .;..;..\Out
+IPATH = .
+
+#DLL_LIB=ZLIB_$(DLLVER).LIB
+#DLL_DLL=ZLIB_$(DLLVER).DLL
+
+THEDLL=U1_$(DLLVER).DLL
+THELIB=U1_$(DLLVER).LIB
+DEFDLL=U1_$(DLLVER)
+DEF=ZLIB.DEF
+
+
+
+#EXE=test.exe
+
+#Precompiled headers:  $(PH_GENERATE) $(PH_USE)
+#PH_GEN=/Fi+
+#PH_USE=/Si+
+
+#SYSTEM_LINKAGE
+#SYS_LINK=/Ms
+
+COMMON_CC=$(DEB) $(OPT) /I$(IPATH) /Tdp /Q+ $(SYS_LINK) $(PH_GEN) $(PH_USE) -Le -Lj -Ls
+
+CC =     icc /Ge- $(COMMON_CC)
+EXE_CC = icc /Ge+ $(COMMON_CC)
+
+
+
+OBJS = zsema.obj zstrng.obj
+
+
+
+#=============================================================
+#		Explicit Rules
+#=============================================================
+
+all: mkmf lib
+
+
+
+mkmf:
+    mkmf -s
+
+
+
+#=============================================================
+#               DLL
+#=============================================================
+
+
+install: $(THEDLL) $(THELIB) *.h
+	copy $(THEDLL) C:\Local\DLL
+	attrib +r C:\Local\DLL\$(THEDLL)
+	copy $(THELIB) ..\out
+	copy *.h ..\out
+
+dll: $(THELIB)
+
+lib: $(THELIB)
+
+
+#unlock:
+#	attrib -r C:\Local\DLL\$(THEDLL)
+
+#again: unlock all
+
+#reinstall: unlock all
+
+clean:
+	-rm $(OBJS) $(THEDLL) $(THELIB)
+        -mkdir bak
+        -move *~ bak
+
+
+$(THEDLL): $(OBJS) $(DEF) makefile
+	icc /Tdp /I$(IPATH) /B"/NOE" $(DEBLINK) /Ge- /Fe$(THEDLL) /Ms /Q $(OBJS) REXX.LIB $(DEF)
+
+
+_dll_init.obj : _dll_init.c
+	icc /Ti /O+ /Q+ /Gi+ /Gs+ /Ss /Ms /Ge- /c _dll_init.c
+
+$(THELIB): $(THEDLL)
+	IMPLIB /NoLogo $(THELIB) $(THEDLL)
+
+$(DEF): makefile ..\dllver.mak
+	cat >$(DEF) <<
+LIBRARY $(DEFDLL) INITINSTANCE TERMINSTANCE
+DESCRIPTION 'dz general library $(VER)'
+DATA MULTIPLE READWRITE LOADONCALL
+CODE LOADONCALL
+PROTMODE
+STACKSIZE 81920
+HEAPSIZE 81920
+<<
+
+
+
+###
+zsema.obj: zsema.h zexcept.h zstrng.h zstyle.h
+zstrng.obj: zstrng.h zexcept.h

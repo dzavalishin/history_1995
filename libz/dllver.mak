@@ -1,0 +1,3 @@
+VER=0.70a
+DLLVER=070a
+VER_=070a
